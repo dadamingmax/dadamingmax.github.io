@@ -132,29 +132,19 @@
 <p>macOS 用户：</p>
 <p> <code>sudo xcode-select --install /bin/bash -c &quot;$(curl -fsSL [https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh](http://link.zhihu.com/?target=https%3A//raw.githubusercontent.com/Homebrew/install/HEAD/install.sh))&quot; sudo brew install node </code></p>
 <p>验证环境：</p>
-<blockquote>
-<p>node –version<br>npm –version</p>
-</blockquote>
+<p><code>node --version </code><br><code>npm --version</code></p>
 <h3 id="2-安装-Codex-CLI："><a href="#2-安装-Codex-CLI：" class="headerlink" title="2. 安装 Codex CLI："></a>2. 安装 Codex CLI：</h3><p>确保 npm 环境就绪后，执行以下命令：</p>
-<blockquote>
-<p>npm install -g @openai&#x2F;codex</p>
-</blockquote>
-<h3 id="方式-B：使用-Homebrew-安装（macOS-Linux）"><a href="#方式-B：使用-Homebrew-安装（macOS-Linux）" class="headerlink" title="方式 B：使用 Homebrew 安装（macOS&#x2F;Linux）"></a>方式 B：使用 Homebrew 安装（macOS&#x2F;Linux）</h3><blockquote>
-<p>brew install codex</p>
-</blockquote>
+<p> <code>npm install -g @openai/codex</code></p>
+<h3 id="方式-B：使用-Homebrew-安装（macOS-Linux）"><a href="#方式-B：使用-Homebrew-安装（macOS-Linux）" class="headerlink" title="方式 B：使用 Homebrew 安装（macOS&#x2F;Linux）"></a>方式 B：使用 Homebrew 安装（macOS&#x2F;Linux）</h3><p><code>brew install codex</code></p>
 <h3 id="3-3-启动-Codex"><a href="#3-3-启动-Codex" class="headerlink" title="3.3 启动 Codex"></a>3.3 启动 Codex</h3><p>安装完成后，新建一个工作目录，在终端中输入<code>codex</code>命令即可唤醒</p>
 <p><img src="https://picx.zhimg.com/80/v2-1f33fbcf8744bfa3ac2c338e0c2d51ee_720w.webp?source=d16d100b" alt="img"></p>
 <h2 id="四、-Codex-CLI-最佳实践与配置"><a href="#四、-Codex-CLI-最佳实践与配置" class="headerlink" title="四、 Codex CLI 最佳实践与配置"></a>四、 Codex CLI 最佳实践与配置</h2><p>为了更好地契合中文开发环境，建议进行以下初始化配置。</p>
 <h3 id="4-1-配置中文回复（持久化设置）"><a href="#4-1-配置中文回复（持久化设置）" class="headerlink" title="4.1 配置中文回复（持久化设置）"></a>4.1 配置中文回复（持久化设置）</h3><p>默认情况下，Codex 可能以英文回复。为确保其始终使用中文，我们需要配置 <code>AGENTS.md</code> 记忆文件。</p>
 <p>推荐方案（全局生效）： 在用户主目录下创建配置目录及文件：</p>
-<blockquote>
-<p>mkdir -p ~&#x2F;.codex &amp;&amp; printf ‘Always respond in Chinese-simplified\n’ &gt; ~&#x2F;.codex&#x2F;AGENTS.md</p>
-</blockquote>
+<p><code>mkdir -p ~/.codex &amp;&amp; printf &#39;Always respond in Chinese-simplified\n&#39; &gt; ~/.codex/AGENTS.md</code></p>
 <p>注：虽然 <code>/init</code> 命令可在当前目录生成配置，但全局配置更便于跨项目使用。</p>
 <h3 id="4-2-模型管理"><a href="#4-2-模型管理" class="headerlink" title="4.2 模型管理"></a>4.2 模型管理</h3><p>在 CLI 交互过程中，可通过指令查看或切换模型：</p>
-<blockquote>
-<p>&#x2F;model</p>
-</blockquote>
+<p><code>/model</code></p>
 <p>推荐： 始终优先使用 GPT-5-Codex (high)。</p>
 <h3 id="4-3-网络环境与鉴权"><a href="#4-3-网络环境与鉴权" class="headerlink" title="4.3 网络环境与鉴权"></a>4.3 网络环境与鉴权</h3><p>由于 OpenAI 服务器负载较高且风控严格，建议在本地网络环境中开启全局代理（Tun 模式）。这不仅能提高连接稳定性，还能有效避免因 IP 跳动导致的账号滥用检测（封号风险）。</p>
 <h2 id="五、-Windows-用户专项指南：WSL-部署"><a href="#五、-Windows-用户专项指南：WSL-部署" class="headerlink" title="五、 Windows 用户专项指南：WSL 部署"></a>五、 Windows 用户专项指南：WSL 部署</h2><p>鉴于 Windows 原生环境的不稳定性，通过 WSL 部署是目前最佳的解决方案。</p>
@@ -166,9 +156,7 @@
 <li>Virtual Machine Platform (虚拟机平台)</li>
 <li>Windows Subsystem for Linux (适用于 Linux 的 Windows 子系统)</li>
 </ul>
-<h3 id="5-3-安装-WSL-发行版"><a href="#5-3-安装-WSL-发行版" class="headerlink" title="5.3 安装 WSL 发行版"></a>5.3 安装 WSL 发行版</h3><h3 id="方式-A：命令行安装（推荐，需网络通畅）-以管理员身份运行-PowerShell："><a href="#方式-A：命令行安装（推荐，需网络通畅）-以管理员身份运行-PowerShell：" class="headerlink" title="方式 A：命令行安装（推荐，需网络通畅） 以管理员身份运行 PowerShell："></a>方式 A：命令行安装（推荐，需网络通畅） 以管理员身份运行 PowerShell：</h3><blockquote>
-<p>wsl –install -d Ubuntu-24.04</p>
-</blockquote>
+<h3 id="5-3-安装-WSL-发行版"><a href="#5-3-安装-WSL-发行版" class="headerlink" title="5.3 安装 WSL 发行版"></a>5.3 安装 WSL 发行版</h3><h3 id="方式-A：命令行安装（推荐，需网络通畅）-以管理员身份运行-PowerShell："><a href="#方式-A：命令行安装（推荐，需网络通畅）-以管理员身份运行-PowerShell：" class="headerlink" title="方式 A：命令行安装（推荐，需网络通畅） 以管理员身份运行 PowerShell："></a>方式 A：命令行安装（推荐，需网络通畅） 以管理员身份运行 PowerShell：</h3><p><code>wsl --install -d Ubuntu-24.04</code></p>
 <p>注：如果遇到网络报错（如 0x80072efd），请检查网络代理设置或配置 GitHub&#x2F;微软商店的 DNS Hosts。</p>
 <h3 id="方式-B：离线安装包-如果网络受限，可下载对应架构的安装包手动安装："><a href="#方式-B：离线安装包-如果网络受限，可下载对应架构的安装包手动安装：" class="headerlink" title="方式 B：离线安装包 如果网络受限，可下载对应架构的安装包手动安装："></a>方式 B：离线安装包 如果网络受限，可下载对应架构的安装包手动安装：</h3><ul>
 <li>X64 架构 (Intel&#x2F;AMD): <code>WSL-2.5.9.0-x64.msi</code></li>
@@ -188,7 +176,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://clawdo.com/2026/02/02/codex-deployment/" data-id="cuidUdJyPu3yOyN72ttJXyAYR" data-title="深度解析 OpenAI Codex：从入门到精通 —— 常用场景与部署全指南" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://clawdo.com/2026/02/02/codex-deployment/" data-id="cuidegTA3nDOnD2eQ4gbWYpGN" data-title="深度解析 OpenAI Codex：从入门到精通 —— 常用场景与部署全指南" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -331,7 +319,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://clawdo.com/2026/01/29/Moltbot-Usage-Tutorial/" data-id="cuidesrmsP06Ntg8I1dFl-eLE" data-title="Moltbot是什么？有什么用？适合用在哪些场景？如何使用安装？" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://clawdo.com/2026/01/29/Moltbot-Usage-Tutorial/" data-id="cuidyBcho--eamt97nWsfS335" data-title="Moltbot是什么？有什么用？适合用在哪些场景？如何使用安装？" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -445,7 +433,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://clawdo.com/2026/01/28/Claudepro-automatic-upgrade/" data-id="cuidKYVlwoCNWFkZFgx0X0Te1" data-title="2026最新国内Claude升级教程！手把手快速升级订阅！" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://clawdo.com/2026/01/28/Claudepro-automatic-upgrade/" data-id="cuidiYejEFBr8yAS-duI6vxiQ" data-title="2026最新国内Claude升级教程！手把手快速升级订阅！" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -524,7 +512,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://clawdo.com/2026/01/27/chatgptplus-automatic-upgrade/" data-id="cuidVtyUc5o4lOAq5uAgYjQsG" data-title="2026年 国内如何用chatgpt plus？在哪可以直接购买原生独立账号？自己现有chatgpt账号是否可以代充？" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://clawdo.com/2026/01/27/chatgptplus-automatic-upgrade/" data-id="cuidTBGSM34TcE98YC7xHE72G" data-title="2026年 国内如何用chatgpt plus？在哪可以直接购买原生独立账号？自己现有chatgpt账号是否可以代充？" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       

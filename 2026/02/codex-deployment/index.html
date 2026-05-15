@@ -1,124 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html class="has-navbar-fixed-top">
 <head>
-  <meta charset="utf-8">
-  
-  <!-- Baidu analytics. -->
-  <script>
-  var _hmt = _hmt || [];
-  (function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?05f73ede0440dbfdffc6c599c938373e";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-  })();
-  </script>
-  
-  <title>深度解析 OpenAI Codex：从入门到精通 —— 常用场景与部署全指南 | 国内 AI 订阅升级教程汇总</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="随着 GPT-5-Codex 模型的发布，OpenAI 在代码生成与自动化编程领域再次树立了新的标杆。相较于传统的辅助编程工具，Codex 不仅在上下文理解能力上有了质的飞跃，其最新的独立任务执行能力（Autonomous Task Execution）更是达到了惊人的 7 小时时长。 本文将系统介绍 Codex 的核心功能、市场定位，并提供从 IDE 插件到终端 CLI（涵盖 macOS&amp;#x">
-<meta property="og:type" content="article">
-<meta property="og:title" content="深度解析 OpenAI Codex：从入门到精通 —— 常用场景与部署全指南">
-<meta property="og:url" content="https://clawdo.com/2026/02/codex-deployment/index.html">
-<meta property="og:site_name" content="国内 AI 订阅升级教程汇总">
-<meta property="og:description" content="随着 GPT-5-Codex 模型的发布，OpenAI 在代码生成与自动化编程领域再次树立了新的标杆。相较于传统的辅助编程工具，Codex 不仅在上下文理解能力上有了质的飞跃，其最新的独立任务执行能力（Autonomous Task Execution）更是达到了惊人的 7 小时时长。 本文将系统介绍 Codex 的核心功能、市场定位，并提供从 IDE 插件到终端 CLI（涵盖 macOS&amp;#x">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://picx.zhimg.com/80/v2-99032ebb797457f2936ed6e002489e44_720w.webp?source=d16d100b">
-<meta property="og:image" content="https://picx.zhimg.com/80/v2-ba20d5fa04dbc0d63f80d14f41686cec_720w.webp?source=d16d100b">
-<meta property="og:image" content="https://picx.zhimg.com/80/v2-806242a878ceab6b7a98b99fc4b4d8d9_720w.webp?source=d16d100b">
-<meta property="og:image" content="https://pica.zhimg.com/80/v2-dbbc7d141fae6c932ba42b9fa1da05aa_720w.webp?source=d16d100b">
-<meta property="og:image" content="https://picx.zhimg.com/80/v2-1f33fbcf8744bfa3ac2c338e0c2d51ee_720w.webp?source=d16d100b">
-<meta property="og:image" content="https://pic1.zhimg.com/80/v2-eb51e07818c24d166347486c62ab3585_720w.webp?source=d16d100b">
-<meta property="article:published_time" content="2026-02-02T08:53:22.000Z">
-<meta property="article:modified_time" content="2026-04-03T03:59:29.861Z">
-<meta property="article:author" content="dadamingmax">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://picx.zhimg.com/80/v2-99032ebb797457f2936ed6e002489e44_720w.webp?source=d16d100b">
-  
-    <link rel="alternate" href="/atom.xml" title="国内 AI 订阅升级教程汇总" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
+    <meta charset="utf-8">
+<title>深度解析 OpenAI Codex：从入门到精通 —— 常用场景与部署全指南 - 国内 AI 订阅升级教程汇总</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+
+
+<meta name="description" content="">
+
+
+
+
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+
 <link rel="stylesheet" href="/css/style.css">
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
-  
-  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+
 
 <meta name="generator" content="Hexo 8.1.1"></head>
-
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">国内 AI 订阅升级教程汇总</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">总结国内 AI 订阅升级教程，包括但不限于 ChatGPT Plus、SuperGrok、Claude Pro 等。</a>
-        </h2>
-      
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                <img src="/images/logo.png" alt="" height="28">
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="/">Home</a>
+            
+            <a class="navbar-item "
+               href="/archives">Archives</a>
+            
+            <a class="navbar-item "
+               href="/categories">Categories</a>
+            
+            <a class="navbar-item "
+               href="/tags">Tags</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+        </div>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://clawdo.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
+</nav>
 
-      <div class="outer">
-        <section id="main"><article id="post-codex-deployment" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2026/02/codex-deployment/" class="article-date">
-  <time class="dt-published" datetime="2026-02-02T08:53:22.000Z" itemprop="datePublished">2026-02-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      深度解析 OpenAI Codex：从入门到精通 —— 常用场景与部署全指南
+            深度解析 OpenAI Codex：从入门到精通 —— 常用场景与部署全指南
+        
     </h1>
-  
-
-      </header>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <span>Feb 2 2026</span>
+            
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            13 minutes read (About 1904 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p><img src="https://picx.zhimg.com/80/v2-99032ebb797457f2936ed6e002489e44_720w.webp?source=d16d100b" alt="img"></p>
+        <html><head></head><body><p><img src="https://picx.zhimg.com/80/v2-99032ebb797457f2936ed6e002489e44_720w.webp?source=d16d100b" alt="img"></p>
 <p>随着 GPT-5-Codex 模型的发布，OpenAI 在代码生成与自动化编程领域再次树立了新的标杆。相较于传统的辅助编程工具，Codex 不仅在上下文理解能力上有了质的飞跃，其最新的独立任务执行能力（Autonomous Task Execution）更是达到了惊人的 7 小时时长。</p>
-<p>本文将系统介绍 Codex 的核心功能、市场定位，并提供从 IDE 插件到终端 CLI（涵盖 macOS&#x2F;Linux 及 Windows WSL）的全方位部署指南。</p>
+<p>本文将系统介绍 Codex 的核心功能、市场定位，并提供从 IDE 插件到终端 CLI（涵盖 macOS/Linux 及 Windows WSL）的全方位部署指南。</p>
 <h2 id="一、-产品概述：什么是-Codex？"><a href="#一、-产品概述：什么是-Codex？" class="headerlink" title="一、 产品概述：什么是 Codex？"></a>一、 产品概述：什么是 Codex？</h2><p>Codex 是 OpenAI 推出的下一代编程辅助与自动化工具，旨在通过先进的大语言模型提升开发效率。其产品形态涵盖云端（Web）、集成开发环境（IDE）插件以及本地终端（CLI）版本。</p>
 <h3 id="1-1-核心优势与市场定位"><a href="#1-1-核心优势与市场定位" class="headerlink" title="1.1 核心优势与市场定位"></a>1.1 核心优势与市场定位</h3><p>目前市面上的 AI 编程工具主要分为两类：</p>
 <ol>
@@ -141,53 +143,53 @@
 <p>模型选择： 建议在插件设置或对话框中将模型切换为 GPT-5-Codex (high) 以获得最佳性能。</p>
 <p><img src="https://pica.zhimg.com/80/v2-dbbc7d141fae6c932ba42b9fa1da05aa_720w.webp?source=d16d100b" alt="img"></p>
 <h2 id="三、-部署方案二：终端-CLI（适合高阶开发者）"><a href="#三、-部署方案二：终端-CLI（适合高阶开发者）" class="headerlink" title="三、 部署方案二：终端 CLI（适合高阶开发者）"></a>三、 部署方案二：终端 CLI（适合高阶开发者）</h2><p>Codex CLI 是一款强大的编码代理（Coding Agent），它能够直接在本地终端运行，拥有读取、修改文件及执行系统命令的权限。</p>
-<h3 id="3-1-环境兼容性说明"><a href="#3-1-环境兼容性说明" class="headerlink" title="3.1 环境兼容性说明"></a>3.1 环境兼容性说明</h3><p>macOS &#x2F; Linux： 原生支持，安装体验流畅。</p>
+<h3 id="3-1-环境兼容性说明"><a href="#3-1-环境兼容性说明" class="headerlink" title="3.1 环境兼容性说明"></a>3.1 环境兼容性说明</h3><p>macOS / Linux： 原生支持，安装体验流畅。</p>
 <p>Windows： <strong>目前处于实验阶段，强烈建议通过 WSL (Windows Subsystem for Linux) 运行。</strong></p>
-<p>直接在 Windows CMD&#x2F;PowerShell 中运行可能会遇到字符编码（乱码）及路径依赖等复杂问题。</p>
+<p>直接在 Windows CMD/PowerShell 中运行可能会遇到字符编码（乱码）及路径依赖等复杂问题。</p>
 <h3 id="3-2-安装流程"><a href="#3-2-安装流程" class="headerlink" title="3.2 安装流程"></a>3.2 安装流程</h3><p>Codex CLI 支持 npm 和 Homebrew 两种安装方式。</p>
 <h3 id="方式-A：使用-npm-安装（通用）"><a href="#方式-A：使用-npm-安装（通用）" class="headerlink" title="方式 A：使用 npm 安装（通用）"></a>方式 A：使用 npm 安装（通用）</h3><p>此方式需要预先配置 Node.js 环境。</p>
-<h3 id="1-安装-Node-js："><a href="#1-安装-Node-js：" class="headerlink" title="1. 安装 Node.js："></a>1. 安装 Node.js：</h3><p>Ubuntu &#x2F; Debian 用户：</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL [https://deb.nodesource.com/setup_22.x](http://link.zhihu.com/?target=https%3A//deb.nodesource.com/setup_22.x) | sudo bash - sudo apt-get install -y nodejs</span><br></pre></td></tr></table></figure>
+<h3 id="1-安装-Node-js："><a href="#1-安装-Node-js：" class="headerlink" title="1. 安装 Node.js："></a>1. 安装 Node.js：</h3><p>Ubuntu / Debian 用户：</p>
+ <figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL [https://deb.nodesource.com/setup_22.x](http://link.zhihu.com/?target=https%3A//deb.nodesource.com/setup_22.x) | sudo bash - sudo apt-get install -y nodejs</span><br></pre></td></tr></tbody></table></figure>
 
 <p>macOS 用户：</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo xcode-select --install /bin/bash -c &quot;$(curl -fsSL [https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh](http://link.zhihu.com/?target=https%3A//raw.githubusercontent.com/Homebrew/install/HEAD/install.sh))&quot; sudo brew install node </span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo xcode-select --install /bin/bash -c "$(curl -fsSL [https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh](http://link.zhihu.com/?target=https%3A//raw.githubusercontent.com/Homebrew/install/HEAD/install.sh))" sudo brew install node </span><br></pre></td></tr></tbody></table></figure>
 
 
 <p>验证环境：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node --version </span><br><span class="line">npm --version</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node --version </span><br><span class="line">npm --version</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="2-安装-Codex-CLI："><a href="#2-安装-Codex-CLI：" class="headerlink" title="2. 安装 Codex CLI："></a>2. 安装 Codex CLI：</h3><p>确保 npm 环境就绪后，执行以下命令：</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @openai/codex</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @openai/codex</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="方式-B：使用-Homebrew-安装（macOS-Linux）"><a href="#方式-B：使用-Homebrew-安装（macOS-Linux）" class="headerlink" title="方式 B：使用 Homebrew 安装（macOS&#x2F;Linux）"></a>方式 B：使用 Homebrew 安装（macOS&#x2F;Linux）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install codex</span><br></pre></td></tr></table></figure>
+<h3 id="方式-B：使用-Homebrew-安装（macOS-Linux）"><a href="#方式-B：使用-Homebrew-安装（macOS-Linux）" class="headerlink" title="方式 B：使用 Homebrew 安装（macOS/Linux）"></a>方式 B：使用 Homebrew 安装（macOS/Linux）</h3><figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install codex</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="3-3-启动-Codex"><a href="#3-3-启动-Codex" class="headerlink" title="3.3 启动 Codex"></a>3.3 启动 Codex</h3><p>安装完成后，新建一个工作目录，在终端中输入<code>codex</code>命令即可唤醒</p>
 <p><img src="https://picx.zhimg.com/80/v2-1f33fbcf8744bfa3ac2c338e0c2d51ee_720w.webp?source=d16d100b" alt="img"></p>
 <h2 id="四、-Codex-CLI-最佳实践与配置"><a href="#四、-Codex-CLI-最佳实践与配置" class="headerlink" title="四、 Codex CLI 最佳实践与配置"></a>四、 Codex CLI 最佳实践与配置</h2><p>为了更好地契合中文开发环境，建议进行以下初始化配置。</p>
 <h3 id="4-1-配置中文回复（持久化设置）"><a href="#4-1-配置中文回复（持久化设置）" class="headerlink" title="4.1 配置中文回复（持久化设置）"></a>4.1 配置中文回复（持久化设置）</h3><p>默认情况下，Codex 可能以英文回复。为确保其始终使用中文，我们需要配置 <code>AGENTS.md</code> 记忆文件。</p>
 <p>推荐方案（全局生效）： 在用户主目录下创建配置目录及文件：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p ~/.codex &amp;&amp; printf &#x27;Always respond in Chinese-simplified\n&#x27; &gt; ~/.codex/AGENTS.md</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p ~/.codex &amp;&amp; printf 'Always respond in Chinese-simplified\n' &gt; ~/.codex/AGENTS.md</span><br></pre></td></tr></tbody></table></figure>
 
 <p>注：虽然 <code>/init</code> 命令可在当前目录生成配置，但全局配置更便于跨项目使用。</p>
 <h3 id="4-2-模型管理"><a href="#4-2-模型管理" class="headerlink" title="4.2 模型管理"></a>4.2 模型管理</h3><p>在 CLI 交互过程中，可通过指令查看或切换模型：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/model</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/model</span><br></pre></td></tr></tbody></table></figure>
 
 <p>推荐： 始终优先使用 GPT-5-Codex (high)。</p>
 <h3 id="4-3-网络环境与鉴权"><a href="#4-3-网络环境与鉴权" class="headerlink" title="4.3 网络环境与鉴权"></a>4.3 网络环境与鉴权</h3><p>由于 OpenAI 服务器负载较高且风控严格，建议在本地网络环境中开启全局代理（Tun 模式）。这不仅能提高连接稳定性，还能有效避免因 IP 跳动导致的账号滥用检测（封号风险）。</p>
 <h2 id="五、-Windows-用户专项指南：WSL-部署"><a href="#五、-Windows-用户专项指南：WSL-部署" class="headerlink" title="五、 Windows 用户专项指南：WSL 部署"></a>五、 Windows 用户专项指南：WSL 部署</h2><p>鉴于 Windows 原生环境的不稳定性，通过 WSL 部署是目前最佳的解决方案。</p>
 <h3 id="5-1-前置要求"><a href="#5-1-前置要求" class="headerlink" title="5.1 前置要求"></a>5.1 前置要求</h3><p>系统版本： <code>Windows 10 (21H2+)</code> 或<code> Windows 11</code>。</p>
-<p>系统版本类型： 专业版&#x2F;企业版&#x2F;工作站版（家庭版需额外操作）。</p>
-<p>硬件支持： CPU 需支持虚拟化，并已在 BIOS&#x2F;UEFI 中开启。</p>
+<p>系统版本类型： 专业版/企业版/工作站版（家庭版需额外操作）。</p>
+<p>硬件支持： CPU 需支持虚拟化，并已在 BIOS/UEFI 中开启。</p>
 <h3 id="5-2-开启系统功能"><a href="#5-2-开启系统功能" class="headerlink" title="5.2 开启系统功能"></a>5.2 开启系统功能</h3><p>进入 控制面板 -&gt; 程序与功能 -&gt; 启用或关闭 Windows 功能，勾选以下两项并重启电脑：</p>
 <ul>
 <li>Virtual Machine Platform (虚拟机平台)</li>
 <li>Windows Subsystem for Linux (适用于 Linux 的 Windows 子系统)</li>
 </ul>
-<h3 id="5-3-安装-WSL-发行版"><a href="#5-3-安装-WSL-发行版" class="headerlink" title="5.3 安装 WSL 发行版"></a>5.3 安装 WSL 发行版</h3><h3 id="方式-A：命令行安装（推荐，需网络通畅）-以管理员身份运行-PowerShell："><a href="#方式-A：命令行安装（推荐，需网络通畅）-以管理员身份运行-PowerShell：" class="headerlink" title="方式 A：命令行安装（推荐，需网络通畅） 以管理员身份运行 PowerShell："></a>方式 A：命令行安装（推荐，需网络通畅） 以管理员身份运行 PowerShell：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --install -d Ubuntu-24.04</span><br></pre></td></tr></table></figure>
+<h3 id="5-3-安装-WSL-发行版"><a href="#5-3-安装-WSL-发行版" class="headerlink" title="5.3 安装 WSL 发行版"></a>5.3 安装 WSL 发行版</h3><h3 id="方式-A：命令行安装（推荐，需网络通畅）-以管理员身份运行-PowerShell："><a href="#方式-A：命令行安装（推荐，需网络通畅）-以管理员身份运行-PowerShell：" class="headerlink" title="方式 A：命令行安装（推荐，需网络通畅） 以管理员身份运行 PowerShell："></a>方式 A：命令行安装（推荐，需网络通畅） 以管理员身份运行 PowerShell：</h3><figure class="highlight shell hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --install -d Ubuntu-24.04</span><br></pre></td></tr></tbody></table></figure>
 
-<p>注：如果遇到网络报错（如 0x80072efd），请检查网络代理设置或配置 GitHub&#x2F;微软商店的 DNS Hosts。</p>
+<p>注：如果遇到网络报错（如 0x80072efd），请检查网络代理设置或配置 GitHub/微软商店的 DNS Hosts。</p>
 <h3 id="方式-B：离线安装包-如果网络受限，可下载对应架构的安装包手动安装："><a href="#方式-B：离线安装包-如果网络受限，可下载对应架构的安装包手动安装：" class="headerlink" title="方式 B：离线安装包 如果网络受限，可下载对应架构的安装包手动安装："></a>方式 B：离线安装包 如果网络受限，可下载对应架构的安装包手动安装：</h3><ul>
-<li>X64 架构 (Intel&#x2F;AMD): <code>WSL-2.5.9.0-x64.msi</code></li>
+<li>X64 架构 (Intel/AMD): <code>WSL-2.5.9.0-x64.msi</code></li>
 <li>ARM64 架构: <code>WSL-2.5.9.0-arm64.msi</code></li>
 <li>官方 Release: <code>GitHub - Microsoft WSL</code></li>
 </ul>
@@ -197,138 +199,199 @@
 <h2 id="六、-订阅与权限说明"><a href="#六、-订阅与权限说明" class="headerlink" title="六、 订阅与权限说明"></a>六、 订阅与权限说明</h2><p>Codex 目前仅面向 ChatGPT Plus 及以上订阅用户开放。</p>
 <ol>
 <li>官方升级指引： 请直接在 OpenAI 官网进行绑卡升级。</li>
-<li>辅助升级渠道： 如果遇到支付障碍，可参考相关服务： ChatGPT Plus 一键升级官网 <a target="_blank" rel="noopener" href="https://mupgpt.clawdo.com/">https://mupgpt.clawdo.com/</a></li>
+<li>辅助升级渠道： 如果遇到支付障碍，可参考相关服务： ChatGPT Plus 一键升级官网 <a target="_blank" rel="noopener" href="https://cnmgpt.com/">https://cnmgpt.com/</a></li>
 </ol>
 <p><img src="https://pic1.zhimg.com/80/v2-eb51e07818c24d166347486c62ab3585_720w.webp?source=d16d100b" alt="img"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://clawdo.com/2026/02/codex-deployment/" data-id="cuiddy2vDHnUnkHION6prltTW" data-title="深度解析 OpenAI Codex：从入门到精通 —— 常用场景与部署全指南" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
+</body></html>
     
-<nav id="article-nav">
-  
-    <a href="/2026/02/supergrok-upgrade/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          2026 国内最新 SuperGrok 升级订阅教程
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2026/01/Moltbot-Usage-Tutorial/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Moltbot 如何使用安装？</div>
-    </a>
-  
-</nav>
-
-  
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2026/02/supergrok-upgrade/">2026 国内最新 SuperGrok 升级订阅教程</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2026/01/Moltbot-Usage-Tutorial/">Moltbot 如何使用安装？</a>
+            
+        </span>
+    </div>
+    
 </article>
 
 
+
+
+    </div>
 </section>
-        
-          <aside id="sidebar">
-  
-    
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2026 dadamingmax&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        target="_blank" rel="noopener" href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
 
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/04/">April 2026</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/02/">February 2026</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/01/">January 2026</a></li></ul>
+            
+            
+        </div>
     </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2026/04/Google-Email-Registration/">2026 年国内最新注册 Gmail 谷歌邮箱教程 | 一部手机五分钟，注册成功率90%以上</a>
-          </li>
-        
-          <li>
-            <a href="/2026/04/google-age-verification/">Google年龄验证怎么解决？自拍验证步骤指南</a>
-          </li>
-        
-          <li>
-            <a href="/2026/04/Claude-registe/">Claude 封号的原因是什么？如何防止 Claude 封号？| 2026 国内最新注册 Claude 账号教程</a>
-          </li>
-        
-          <li>
-            <a href="/2026/02/minmax-2-5/">用 M2.5 跑 OpenClaw 的完整步骤（暴降 AI Agent 成本）</a>
-          </li>
-        
-          <li>
-            <a href="/2026/02/codex5-3-use/">关于 GPT-5.3-Codex 的使用权限与获取方式说明</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2026 dadamingmax<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
 </footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
 
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" target="_blank" rel="noopener" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
     
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery > p > .gallery-item').unwrap();
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
 
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
+        }
 
-<script src="/js/jquery-3.6.4.min.js"></script>
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
 
+        .hljs .clipboard-btn:hover {
+          color: #8a8a8a;
+        }
 
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
 
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
 
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+        clipboard.on('success', function(e) {
+          e.clearSelection();
+        })
+      })
+    </script>
+
+    
 
 
 
 <script src="/js/script.js"></script>
 
 
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
 
+<script src="/js/insight.js"></script>
 
-
-  </div>
+    
 </body>
 </html>

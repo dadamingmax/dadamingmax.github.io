@@ -2,6 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://clawdo.com/2026/01/Moltbot-Usage-Tutorial/</loc>
+    
+    <lastmod>2026-05-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://clawdo.com/2026/02/codex5-3-use/</loc>
+    
+    <lastmod>2026-05-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://clawdo.com/2026/02/codex-deployment/</loc>
+    
+    <lastmod>2026-05-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://clawdo.com/2026/01/Claudepro-automatic-upgrade/</loc>
+    
+    <lastmod>2026-05-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://clawdo.com/2026/02/supergrok-upgrade/</loc>
+    
+    <lastmod>2026-05-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://clawdo.com/2026/02/Claudepro-upgrade/</loc>
+    
+    <lastmod>2026-05-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://clawdo.com/2026/04/Claude-registe/</loc>
+    
+    <lastmod>2026-05-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://clawdo.com/2026/04/Google-Email-Registration/</loc>
     
     <lastmod>2026-04-28</lastmod>
@@ -20,69 +83,6 @@
   </url>
   
   <url>
-    <loc>https://clawdo.com/2026/04/Claude-registe/</loc>
-    
-    <lastmod>2026-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://clawdo.com/2026/01/Moltbot-Usage-Tutorial/</loc>
-    
-    <lastmod>2026-04-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://clawdo.com/2026/02/codex-deployment/</loc>
-    
-    <lastmod>2026-04-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://clawdo.com/2026/02/codex5-3-use/</loc>
-    
-    <lastmod>2026-04-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://clawdo.com/2026/01/Claudepro-automatic-upgrade/</loc>
-    
-    <lastmod>2026-04-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://clawdo.com/2026/02/Claudepro-upgrade/</loc>
-    
-    <lastmod>2026-04-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://clawdo.com/2026/02/supergrok-upgrade/</loc>
-    
-    <lastmod>2026-04-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://clawdo.com/2026/02/minmax-2-5/</loc>
     
     <lastmod>2026-04-02</lastmod>
@@ -94,7 +94,7 @@
 
   <url>
     <loc>https://clawdo.com/</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

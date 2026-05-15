@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+<title>国内 AI 订阅升级教程汇总</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+
+
+<meta name="description" content="">
+
+
+
+
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                <img src="/images/logo.png" alt="" height="28">
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="/">Home</a>
+            
+            <a class="navbar-item "
+               href="/archives">Archives</a>
+            
+            <a class="navbar-item "
+               href="/categories">Categories</a>
+            
+            <a class="navbar-item "
+               href="/tags">Tags</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2026/02/codex-deployment/" itemprop="url">深度解析 OpenAI Codex：从入门到精通 —— 常用场景与部署全指南</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <span>Feb 2 2026</span>
+            
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            13 minutes read (About 1904 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p><img src="https://picx.zhimg.com/80/v2-99032ebb797457f2936ed6e002489e44_720w.webp?source=d16d100b" alt="img"></p>
+<p>随着 GPT-5-Codex 模型的发布，OpenAI 在代码生成与自动化编程领域再次树立了新的标杆。相较于传统的辅助编程工具，Codex 不仅在上下文理解能力上有了质的飞跃，其最新的独立任务执行能力（Autonomous Task Execution）更是达到了惊人的 7 小时时长。</p>
+<p>本文将系统介绍 Codex 的核心功能、市场定位，并提供从 IDE 插件到终端 CLI（涵盖 macOS/Linux 及 Windows WSL）的全方位部署指南。</p>
+<h2 id="一、-产品概述：什么是-Codex？"><a href="#一、-产品概述：什么是-Codex？" class="headerlink" title="一、 产品概述：什么是 Codex？"></a>一、 产品概述：什么是 Codex？</h2><p>Codex 是 OpenAI 推出的下一代编程辅助与自动化工具，旨在通过先进的大语言模型提升开发效率。其产品形态涵盖云端（Web）、集成开发环境（IDE）插件以及本地终端（CLI）版本。</p>
+<h3 id="1-1-核心优势与市场定位"><a href="#1-1-核心优势与市场定位" class="headerlink" title="1.1 核心优势与市场定位"></a>1.1 核心优势与市场定位</h3><p>目前市面上的 AI 编程工具主要分为两类：</p>
+<ol>
+<li>IDE 集成类： 如 Cursor、Windsurf，主打沉浸式编辑器体验。</li>
+<li>CLI 代理类： 如 Claude Code、Gemini CLI，主打终端交互与文件系统操作。</li>
+</ol>
+<p>为什么选择 Codex 而非 Claude Code？ 尽管 Claude Code 在早期表现出色，但近期用户反馈普遍集中在以下痛点：</p>
+<p>1.模型稳定性： 竞品近期出现逻辑推理能力波动（“降智”现象）。</p>
+<ol>
+<li>风控严格： 第三方镜像或非正规途径极易导致账号封禁。</li>
+<li>成本效益： Codex 直接集成于 ChatGPT Plus 订阅中，对于已订阅用户而言，无需额外付费即可获得 GPT-5 级别的代码能力，且官方渠道账号安全性更高。</li>
+</ol>
+<h2 id="二、-部署方案一：IDE-集成（适合-GUI-偏好用户）"><a href="#二、-部署方案一：IDE-集成（适合-GUI-偏好用户）" class="headerlink" title="二、 部署方案一：IDE 集成（适合 GUI 偏好用户）"></a>二、 部署方案一：IDE 集成（适合 GUI 偏好用户）</h2><p>对于习惯图形化界面或初学者，直接在现有的 IDE 中集成 Codex 是门槛最低的方式。</p>
+<h3 id="2-1-支持平台"><a href="#2-1-支持平台" class="headerlink" title="2.1 支持平台"></a>2.1 支持平台</h3><p>Codex 提供了标准的扩展插件，支持主流开发工具，包括 VS Code、Cursor 及 Windsurf。</p>
+<h3 id="2-2-VS-Code-安装步骤"><a href="#2-2-VS-Code-安装步骤" class="headerlink" title="2.2 VS Code 安装步骤"></a>2.2 VS Code 安装步骤</h3><p>打开插件市场： 启动 VS Code，点击左侧扩展图标（Extensions）。</p>
+<p>搜索与验证： 输入 Codex。注意： 请务必认准发布者为 OpenAI 的官方标志，避免下载同名第三方插件。</p>
+<p><img src="https://picx.zhimg.com/80/v2-ba20d5fa04dbc0d63f80d14f41686cec_720w.webp?source=d16d100b" alt="img"></p>
+<p>安装与激活： 点击安装。完成后，IDE 右上角会出现 OpenAI Logo，侧边栏也会增加 Codex 入口。</p>
+<p><img src="https://picx.zhimg.com/80/v2-806242a878ceab6b7a98b99fc4b4d8d9_720w.webp?source=d16d100b" alt="img"></p>
+<p>模型选择： 建议在插件设置或对话框中将模型切换为 GPT-5-Codex (high) 以获得最佳性能。</p>
+<p><img src="https://pica.zhimg.com/80/v2-dbbc7d141fae6c932ba42b9fa1da05aa_720w.webp?source=d16d100b" alt="img"></p>
+<h2 id="三、-部署方案二：终端-CLI（适合高阶开发者）"><a href="#三、-部署方案二：终端-CLI（适合高阶开发者）" class="headerlink" title="三、 部署方案二：终端 CLI（适合高阶开发者）"></a>三、 部署方案二：终端 CLI（适合高阶开发者）</h2><p>Codex CLI 是一款强大的编码代理（Coding Agent），它能够直接在本地终端运行，拥有读取、修改文件及执行系统命令的权限。</p>
+<h3 id="3-1-环境兼容性说明"><a href="#3-1-环境兼容性说明" class="headerlink" title="3.1 环境兼容性说明"></a>3.1 环境兼容性说明</h3><p>macOS / Linux： 原生支持，安装体验流畅。</p>
+<p>Windows： <strong>目前处于实验阶段，强烈建议通过 WSL (Windows Subsystem for Linux) 运行。</strong></p>
+<p>直接在 Windows CMD/PowerShell 中运行可能会遇到字符编码（乱码）及路径依赖等复杂问题。</p>
+<h3 id="3-2-安装流程"><a href="#3-2-安装流程" class="headerlink" title="3.2 安装流程"></a>3.2 安装流程</h3><p>Codex CLI 支持 npm 和 Homebrew 两种安装方式。</p>
+<h3 id="方式-A：使用-npm-安装（通用）"><a href="#方式-A：使用-npm-安装（通用）" class="headerlink" title="方式 A：使用 npm 安装（通用）"></a>方式 A：使用 npm 安装（通用）</h3><p>此方式需要预先配置 Node.js 环境。</p>
+<h3 id="1-安装-Node-js："><a href="#1-安装-Node-js：" class="headerlink" title="1. 安装 Node.js："></a>1. 安装 Node.js：</h3><p>Ubuntu / Debian 用户：</p>
+ <figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL [https://deb.nodesource.com/setup_22.x](http://link.zhihu.com/?target=https%3A//deb.nodesource.com/setup_22.x) | sudo bash - sudo apt-get install -y nodejs</span><br></pre></td></tr></tbody></table></figure>
+
+<p>macOS 用户：</p>
+ <figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo xcode-select --install /bin/bash -c "$(curl -fsSL [https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh](http://link.zhihu.com/?target=https%3A//raw.githubusercontent.com/Homebrew/install/HEAD/install.sh))" sudo brew install node </span><br></pre></td></tr></tbody></table></figure>
+
+
+<p>验证环境：</p>
+<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node --version </span><br><span class="line">npm --version</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="2-安装-Codex-CLI："><a href="#2-安装-Codex-CLI：" class="headerlink" title="2. 安装 Codex CLI："></a>2. 安装 Codex CLI：</h3><p>确保 npm 环境就绪后，执行以下命令：</p>
+ <figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @openai/codex</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="方式-B：使用-Homebrew-安装（macOS-Linux）"><a href="#方式-B：使用-Homebrew-安装（macOS-Linux）" class="headerlink" title="方式 B：使用 Homebrew 安装（macOS/Linux）"></a>方式 B：使用 Homebrew 安装（macOS/Linux）</h3><figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install codex</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="3-3-启动-Codex"><a href="#3-3-启动-Codex" class="headerlink" title="3.3 启动 Codex"></a>3.3 启动 Codex</h3><p>安装完成后，新建一个工作目录，在终端中输入<code>codex</code>命令即可唤醒</p>
+<p><img src="https://picx.zhimg.com/80/v2-1f33fbcf8744bfa3ac2c338e0c2d51ee_720w.webp?source=d16d100b" alt="img"></p>
+<h2 id="四、-Codex-CLI-最佳实践与配置"><a href="#四、-Codex-CLI-最佳实践与配置" class="headerlink" title="四、 Codex CLI 最佳实践与配置"></a>四、 Codex CLI 最佳实践与配置</h2><p>为了更好地契合中文开发环境，建议进行以下初始化配置。</p>
+<h3 id="4-1-配置中文回复（持久化设置）"><a href="#4-1-配置中文回复（持久化设置）" class="headerlink" title="4.1 配置中文回复（持久化设置）"></a>4.1 配置中文回复（持久化设置）</h3><p>默认情况下，Codex 可能以英文回复。为确保其始终使用中文，我们需要配置 <code>AGENTS.md</code> 记忆文件。</p>
+<p>推荐方案（全局生效）： 在用户主目录下创建配置目录及文件：</p>
+<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p ~/.codex &amp;&amp; printf 'Always respond in Chinese-simplified\n' &gt; ~/.codex/AGENTS.md</span><br></pre></td></tr></tbody></table></figure>
+
+<p>注：虽然 <code>/init</code> 命令可在当前目录生成配置，但全局配置更便于跨项目使用。</p>
+<h3 id="4-2-模型管理"><a href="#4-2-模型管理" class="headerlink" title="4.2 模型管理"></a>4.2 模型管理</h3><p>在 CLI 交互过程中，可通过指令查看或切换模型：</p>
+<figure class="highlight shell hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/model</span><br></pre></td></tr></tbody></table></figure>
+
+<p>推荐： 始终优先使用 GPT-5-Codex (high)。</p>
+<h3 id="4-3-网络环境与鉴权"><a href="#4-3-网络环境与鉴权" class="headerlink" title="4.3 网络环境与鉴权"></a>4.3 网络环境与鉴权</h3><p>由于 OpenAI 服务器负载较高且风控严格，建议在本地网络环境中开启全局代理（Tun 模式）。这不仅能提高连接稳定性，还能有效避免因 IP 跳动导致的账号滥用检测（封号风险）。</p>
+<h2 id="五、-Windows-用户专项指南：WSL-部署"><a href="#五、-Windows-用户专项指南：WSL-部署" class="headerlink" title="五、 Windows 用户专项指南：WSL 部署"></a>五、 Windows 用户专项指南：WSL 部署</h2><p>鉴于 Windows 原生环境的不稳定性，通过 WSL 部署是目前最佳的解决方案。</p>
+<h3 id="5-1-前置要求"><a href="#5-1-前置要求" class="headerlink" title="5.1 前置要求"></a>5.1 前置要求</h3><p>系统版本： <code>Windows 10 (21H2+)</code> 或<code> Windows 11</code>。</p>
+<p>系统版本类型： 专业版/企业版/工作站版（家庭版需额外操作）。</p>
+<p>硬件支持： CPU 需支持虚拟化，并已在 BIOS/UEFI 中开启。</p>
+<h3 id="5-2-开启系统功能"><a href="#5-2-开启系统功能" class="headerlink" title="5.2 开启系统功能"></a>5.2 开启系统功能</h3><p>进入 控制面板 -&gt; 程序与功能 -&gt; 启用或关闭 Windows 功能，勾选以下两项并重启电脑：</p>
+<ul>
+<li>Virtual Machine Platform (虚拟机平台)</li>
+<li>Windows Subsystem for Linux (适用于 Linux 的 Windows 子系统)</li>
+</ul>
+<h3 id="5-3-安装-WSL-发行版"><a href="#5-3-安装-WSL-发行版" class="headerlink" title="5.3 安装 WSL 发行版"></a>5.3 安装 WSL 发行版</h3><h3 id="方式-A：命令行安装（推荐，需网络通畅）-以管理员身份运行-PowerShell："><a href="#方式-A：命令行安装（推荐，需网络通畅）-以管理员身份运行-PowerShell：" class="headerlink" title="方式 A：命令行安装（推荐，需网络通畅） 以管理员身份运行 PowerShell："></a>方式 A：命令行安装（推荐，需网络通畅） 以管理员身份运行 PowerShell：</h3><figure class="highlight shell hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --install -d Ubuntu-24.04</span><br></pre></td></tr></tbody></table></figure>
+
+<p>注：如果遇到网络报错（如 0x80072efd），请检查网络代理设置或配置 GitHub/微软商店的 DNS Hosts。</p>
+<h3 id="方式-B：离线安装包-如果网络受限，可下载对应架构的安装包手动安装："><a href="#方式-B：离线安装包-如果网络受限，可下载对应架构的安装包手动安装：" class="headerlink" title="方式 B：离线安装包 如果网络受限，可下载对应架构的安装包手动安装："></a>方式 B：离线安装包 如果网络受限，可下载对应架构的安装包手动安装：</h3><ul>
+<li>X64 架构 (Intel/AMD): <code>WSL-2.5.9.0-x64.msi</code></li>
+<li>ARM64 架构: <code>WSL-2.5.9.0-arm64.msi</code></li>
+<li>官方 Release: <code>GitHub - Microsoft WSL</code></li>
+</ul>
+<h3 id="5-4-在-WSL-中运行-Codex"><a href="#5-4-在-WSL-中运行-Codex" class="headerlink" title="5.4 在 WSL 中运行 Codex"></a>5.4 在 WSL 中运行 Codex</h3><p>安装完成后，在 <code>Windows CMD</code> 或 <code>PowerShell</code> 输入 <code>wsl </code>即可进入 Ubuntu 环境。</p>
+<p>首次进入需设置 UNIX 用户名和密码。</p>
+<p>进入 Linux 环境后，请参照上文 “ <strong>3.2 安装流程 (方式 A)</strong> ” 中的 Linux 步骤安装 Node.js 及 Codex CLI。</p>
+<h2 id="六、-订阅与权限说明"><a href="#六、-订阅与权限说明" class="headerlink" title="六、 订阅与权限说明"></a>六、 订阅与权限说明</h2><p>Codex 目前仅面向 ChatGPT Plus 及以上订阅用户开放。</p>
+<ol>
+<li>官方升级指引： 请直接在 OpenAI 官网进行绑卡升级。</li>
+<li>辅助升级渠道： 如果遇到支付障碍，可参考相关服务： ChatGPT Plus 一键升级官网 <a target="_blank" rel="noopener" href="https://cnmgpt.com/">https://cnmgpt.com/</a></li>
+</ol>
+<p><img src="https://pic1.zhimg.com/80/v2-eb51e07818c24d166347486c62ab3585_720w.webp?source=d16d100b" alt="img"></p>
+</body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2026/01/Moltbot-Usage-Tutorial/" itemprop="url">Moltbot 如何使用安装？</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <span>Jan 29 2026</span>
+            
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            12 minutes read (About 1868 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><h2 id="如何使用安装Moltbot"><a href="#如何使用安装Moltbot" class="headerlink" title="如何使用安装Moltbot"></a>如何使用安装Moltbot</h2><p>安装前需检查自己电脑的环境要求</p>
+<ul>
+<li>Node.js 版本 &gt;= 22 以上</li>
+<li>Git</li>
+</ul>
+<p>Windows 电脑用户建议优先选择 WSL2 （<strong>推荐 Ubuntu 系统</strong>），Mac 电脑用户直接开箱即用。</p>
+<p>安装 Clawdbot 相对比较简单，只需要用到一条 shell 命令就行。</p>
+<p>macOS / Linux / Ubuntu / Debian安装使用下面命令（推荐）：</p>
+<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$curl -fsSL https://molt.bot/install.sh | bash$</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Windows (PowerShell) 安装使用下面命令（推荐）：</p>
+<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iwr -useb https://molt.bot/install.ps1 | iex</span><br></pre></td></tr></tbody></table></figure>
+
+<p>如果你需要用最新 beta 版本，可以用最新的指令：</p>
+<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://molt.bot/install.sh | bash -s -- --beta</span><br></pre></td></tr></tbody></table></figure>
+
+<p>当然了，可以使用 Npm 包管理进行安装，你安装了 Node.js 环境之后，都有 Npm 工具的。</p>
+<p>不管是 Mac / Linux / Ubuntu / Windows 都可以直接用 Npm 工具进行管理版本和安装：</p>
+<p>支持所有系统，全局安装的指令（对npm不熟悉的，不要使用这种方式安装）： 因为 npm 是官方刚发布的，可能运行有点问题，建议还是使用上面的其他指令安装。 这边知道一下就行哈。</p>
+<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g moltbot@latest</span><br></pre></td></tr></tbody></table></figure>
+
+<p>npm 安装后，如果执行 moltbot 找不到指令的话，可以改为 clawdbot 指令。</p>
+<p>上面的指令，使用其中一条就行，按照自己的系统使用对应的指令。</p>
+<h2 id="Mac-苹果电脑安装教程"><a href="#Mac-苹果电脑安装教程" class="headerlink" title="Mac 苹果电脑安装教程"></a>Mac 苹果电脑安装教程</h2><p>目前我的 Node.js 是 22.15 版本，执行指令后，等待一段时间，会进行克隆 Github 上的仓库。</p>
+<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://molt.bot/install.sh | bash</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="https://pica.zhimg.com/80/v2-4b3cfaec6735712275dc758fd0eed730_720w.webp" alt="img"></p>
+<p>当你安装成功之后，会问你是否知道 Clawdbot 的风险很高，<strong>选择 yes</strong> 之后，就可以继续。</p>
+<p>如果你选择 no，那么就会直接退出安装向导。</p>
+<p>这边选择 <strong>QuickStart</strong> 模式，可以默认使用 Clawdbot 的配置。</p>
+<p>这是分配的默认端口：18789， 然后 Clawdbot 是支持 ChatGPT 和 Claude 的 OAuth 授权登录方式。</p>
+<p>也就是你可以不需要去购买API，使用会员的 Codex 或者 Claude Code。</p>
+<p><strong>但是，这里建议别用 Claude 授权登录，因为 Claude 小气，会阻止你使用非 Claude Code 的服务去调用 Claude。</strong></p>
+<p>因为我平时的主力是 Codex，所以我选择 OpenAI, 使用 Codex 的 OAuth 就行，<strong>另外你只要是 GPT 会员（Plus、Business、Pro）就可以用这个方式。</strong></p>
+<p><img src="https://pic2.zhimg.com/80/v2-fd12c977b43db51eab030fe4bcf1777f_720w.webp" alt="img"></p>
+<p>虽然我本地有 Codex CLI，为了方便大家了解 ChatGPT 授权登录的方式，这边我先选择第 2 种。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-b340989c1e2939c779001e3c61e10ee1_720w.webp" alt="img"></p>
+<p>会给你一条 ChatGPT 授权登录的链接，正常你的电脑会自动弹起浏览器，你只需要选择对应的会员进行登录即可。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-bc0e26d095a8f5a209667f01b1027043_720w.webp" alt="img"></p>
+<p>这边我是开通了 Plus 会员</p>
+<p><strong>高性价比体验 Clawdbot 的方式：</strong></p>
+<p><strong>ChatGPT Plus 开通的地址:</strong><a target="_blank" rel="noopener" href="https://cnmgpt.com/">https://cnmgpt.com/</a><br><img src="https://pic1.zhimg.com/80/v2-eb51e07818c24d166347486c62ab3585_720w.webp?source=d16d100b" alt="img"></p>
+<p>授权登录点击继续后，就会进行回调，你就可以回到终端查看安装状态。</p>
+<p><img src="https://picx.zhimg.com/80/v2-52965e581be7afbb820d59e1414bcfb1_720w.webp" alt="img"></p>
+<p><strong>PS：如果你的终端没有自动回调获取到 Code 的话，你就把当前这条回调地址，localhost 开头的，全部复制，粘贴到终端就成功登录啦</strong></p>
+<p><img src="https://pic4.zhimg.com/80/v2-4cda07c415d83ecb47484636e64b0cf1_720w.webp" alt="img"></p>
+<p>我选择了默认 GPT-5.2-Codex 模型，然后就会进入选择频道，我是测试了 TG 的机器人，这里教程的话，我就先跳过啦。</p>
+<p>你可以跳过，后续再选择，或者配置其他的频道。</p>
+<p><img src="https://pica.zhimg.com/80/v2-3874bdd2a28788a679f7cafaf0887526_720w.webp" alt="img"></p>
+<p>接下来就是配置 skills，是的，这个 skills 就是你平时听到的那个 skills。</p>
+<p><img src="https://pica.zhimg.com/80/v2-2f146b014e5f9577bdeb1ddf294ae5bc_720w.webp" alt="img"></p>
+<p>接着就是包管理工具，这里选择平时自己喜欢的就行，默认用的 npm 就行。</p>
+<p>后面就会给你一些 <strong>Skills</strong>，你可以按需选择，或者先跳过也可以。 后续都可以安装的，直接跟 Clawdbot 说安装对应的 skills 就行。</p>
+<p>无需手动哦，只需对话。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-32c36602633b65b68992fb717a00b6c0_720w.webp" alt="img"></p>
+<p>后续出现一些 API KEY 的设置，如果你没有，直接回车：No 就行。 这里是一些图片生成之类的。</p>
+<p><img src="https://picx.zhimg.com/80/v2-37d0004ad2ec89cdd5b760fdad480ca5_720w.webp" alt="img"></p>
+<p>最后，问你需不需要开启钩子，这三个都是 Moltbot 的内置 hooks（钩子脚本），用来在特定事件发生时自动做事：</p>
+<p>boot-md：网关（gateway）启动后自动读取并执行工作区里的 BOOT.md 里的引导/启动指令。</p>
+<p>command-logger：把所有命令事件记录到本地审计日志文件（默认 ~/.clawdbot/logs/commands.log）</p>
+<p>session-memory：当你发出 /new 时，把当前会话上下文保存成一份“记忆快照”到工作区（默认 ~/clawd/memory/ 相关路径）。 建议直接三个都钩上开启。</p>
+<p><img src="https://picx.zhimg.com/80/v2-61e929f2df27e5cb94888627212e9171_720w.webp" alt="img"></p>
+<p>接下来会问你用什么方式开启使用你的 AI 助手。对于新手的话，建议选择 web ui ，就是有页面可以操作，不需要输入各种指令进行操作。</p>
+<p>配置基本都完成啦，现在可以运行你的 Clawdbot 。</p>
+<p>可以执行下面指令，就会自动打开 web ui 控制页面啦：</p>
+<p><code>clawdbot dashboard</code> 默认本地服务运行的端口和地址：<code>http://127.0.0.1:18789</code></p>
+<p><img src="https://pic2.zhimg.com/80/v2-31720f71508a28a0b32a6f5eb3581d6f_720w.webp" alt="img"></p>
+<p>提示：虽然 Clawdbot 改名为 Moltbot，但是目前的工具的指令还没有更新为 moltbot，所以你用官方的指令可能无法确认自己是否成功安装！ 那么，你可以直接把 moltbot 相关 改为 clawdbot 去运行指令，就可以啦！</p>
+<h2 id="一些常用的-Clawdbot-指令说明"><a href="#一些常用的-Clawdbot-指令说明" class="headerlink" title="一些常用的 Clawdbot 指令说明"></a>一些常用的 Clawdbot 指令说明</h2><p>快速诊断当前 clawdbot 的状态（含模型提供商用量/配额等信息）</p>
+<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clawdbot status</span><br></pre></td></tr></tbody></table></figure>
+
+<p>打开 clawdbot 浏览器 Web UI（最快开始聊天/看状态）的管理页面：</p>
+<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clawdbot dashboard</span><br></pre></td></tr></tbody></table></figure>
+
+<p>查看频道配置、探测频道健康、看频道日志。</p>
+<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clawdbot channels list|status|logs</span><br></pre></td></tr></tbody></table></figure>
+
+<p>直接在终端里开 TUI 聊天（没浏览器/远程机很爽）。</p>
+<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clawdbot tui</span><br></pre></td></tr></tbody></table></figure>
+
+<p>重新跑配置向导（改模型/频道/技能时很好用）</p>
+<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clawdbot configure</span><br></pre></td></tr></tbody></table></figure>
+
+<p>管理网关（ <strong>Clawdbot 服务</strong> ） 服务的状态/安装/停/重启。</p>
+<p>如果要关闭你现在在运行的 clawdbot，直接用<code>clawdbot gateway stop</code>就可以啦～</p>
+<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clawdbot gateway status|install|stop|restart</span><br></pre></td></tr></tbody></table></figure>
+
+<p>现在你可以去体验 Clawdbot 啦！当然，如果你不使用 Codex、Claude 这些服务运行 Clawdbot 的话，也可以配置第三方 API 和 KEY，就是可以用国内模型运行 Clawdbot。</p>
+</body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2026/01/Claudepro-automatic-upgrade/" itemprop="url">2026最新国内Claude升级教程！手把手快速升级订阅！</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <span>Jan 28 2026</span>
+            
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            6 minutes read (About 956 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p><img src="https://pic1.zhimg.com/70/v2-e63a385390b1e838053096d5abea029e_1440w.image?source=172ae18b&amp;biz_tag=Post" alt="2026最新国内Claude升级教程！手把手快速升级订阅！"></p>
+<h2 id="Claude-pro的优势"><a href="#Claude-pro的优势" class="headerlink" title="Claude pro的优势"></a>Claude pro的优势</h2><p>Claude Pro 的核心优势在于高频次的交互配额与深度项目管理能力：它通过提供 5 倍于免费版的消息容量，确保高强度工作的连续性，并利用专属的 Projects 功能构建私有知识库，结合超长上下文窗口，在处理复杂逻辑推理、多文档关联分析及长代码开发时，展现出远超基础版的稳定性与严谨性。</p>
+<h2 id="2026年-Claude-Pro-国内充值方案全解析"><a href="#2026年-Claude-Pro-国内充值方案全解析" class="headerlink" title="2026年 Claude Pro 国内充值方案全解析"></a>2026年 Claude Pro 国内充值方案全解析</h2><h3 id="1-三大主流路径对比"><a href="#1-三大主流路径对比" class="headerlink" title="1.三大主流路径对比"></a>1.三大主流路径对比</h3><table>
+<thead>
+<tr>
+<th>维度</th>
+<th>方案一：专业代充</th>
+<th>方案二：虚拟卡 DIY</th>
+<th>方案三：iOS 订阅</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>操作时间</td>
+<td>3-5 分钟</td>
+<td>1 小时以上</td>
+<td>15-30 分钟</td>
+</tr>
+<tr>
+<td>支付方式</td>
+<td>支付宝 / 微信</td>
+<td>USDT / 虚拟币</td>
+<td>美区礼品卡</td>
+</tr>
+<tr>
+<td>成功率</td>
+<td>极高（白名单卡）</td>
+<td>较低（看卡段）</td>
+<td>较高（看账号）</td>
+</tr>
+<tr>
+<td>推荐等级</td>
+<td>⭐️⭐️⭐️⭐️⭐️</td>
+<td>⭐️⭐️</td>
+<td>⭐️⭐️⭐️</td>
+</tr>
+<tr>
+<td>综合成本</td>
+<td>订阅费 + 小额服务费</td>
+<td>订阅费 + 开卡费 + 充值手续费</td>
+<td>订阅费 + 礼品卡汇率差</td>
+</tr>
+<tr>
+<td>风控风险</td>
+<td>极低（内购通道）</td>
+<td>极高（易被判别为高风险卡段）</td>
+<td>中等（黑卡礼品卡易导致封号）</td>
+</tr>
+<tr>
+<td>隐私保护</td>
+<td>优（无需账号密码）</td>
+<td>优（自主管理）</td>
+<td>优（官方代扣）</td>
+</tr>
+<tr>
+<td>适用人群</td>
+<td>追求效率、怕折腾的开发者</td>
+<td>极客、有加密货币使用经验者</td>
+<td>资深果粉、已有美区账号者</td>
+</tr>
+</tbody></table>
+<h3 id="2-核心避坑要点"><a href="#2-核心避坑要点" class="headerlink" title="2.核心避坑要点"></a>2.核心避坑要点</h3><ol>
+<li>别碰低价： 远低于汇率原价的代充多为“黑产”盗刷，极易导致封号且无法找回。</li>
+<li>IP 纯净： 无论哪种支付方式，登录环境若为万人共用的“机场”节点，仍有被 Claude 系统封禁的风险。</li>
+<li>首选代付： 尽量选择只需 账户 ID (User ID) 即可完成的方案，避免泄露账号密码。<br>3.选购建议</li>
+<li>最优选（代充）： 适合时间宝贵、不想被 “Card Declined” 报错搞崩心态的用户。</li>
+<li>稳妥选（iOS）： 适合已有稳定美区账号、且有可靠礼品卡渠道的用户。</li>
+<li>谨慎选（虚拟卡）： 仅推荐给需要批量管理多平台订阅、且有稳定出金渠道的专业玩家。</li>
+</ol>
+<p><strong>“专业的事交给专业的人”，利用账户 ID 代充是目前平衡了安全性、成功率与时间成本的最优解。</strong></p>
+<h2 id="2026年-Claude-Pro-国内专业代充平台推荐"><a href="#2026年-Claude-Pro-国内专业代充平台推荐" class="headerlink" title="2026年 Claude Pro 国内专业代充平台推荐"></a>2026年 Claude Pro 国内专业代充平台推荐</h2><p><a target="_blank" rel="noopener" href="https://cnmclaude.com/">一键进入代充平台：https://cnmClaude.com</a></p>
+<h3 id="自助充值系统操作"><a href="#自助充值系统操作" class="headerlink" title="自助充值系统操作"></a>自助充值系统操作</h3><h3 id="第一步：获取你-Claude-用户-ID"><a href="#第一步：获取你-Claude-用户-ID" class="headerlink" title="第一步：获取你 Claude 用户 ID"></a>第一步：获取你 Claude 用户 ID</h3><p>登录你的 Claude 账号 (<a target="_blank" rel="noopener" href="https://claude.ai/">https://claude.ai</a>) 进入设置 → 账户信息 → 复制ID 或者直接打开这个链接就可以跳转：<a target="_blank" rel="noopener" href="https://claude.ai/settings">https://claude.ai/settings</a></p>
+<p><img src="https://pic3.zhimg.com/v2-e8faadc194a1747842c54aa9a1e670ac_1440w.jpg" alt="img"></p>
+<h3 id="第二步：填入你购买的卡密或者充值码"><a href="#第二步：填入你购买的卡密或者充值码" class="headerlink" title="第二步：填入你购买的卡密或者充值码"></a>第二步：填入你购买的卡密或者充值码</h3><p><img src="https://pica.zhimg.com/v2-f3d0bb36efb1f0c6a31bea4e3f867612_1440w.jpg" alt="img"></p>
+<p>复制这个 Organization ID（账号ID）回到充值系统上填入即可直冲</p>
+<p><img src="https://pic2.zhimg.com/v2-1781fc600dec18ef1f8e566e308ca0bd_1440w.jpg" alt="img"></p>
+<p>页面刷新的一瞬，那颗标志性的 Pro 标识便会点亮。这意味着你已经彻底解除了次数枷锁，无论是高频调用 Artifacts 预览代码，还是处理超长文档，都能火力全开。</p>
+</body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+    
+        
+<nav class="pagination is-centered is-rounded" role="navigation" aria-label="pagination">
+    <div class="pagination-previous">
+        <a href="/">Prev</a>
+    </div>
+    <div class="pagination-next is-invisible is-hidden-mobile">
+        <a href="/page/3/">Next</a>
+    </div>
+    <ul class="pagination-list is-hidden-mobile">
+        
+        <li><a class="pagination-link" href="/">1</a></li>
+        
+        <li><a class="pagination-link is-current" href="/page/2/">2</a></li>
+        
+    </ul>
+</nav>
+    
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2026 dadamingmax&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        target="_blank" rel="noopener" href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" target="_blank" rel="noopener" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery > p > .gallery-item').unwrap();
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
+        }
+
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hljs .clipboard-btn:hover {
+          color: #8a8a8a;
+        }
+
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
+
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
+
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+        clipboard.on('success', function(e) {
+          e.clearSelection();
+        })
+      })
+    </script>
+
+    
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+    
+</body>
+</html>

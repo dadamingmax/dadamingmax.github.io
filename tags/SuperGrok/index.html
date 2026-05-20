@@ -107,6 +107,216 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
+            <a href="/2026/05/Windows-OpenClaw-Grok-Complete-Setup-Guide/" itemprop="url">【保姆级】Windows 装 OpenClaw + Grok 全流程：自启动、网页搜索、Telegram 接入</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <span>May 20 2026</span>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Grok/">Grok</a><span>></span><a class="article-category-link" href="/categories/Grok/SuperGrok/">SuperGrok</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            11 minutes read (About 1705 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p><strong>本地 AI 代理神器 + Grok 模型，5–15 分钟搞定 24/7 智能助手</strong></p>
+<p>OpenClaw（原 Clawdbot/Moltbot）是目前最火的开源本地 AI 代理框架。它能通过 WhatsApp、Telegram、Discord 等聊天工具，让 Grok 等大模型真正”动手”做事——发邮件、管理日历、运行脚本、搜索网页、生成图片视频。</p>
+<p>Grok（xAI）已<strong>原生深度集成</strong>到 OpenClaw 中，支持网页搜索、X 搜索、代码执行、图像/视频生成等高级功能，性价比高、工具调用稳定。</p>
+<p><img src="https://pic3.zhimg.com/v2-dc5394e0622588893dabd05dc95c358a_1440w.jpg" alt="img"></p>
+<p>本文针对 <strong>Windows 用户</strong>，提供最详细、最实操的干货教程，全程使用<strong>原生 Windows 方案</strong>（无需 WSL）。</p>
+<h2 id="目录："><a href="#目录：" class="headerlink" title="目录："></a>目录：</h2><p><strong>一、为什么在 Windows 上用 OpenClaw + Grok？</strong></p>
+<p><strong>二、前置准备</strong></p>
+<p><strong>三、原生 Windows 安装</strong></p>
+<p><strong>四、Grok 模型配置与验证</strong></p>
+<p><strong>五、启用 Grok 高级功能</strong></p>
+<p><strong>六、连接 Telegram，实现手机远程指挥</strong></p>
+<p><strong>七、常见问题与解决方案</strong></p>
+<p><strong>八、维护与进阶建议</strong></p>
+<h2 id="一、为什么在-Windows-上用-OpenClaw-Grok？"><a href="#一、为什么在-Windows-上用-OpenClaw-Grok？" class="headerlink" title="一、为什么在 Windows 上用 OpenClaw + Grok？"></a>一、为什么在 Windows 上用 OpenClaw + Grok？</h2><table>
+<thead>
+<tr>
+<th>优势</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>本地运行</td>
+<td>数据不上传，隐私安全</td>
+</tr>
+<tr>
+<td>Grok 原生支持</td>
+<td>聊天 + 网页搜索 + X 搜索 + 代码执行 + 生图生视频</td>
+</tr>
+<tr>
+<td>多渠道交互</td>
+<td>手机 Telegram/WhatsApp 就能指挥</td>
+</tr>
+<tr>
+<td>24/7 运行</td>
+<td>设置守护进程后开机自启</td>
+</tr>
+<tr>
+<td>成本可控</td>
+<td>Grok fast 模型日常使用费用很低</td>
+</tr>
+</tbody></table>
+<p><strong>推荐模型（2026 年最新）：</strong></p>
+<ul>
+<li>日常主力：<code>grok-4.3</code>（最均衡）</li>
+<li>追求速度：<code>grok-4-fast</code> / <code>grok-4.1-fast</code></li>
+<li>代码开发：<code>grok-code-fast-1</code></li>
+</ul>
+<h2 id="二、前置准备"><a href="#二、前置准备" class="headerlink" title="二、前置准备"></a>二、前置准备</h2><p><img src="https://pic2.zhimg.com/100/v2-b67ac2d9c1b3b0a5de298fc7e5e7e84d_r.jpg" alt="preview"></p>
+<ol>
+<li>Windows 10 / 11（推荐 Windows 11）</li>
+<li>下载安装最新版 <strong>Node.js</strong>（官网 LTS 版本）</li>
+<li><strong>SuperGrok</strong> 或 <strong>X Premium</strong> 订阅（推荐 <strong>SuperGrok 官方订阅升级服务</strong> : <a target="_blank" rel="noopener" href="https://cnmgrok.com/">cnmGrok.com</a>）</li>
+</ol>
+<h2 id="三、原生-Windows-安装"><a href="#三、原生-Windows-安装" class="headerlink" title="三、原生 Windows 安装"></a>三、原生 Windows 安装</h2><h3 id="1-以管理员身份打开-PowerShell"><a href="#1-以管理员身份打开-PowerShell" class="headerlink" title="1. 以管理员身份打开 PowerShell"></a>1. 以管理员身份打开 PowerShell</h3><p><code>Win + X</code>，选择 <strong>PowerShell（管理员）</strong>。</p>
+<p><img src="https://picx.zhimg.com/v2-f535b84fae9380003323a480bd3f6401_1440w.jpg" alt="img"></p>
+<p>Win+X 选择 PowerShell（管理员）</p>
+<h3 id="2-执行安装命令"><a href="#2-执行安装命令" class="headerlink" title="2. 执行安装命令"></a>2. 执行安装命令</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iwr -useb https://openclaw.ai/install.ps1 | iex</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="https://pic3.zhimg.com/v2-522f8d39371f3c84fb7afa4d9fcd5ec6_1440w.jpg" alt="img"></p>
+<p>执行命令</p>
+<p>如果提示执行策略问题，先运行下面这条，再重试上一步：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="3-运行配置向导"><a href="#3-运行配置向导" class="headerlink" title="3. 运行配置向导"></a>3. 运行配置向导</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openclaw onboard --install-daemon</span><br></pre></td></tr></tbody></table></figure>
+
+<p>按提示操作：</p>
+<ul>
+<li><strong>模型提供商</strong>：选择 <code>xAI</code></li>
+<li><strong>认证方式</strong>：选择 <code>xAI OAuth</code></li>
+</ul>
+<p><img src="https://picx.zhimg.com/v2-6488e6358e545744d3ea3bcf52c37619_1440w.jpg" alt="img"></p>
+<p>选择 xAI OAuth</p>
+<p>浏览器弹出授权页，点击”允许”即可连接成功。</p>
+<p><img src="https://pic4.zhimg.com/v2-4fa460d0d5807344e85b95157970769b_1440w.jpg" alt="img"></p>
+<p>允许即可连接成功</p>
+<h3 id="4-自启动机制说明"><a href="#4-自启动机制说明" class="headerlink" title="4. 自启动机制说明"></a>4. 自启动机制说明</h3><p>原生 Windows 会优先尝试创建<strong>计划任务（Scheduled Task）</strong> 实现开机自启，若失败则回退到用户启动文件夹。无需手动干预。</p>
+<h2 id="四、Grok-模型配置与验证"><a href="#四、Grok-模型配置与验证" class="headerlink" title="四、Grok 模型配置与验证"></a>四、Grok 模型配置与验证</h2><h3 id="1-手动配置模型（可选）"><a href="#1-手动配置模型（可选）" class="headerlink" title="1. 手动配置模型（可选）"></a>1. 手动配置模型（可选）</h3><p>配置文件路径：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\你的用户名\.openclaw\openclaw.json</span><br></pre></td></tr></tbody></table></figure>
+
+<p>推荐配置：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">  "agents": {</span><br><span class="line">    "defaults": {</span><br><span class="line">      "model": {</span><br><span class="line">        "primary": "xai/grok-4.3"</span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>如需切换其他模型（例如 <code>grok-4-fast</code>），直接修改 <code>primary</code> 字段即可。</p>
+<h3 id="2-永久设置-API-Key（可选）"><a href="#2-永久设置-API-Key（可选）" class="headerlink" title="2. 永久设置 API Key（可选）"></a>2. 永久设置 API Key（可选）</h3><p>若使用 API Key 方式认证，建议通过系统<strong>环境变量图形界面</strong>添加 <code>XAI_API_KEY</code>，避免每次启动重新输入。</p>
+<h3 id="3-重启-Gateway"><a href="#3-重启-Gateway" class="headerlink" title="3. 重启 Gateway"></a>3. 重启 Gateway</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openclaw gateway restart</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="4-验证是否成功"><a href="#4-验证是否成功" class="headerlink" title="4. 验证是否成功"></a>4. 验证是否成功</h3><p>打开 Dashboard：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openclaw dashboard</span><br></pre></td></tr></tbody></table></figure>
+
+<p>浏览器访问 <code>http://127.0.0.1:18789/</code>，在聊天框输入测试：<code>你是什么模型？</code></p>
+<p><img src="https://picx.zhimg.com/v2-404791dc481fe14f3a59623b2c6ce819_1440w.jpg" alt="img"></p>
+<p>验证模型</p>
+<p>如果回复中提到 Grok，说明整合成功。</p>
+<h2 id="五、启用-Grok-高级功能"><a href="#五、启用-Grok-高级功能" class="headerlink" title="五、启用 Grok 高级功能"></a>五、启用 Grok 高级功能</h2><h3 id="网页搜索（强烈推荐开启）"><a href="#网页搜索（强烈推荐开启）" class="headerlink" title="网页搜索（强烈推荐开启）"></a>网页搜索（强烈推荐开启）</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openclaw config set tools.web.search.provider grok</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="https://pica.zhimg.com/v2-3e2a7f5661346c50ddbf0a80bbddb0be_1440w.jpg" alt="img"></p>
+<p>开启网页搜索</p>
+<h3 id="其他原生支持功能（无需额外配置）"><a href="#其他原生支持功能（无需额外配置）" class="headerlink" title="其他原生支持功能（无需额外配置）"></a>其他原生支持功能（无需额外配置）</h3><ul>
+<li><strong>图像生成</strong>：默认支持 <code>grok-imagine-image</code></li>
+<li><strong>视频生成</strong>：支持 <code>grok-imagine-video</code></li>
+<li><strong>X 搜索（x_search）</strong>：自动可用</li>
+<li><strong>代码执行</strong>：自动可用</li>
+<li><strong>文字转语音 / 语音转文字</strong>：已内置支持</li>
+</ul>
+<h2 id="六、连接-Telegram，实现手机远程指挥"><a href="#六、连接-Telegram，实现手机远程指挥" class="headerlink" title="六、连接 Telegram，实现手机远程指挥"></a>六、连接 Telegram，实现手机远程指挥</h2><h3 id="1-创建-Telegram-Bot"><a href="#1-创建-Telegram-Bot" class="headerlink" title="1. 创建 Telegram Bot"></a>1. 创建 Telegram Bot</h3><p>打开 Telegram，搜索 <code>@BotFather</code>：</p>
+<p><img src="https://pica.zhimg.com/v2-5aef6a195bdeffce46a5931a14db9614_1440w.jpg" alt="img"></p>
+<p>BotFather</p>
+<p>发送 <code>/newbot</code>，按提示创建机器人。完成后复制 Bot Token，格式类似 <code>1234567890:AAxxxxxx</code>。</p>
+<p><img src="https://pic3.zhimg.com/v2-78c98bf188aa2aaf7031ae4ae0a942e0_1440w.jpg" alt="img"></p>
+<p>获取 Bot Token</p>
+<h3 id="2-配置-OpenClaw"><a href="#2-配置-OpenClaw" class="headerlink" title="2. 配置 OpenClaw"></a>2. 配置 OpenClaw</h3><p>在 PowerShell 输入： <code>notepad "$env:USERPROFILE\.openclaw\openclaw.json"</code></p>
+<p>打开配置文件</p>
+<p>添加 Telegram 配置：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">  "channels": {</span><br><span class="line">    "telegram": {</span><br><span class="line">      "enabled": true,</span><br><span class="line">      "botToken": "你的Bot Token",</span><br><span class="line">      "dmPolicy": "pairing"</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>如果文件里已有内容，<strong>不要整份覆盖</strong>，只合并 <code>channels.telegram</code> 字段。</p>
+</blockquote>
+<h3 id="3-启动-Gateway"><a href="#3-启动-Gateway" class="headerlink" title="3. 启动 Gateway"></a>3. 启动 Gateway</h3><p>在 powershell 输入： <code>openclaw gateway</code></p>
+<h3 id="4-私聊-Bot-触发配对"><a href="#4-私聊-Bot-触发配对" class="headerlink" title="4. 私聊 Bot 触发配对"></a>4. 私聊 Bot 触发配对</h3><p>在 Telegram 打开你创建的 Bot，发送：<code>/start</code></p>
+<p>Bot 会返回一段配对码，复制下来。</p>
+<p><img src="https://pic1.zhimg.com/v2-62aa3c28cd3a80cc8e9264396d3fd0c8_1440w.jpg" alt="img"></p>
+<p>Bot 返回配对码</p>
+<h3 id="5-在-PowerShell-批准配对"><a href="#5-在-PowerShell-批准配对" class="headerlink" title="5. 在 PowerShell 批准配对"></a>5. 在 PowerShell 批准配对</h3><p>在 powershell 输入：<code>openclaw pairing approve telegram 你的配对码</code></p>
+<h3 id="6-测试连接"><a href="#6-测试连接" class="headerlink" title="6. 测试连接"></a>6. 测试连接</h3><p>在 Telegram 给 Bot 发一句：<code>你好</code></p>
+<p>收到回复即代表 Telegram 接入成功。</p>
+<p><img src="https://pic4.zhimg.com/v2-d0e8404f69d8dc3a90802b865917faf7_1440w.jpg" alt="img"></p>
+<p>Telegram 连接成功</p>
+<h2 id="七、常见问题与解决方案"><a href="#七、常见问题与解决方案" class="headerlink" title="七、常见问题与解决方案"></a>七、常见问题与解决方案</h2><table>
+<thead>
+<tr>
+<th>问题</th>
+<th>解决方案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PowerShell 执行策略报错</td>
+<td>以管理员运行 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</td>
+</tr>
+<tr>
+<td>守护进程未自启动</td>
+<td>执行 openclaw gateway install</td>
+</tr>
+<tr>
+<td>Dashboard 打不开</td>
+<td>确认 Gateway 正在运行，检查端口 18789 是否被占用</td>
+</tr>
+<tr>
+<td>想远程访问</td>
+<td>配置 Telegram / Discord，或使用 Tailscale 组网</td>
+</tr>
+<tr>
+<td>更新 OpenClaw</td>
+<td>重新运行安装脚本，或执行 openclaw update</td>
+</tr>
+</tbody></table>
+<h2 id="八、维护与进阶建议"><a href="#八、维护与进阶建议" class="headerlink" title="八、维护与进阶建议"></a>八、维护与进阶建议</h2><ul>
+<li><strong>定期更新</strong>：运行安装脚本或 <code>openclaw update</code></li>
+<li><strong>查看日志</strong>：<code>openclaw gateway logs</code></li>
+<li><strong>成本控制</strong>：日常用 fast 系列模型，复杂任务再切换到 <code>grok-4.3</code></li>
+<li><strong>配置备份</strong>：定期备份 <code>C:\Users\你的用户名\.openclaw\</code> 整个文件夹</li>
+<li><strong>多 Agent 进阶</strong>：后期可配置多个专业 Agent（研究、coding、自动化等）分工协作</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>到这里，你已经在 Windows 上完成了 <strong>OpenClaw + Grok</strong> 的完整本地部署，拥有一个真正能”干活”的 24/7 AI 助手。</p>
+<p>建议的体验路径：</p>
+<ol>
+<li><strong>先用 Dashboard 测试</strong>——确认模型、工具、生成能力都正常</li>
+<li><strong>再接入 Telegram</strong>——实现手机远程指挥</li>
+<li><strong>最后做自动化</strong>——把高频任务串成 Agent 工作流</li>
+</ol>
+<p>至此，本地 AI 代理就真正跑起来了。</p>
+</body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
             <a href="/2026/05/Grok-Hermes-Agent-Windows-Setup-Guide/" itemprop="url">在 Windows 上用 Grok 订阅跑通 Hermes Agent(零 API key,15 分钟上手)</a>
         
     </h1>

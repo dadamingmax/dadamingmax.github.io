@@ -100,6 +100,213 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
+            <a href="/2026/05/Grok-Build-Guide-2026/" itemprop="url">Grok Build 使用教程（2026 年最新版）</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <span>May 26 2026</span>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Grok-Build/">Grok Build</a><span>></span><a class="article-category-link" href="/categories/Grok-Build/Grok/">Grok</a><span>></span><a class="article-category-link" href="/categories/Grok-Build/Grok/SuperGrok/">SuperGrok</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            12 minutes read (About 1754 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p><img src="https://pic1.zhimg.com/70/v2-428c9154c1249fbce622c707e613a457_1440w.image?source=172ae18b&amp;biz_tag=Post" alt="Grok Build 使用教程（2026 年最新版）"></p>
+<p>Grok Build 是 xAI 官方推出的<strong>终端 AI 编码代理</strong>（Coding Agent CLI），于 2026 年 5 月正式进入早期 Beta 阶段。它把强大的 Grok 模型直接塞进你的终端，能帮你完成从规划、搜索、编码、测试到 Git 提交的全流程工作。</p>
+<p>它支持<strong>交互式 TUI</strong>（全屏、鼠标操作、无闪烁）、<strong>Plan Mode</strong>（先规划再执行）、<strong>并行子代理</strong>、<strong>无头模式</strong>（脚本/自动化）、<strong>ACP 协议</strong>接入其他工具等特性，是目前最接近“专业软件工程师”的终端 AI 工具之一。</p>
+<h2 id="1-前提条件"><a href="#1-前提条件" class="headerlink" title="1. 前提条件"></a>1. 前提条件</h2><ul>
+<li><strong>订阅要求</strong>：SuperGrok 或 X Premium Plus 会员</li>
+</ul>
+<p><a href="https://clawdo.com/2026/02/supergrok-upgrade/">点击查看文章 : 2026 国内最新 SuperGrok 升级订阅教程</a></p>
+<ul>
+<li><strong>系统支持</strong>：macOS、Linux、Windows（推荐 macOS/Linux 体验最佳）。</li>
+<li><strong>推荐环境</strong>：在你的项目根目录下运行效果最好（它会自动读取仓库结构、AGENTS.md、技能等）。</li>
+</ul>
+<h2 id="2-安装-Grok-Build"><a href="#2-安装-Grok-Build" class="headerlink" title="2. 安装 Grok Build"></a>2. 安装 Grok Build</h2><p><strong>macOS / Linux</strong></p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://x.ai/cli/install.sh | bash</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>Windows（PowerShell，管理员权限推荐）</strong></p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">irm https://x.ai/cli/install.ps1 | iex</span><br></pre></td></tr></tbody></table></figure>
+
+<p>安装完成后，终端输入 <code>grok --version</code> 验证是否成功。</p>
+<h2 id="3-首次启动与登录"><a href="#3-首次启动与登录" class="headerlink" title="3. 首次启动与登录"></a>3. 首次启动与登录</h2><ol>
+<li>进入你的项目目录：<code>cd /path/to/your/project</code></li>
+<li>启动 Grok Build：<code>grok</code></li>
+</ol>
+<p><img src="https://pic4.zhimg.com/80/v2-5c281c93dcbb1ce2a0a4e20f39867485_720w.webp" alt="输入 grok 启动 Grok Build"></p>
+<ol start="3">
+<li>首次登录： 会自动打开浏览器进行 xAI 账号授权（推荐）。</li>
+</ol>
+<p><img src="https://pic1.zhimg.com/80/v2-5921332298d2de85981109543f6739b6_720w.webp" alt="点击允许即可连接成功"></p>
+<p>无浏览器环境可手动设置环境变量：<code>export XAI_API_KEY="xai-你的密钥"</code> （密钥可在 <a target="_blank" rel="noopener" href="https://console.x.ai/team/default/api-keys">https://console.x.ai/team/default/api-keys</a> 获取）</p>
+<p>登录成功后会进入<strong>全屏交互式 TUI</strong> 界面。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-83661bf219b0a122ee192bd0315eccfd_720w.webp" alt="TUI 界面"></p>
+<h2 id="4-TUI-界面操作指南"><a href="#4-TUI-界面操作指南" class="headerlink" title="4. TUI 界面操作指南"></a>4. TUI 界面操作指南</h2><p>Grok Build 的 TUI 支持<strong>鼠标点击</strong>、<strong>键盘快捷键</strong>，界面清晰无闪烁：</p>
+<p><strong>输入框</strong>：直接输入自然语言指令（如中文或英文）。</p>
+<p><strong>常用命令</strong>（在 TUI 内输入）：</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>/help</td>
+<td>打开动态帮助面板（推荐新手必用）</td>
+</tr>
+<tr>
+<td>/plan</td>
+<td>手动进入 Plan Mode</td>
+</tr>
+<tr>
+<td>/yolo 或 /always-approve</td>
+<td>开启/关闭自动批准模式（YOLO 模式）</td>
+</tr>
+<tr>
+<td>/model &lt;模型名&gt;</td>
+<td>切换模型</td>
+</tr>
+<tr>
+<td>/inspect</td>
+<td>查看当前项目加载的技能、插件与配置</td>
+</tr>
+<tr>
+<td>/feedback</td>
+<td>直接向 xAI 团队提交反馈（Beta 阶段非常有用）</td>
+</tr>
+<tr>
+<td>/clear</td>
+<td>清空当前会话历史</td>
+</tr>
+</tbody></table>
+<h2 id="5-Plan-Mode（强烈推荐用于复杂任务）"><a href="#5-Plan-Mode（强烈推荐用于复杂任务）" class="headerlink" title="5. Plan Mode（强烈推荐用于复杂任务）"></a>5. Plan Mode（强烈推荐用于复杂任务）</h2><p>输入复杂需求前，先用 <code>/plan</code> 或启动时加标志进入规划模式。</p>
+<p>Grok Build 会先输出完整执行计划（分步骤）。 你可以：</p>
+<ul>
+<li>逐条批准（Enter）</li>
+<li>评论修改某一步</li>
+<li>完全重写计划</li>
+<li>批准后，所有文件变更都会以<strong>干净的 diff</strong> 形式展示，确认无误后再执行。</li>
+</ul>
+<p><strong>Plan Mode 的三种常用方法</strong></p>
+<ol>
+<li>快捷键切换（最快，推荐日常使用） :在 TUI 中按 <code>Shift + Tab</code> 循环切换模式，直到状态栏显示 Plan。</li>
+</ol>
+<p><img src="https://pica.zhimg.com/80/v2-d0225eca962eb29b5a5854db575589d2_720w.webp" alt="Plan"></p>
+<ol start="2">
+<li>使用 Slash 命令: 输入命令<code>/plan</code>或<code>/plan on</code>后按回车。</li>
+<li>启动时直接进入（适合复杂任务）:<code>grok --plan</code> 或结合项目路径：<code>cd your-project &amp;&amp; grok --plan</code></li>
+</ol>
+<p><strong>退出或切换回 Normal 模式</strong></p>
+<p>再次按 <strong>Shift + Tab</strong> 切换到 Normal 模式或输入命令：<code>/plan off</code></p>
+<h2 id="6-基本使用示例"><a href="#6-基本使用示例" class="headerlink" title="6. 基本使用示例"></a>6. 基本使用示例</h2><h3 id="示例-1：新建项目"><a href="#示例-1：新建项目" class="headerlink" title="示例 1：新建项目"></a>示例 1：新建项目</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">创建一个现代化的 React + TypeScript Todo App，带暗黑模式、拖拽排序、本地存储，使用 Tailwind CSS，风格参考 Apple</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>操作建议：</strong></p>
+<ol>
+<li>直接在空文件夹中启动 <code>grok</code></li>
+<li>推荐开启 <strong>Plan Mode</strong>，让 Grok Build 先输出项目结构、依赖清单和技术方案</li>
+<li>批准计划后，它会自动创建 <code>package.json</code>、组件文件、样式，并初始化 Git 仓库</li>
+</ol>
+<p><img src="https://pic2.zhimg.com/80/v2-5025ef5c426c363e00c54c58cdcf137b_720w.webp" alt="项目创建中"></p>
+<p><img src="https://pic3.zhimg.com/80/v2-d49a994b059244332f8cde27d677ffd6_720w.webp" alt="项目创建完成"></p>
+<p><strong>预期效果：</strong></p>
+<ul>
+<li>生成完整的项目结构（含 README、测试文件）</li>
+</ul>
+<p><img src="https://picx.zhimg.com/80/v2-4a9be217b7309ab0e85f64cd1606ae77_720w.webp" alt="项目结构"></p>
+<ul>
+<li>包含暗黑模式切换、拖拽排序（@dnd-kit）、本地持久化（localStorage + Zustand）</li>
+<li>自动安装依赖并运行 <code>npm run dev</code></li>
+</ul>
+<p><img src="https://pica.zhimg.com/80/v2-4a12cbf7a83ac3d1c43481167bf36dea_720w.webp" alt="示例 1 结果预览"></p>
+<p><strong>进阶技巧：</strong></p>
+<ul>
+<li>追加需求：“加上用户登录界面和后端 API 模拟”</li>
+<li>完成后输入：“帮我部署到 Vercel 并生成部署脚本”</li>
+</ul>
+<h3 id="示例-2：分析现有项目"><a href="#示例-2：分析现有项目" class="headerlink" title="示例 2：分析现有项目"></a>示例 2：分析现有项目</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Explain this repo in detail. 重点分析架构、核心模块和潜在优化点。</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="示例-3：修改代码"><a href="#示例-3：修改代码" class="headerlink" title="示例 3：修改代码"></a>示例 3：修改代码</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@src/main.rs 帮我把这个文件重构为更清晰的模块结构，并添加错误处理。</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="示例-4：并行子代理（大型任务）"><a href="#示例-4：并行子代理（大型任务）" class="headerlink" title="示例 4：并行子代理（大型任务）"></a>示例 4：并行子代理（大型任务）</h3><p>Grok Build 会自动拆分任务给多个子代理并行执行（如一个写前端、一个写后端、一个写测试）。</p>
+<h2 id="7-无头模式（Headless）——-脚本-自动化神器"><a href="#7-无头模式（Headless）——-脚本-自动化神器" class="headerlink" title="7. 无头模式（Headless）—— 脚本/自动化神器"></a>7. 无头模式（Headless）—— 脚本/自动化神器</h2><p>适合 CI/CD、自动化脚本或嵌入其他工具：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 简单执行</span><br><span class="line">grok -p "为当前项目添加用户认证模块（JWT + 数据库）"</span><br><span class="line"></span><br><span class="line"># 输出 JSON 便于解析</span><br><span class="line">grok -p "分析这个代码库的安全问题" --output-format streaming-json</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="8-高级功能"><a href="#8-高级功能" class="headerlink" title="8. 高级功能"></a>8. 高级功能</h2><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>说明</th>
+<th>如何使用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>并行子代理</td>
+<td>大任务自动拆分多个代理同时工作</td>
+<td>自然语言描述即可</td>
+</tr>
+<tr>
+<td>Git 深度集成</td>
+<td>自动创建分支、提交、生成 PR</td>
+<td>直接说“提交这些改动”</td>
+</tr>
+<tr>
+<td>自定义配置</td>
+<td>支持 AGENTS.md、技能、插件、MCP 服务器</td>
+<td>项目根目录放置即可</td>
+</tr>
+<tr>
+<td>自定义模型</td>
+<td>可接入其他模型</td>
+<td>配置文件 + /model 切换</td>
+</tr>
+<tr>
+<td>ACP 协议</td>
+<td>可接入 IDE、其他 Agent 框架</td>
+<td>官方支持</td>
+</tr>
+<tr>
+<td>Inspect</td>
+<td>查看当前项目已加载的配置、技能等</td>
+<td>grok inspect</td>
+</tr>
+</tbody></table>
+<h2 id="9-实用技巧-注意事项"><a href="#9-实用技巧-注意事项" class="headerlink" title="9. 实用技巧 &amp; 注意事项"></a>9. 实用技巧 &amp; 注意事项</h2><ul>
+<li><strong>最好在 Git 仓库根目录运行</strong>，效果最强。</li>
+<li><strong>大项目建议先用 Plan Mode</strong>，避免一次性改太多。</li>
+<li><strong>图片支持</strong>：可直接粘贴截图让它分析 UI 或报错。</li>
+<li><strong>多任务切换</strong>：支持同时运行多个 Grok Build 实例。</li>
+<li><strong>Beta 阶段</strong>：偶尔会有小 bug，遇到问题请用 <code>/feedback</code> 反馈。</li>
+<li><strong>卸载</strong>：参考官方文档或删除对应二进制文件。</li>
+</ul>
+</body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
             <a href="/2026/05/How-to-Build-an-Android-App-with-Google-AI-Studio/" itemprop="url">10 分钟实战:手把手教你用 Google AI Studio 做一个能用的安卓 App</a>
         
     </h1>
@@ -1682,148 +1889,6 @@
 <p><img src="https://picx.zhimg.com/v2-316696ac26022f596e00a1db31ac0791_1440w.jpg" alt="img"></p>
 <p>完成这几步后，Codex 就能和浏览器联动。</p>
 <p>遇到网页总结、页面分析、资料查找、表单查看、教程整理这类任务，都可以直接让 Codex 配合 Chrome 来完成，效率会高很多。</p>
-</body></html>
-    
-    </div>
-    
-    
-</article>
-
-
-
-
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            <a href="/2026/05/Codex-Pet-Complete-Guide/" itemprop="url">Codex电子宠物保姆级教程：/pet唤醒，/hatch自制宠物，/goal让它盯着任务跑</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            
-                <span>May 5 2026</span>
-            
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/Codex/">Codex</a><span>></span><a class="article-category-link" href="/categories/Codex/ChatGPT/">ChatGPT</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            10 minutes read (About 1517 words)
-        </span>
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <html><head></head><body><p><img src="https://picx.zhimg.com/70/v2-44e7a74b81418448ca2047a95544daaa_1440w.image?source=172ae18b&amp;biz_tag=Post" alt="Codex电子宠物保姆级教程：/pet唤醒，/hatch自制宠物，/goal让它盯着任务跑"></p>
-<p>上周，Codex 悄悄更新了。</p>
-<p>大多数人注意到的，是屏幕角落突然多了一只会动的宠物。</p>
-<p><strong>宠物是表面。真正藏在里面的，是一套让Agent持续干活的新机制。</strong></p>
-<p>今天这篇，帮你把这次Codex更新吃透——<code>/pet</code>怎么玩，宠物怎么自制，<code>/goal</code>到底解决了什么问题。</p>
-<h2 id="一、说一下那只宠物：它不是摆设"><a href="#一、说一下那只宠物：它不是摆设" class="headerlink" title="一、说一下那只宠物：它不是摆设"></a>一、说一下那只宠物：它不是摆设</h2><p>输入 <code>/pet</code>，Codex桌面端的角落会冒出一只小动物。</p>
-<p><img src="https://pic1.zhimg.com/v2-337b3664282f8b795a42db43d70e1384_1440w.jpg" alt="img"></p>
-<p>可以悬浮、跨App显示。会随着任务状态变换动作。</p>
-<p>这就<strong>解决</strong>了一个真实的<strong>痛点</strong>：<strong>让你知道Codex在跑、有没有卡住、是不是在等我输入？</strong></p>
-<h2 id="二、两步唤醒"><a href="#二、两步唤醒" class="headerlink" title="二、两步唤醒"></a>二、两步唤醒</h2><p>首先确认你用的是 <strong>Codex桌面端App</strong>，不是纯 CLI。</p>
-<p>在输入框输入：<code>/pet</code></p>
-<p><img src="https://picx.zhimg.com/v2-8e201838f82f156ba5f0ae2df657433f_1440w.jpg" alt="img"></p>
-<p>角落就会出现宠物。再输一次，收起。</p>
-<p>或者： <code>Settings ~&gt; Appearance ~&gt; Pets</code></p>
-<p><img src="https://pic2.zhimg.com/v2-8303f1dc1e3488b4058317402610d729_1440w.jpg" alt="img"></p>
-<p>快捷键党用 <code>Cmd+K</code> / <code>Ctrl+K</code> 打开命令面板，同样可以唤醒或收起。</p>
-<p>内置宠物可以直接用，不用任何配置。</p>
-<h2 id="三、进阶：用-hatch-搞一只自己的宠物"><a href="#三、进阶：用-hatch-搞一只自己的宠物" class="headerlink" title="三、进阶：用 /hatch 搞一只自己的宠物"></a>三、进阶：用 /hatch 搞一只自己的宠物</h2><p>不喜欢内置的可以自己造一只。</p>
-<p>Codex 支持通过 <code>hatch-pet</code> skill创建自定义宠物。</p>
-<p><strong>第一步：安装skill</strong>：直接输入<code>$skill-installer hatch-pet</code></p>
-<p><strong>第二步：重载skill</strong>：按<code>Cmd/Ctrl + K</code>跑<code>Force Reload Skills</code></p>
-<p><strong>第三步：给出提示词，让它帮你生成，或者通过 image2 生成参考图，让其参考图片生成宠物</strong></p>
-<p>直接抄这个模板，改一改就行：</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">帮我创建一只 Codex 电子宠物。</span><br><span class="line">宠物名称：yinienie</span><br><span class="line">宠物类型：像素风小黑猫</span><br><span class="line">视觉风格：极简，轮廓清晰，适合桌面悬浮</span><br><span class="line">性格设定：傲娇但靠谱，发现问题会直接提醒</span><br><span class="line">主要颜色：黑色 + 绿色眼睛</span><br><span class="line">标志元素：脖子上挂一块小代码牌</span><br><span class="line">动作状态：</span><br><span class="line">1. idle 待机</span><br><span class="line">2. working 敲代码中</span><br><span class="line">3. thinking 歪头冒问号</span><br><span class="line">4. waiting 等待输入</span><br><span class="line">5. done 开心跳一下</span><br><span class="line">6. sleeping 趴下睡觉</span><br><span class="line">要求：无背景、无文字、缩小后轮廓依然清晰</span><br></pre></td></tr></tbody></table></figure>
-
-<p>提示词越具体，生成结果越稳。 记住：</p>
-<ol>
-<li>轮廓要清楚（缩到角落还认得出来吗）；</li>
-<li>颜色控制在2-4个；</li>
-<li>动作要有状态感，待机/工作/完成各不同；</li>
-<li>人设要具体，别只写”可爱”，写”傲娇但认真”生成结果稳多了。</li>
-</ol>
-<p>还有就是：不加文字。 宠物那么小，字上去必糊。</p>
-<p><strong>image2 生成图片提示词：</strong></p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">什么什么角色</span><br><span class="line">纯色绿幕背景</span><br><span class="line">无场景无文字无阴影无额外漂浮特效</span><br><span class="line">像素邻近风格</span><br><span class="line">适合缩小到 192x208</span><br></pre></td></tr></tbody></table></figure>
-
-<p><img src="https://pic1.zhimg.com/v2-afc951f913c3eb9829cde6f9d301461c_1440w.jpg" alt="img"></p>
-<p>生成图片</p>
-<p><img src="https://pica.zhimg.com/v2-1260268dee46db2fc361cb68bb86efe6_1440w.jpg" alt="img"></p>
-<p><strong>动作效果：</strong></p>
-<p><img src="https://pica.zhimg.com/v2-2d6b6432785b95889ee9328a7d1bd358_1440w.jpg" alt="img"></p>
-<p>打开设置外观下滑到底即可查看你的自定义宠物</p>
-<p><img src="https://pic1.zhimg.com/v2-591353ce1e965fef6724cf3f71c52a1c_1440w.jpg" alt="img"></p>
-<p><img src="https://picx.zhimg.com/v2-4d864d0ca4ea9f1d5bb3072353af732b_1440w.jpg" alt="img"></p>
-<h2 id="四、重头戏：-goal"><a href="#四、重头戏：-goal" class="headerlink" title="四、重头戏：/goal"></a>四、重头戏：/goal</h2><p>以前Agent跑一轮就停，你得手动推下一步。</p>
-<p><strong>/goal</strong> 之后：告诉它目标，它自己持续开，你只管关键节点审查。</p>
-<p>从手动挡，变成自动导航。</p>
-<h2 id="五、-goal-怎么开启？"><a href="#五、-goal-怎么开启？" class="headerlink" title="五、/goal 怎么开启？"></a>五、/goal 怎么开启？</h2><p><strong>手动打开</strong>。</p>
-<p>编辑配置文件： <code>~/.codex/config.toml</code></p>
-<p>加入： <code>[features] goals = true</code></p>
-<p>或者直接命令行： <code>codex update codex features enable goals</code></p>
-<p>开启之后，核心命令就这几个：</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>/goal &lt;目标描述&gt;</td>
-<td>创建目标，开始持续执行</td>
-</tr>
-<tr>
-<td>/goal pause</td>
-<td>暂停，中途检查用</td>
-</tr>
-<tr>
-<td>/goal unpause</td>
-<td>继续执行</td>
-</tr>
-<tr>
-<td>/goal clear</td>
-<td>清除目标，重新来</td>
-</tr>
-</tbody></table>
-<p><strong>pause/unpause这对命令非常重要。</strong></p>
-<p>Agent跑偏了不要直接Ctrl+C粗暴停，先pause，看看跑到哪了，补充上下文，再unpause继续。</p>
-<h2 id="六、goal-怎么才好用？"><a href="#六、goal-怎么才好用？" class="headerlink" title="六、goal 怎么才好用？"></a>六、goal 怎么才好用？</h2><p>一个好用的goal要包含4个要素： <strong>任务目标、执行边界、验收标准、输出要求。</strong></p>
-<p><strong>修bug：</strong></p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/goal 修复登录页点击后偶发loading卡死问题。</span><br><span class="line">先定位原因，再做最小改动。</span><br><span class="line">验收：登录正常结束，失败时能恢复按钮状态。</span><br><span class="line">最后总结改动文件和潜在风险。</span><br></pre></td></tr></tbody></table></figure>
-
-<p><strong>重构：</strong></p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/goal 把Dashboard页面重复卡片结构拆成可复用组件。</span><br><span class="line">不改接口逻辑，不改视觉效果。</span><br><span class="line">完成后跑类型检查，总结拆分思路。</span><br></pre></td></tr></tbody></table></figure>
-
-<p><strong>补测试：</strong></p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/goal 为订单状态转换逻辑补测试。</span><br><span class="line">先读现有测试风格，再覆盖正常流、异常流、边界情况。</span><br><span class="line">跑完说明覆盖了哪些场景。</span><br></pre></td></tr></tbody></table></figure>
-
-<p>记住：<strong>目标越清晰，它跑偏的概率越低。</strong></p>
-<h2 id="七、什么时候用，什么时候不用？"><a href="#七、什么时候用，什么时候不用？" class="headerlink" title="七、什么时候用，什么时候不用？"></a>七、什么时候用，什么时候不用？</h2><p><strong>适合 <code>/goal</code> 的场景：</strong></p>
-<ul>
-<li>项目重构（改动多、轮次长）</li>
-<li>批量修bug（重复劳动，交给它跑）</li>
-<li>补测试、写文档（不需要每步确认）</li>
-<li>排查复杂问题（让它先探路）</li>
-</ul>
-<p><strong>人工介入的场景：</strong></p>
-<ul>
-<li>涉及支付、权限、数据删除</li>
-<li>改动核心业务逻辑</li>
-<li>生产环境部署前</li>
-</ul>
-<p><strong>让Codex执行重复劳动，让自己做最后的判断。</strong></p>
 </body></html>
     
     </div>

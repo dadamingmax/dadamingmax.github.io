@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+<title>Grok Build 使用教程（2026 年最新版） - CNM 国内 AI 订阅升级与使用教程大全</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+
+
+<meta name="description" content="">
+
+
+
+
+
+
+
+
+
+<link rel="icon" type="image/png" href="/favicon.png?v=20260519-2">
+<link rel="shortcut icon" type="image/png" href="/favicon.png?v=20260519-2">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                <img src="/images/logo.png" alt="" height="28">
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="/">Home</a>
+            
+            <a class="navbar-item "
+               href="/archives">Archives</a>
+            
+            <a class="navbar-item "
+               href="/categories">Categories</a>
+            
+            <a class="navbar-item "
+               href="/tags">Tags</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            Grok Build 使用教程（2026 年最新版）
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <span>May 26 2026</span>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Grok-Build/">Grok Build</a><span>></span><a class="article-category-link" href="/categories/Grok-Build/Grok/">Grok</a><span>></span><a class="article-category-link" href="/categories/Grok-Build/Grok/SuperGrok/">SuperGrok</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            12 minutes read (About 1754 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p><img src="https://pic1.zhimg.com/70/v2-428c9154c1249fbce622c707e613a457_1440w.image?source=172ae18b&amp;biz_tag=Post" alt="Grok Build 使用教程（2026 年最新版）"></p>
+<p>Grok Build 是 xAI 官方推出的<strong>终端 AI 编码代理</strong>（Coding Agent CLI），于 2026 年 5 月正式进入早期 Beta 阶段。它把强大的 Grok 模型直接塞进你的终端，能帮你完成从规划、搜索、编码、测试到 Git 提交的全流程工作。</p>
+<p>它支持<strong>交互式 TUI</strong>（全屏、鼠标操作、无闪烁）、<strong>Plan Mode</strong>（先规划再执行）、<strong>并行子代理</strong>、<strong>无头模式</strong>（脚本/自动化）、<strong>ACP 协议</strong>接入其他工具等特性，是目前最接近“专业软件工程师”的终端 AI 工具之一。</p>
+<h2 id="1-前提条件"><a href="#1-前提条件" class="headerlink" title="1. 前提条件"></a>1. 前提条件</h2><ul>
+<li><strong>订阅要求</strong>：SuperGrok 或 X Premium Plus 会员</li>
+</ul>
+<p><a href="https://clawdo.com/2026/02/supergrok-upgrade/">点击查看文章 : 2026 国内最新 SuperGrok 升级订阅教程</a></p>
+<ul>
+<li><strong>系统支持</strong>：macOS、Linux、Windows（推荐 macOS/Linux 体验最佳）。</li>
+<li><strong>推荐环境</strong>：在你的项目根目录下运行效果最好（它会自动读取仓库结构、AGENTS.md、技能等）。</li>
+</ul>
+<h2 id="2-安装-Grok-Build"><a href="#2-安装-Grok-Build" class="headerlink" title="2. 安装 Grok Build"></a>2. 安装 Grok Build</h2><p><strong>macOS / Linux</strong></p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://x.ai/cli/install.sh | bash</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>Windows（PowerShell，管理员权限推荐）</strong></p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">irm https://x.ai/cli/install.ps1 | iex</span><br></pre></td></tr></tbody></table></figure>
+
+<p>安装完成后，终端输入 <code>grok --version</code> 验证是否成功。</p>
+<h2 id="3-首次启动与登录"><a href="#3-首次启动与登录" class="headerlink" title="3. 首次启动与登录"></a>3. 首次启动与登录</h2><ol>
+<li>进入你的项目目录：<code>cd /path/to/your/project</code></li>
+<li>启动 Grok Build：<code>grok</code></li>
+</ol>
+<p><img src="https://pic4.zhimg.com/80/v2-5c281c93dcbb1ce2a0a4e20f39867485_720w.webp" alt="输入 grok 启动 Grok Build"></p>
+<ol start="3">
+<li>首次登录： 会自动打开浏览器进行 xAI 账号授权（推荐）。</li>
+</ol>
+<p><img src="https://pic1.zhimg.com/80/v2-5921332298d2de85981109543f6739b6_720w.webp" alt="点击允许即可连接成功"></p>
+<p>无浏览器环境可手动设置环境变量：<code>export XAI_API_KEY="xai-你的密钥"</code> （密钥可在 <a target="_blank" rel="noopener" href="https://console.x.ai/team/default/api-keys">https://console.x.ai/team/default/api-keys</a> 获取）</p>
+<p>登录成功后会进入<strong>全屏交互式 TUI</strong> 界面。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-83661bf219b0a122ee192bd0315eccfd_720w.webp" alt="TUI 界面"></p>
+<h2 id="4-TUI-界面操作指南"><a href="#4-TUI-界面操作指南" class="headerlink" title="4. TUI 界面操作指南"></a>4. TUI 界面操作指南</h2><p>Grok Build 的 TUI 支持<strong>鼠标点击</strong>、<strong>键盘快捷键</strong>，界面清晰无闪烁：</p>
+<p><strong>输入框</strong>：直接输入自然语言指令（如中文或英文）。</p>
+<p><strong>常用命令</strong>（在 TUI 内输入）：</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>/help</td>
+<td>打开动态帮助面板（推荐新手必用）</td>
+</tr>
+<tr>
+<td>/plan</td>
+<td>手动进入 Plan Mode</td>
+</tr>
+<tr>
+<td>/yolo 或 /always-approve</td>
+<td>开启/关闭自动批准模式（YOLO 模式）</td>
+</tr>
+<tr>
+<td>/model &lt;模型名&gt;</td>
+<td>切换模型</td>
+</tr>
+<tr>
+<td>/inspect</td>
+<td>查看当前项目加载的技能、插件与配置</td>
+</tr>
+<tr>
+<td>/feedback</td>
+<td>直接向 xAI 团队提交反馈（Beta 阶段非常有用）</td>
+</tr>
+<tr>
+<td>/clear</td>
+<td>清空当前会话历史</td>
+</tr>
+</tbody></table>
+<h2 id="5-Plan-Mode（强烈推荐用于复杂任务）"><a href="#5-Plan-Mode（强烈推荐用于复杂任务）" class="headerlink" title="5. Plan Mode（强烈推荐用于复杂任务）"></a>5. Plan Mode（强烈推荐用于复杂任务）</h2><p>输入复杂需求前，先用 <code>/plan</code> 或启动时加标志进入规划模式。</p>
+<p>Grok Build 会先输出完整执行计划（分步骤）。 你可以：</p>
+<ul>
+<li>逐条批准（Enter）</li>
+<li>评论修改某一步</li>
+<li>完全重写计划</li>
+<li>批准后，所有文件变更都会以<strong>干净的 diff</strong> 形式展示，确认无误后再执行。</li>
+</ul>
+<p><strong>Plan Mode 的三种常用方法</strong></p>
+<ol>
+<li>快捷键切换（最快，推荐日常使用） :在 TUI 中按 <code>Shift + Tab</code> 循环切换模式，直到状态栏显示 Plan。</li>
+</ol>
+<p><img src="https://pica.zhimg.com/80/v2-d0225eca962eb29b5a5854db575589d2_720w.webp" alt="Plan"></p>
+<ol start="2">
+<li>使用 Slash 命令: 输入命令<code>/plan</code>或<code>/plan on</code>后按回车。</li>
+<li>启动时直接进入（适合复杂任务）:<code>grok --plan</code> 或结合项目路径：<code>cd your-project &amp;&amp; grok --plan</code></li>
+</ol>
+<p><strong>退出或切换回 Normal 模式</strong></p>
+<p>再次按 <strong>Shift + Tab</strong> 切换到 Normal 模式或输入命令：<code>/plan off</code></p>
+<h2 id="6-基本使用示例"><a href="#6-基本使用示例" class="headerlink" title="6. 基本使用示例"></a>6. 基本使用示例</h2><h3 id="示例-1：新建项目"><a href="#示例-1：新建项目" class="headerlink" title="示例 1：新建项目"></a>示例 1：新建项目</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">创建一个现代化的 React + TypeScript Todo App，带暗黑模式、拖拽排序、本地存储，使用 Tailwind CSS，风格参考 Apple</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>操作建议：</strong></p>
+<ol>
+<li>直接在空文件夹中启动 <code>grok</code></li>
+<li>推荐开启 <strong>Plan Mode</strong>，让 Grok Build 先输出项目结构、依赖清单和技术方案</li>
+<li>批准计划后，它会自动创建 <code>package.json</code>、组件文件、样式，并初始化 Git 仓库</li>
+</ol>
+<p><img src="https://pic2.zhimg.com/80/v2-5025ef5c426c363e00c54c58cdcf137b_720w.webp" alt="项目创建中"></p>
+<p><img src="https://pic3.zhimg.com/80/v2-d49a994b059244332f8cde27d677ffd6_720w.webp" alt="项目创建完成"></p>
+<p><strong>预期效果：</strong></p>
+<ul>
+<li>生成完整的项目结构（含 README、测试文件）</li>
+</ul>
+<p><img src="https://picx.zhimg.com/80/v2-4a9be217b7309ab0e85f64cd1606ae77_720w.webp" alt="项目结构"></p>
+<ul>
+<li>包含暗黑模式切换、拖拽排序（@dnd-kit）、本地持久化（localStorage + Zustand）</li>
+<li>自动安装依赖并运行 <code>npm run dev</code></li>
+</ul>
+<p><img src="https://pica.zhimg.com/80/v2-4a12cbf7a83ac3d1c43481167bf36dea_720w.webp" alt="示例 1 结果预览"></p>
+<p><strong>进阶技巧：</strong></p>
+<ul>
+<li>追加需求：“加上用户登录界面和后端 API 模拟”</li>
+<li>完成后输入：“帮我部署到 Vercel 并生成部署脚本”</li>
+</ul>
+<h3 id="示例-2：分析现有项目"><a href="#示例-2：分析现有项目" class="headerlink" title="示例 2：分析现有项目"></a>示例 2：分析现有项目</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Explain this repo in detail. 重点分析架构、核心模块和潜在优化点。</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="示例-3：修改代码"><a href="#示例-3：修改代码" class="headerlink" title="示例 3：修改代码"></a>示例 3：修改代码</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@src/main.rs 帮我把这个文件重构为更清晰的模块结构，并添加错误处理。</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="示例-4：并行子代理（大型任务）"><a href="#示例-4：并行子代理（大型任务）" class="headerlink" title="示例 4：并行子代理（大型任务）"></a>示例 4：并行子代理（大型任务）</h3><p>Grok Build 会自动拆分任务给多个子代理并行执行（如一个写前端、一个写后端、一个写测试）。</p>
+<h2 id="7-无头模式（Headless）——-脚本-自动化神器"><a href="#7-无头模式（Headless）——-脚本-自动化神器" class="headerlink" title="7. 无头模式（Headless）—— 脚本/自动化神器"></a>7. 无头模式（Headless）—— 脚本/自动化神器</h2><p>适合 CI/CD、自动化脚本或嵌入其他工具：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 简单执行</span><br><span class="line">grok -p "为当前项目添加用户认证模块（JWT + 数据库）"</span><br><span class="line"></span><br><span class="line"># 输出 JSON 便于解析</span><br><span class="line">grok -p "分析这个代码库的安全问题" --output-format streaming-json</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="8-高级功能"><a href="#8-高级功能" class="headerlink" title="8. 高级功能"></a>8. 高级功能</h2><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>说明</th>
+<th>如何使用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>并行子代理</td>
+<td>大任务自动拆分多个代理同时工作</td>
+<td>自然语言描述即可</td>
+</tr>
+<tr>
+<td>Git 深度集成</td>
+<td>自动创建分支、提交、生成 PR</td>
+<td>直接说“提交这些改动”</td>
+</tr>
+<tr>
+<td>自定义配置</td>
+<td>支持 AGENTS.md、技能、插件、MCP 服务器</td>
+<td>项目根目录放置即可</td>
+</tr>
+<tr>
+<td>自定义模型</td>
+<td>可接入其他模型</td>
+<td>配置文件 + /model 切换</td>
+</tr>
+<tr>
+<td>ACP 协议</td>
+<td>可接入 IDE、其他 Agent 框架</td>
+<td>官方支持</td>
+</tr>
+<tr>
+<td>Inspect</td>
+<td>查看当前项目已加载的配置、技能等</td>
+<td>grok inspect</td>
+</tr>
+</tbody></table>
+<h2 id="9-实用技巧-注意事项"><a href="#9-实用技巧-注意事项" class="headerlink" title="9. 实用技巧 &amp; 注意事项"></a>9. 实用技巧 &amp; 注意事项</h2><ul>
+<li><strong>最好在 Git 仓库根目录运行</strong>，效果最强。</li>
+<li><strong>大项目建议先用 Plan Mode</strong>，避免一次性改太多。</li>
+<li><strong>图片支持</strong>：可直接粘贴截图让它分析 UI 或报错。</li>
+<li><strong>多任务切换</strong>：支持同时运行多个 Grok Build 实例。</li>
+<li><strong>Beta 阶段</strong>：偶尔会有小 bug，遇到问题请用 <code>/feedback</code> 反馈。</li>
+<li><strong>卸载</strong>：参考官方文档或删除对应二进制文件。</li>
+</ul>
+</body></html>
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/SuperGrok/">#SuperGrok</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Grok/">#Grok</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Grok-Build/">#Grok Build</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-prev">
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2026/05/How-to-Build-an-Android-App-with-Google-AI-Studio/">10 分钟实战:手把手教你用 Google AI Studio 做一个能用的安卓 App</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2026 dadaming&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        target="_blank" rel="noopener" href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" target="_blank" rel="noopener" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery > p > .gallery-item').unwrap();
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
+        }
+
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hljs .clipboard-btn:hover {
+          color: #8a8a8a;
+        }
+
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
+
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
+
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+        clipboard.on('success', function(e) {
+          e.clearSelection();
+        })
+      })
+    </script>
+
+    
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+    
+</body>
+</html>

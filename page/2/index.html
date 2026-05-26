@@ -100,6 +100,148 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
+            <a href="/2026/05/Codex-Pet-Complete-Guide/" itemprop="url">Codex电子宠物保姆级教程：/pet唤醒，/hatch自制宠物，/goal让它盯着任务跑</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <span>May 5 2026</span>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Codex/">Codex</a><span>></span><a class="article-category-link" href="/categories/Codex/ChatGPT/">ChatGPT</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            10 minutes read (About 1517 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p><img src="https://picx.zhimg.com/70/v2-44e7a74b81418448ca2047a95544daaa_1440w.image?source=172ae18b&amp;biz_tag=Post" alt="Codex电子宠物保姆级教程：/pet唤醒，/hatch自制宠物，/goal让它盯着任务跑"></p>
+<p>上周，Codex 悄悄更新了。</p>
+<p>大多数人注意到的，是屏幕角落突然多了一只会动的宠物。</p>
+<p><strong>宠物是表面。真正藏在里面的，是一套让Agent持续干活的新机制。</strong></p>
+<p>今天这篇，帮你把这次Codex更新吃透——<code>/pet</code>怎么玩，宠物怎么自制，<code>/goal</code>到底解决了什么问题。</p>
+<h2 id="一、说一下那只宠物：它不是摆设"><a href="#一、说一下那只宠物：它不是摆设" class="headerlink" title="一、说一下那只宠物：它不是摆设"></a>一、说一下那只宠物：它不是摆设</h2><p>输入 <code>/pet</code>，Codex桌面端的角落会冒出一只小动物。</p>
+<p><img src="https://pic1.zhimg.com/v2-337b3664282f8b795a42db43d70e1384_1440w.jpg" alt="img"></p>
+<p>可以悬浮、跨App显示。会随着任务状态变换动作。</p>
+<p>这就<strong>解决</strong>了一个真实的<strong>痛点</strong>：<strong>让你知道Codex在跑、有没有卡住、是不是在等我输入？</strong></p>
+<h2 id="二、两步唤醒"><a href="#二、两步唤醒" class="headerlink" title="二、两步唤醒"></a>二、两步唤醒</h2><p>首先确认你用的是 <strong>Codex桌面端App</strong>，不是纯 CLI。</p>
+<p>在输入框输入：<code>/pet</code></p>
+<p><img src="https://picx.zhimg.com/v2-8e201838f82f156ba5f0ae2df657433f_1440w.jpg" alt="img"></p>
+<p>角落就会出现宠物。再输一次，收起。</p>
+<p>或者： <code>Settings ~&gt; Appearance ~&gt; Pets</code></p>
+<p><img src="https://pic2.zhimg.com/v2-8303f1dc1e3488b4058317402610d729_1440w.jpg" alt="img"></p>
+<p>快捷键党用 <code>Cmd+K</code> / <code>Ctrl+K</code> 打开命令面板，同样可以唤醒或收起。</p>
+<p>内置宠物可以直接用，不用任何配置。</p>
+<h2 id="三、进阶：用-hatch-搞一只自己的宠物"><a href="#三、进阶：用-hatch-搞一只自己的宠物" class="headerlink" title="三、进阶：用 /hatch 搞一只自己的宠物"></a>三、进阶：用 /hatch 搞一只自己的宠物</h2><p>不喜欢内置的可以自己造一只。</p>
+<p>Codex 支持通过 <code>hatch-pet</code> skill创建自定义宠物。</p>
+<p><strong>第一步：安装skill</strong>：直接输入<code>$skill-installer hatch-pet</code></p>
+<p><strong>第二步：重载skill</strong>：按<code>Cmd/Ctrl + K</code>跑<code>Force Reload Skills</code></p>
+<p><strong>第三步：给出提示词，让它帮你生成，或者通过 image2 生成参考图，让其参考图片生成宠物</strong></p>
+<p>直接抄这个模板，改一改就行：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">帮我创建一只 Codex 电子宠物。</span><br><span class="line">宠物名称：yinienie</span><br><span class="line">宠物类型：像素风小黑猫</span><br><span class="line">视觉风格：极简，轮廓清晰，适合桌面悬浮</span><br><span class="line">性格设定：傲娇但靠谱，发现问题会直接提醒</span><br><span class="line">主要颜色：黑色 + 绿色眼睛</span><br><span class="line">标志元素：脖子上挂一块小代码牌</span><br><span class="line">动作状态：</span><br><span class="line">1. idle 待机</span><br><span class="line">2. working 敲代码中</span><br><span class="line">3. thinking 歪头冒问号</span><br><span class="line">4. waiting 等待输入</span><br><span class="line">5. done 开心跳一下</span><br><span class="line">6. sleeping 趴下睡觉</span><br><span class="line">要求：无背景、无文字、缩小后轮廓依然清晰</span><br></pre></td></tr></tbody></table></figure>
+
+<p>提示词越具体，生成结果越稳。 记住：</p>
+<ol>
+<li>轮廓要清楚（缩到角落还认得出来吗）；</li>
+<li>颜色控制在2-4个；</li>
+<li>动作要有状态感，待机/工作/完成各不同；</li>
+<li>人设要具体，别只写”可爱”，写”傲娇但认真”生成结果稳多了。</li>
+</ol>
+<p>还有就是：不加文字。 宠物那么小，字上去必糊。</p>
+<p><strong>image2 生成图片提示词：</strong></p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">什么什么角色</span><br><span class="line">纯色绿幕背景</span><br><span class="line">无场景无文字无阴影无额外漂浮特效</span><br><span class="line">像素邻近风格</span><br><span class="line">适合缩小到 192x208</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="https://pic1.zhimg.com/v2-afc951f913c3eb9829cde6f9d301461c_1440w.jpg" alt="img"></p>
+<p>生成图片</p>
+<p><img src="https://pica.zhimg.com/v2-1260268dee46db2fc361cb68bb86efe6_1440w.jpg" alt="img"></p>
+<p><strong>动作效果：</strong></p>
+<p><img src="https://pica.zhimg.com/v2-2d6b6432785b95889ee9328a7d1bd358_1440w.jpg" alt="img"></p>
+<p>打开设置外观下滑到底即可查看你的自定义宠物</p>
+<p><img src="https://pic1.zhimg.com/v2-591353ce1e965fef6724cf3f71c52a1c_1440w.jpg" alt="img"></p>
+<p><img src="https://picx.zhimg.com/v2-4d864d0ca4ea9f1d5bb3072353af732b_1440w.jpg" alt="img"></p>
+<h2 id="四、重头戏：-goal"><a href="#四、重头戏：-goal" class="headerlink" title="四、重头戏：/goal"></a>四、重头戏：/goal</h2><p>以前Agent跑一轮就停，你得手动推下一步。</p>
+<p><strong>/goal</strong> 之后：告诉它目标，它自己持续开，你只管关键节点审查。</p>
+<p>从手动挡，变成自动导航。</p>
+<h2 id="五、-goal-怎么开启？"><a href="#五、-goal-怎么开启？" class="headerlink" title="五、/goal 怎么开启？"></a>五、/goal 怎么开启？</h2><p><strong>手动打开</strong>。</p>
+<p>编辑配置文件： <code>~/.codex/config.toml</code></p>
+<p>加入： <code>[features] goals = true</code></p>
+<p>或者直接命令行： <code>codex update codex features enable goals</code></p>
+<p>开启之后，核心命令就这几个：</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>/goal &lt;目标描述&gt;</td>
+<td>创建目标，开始持续执行</td>
+</tr>
+<tr>
+<td>/goal pause</td>
+<td>暂停，中途检查用</td>
+</tr>
+<tr>
+<td>/goal unpause</td>
+<td>继续执行</td>
+</tr>
+<tr>
+<td>/goal clear</td>
+<td>清除目标，重新来</td>
+</tr>
+</tbody></table>
+<p><strong>pause/unpause这对命令非常重要。</strong></p>
+<p>Agent跑偏了不要直接Ctrl+C粗暴停，先pause，看看跑到哪了，补充上下文，再unpause继续。</p>
+<h2 id="六、goal-怎么才好用？"><a href="#六、goal-怎么才好用？" class="headerlink" title="六、goal 怎么才好用？"></a>六、goal 怎么才好用？</h2><p>一个好用的goal要包含4个要素： <strong>任务目标、执行边界、验收标准、输出要求。</strong></p>
+<p><strong>修bug：</strong></p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/goal 修复登录页点击后偶发loading卡死问题。</span><br><span class="line">先定位原因，再做最小改动。</span><br><span class="line">验收：登录正常结束，失败时能恢复按钮状态。</span><br><span class="line">最后总结改动文件和潜在风险。</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>重构：</strong></p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/goal 把Dashboard页面重复卡片结构拆成可复用组件。</span><br><span class="line">不改接口逻辑，不改视觉效果。</span><br><span class="line">完成后跑类型检查，总结拆分思路。</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>补测试：</strong></p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/goal 为订单状态转换逻辑补测试。</span><br><span class="line">先读现有测试风格，再覆盖正常流、异常流、边界情况。</span><br><span class="line">跑完说明覆盖了哪些场景。</span><br></pre></td></tr></tbody></table></figure>
+
+<p>记住：<strong>目标越清晰，它跑偏的概率越低。</strong></p>
+<h2 id="七、什么时候用，什么时候不用？"><a href="#七、什么时候用，什么时候不用？" class="headerlink" title="七、什么时候用，什么时候不用？"></a>七、什么时候用，什么时候不用？</h2><p><strong>适合 <code>/goal</code> 的场景：</strong></p>
+<ul>
+<li>项目重构（改动多、轮次长）</li>
+<li>批量修bug（重复劳动，交给它跑）</li>
+<li>补测试、写文档（不需要每步确认）</li>
+<li>排查复杂问题（让它先探路）</li>
+</ul>
+<p><strong>人工介入的场景：</strong></p>
+<ul>
+<li>涉及支付、权限、数据删除</li>
+<li>改动核心业务逻辑</li>
+<li>生产环境部署前</li>
+</ul>
+<p><strong>让Codex执行重复劳动，让自己做最后的判断。</strong></p>
+</body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
             <a href="/2026/04/Google-Email-Registration/" itemprop="url">2026 年国内最新注册 Gmail 谷歌邮箱教程 | 一部手机五分钟，注册成功率90%以上</a>
         
     </h1>
@@ -1048,94 +1190,6 @@
 <ol start="5">
 <li>刷新 Claude 页面或者重新登陆，就能看到 Pro 标识了，Artifacts 随便用，次数限制也解除了。</li>
 </ol>
-</body></html>
-    
-    </div>
-    
-    
-</article>
-
-
-
-
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            <a href="/2026/02/supergrok-upgrade/" itemprop="url">2026 国内最新 SuperGrok 升级订阅教程</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            
-                <span>Feb 4 2026</span>
-            
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/SuperGrok/">SuperGrok</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            6 minutes read (About 825 words)
-        </span>
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <html><head></head><body><p><img src="https://pica.zhimg.com/v2-ced73171a46a761271130105a44ef291_720w.jpg?source=172ae18b" alt="2026 国内最新订阅升级 SuperGrok 教程"></p>
-<p>如果你想升级到 <strong>SuperGrok</strong>，最稳妥的方式还是通过官方渠道订阅。</p>
-<h2 id="官方订阅入口"><a href="#官方订阅入口" class="headerlink" title="官方订阅入口"></a>官方订阅入口</h2><p>进入 <strong><a target="_blank" rel="noopener" href="https://grok.com/">http://grok.com</a></strong> → 点击 <strong>Plans</strong> → 选择 <strong>SuperGrok</strong> 套餐 → 绑定信用卡或 PayPal 完成支付。</p>
-<h3 id="套餐价格参考"><a href="#套餐价格参考" class="headerlink" title="套餐价格参考"></a>套餐价格参考</h3><p><img src="https://pic2.zhimg.com/80/v2-277dbbc5b25bc5ab56ed6063e9533e77_720w.webp" alt="官方套餐"></p>
-<ul>
-<li><strong>SuperGrok Lite</strong>：<strong>10 美元/月</strong></li>
-<li><strong>SuperGrok Lite 年付</strong>：<strong>100 美元/年</strong>（折合 <strong>8.33 美元/月</strong>）</li>
-<li><strong>SuperGrok</strong>：<strong>30 美元/月</strong></li>
-<li><strong>SuperGrok 年付</strong>：<strong>300 美元/年</strong>（折合 <strong>25 美元/月</strong>）</li>
-<li><strong>SuperGrok Heavy</strong>：<strong>300 美元/月</strong></li>
-</ul>
-<h3 id="优惠说明"><a href="#优惠说明" class="headerlink" title="优惠说明"></a>优惠说明</h3><ul>
-<li>已开通 <strong><a target="_blank" rel="noopener" href="https://zhida.zhihu.com/search?content_id=775842761&amp;content_type=Answer&amp;match_order=1&amp;q=X+Premium+&amp;zhida_source=entity">X Premium+</a></strong> 的用户，可享 <strong>50% 折扣</strong></li>
-<li>已开通 <strong>X Premium</strong> 的用户，可享 <strong>25% 折扣</strong></li>
-<li>当前支持 <strong>3 天免费试用</strong>（需先绑定支付方式）</li>
-</ul>
-<blockquote>
-<p>以上价格与优惠活动，请以 Grok 官方页面实际显示为准。</p>
-</blockquote>
-<h2 id="国内用户常见问题"><a href="#国内用户常见问题" class="headerlink" title="国内用户常见问题"></a>国内用户常见问题</h2><p>不少国内用户在订阅时，都会遇到这些情况：</p>
-<ul>
-<li>国内信用卡支付失败</li>
-<li>没有可用的境外 PayPal</li>
-<li>不清楚海外支付流程，操作起来比较麻烦</li>
-</ul>
-<p>如果你不想自己折腾这些支付步骤，也可以考虑通过官方代充方式处理。</p>
-<p><strong>官方代充网站：</strong></p>
-<p><a target="_blank" rel="noopener" href="https://cnmgrok.com/">SuperGrok 官方代充网站：cnmgrok.com</a></p>
-<p><img src="https://pic3.zhimg.com/80/v2-d010fdb92b5fe5dcfc40ba0508de421e_720w.webp" alt="SuperGrok 官方代充网站"></p>
-<h2 id="国内-SuperGrok-升级教程"><a href="#国内-SuperGrok-升级教程" class="headerlink" title="国内 SuperGrok 升级教程"></a>国内 SuperGrok 升级教程</h2><p>前往 <strong>SuperGrok 官方代充网站：</strong><br><a target="_blank" rel="noopener" href="https://cnmgrok.com/">cnmgrok.com</a></p>
-<p>自助下单<strong>购买充值码</strong>。</p>
-<h3 id="第一步：输入卡密或充值码"><a href="#第一步：输入卡密或充值码" class="headerlink" title="第一步：输入卡密或充值码"></a>第一步：输入卡密或充值码</h3><p>进入充值页面后，先填写你购买好的 <strong>卡密 / 充值码</strong>。</p>
-<p><img src="https://pic3.zhimg.com/80/v2-6fd89df470bab8df05d64aaee7a407f0_720w.webp" alt="输入填写的卡密/充值码"></p>
-<h3 id="第二步：获取并填写-Grok-用户-ID"><a href="#第二步：获取并填写-Grok-用户-ID" class="headerlink" title="第二步：获取并填写 Grok 用户 ID"></a>第二步：获取并填写 Grok 用户 ID</h3><p>你需要先获取自己的 <strong>Grok 用户 ID</strong>。</p>
-<p>获取方式有两种：</p>
-<ul>
-<li>在 Grok 账号的 <strong>设置页面</strong> 中查看</li>
-<li>或者直接打开以下链接跳转到账户页： <a target="_blank" rel="noopener" href="https://grok.com/%3F_s%3Daccount">https://grok.com/?_s=account</a></li>
-</ul>
-<p><img src="https://pic3.zhimg.com/80/v2-b52867f341363ac13b494563ec656fcc_720w.webp" alt="复制你的 Grok ID"></p>
-<p>打开后，复制你的 <strong><a target="_blank" rel="noopener" href="https://grok.com/?_s=account">Grok ID</a>（账号 ID）</strong>，再返回充值系统填写即可。</p>
-<p><img src="https://pic3.zhimg.com/80/v2-c2beb9e3e70e8829aa1aa20743b700ee_720w.webp" alt="粘贴刚刚复制的 ID"></p>
-<h3 id="第三步：确认提交，完成升级"><a href="#第三步：确认提交，完成升级" class="headerlink" title="第三步：确认提交，完成升级"></a>第三步：确认提交，完成升级</h3><p>确认信息无误后，点击提交，等待充值完成即可。</p>
-<p><img src="https://pic2.zhimg.com/80/v2-df6c363d32555fd1f0418a1c62a49741_720w.webp" alt="点击开始充值"></p>
-<p>充值成功后，返回 Grok 账号页面，就可以看到 <strong>SuperGrok</strong> 已经开通。</p>
-<p><img src="https://pic1.zhimg.com/80/v2-5a9401a09babc058134eef9bab32c37c_720w.webp" alt="Grok 页面"></p>
-<p>整个流程通常 <strong>无需提供账号密码</strong>，只需填写对应的用户 ID 即可完成充值。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>如果你有可用的海外支付方式，建议优先走 <strong>Grok 官方渠道</strong> 订阅，更直接也更稳妥。</p>
-<p>如果你暂时无法完成海外支付，可以考虑<a target="_blank" rel="noopener" href="https://cnmgrok.com/">官方代充</a>方案。</p>
 </body></html>
     
     </div>

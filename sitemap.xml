@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://clawdo.com/2026/05/Grok-Build-Guide-2026/</loc>
+    
+    <lastmod>2026-05-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://clawdo.com/2026/05/How-to-Build-an-Android-App-with-Google-AI-Studio/</loc>
     
     <lastmod>2026-05-22</lastmod>
@@ -211,7 +220,7 @@
 
   <url>
     <loc>https://clawdo.com/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -219,126 +228,133 @@
   
   <url>
     <loc>https://clawdo.com/tags/ChatGPT/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/tags/OpenClaw/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/tags/Codex/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/tags/Claude/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/tags/SuperGrok/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/tags/Google/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/tags/Google-gmail/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/tags/Grok/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/tags/Hermes-Agent/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/tags/Chrome/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/tags/Pet/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/tags/%E7%94%B5%E5%AD%90%E5%AE%A0%E7%89%A9/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/tags/Claude-Design/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/tags/Figma/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/tags/Windows/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/tags/Google-AI-Studio/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/tags/Gemini/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/tags/Android/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://clawdo.com/tags/Grok-Build/</loc>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -347,98 +363,119 @@
   
   <url>
     <loc>https://clawdo.com/categories/ChatGPT/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/categories/Claude/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/categories/SuperGrok/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/categories/Google/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/categories/SuperGrok/Hermes-Agent/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/categories/SuperGrok/Hermes-Agent/Grok/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/categories/ChatGPT/Codex/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/categories/Codex/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/categories/Codex/ChatGPT/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/categories/Grok/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/categories/Grok/SuperGrok/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/categories/Google-AI-Studio/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/categories/Google-AI-Studio/Gemini/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://clawdo.com/categories/Google-AI-Studio/Gemini/Google/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://clawdo.com/categories/Grok-Build/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://clawdo.com/categories/Grok-Build/Grok/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://clawdo.com/categories/Grok-Build/Grok/SuperGrok/</loc>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

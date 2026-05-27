@@ -107,6 +107,106 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
+            <a href="/2026/05/Grok-Build-Error-Sending-Request-Fix/" itemprop="url">Grok Build error sending request 怎么解决？问题出在这里</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <span>May 27 2026</span>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Grok-Build/">Grok Build</a><span>></span><a class="article-category-link" href="/categories/Grok-Build/Grok/">Grok</a><span>></span><a class="article-category-link" href="/categories/Grok-Build/Grok/SuperGrok/">SuperGrok</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            8 minutes read (About 1241 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p><img src="https://picx.zhimg.com/70/v2-f795b22e2c32de0e5541d04f947226ac_1440w.image?source=172ae18b&amp;biz_tag=Post" alt="Grok Build error sending request 怎么解决？排查了一晚上，问题出在这里"></p>
+<p>前几天装 Grok Build，被一个特别隐蔽的问题卡了一晚上。</p>
+<p>折腾完之后回头看，发现这个坑其实很多人都会踩，踩了之后第一反应基本都是错的。今天把过程整个写出来，看完这篇你应该可以省不少时间。</p>
+<h2 id="报错长这样"><a href="#报错长这样" class="headerlink" title="报错长这样"></a>报错长这样</h2><p>我本地装好 Grok Build 之后，初始化要跳转 xAI 登录认证。浏览器那边一切正常，但终端这边一直转圈，过一会儿就甩出来这段：<code>error sending request for url https://auth.x.ai/.well-known/openid-configuration</code></p>
+<p><img src="https://pic4.zhimg.com/v2-5c281c93dcbb1ce2a0a4e20f39867485_1440w.jpg" alt="img"></p>
+<p>翻译就是：Grok Build 想去请求 <code>auth.x.ai</code> 获取登录配置，但是请求根本发不出去。</p>
+<h2 id="我开始全猜错"><a href="#我开始全猜错" class="headerlink" title="我开始全猜错"></a>我开始全猜错</h2><p>我的第一反应是这么排查的：重装、换号、升级、清配置，全没用。</p>
+<p>折腾快一小时才反应过来，报错里写得明明白白：<code>error sending request</code></p>
+<p>请求压根没发出去——这是网络层的问题，跟上面那些一个都不沾边。</p>
+<h2 id="最反直觉的一点"><a href="#最反直觉的一点" class="headerlink" title="最反直觉的一点"></a>最反直觉的一点</h2><p>根本原因是：</p>
+<blockquote>
+<p><strong>浏览器能上不等于终端能上</strong></p>
+</blockquote>
+<p>我们日常用的本地网络工具，默认只接管浏览器流量。PowerShell、CMD、Node.js 这些命令行工具，默认不读取系统网络配置，全走直连。Grok Build 的请求自然也没走配好的通道。</p>
+<h2 id="完整排查步骤"><a href="#完整排查步骤" class="headerlink" title="完整排查步骤"></a>完整排查步骤</h2><h3 id="第-1-步：先确认浏览器能打开"><a href="#第-1-步：先确认浏览器能打开" class="headerlink" title="第 1 步：先确认浏览器能打开"></a>第 1 步：先确认浏览器能打开</h3><p>浏览器手动访问：</p>
+<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://auth.x.ai/.well-known/openid-configuration</span><br></pre></td></tr></tbody></table></figure>
+
+<p>能看到一大段 JSON 配置就说明你的本地网络环境没问题。打不开的话先解决网络环境本身。</p>
+<h3 id="第-2-步：找到本地网络工具的端口"><a href="#第-2-步：找到本地网络工具的端口" class="headerlink" title="第 2 步：找到本地网络工具的端口"></a>第 2 步：找到本地网络工具的端口</h3><p>不同网络工具端口不一样，<strong>千万别照搬别人的端口号</strong>。</p>
+<p>打开你自己常用的那个本地网络工具，找到”本地端口”或”入站端口”，把 HTTP 和 SOCKS 两个端口号都记下来。一般在主界面就能看到，类似：</p>
+<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">本地: socks:XXXXX | http:XXXXX</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="第-3-步：在终端里手动配置环境变量"><a href="#第-3-步：在终端里手动配置环境变量" class="headerlink" title="第 3 步：在终端里手动配置环境变量"></a>第 3 步：在终端里手动配置环境变量</h3><p><strong>用 PowerShell 的话</strong>，输入下面的命令，把端口号换成你自己的：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$env:HTTP_PROXY="http://127.0.0.1:你的HTTP端口"</span><br><span class="line">$env:HTTPS_PROXY="http://127.0.0.1:你的HTTP端口"</span><br><span class="line">$env:ALL_PROXY="socks5://127.0.0.1:你的SOCKS端口"</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>用 CMD 的话</strong>，命令换成：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">set HTTP_PROXY=http://127.0.0.1:你的HTTP端口</span><br><span class="line">set HTTPS_PROXY=http://127.0.0.1:你的HTTP端口</span><br><span class="line">set ALL_PROXY=socks5://127.0.0.1:你的SOCKS端口</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这是告诉这个终端窗口：你后续发出的请求都走本地这些端口。</p>
+<p><strong>有个特别重要的细节</strong>：</p>
+<p>这个配置<strong>只在当前窗口生效</strong>，窗口一关就失效。所以下面所有的测试和最后跑 Grok Build，都必须在<strong>同一个窗口</strong>里完成。</p>
+<h3 id="第-4-步：用-curl-做对比测试"><a href="#第-4-步：用-curl-做对比测试" class="headerlink" title="第 4 步：用 curl 做对比测试"></a>第 4 步：用 curl 做对比测试</h3><p>这一步是整个排查的关键，能精准定位问题。</p>
+<p>先测带端口参数的版本：</p>
+<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl.exe -x http://127.0.0.1:你的HTTP端口 https://auth.x.ai/.well-known/openid-configuration</span><br></pre></td></tr></tbody></table></figure>
+
+<p>返回一大段 JSON 就说明本地通道本身没问题。</p>
+<p>再测不带端口参数的版本：</p>
+<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl.exe https://auth.x.ai/.well-known/openid-configuration</span><br></pre></td></tr></tbody></table></figure>
+
+<p>如果<strong>这个失败、上面那个成功</strong>，就 100% 锁定了问题：命令行环境没读取系统的网络配置，必须靠手动设置环境变量解决。</p>
+<h3 id="第-5-步：在同一个窗口跑-Grok-Build"><a href="#第-5-步：在同一个窗口跑-Grok-Build" class="headerlink" title="第 5 步：在同一个窗口跑 Grok Build"></a>第 5 步：在同一个窗口跑 Grok Build</h3><figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grok-build</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后点击界面里的：</p>
+<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Login with Grok</span><br></pre></td></tr></tbody></table></figure>
+
+<p>正常情况下浏览器会自动弹出登录页，跳转完成回到终端就能继续了。</p>
+<p><img src="https://pic1.zhimg.com/v2-5921332298d2de85981109543f6739b6_1440w.jpg" alt="img"></p>
+<p>授权登录</p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>整个问题的核心其实就一句话：</p>
+<blockquote>
+<p><strong>浏览器和终端是两套独立的网络通道，给浏览器配好了，不等于给终端配好了。</strong></p>
+</blockquote>
+<p>排查方法简单四步：</p>
+<ol>
+<li>看到 <code>error sending request</code>，先怀疑网络可达性，不要先怀疑软件本身。</li>
+<li>分别验证浏览器侧和终端侧的可达性。</li>
+<li>用 curl 带参数和不带参数各测一次，对比结果就能定位问题。</li>
+<li>实在不行就开 TUN，一了百了。</li>
+</ol>
+<p>这套思路不光适用于 Grok Build，所有需要联网的命令行工具都适用。各种 AI 命令行工具、<code>npm install</code> 超时之类的问题，本质上都是这一类。</p>
+<p>希望这篇能帮你少走点弯路。</p>
+</body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
             <a href="/2026/05/Grok-Build-Guide-2026/" itemprop="url">Grok Build 使用教程（2026 年最新版）</a>
         
     </h1>

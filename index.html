@@ -100,6 +100,143 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
+            <a href="/2026/05/Google-Antigravity-CLI-Windows-Guide/" itemprop="url">告别 Gemini CLI！Google 新神器 Antigravity CLI 上手指南（Windows 新手版）</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <span>May 29 2026</span>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Gemini/">Gemini</a><span>></span><a class="article-category-link" href="/categories/Gemini/Google/">Google</a><span>></span><a class="article-category-link" href="/categories/Gemini/Google/Antigravity-CLI/">Antigravity CLI</a><span>></span><a class="article-category-link" href="/categories/Gemini/Google/Antigravity-CLI/Windows/">Windows</a><span>></span><a class="article-category-link" href="/categories/Gemini/Google/Antigravity-CLI/Windows/Gemini-CLI/">Gemini CLI</a><span>></span><a class="article-category-link" href="/categories/Gemini/Google/Antigravity-CLI/Windows/Gemini-CLI/%E6%96%B0%E6%89%8B%E6%8C%87%E5%8D%97/">新手指南</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            10 minutes read (About 1572 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p><img src="https://picx.zhimg.com/70/v2-f8879e2dac10d50de9fb189d46924936_1440w.image?source=172ae18b&amp;biz_tag=Post" alt="告别 Gemini CLI！Google 新神器 Antigravity CLI 上手指南（Windows 新手版）"></p>
+<p>核心命令只有一个：<code>agy</code>。</p>
+<p>跟着这篇走，10 分钟搞定安装、登录、第一个 Prompt。</p>
+<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>Google 已于 <strong>2026 年 5 月 19 日</strong>正式宣布 Antigravity CLI 向所有人开放。</p>
+<p><img src="https://picx.zhimg.com/v2-732f03f4c916b614af21758d5b205a83_1440w.jpg" alt="img"></p>
+<p>同时，Gemini CLI 将在 <strong>2026 年 6 月 18 日</strong>之后停止为免费用户、Google AI Pro 及 Ultra 用户提供服务。</p>
+<p>也就是说——<strong>现在该换了</strong>。</p>
+<p>本文面向 Windows 新手，手把手带你完成安装、登录和第一次使用。</p>
+<h2 id="一、你需要准备什么"><a href="#一、你需要准备什么" class="headerlink" title="一、你需要准备什么"></a>一、你需要准备什么</h2><p>开始之前，确认你手边有这几样东西：</p>
+<ul>
+<li><p>一台 Windows / macOS / Linux 电脑</p>
+</li>
+<li><p>一个 Google 账号（不知道怎么注册谷歌邮箱可以点击查看文章：<a href="https://clawdo.com/2026/04/Google-Email-Registration/">2026 年国内最新注册 Gmail 谷歌邮箱教程 | 一部手机五分钟，注册成功率90%以上clawdo.com/2026/04/Google-Email-Registration/</a>）</p>
+</li>
+<li><p>能正常访问 Google 服务的网络</p>
+</li>
+<li><p>一个用于测试的项目文件夹，比如 <code>D:\agy-demo</code></p>
+</li>
+</ul>
+<p>Antigravity CLI 原生支持 Windows、macOS 和 Linux，安装后统一通过 <code>agy</code> 命令启动，简洁干净。</p>
+<h2 id="二、安装-Antigravity-CLI"><a href="#二、安装-Antigravity-CLI" class="headerlink" title="二、安装 Antigravity CLI"></a>二、安装 Antigravity CLI</h2><h3 id="Windows-推荐：用-PowerShell"><a href="#Windows-推荐：用-PowerShell" class="headerlink" title="Windows 推荐：用 PowerShell"></a>Windows 推荐：用 PowerShell</h3><p>打开 <strong>PowerShell</strong>，粘贴以下命令并回车：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">irm https://antigravity.google/cli/install.ps1 | iex</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="备选：用-CMD"><a href="#备选：用-CMD" class="headerlink" title="备选：用 CMD"></a>备选：用 CMD</h3><p>打开<strong>命令提示符（CMD）</strong>，执行：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://antigravity.google/cli/install.cmd -o install.cmd &amp;&amp; install.cmd &amp;&amp; del install.cmd</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="macOS-Linux"><a href="#macOS-Linux" class="headerlink" title="macOS / Linux"></a>macOS / Linux</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://antigravity.google/cli/install.sh | bash</span><br></pre></td></tr></tbody></table></figure>
+
+<p>安装完成后，<code>agy</code> 会自动加入系统路径，无需手动配置。</p>
+<h2 id="三、验证是否安装成功"><a href="#三、验证是否安装成功" class="headerlink" title="三、验证是否安装成功"></a>三、验证是否安装成功</h2><p>安装完成后，<strong>关闭终端，重新打开 PowerShell</strong>，输入：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">agy --version</span><br></pre></td></tr></tbody></table></figure>
+
+<p>看到版本号，说明一切正常。</p>
+<p><img src="https://pic4.zhimg.com/v2-1003d969cb84efb42e41b7e030b092d9_1440w.jpg" alt="img"></p>
+<h2 id="四、第一次登录"><a href="#四、第一次登录" class="headerlink" title="四、第一次登录"></a>四、第一次登录</h2><p>直接运行：<code>agy</code></p>
+<p>第一次启动会进入登录引导，你会看到：</p>
+<p><img src="https://picx.zhimg.com/v2-1d338531d8de2e0f36ef759f9a5845c3_1440w.jpg" alt="img"></p>
+<p><strong>普通个人用户选第 1 项：Google OAuth。</strong></p>
+<p><img src="https://pic1.zhimg.com/v2-9fd51479193ef528e0ec97d27c4345cc_1440w.jpg" alt="img"></p>
+<p>它会自动打开浏览器（未自动打开你可以复制链接到浏览器，自行打开授权），用你的 Google 账号完成授权。</p>
+<p><img src="https://pic3.zhimg.com/v2-47d4d6022bceafa857140dea5e968a1a_1440w.jpg" alt="img"></p>
+<p>授权成功后，按提示把授权码粘贴回终端。</p>
+<p><img src="https://pica.zhimg.com/v2-afc90f1cc5d1c9b643735202bec0369a_1440w.jpg" alt="img"></p>
+<p>复制授权码</p>
+<p><img src="https://pic3.zhimg.com/v2-f5380a61d07e484c26e220311f654ba2_1440w.jpg" alt="img"></p>
+<p>填写授权码，等待登录</p>
+<p>再接受一下条款，就完成了。</p>
+<blockquote>
+<p><strong>什么时候选第 2 项？</strong> 如果你是企业用户、有 GCP 项目或团队协作场景，才需要选 <code>Use a Google Cloud project</code>。个人用户无需考虑。</p>
+</blockquote>
+<h2 id="五、创建并进入测试项目"><a href="#五、创建并进入测试项目" class="headerlink" title="五、创建并进入测试项目"></a>五、创建并进入测试项目</h2><p>强烈建议新手先建一个空文件夹来练手，避免误改真实项目：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir C:\Users\屎努比\Desktop\grokdemo1</span><br><span class="line">cd C:\Users\屎努比\Desktop\grokdemo1</span><br><span class="line">agy</span><br></pre></td></tr></tbody></table></figure>
+
+<p>第一次进入新文件夹，它会问你是否信任该目录：</p>
+<p><img src="https://pic1.zhimg.com/v2-7530a1690e1a3a4472a12058696a8fc6_1440w.jpg" alt="img"></p>
+<p>选 <strong>Yes</strong>——Antigravity CLI 需要读取和操作当前目录里的文件，这是正常权限请求。</p>
+<p><img src="https://pic4.zhimg.com/v2-c9f8271b4bdd0b0f93becfb05f721b4f_1440w.jpg" alt="img"></p>
+<h2 id="六、第一个-Prompt，现在就试"><a href="#六、第一个-Prompt，现在就试" class="headerlink" title="六、第一个 Prompt，现在就试"></a>六、第一个 Prompt，现在就试</h2><p>进入 <code>agy</code> 交互界面后，可以直接输入中文。</p>
+<p><strong>分析项目结构（推荐第一步）：</strong> <code>你现在是我的编程助手。请先阅读当前项目结构，不要修改任何文件。然后用中文告诉我：这个项目是什么、主要文件有哪些、下一步适合做什么。</code></p>
+<p><strong>让它创建一个小页面：</strong> <code>请帮我创建一个最简单的 HTML + CSS + JS 页面，主题是待办事项列表， 要求页面简洁、可运行，并解释每个文件的作用。</code></p>
+<blockquote>
+<p><strong>新手提示</strong>：先不要开”完全自动执行”模式。让它给出修改计划，你确认后再执行，这样最安全。</p>
+</blockquote>
+<h2 id="七、常用内置命令速查"><a href="#七、常用内置命令速查" class="headerlink" title="七、常用内置命令速查"></a>七、常用内置命令速查</h2><p>进入 <code>agy</code> 后，这几个命令最常用：</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>/settings</td>
+<td>打开设置面板</td>
+</tr>
+<tr>
+<td>/config</td>
+<td>修改配置（主题、模型、工具权限等）</td>
+</tr>
+<tr>
+<td>/permissions</td>
+<td>查看或修改工具权限</td>
+</tr>
+<tr>
+<td>?</td>
+<td>查看快捷键和帮助</td>
+</tr>
+</tbody></table>
+<p>配置文件默认保存在： <code>~/.gemini/antigravity-cli/settings.json</code></p>
+<h2 id="八、如何更新"><a href="#八、如何更新" class="headerlink" title="八、如何更新"></a>八、如何更新</h2><p><code>agy update</code> 更新后重新打开终端，运行 <code>agy --version</code> 确认版本已更新。</p>
+<h2 id="九、常见问题解答"><a href="#九、常见问题解答" class="headerlink" title="九、常见问题解答"></a>九、常见问题解答</h2><h3 id="agy-提示”不是内部或外部命令”"><a href="#agy-提示”不是内部或外部命令”" class="headerlink" title="agy 提示”不是内部或外部命令”"></a><code>agy</code> 提示”不是内部或外部命令”</h3><p>环境变量未生效。解决方法：<strong>关闭 PowerShell，重新打开</strong>，再试一次。如果还不行，重新执行安装命令即可。</p>
+<h3 id="登录后反复要求重新登录"><a href="#登录后反复要求重新登录" class="headerlink" title="登录后反复要求重新登录"></a>登录后反复要求重新登录</h3><p>先执行更新：<code>agy update</code></p>
+<p>这个问题在 1.0.1 版本已修复，更新后重启 <code>agy</code> 即可恢复正常。WSL 环境下此问题偶发，同样建议更新解决。</p>
+<h2 id="十、新手练习路线图"><a href="#十、新手练习路线图" class="headerlink" title="十、新手练习路线图"></a>十、新手练习路线图</h2><p>刚开始别急着让它改大项目，按这个顺序循序渐进，最稳：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">第一步：让它读取并分析项目结构</span><br><span class="line">第二步：让它解释某段代码</span><br><span class="line">第三步：让它新增一个小功能</span><br><span class="line">第四步：让它修复一个明确的 bug</span><br><span class="line">第五步：让它生成 README 文档</span><br><span class="line">第六步：熟练后，再考虑让它重构项目</span><br></pre></td></tr></tbody></table></figure>
+
+<p>功能越来越强大，但每一步你都清楚发生了什么——这才是用好 AI 编程工具的正确姿势。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>Antigravity CLI 的使用门槛其实很低，核心就一个命令：<code>agy</code>。安装、登录、信任项目、开始对话，全程不超过 10 分钟。</p>
+</body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
             <a href="/2026/05/Grok-Build-Error-Sending-Request-Fix/" itemprop="url">Grok Build error sending request 怎么解决？问题出在这里</a>
         
     </h1>
@@ -1782,128 +1919,6 @@
 <li><input disabled="" type="checkbox"> 把”我的 Claude 模板库.docx”建起来,保存第一个 Prompt</li>
 </ol>
 <p><strong>三天后回来看你节省了多少时间。</strong> 如果你发现自己已经每天都在用,那升级 Pro 这件事就不需要纠结——工具的价值在于使用频率,你高频用它,它就值这个钱。</p>
-</body></html>
-    
-    </div>
-    
-    
-</article>
-
-
-
-
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            <a href="/2026/05/Claude-5-Stage-Advanced-Guide/" itemprop="url">Claude 的5阶段进阶指南：当搜索框，真的太浪费了</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            
-                <span>May 13 2026</span>
-            
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/Claude/">Claude</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            9 minutes read (About 1406 words)
-        </span>
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <html><head></head><body><p>身边10个用Claude的,9个是这样用的:打开网页敲问题、复制答案、关掉。</p>
-<p>如果你也是,那你在用法拉利送外卖。</p>
-<p>Claude的真实用法,是一条<strong>5阶段进阶曲线</strong>。每跨一步,每周省下的时间指数级增长——从30分钟,到5小时,到10小时,到”你睡觉它在干活”。</p>
-<p>直接上干货。</p>
-<h2 id="第一阶段-把它当搜索框"><a href="#第一阶段-把它当搜索框" class="headerlink" title="第一阶段:把它当搜索框"></a><strong>第一阶段:把它当搜索框</strong></h2><p><img src="https://pica.zhimg.com/v2-08597cb3532f43540ef23e27a3afe6d4_1440w.jpg" alt="img"></p>
-<p><strong>你不知道的事</strong>:Claude能跨对话记住你、能组织成项目持续协作、能接管你所有日常工具。你用的是阉割版的阉割版。</p>
-<p><strong>破局动作</strong>:</p>
-<ul>
-<li>别打字描述,<strong>直接甩截图</strong>(Claude能读图)</li>
-<li><strong>创建第一个Project</strong>:丢几份参考文档+一段系统提示,从此每个对话自动加载上下文。Claude有记忆了。</li>
-</ul>
-<p><img src="https://pic4.zhimg.com/v2-c24f6dbf20cef7a371d1435b5ee1eab3_1440w.jpg" alt="img"></p>
-<h2 id="第二阶段-让它成为”同事”"><a href="#第二阶段-让它成为”同事”" class="headerlink" title="第二阶段:让它成为”同事”"></a><strong>第二阶段:让它成为”同事”</strong></h2><p>下周二你问”上周Q2方案咋定的来着?”——Claude直接拉出来引用原对话继续推进。<strong>这一刻它从工具变成同事。</strong></p>
-<p><strong>6个核心武器:</strong></p>
-<ol>
-<li><strong>记忆+历史搜索</strong> → 告别每次从零自我介绍</li>
-<li><strong>Connectors</strong> → 50+工具一键打通(Slack/Gmail/Drive/Notion/GitHub/日历)</li>
-</ol>
-<p><img src="https://pica.zhimg.com/v2-ab19c590bbd921bd996b77aaa0943822_1440w.jpg" alt="img"></p>
-<ol start="3">
-<li><strong>文件创建</strong> → 直接生成带公式的真Excel/PPT/Word/PDF,不是预览,是可交付文件</li>
-</ol>
-<p><img src="https://pic1.zhimg.com/v2-2f129af04a47f6c463fcb6a4a7143f92_1440w.jpg" alt="img"></p>
-<ol start="4">
-<li><p><strong>持久化Artifacts</strong> → 跨会话存数据、调API、生成公开链接,不会代码也能搭小app</p>
-</li>
-<li><p><strong>内联可视化</strong> → 丢CSV直接出图,实时切换变量</p>
-</li>
-<li><p><strong>原生Office插件</strong> → 嵌进Excel/PPT/Word里跑,自动套品牌色</p>
-</li>
-</ol>
-<p><img src="https://pic4.zhimg.com/v2-f97e391852ef8ea7ff690fc8484069b7_1440w.jpg" alt="img"></p>
-<h3 id="说句实话"><a href="#说句实话" class="headerlink" title="说句实话:"></a><strong>说句实话:</strong></h3><p>上面这些真正改变工作方式的能力——<strong>历史搜索、持久化Artifacts、Office插件</strong>——以及后面所有狠活,<strong>都在Pro及以上订阅里</strong>。</p>
-<p>判断标准很简单:<strong>你每天用Claude超过30分钟,一周就回本</strong>。</p>
-<blockquote>
-<p><strong>Claude Pro 官方充值服务：<a target="_blank" rel="noopener" href="https://cnmclaude.com/">http://cnmClaude.com</a></strong><br>Claude Pro订阅升级教程</p>
-</blockquote>
-<p><img src="https://pic1.zhimg.com/v2-39b385daa718212f41fc9b00741a782c_1440w.jpg" alt="img"></p>
-<h2 id="第三阶段-让它”动手”干活"><a href="#第三阶段-让它”动手”干活" class="headerlink" title="第三阶段:让它”动手”干活"></a><strong>第三阶段:让它”动手”干活</strong></h2><p>核心叫 Cowork——跑在你电脑上、有文件系统权限的Claude。</p>
-<p><img src="https://pic4.zhimg.com/v2-ba99f08c28d59515bc6dd424ad020dff_1440w.jpg" alt="img"></p>
-<p>举例:指着下载文件夹说”过去三个月的PDF、截图、发票按类型分类、统一重命名、给我总结”。去喝咖啡,回来全做完了。</p>
-<p><strong>5个核心能力:</strong></p>
-<ol>
-<li><strong>文件系统访问</strong> → 隔离虚拟机+你授权的文件夹读写权限</li>
-<li><strong>Skills</strong> → 可复用markdown工作流,建一次永久用,官方+社区100+个</li>
-</ol>
-<p><img src="https://pic3.zhimg.com/v2-e77d09372f3e7533f2cb8a1819b784b2_1440w.jpg" alt="img"></p>
-<ol>
-<li><strong>计划任务</strong> → <code>/schedule</code> 让任务定时跑</li>
-</ol>
-<p><img src="https://pic2.zhimg.com/v2-24f25bfdee72cdf6d7dab79c30d43669_1440w.jpg" alt="img"></p>
-<ol>
-<li><strong>移动控制</strong> → 手机发任务,云端执行完ping你</li>
-<li><strong>Claude Design</strong> → 大白话描述,自动生成PPT/原型/落地页,自动套品牌</li>
-</ol>
-<p><img src="https://pic4.zhimg.com/v2-d6b51a1a225092bbc77ac013b1e8eb99_1440w.jpg" alt="img"></p>
-<p><strong>多数人卡这里不是技术问题,是不敢让AI碰自己文件</strong>。Cowork的权限模型只能动你授权的文件夹,放心。</p>
-<p><strong>破局动作</strong>:建标准文件夹结构</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/about-me   /templates   /projects   /outputs</span><br></pre></td></tr></tbody></table></figure>
-
-<p>写清楚命名规则丢进去,Claude从此干活有章法。</p>
-<h2 id="第四阶段-让它成为”工程团队”"><a href="#第四阶段-让它成为”工程团队”" class="headerlink" title="第四阶段:让它成为”工程团队”"></a><strong>第四阶段:让它成为”工程团队”</strong></h2><p>Anthropic 做 Claude Code 的 Boris Cherny ,<strong>每天并行跑5个Claude会话</strong>,启动完去开会,回来一堆PR等review。</p>
-<p><strong>5个关键:</strong></p>
-<ol>
-<li><strong>claude.md</strong> → 项目根目录的规则文档,Claude自动读取。犯错就让它”更新claude.md以后别再这样”,<strong>自我训练</strong></li>
-<li><strong>Plan Mode</strong> → Shift+Tab两次,先给计划再执行。隐藏玩法<strong>Opus规划+Sonnet执行,成本砍半</strong></li>
-<li><strong>Sub-agents</strong> → 不同任务开专门Claude,独立上下文并行</li>
-<li><strong>Git Worktrees</strong> → <code>claude-worktree feature-name</code> 独立分支隔离工作空间,3-4个并行最舒服</li>
-<li><strong>MCP</strong> → 但能用CLI别用MCP,<strong>省60-70% token</strong></li>
-</ol>
-<p><strong>进阶操作</strong>:<code>/compact</code>压缩历史 / <code>/context</code>查token / Auto mode+<code>/focus</code> / 验证循环(让Claude自测自迭代,质量×2-3) / 自定义斜杠命令</p>
-<p><strong>破局动作</strong>:找你每周最重复的事,做成第一个云端自动化routine。</p>
-<h2 id="最终阶段-让它成为”基础设施”"><a href="#最终阶段-让它成为”基础设施”" class="headerlink" title="最终阶段:让它成为”基础设施”"></a><strong>最终阶段:让它成为”基础设施”</strong></h2><p>笔记本合上,你在健身房。有人开PR,Claude在云端自动review完反馈,你摸手机时一切已搞定。</p>
-<p><strong>3个底层能力:</strong></p>
-<ol>
-<li>Cloud Routines → 配置存云端,按计划/API/GitHub事件触发,<strong>电脑可关机</strong></li>
-<li>Hooks → 生命周期安全逻辑,拦截危险命令、自动格式化、完成时通知</li>
-<li>Channels → 从Discord/Telegram/iMessage外部控制会话</li>
-</ol>
-<p><strong>狠活清单</strong>:Headless+Agent SDK(无界面运行/包装产品) / Remote Control(手机远控桌面) / Autodream(后台自动整理记忆) / Task Budgets(token上限) / Agent Teams(多Claude辩论)</p>
-<h2 id="真正的瓶颈不是技术-是信任"><a href="#真正的瓶颈不是技术-是信任" class="headerlink" title="真正的瓶颈不是技术,是信任"></a><strong>真正的瓶颈不是技术,是信任</strong></h2><p>最后一步卡住所有人的不是配置,是<strong>你敢不敢让AI在你不在时替你做决策</strong>。</p>
-<p>破局只有一招:<strong>从最低风险开始</strong>。每天给自己发一份”昨日工作摘要”,不发任何人,只看Claude做得对不对。</p>
-<p>每天观察,积累信任,再放手。</p>
 </body></html>
     
     </div>

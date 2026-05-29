@@ -107,6 +107,143 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
+            <a href="/2026/05/Google-Antigravity-CLI-Windows-Guide/" itemprop="url">告别 Gemini CLI！Google 新神器 Antigravity CLI 上手指南（Windows 新手版）</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <span>May 29 2026</span>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Gemini/">Gemini</a><span>></span><a class="article-category-link" href="/categories/Gemini/Google/">Google</a><span>></span><a class="article-category-link" href="/categories/Gemini/Google/Antigravity-CLI/">Antigravity CLI</a><span>></span><a class="article-category-link" href="/categories/Gemini/Google/Antigravity-CLI/Windows/">Windows</a><span>></span><a class="article-category-link" href="/categories/Gemini/Google/Antigravity-CLI/Windows/Gemini-CLI/">Gemini CLI</a><span>></span><a class="article-category-link" href="/categories/Gemini/Google/Antigravity-CLI/Windows/Gemini-CLI/%E6%96%B0%E6%89%8B%E6%8C%87%E5%8D%97/">新手指南</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            10 minutes read (About 1572 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p><img src="https://picx.zhimg.com/70/v2-f8879e2dac10d50de9fb189d46924936_1440w.image?source=172ae18b&amp;biz_tag=Post" alt="告别 Gemini CLI！Google 新神器 Antigravity CLI 上手指南（Windows 新手版）"></p>
+<p>核心命令只有一个：<code>agy</code>。</p>
+<p>跟着这篇走，10 分钟搞定安装、登录、第一个 Prompt。</p>
+<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>Google 已于 <strong>2026 年 5 月 19 日</strong>正式宣布 Antigravity CLI 向所有人开放。</p>
+<p><img src="https://picx.zhimg.com/v2-732f03f4c916b614af21758d5b205a83_1440w.jpg" alt="img"></p>
+<p>同时，Gemini CLI 将在 <strong>2026 年 6 月 18 日</strong>之后停止为免费用户、Google AI Pro 及 Ultra 用户提供服务。</p>
+<p>也就是说——<strong>现在该换了</strong>。</p>
+<p>本文面向 Windows 新手，手把手带你完成安装、登录和第一次使用。</p>
+<h2 id="一、你需要准备什么"><a href="#一、你需要准备什么" class="headerlink" title="一、你需要准备什么"></a>一、你需要准备什么</h2><p>开始之前，确认你手边有这几样东西：</p>
+<ul>
+<li><p>一台 Windows / macOS / Linux 电脑</p>
+</li>
+<li><p>一个 Google 账号（不知道怎么注册谷歌邮箱可以点击查看文章：<a href="https://clawdo.com/2026/04/Google-Email-Registration/">2026 年国内最新注册 Gmail 谷歌邮箱教程 | 一部手机五分钟，注册成功率90%以上clawdo.com/2026/04/Google-Email-Registration/</a>）</p>
+</li>
+<li><p>能正常访问 Google 服务的网络</p>
+</li>
+<li><p>一个用于测试的项目文件夹，比如 <code>D:\agy-demo</code></p>
+</li>
+</ul>
+<p>Antigravity CLI 原生支持 Windows、macOS 和 Linux，安装后统一通过 <code>agy</code> 命令启动，简洁干净。</p>
+<h2 id="二、安装-Antigravity-CLI"><a href="#二、安装-Antigravity-CLI" class="headerlink" title="二、安装 Antigravity CLI"></a>二、安装 Antigravity CLI</h2><h3 id="Windows-推荐：用-PowerShell"><a href="#Windows-推荐：用-PowerShell" class="headerlink" title="Windows 推荐：用 PowerShell"></a>Windows 推荐：用 PowerShell</h3><p>打开 <strong>PowerShell</strong>，粘贴以下命令并回车：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">irm https://antigravity.google/cli/install.ps1 | iex</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="备选：用-CMD"><a href="#备选：用-CMD" class="headerlink" title="备选：用 CMD"></a>备选：用 CMD</h3><p>打开<strong>命令提示符（CMD）</strong>，执行：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://antigravity.google/cli/install.cmd -o install.cmd &amp;&amp; install.cmd &amp;&amp; del install.cmd</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="macOS-Linux"><a href="#macOS-Linux" class="headerlink" title="macOS / Linux"></a>macOS / Linux</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://antigravity.google/cli/install.sh | bash</span><br></pre></td></tr></tbody></table></figure>
+
+<p>安装完成后，<code>agy</code> 会自动加入系统路径，无需手动配置。</p>
+<h2 id="三、验证是否安装成功"><a href="#三、验证是否安装成功" class="headerlink" title="三、验证是否安装成功"></a>三、验证是否安装成功</h2><p>安装完成后，<strong>关闭终端，重新打开 PowerShell</strong>，输入：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">agy --version</span><br></pre></td></tr></tbody></table></figure>
+
+<p>看到版本号，说明一切正常。</p>
+<p><img src="https://pic4.zhimg.com/v2-1003d969cb84efb42e41b7e030b092d9_1440w.jpg" alt="img"></p>
+<h2 id="四、第一次登录"><a href="#四、第一次登录" class="headerlink" title="四、第一次登录"></a>四、第一次登录</h2><p>直接运行：<code>agy</code></p>
+<p>第一次启动会进入登录引导，你会看到：</p>
+<p><img src="https://picx.zhimg.com/v2-1d338531d8de2e0f36ef759f9a5845c3_1440w.jpg" alt="img"></p>
+<p><strong>普通个人用户选第 1 项：Google OAuth。</strong></p>
+<p><img src="https://pic1.zhimg.com/v2-9fd51479193ef528e0ec97d27c4345cc_1440w.jpg" alt="img"></p>
+<p>它会自动打开浏览器（未自动打开你可以复制链接到浏览器，自行打开授权），用你的 Google 账号完成授权。</p>
+<p><img src="https://pic3.zhimg.com/v2-47d4d6022bceafa857140dea5e968a1a_1440w.jpg" alt="img"></p>
+<p>授权成功后，按提示把授权码粘贴回终端。</p>
+<p><img src="https://pica.zhimg.com/v2-afc90f1cc5d1c9b643735202bec0369a_1440w.jpg" alt="img"></p>
+<p>复制授权码</p>
+<p><img src="https://pic3.zhimg.com/v2-f5380a61d07e484c26e220311f654ba2_1440w.jpg" alt="img"></p>
+<p>填写授权码，等待登录</p>
+<p>再接受一下条款，就完成了。</p>
+<blockquote>
+<p><strong>什么时候选第 2 项？</strong> 如果你是企业用户、有 GCP 项目或团队协作场景，才需要选 <code>Use a Google Cloud project</code>。个人用户无需考虑。</p>
+</blockquote>
+<h2 id="五、创建并进入测试项目"><a href="#五、创建并进入测试项目" class="headerlink" title="五、创建并进入测试项目"></a>五、创建并进入测试项目</h2><p>强烈建议新手先建一个空文件夹来练手，避免误改真实项目：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir C:\Users\屎努比\Desktop\grokdemo1</span><br><span class="line">cd C:\Users\屎努比\Desktop\grokdemo1</span><br><span class="line">agy</span><br></pre></td></tr></tbody></table></figure>
+
+<p>第一次进入新文件夹，它会问你是否信任该目录：</p>
+<p><img src="https://pic1.zhimg.com/v2-7530a1690e1a3a4472a12058696a8fc6_1440w.jpg" alt="img"></p>
+<p>选 <strong>Yes</strong>——Antigravity CLI 需要读取和操作当前目录里的文件，这是正常权限请求。</p>
+<p><img src="https://pic4.zhimg.com/v2-c9f8271b4bdd0b0f93becfb05f721b4f_1440w.jpg" alt="img"></p>
+<h2 id="六、第一个-Prompt，现在就试"><a href="#六、第一个-Prompt，现在就试" class="headerlink" title="六、第一个 Prompt，现在就试"></a>六、第一个 Prompt，现在就试</h2><p>进入 <code>agy</code> 交互界面后，可以直接输入中文。</p>
+<p><strong>分析项目结构（推荐第一步）：</strong> <code>你现在是我的编程助手。请先阅读当前项目结构，不要修改任何文件。然后用中文告诉我：这个项目是什么、主要文件有哪些、下一步适合做什么。</code></p>
+<p><strong>让它创建一个小页面：</strong> <code>请帮我创建一个最简单的 HTML + CSS + JS 页面，主题是待办事项列表， 要求页面简洁、可运行，并解释每个文件的作用。</code></p>
+<blockquote>
+<p><strong>新手提示</strong>：先不要开”完全自动执行”模式。让它给出修改计划，你确认后再执行，这样最安全。</p>
+</blockquote>
+<h2 id="七、常用内置命令速查"><a href="#七、常用内置命令速查" class="headerlink" title="七、常用内置命令速查"></a>七、常用内置命令速查</h2><p>进入 <code>agy</code> 后，这几个命令最常用：</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>/settings</td>
+<td>打开设置面板</td>
+</tr>
+<tr>
+<td>/config</td>
+<td>修改配置（主题、模型、工具权限等）</td>
+</tr>
+<tr>
+<td>/permissions</td>
+<td>查看或修改工具权限</td>
+</tr>
+<tr>
+<td>?</td>
+<td>查看快捷键和帮助</td>
+</tr>
+</tbody></table>
+<p>配置文件默认保存在： <code>~/.gemini/antigravity-cli/settings.json</code></p>
+<h2 id="八、如何更新"><a href="#八、如何更新" class="headerlink" title="八、如何更新"></a>八、如何更新</h2><p><code>agy update</code> 更新后重新打开终端，运行 <code>agy --version</code> 确认版本已更新。</p>
+<h2 id="九、常见问题解答"><a href="#九、常见问题解答" class="headerlink" title="九、常见问题解答"></a>九、常见问题解答</h2><h3 id="agy-提示”不是内部或外部命令”"><a href="#agy-提示”不是内部或外部命令”" class="headerlink" title="agy 提示”不是内部或外部命令”"></a><code>agy</code> 提示”不是内部或外部命令”</h3><p>环境变量未生效。解决方法：<strong>关闭 PowerShell，重新打开</strong>，再试一次。如果还不行，重新执行安装命令即可。</p>
+<h3 id="登录后反复要求重新登录"><a href="#登录后反复要求重新登录" class="headerlink" title="登录后反复要求重新登录"></a>登录后反复要求重新登录</h3><p>先执行更新：<code>agy update</code></p>
+<p>这个问题在 1.0.1 版本已修复，更新后重启 <code>agy</code> 即可恢复正常。WSL 环境下此问题偶发，同样建议更新解决。</p>
+<h2 id="十、新手练习路线图"><a href="#十、新手练习路线图" class="headerlink" title="十、新手练习路线图"></a>十、新手练习路线图</h2><p>刚开始别急着让它改大项目，按这个顺序循序渐进，最稳：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">第一步：让它读取并分析项目结构</span><br><span class="line">第二步：让它解释某段代码</span><br><span class="line">第三步：让它新增一个小功能</span><br><span class="line">第四步：让它修复一个明确的 bug</span><br><span class="line">第五步：让它生成 README 文档</span><br><span class="line">第六步：熟练后，再考虑让它重构项目</span><br></pre></td></tr></tbody></table></figure>
+
+<p>功能越来越强大，但每一步你都清楚发生了什么——这才是用好 AI 编程工具的正确姿势。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>Antigravity CLI 的使用门槛其实很低，核心就一个命令：<code>agy</code>。安装、登录、信任项目、开始对话，全程不超过 10 分钟。</p>
+</body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
             <a href="/2026/05/How-to-Build-an-Android-App-with-Google-AI-Studio/" itemprop="url">10 分钟实战:手把手教你用 Google AI Studio 做一个能用的安卓 App</a>
         
     </h1>

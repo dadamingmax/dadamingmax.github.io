@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://clawdo.com/2026/06/Codex-Phone-Verification-Solutions-2026/</loc>
+    
+    <lastmod>2026-06-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://clawdo.com/2026/06/Composer-2-5-Grok-Build-Long-Task-Guide/</loc>
     
     <lastmod>2026-06-02</lastmod>
@@ -421,6 +430,20 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://clawdo.com/tags/%E6%89%8B%E6%9C%BA%E9%AA%8C%E8%AF%81/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://clawdo.com/tags/OpenAI/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -607,6 +630,20 @@
   
   <url>
     <loc>https://clawdo.com/categories/Gemini/Google/Antigravity-CLI/Windows/Gemini-CLI/%E6%96%B0%E6%89%8B%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://clawdo.com/categories/Codex/OpenAI/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://clawdo.com/categories/Codex/OpenAI/ChatGPT/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

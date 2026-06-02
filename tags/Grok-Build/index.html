@@ -107,6 +107,120 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
+            <a href="/2026/06/Composer-2-5-Grok-Build-Long-Task-Guide/" itemprop="url">Composer 2.5 接入 Grok Build：终端 AI 编程助手开始进入“长任务执行”阶段</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <span>Jun 2 2026</span>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Composer-2-5/">Composer 2.5</a><span>></span><a class="article-category-link" href="/categories/Composer-2-5/Grok/">Grok</a><span>></span><a class="article-category-link" href="/categories/Composer-2-5/Grok/xAI/">xAI</a><span>></span><a class="article-category-link" href="/categories/Composer-2-5/Grok/xAI/Grok-Build/">Grok Build</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            13 minutes read (About 1964 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p><img src="https://picx.zhimg.com/70/v2-d6e928240cf42d9cb7bbdc080704fa7e_1440w.image?source=172ae18b&amp;biz_tag=Post" alt="Composer 2.5 接入 Grok Build：终端 AI 编程助手开始进入“长任务执行”阶段"></p>
+<p>最近 xAI 放出了一条很值得关注的更新：</p>
+<p><img src="https://pic4.zhimg.com/v2-b3f8a87a61ca88cc43895f4977b2d5f1_1440w.jpg" alt="img"></p>
+<p><strong>Composer 2.5 is now available inside Grok Build.</strong></p>
+<p>翻译就是： <strong>Composer 2.5 现在已经可以在 Grok Build 中使用了。</strong></p>
+<p>很多人可能会觉得只是一次普通的模型更新。但从 AI 编程工具的发展方向来看，这次更新其实挺关键。</p>
+<p>因为它说明 Grok Build 不再只是一个“能在终端里写代码的 AI 工具”，而是开始朝着一个更完整的 <strong>Agentic Coding 工作台</strong>发展。</p>
+<h2 id="一、Composer-2-5-到底是什么？"><a href="#一、Composer-2-5-到底是什么？" class="headerlink" title="一、Composer 2.5 到底是什么？"></a>一、Composer 2.5 到底是什么？</h2><p>按照 xAI 官方说法，Composer 2.5 是一个快速、智能度很高的模型，特点是：</p>
+<p><strong>擅长处理长时间运行的任务，也能更好地跟随复杂指令。</strong></p>
+<p>真正做开发的人，会更关注另外几个问题：</p>
+<ol>
+<li>能不能理解整个项目结构？</li>
+<li>能不能连续执行多个步骤？</li>
+<li>能不能先分析再动手，而不是上来就乱改？</li>
+<li>能不能处理多文件、多模块之间的依赖关系？</li>
+<li>能不能在长任务里保持稳定，不跑偏？</li>
+</ol>
+<p>Composer 2.5 这次被接入 Grok Build，重点就是补强这些场景。</p>
+<p>不是单纯为了聊天，而是更偏向实际工程任务。</p>
+<h2 id="二、Grok-Build-是什么？"><a href="#二、Grok-Build-是什么？" class="headerlink" title="二、Grok Build 是什么？"></a>二、Grok Build 是什么？</h2><p>Grok Build 可以理解为 xAI 推出的终端 AI 编程助手。</p>
+<p>不是浏览器里的聊天窗口，也不是单纯的代码补全插件。</p>
+<p>直接运行在终端里的 coding agent。</p>
+<p>你可以在项目目录里启动它，让它读取项目文件、理解代码结构、分析问题、提出计划，并在你确认后执行修改。</p>
+<p>这类工具最大的价值是： 它离真实开发环境更近。</p>
+<p>因为开发者平时真正工作的地方，本来就是终端、IDE、Git、项目文件夹和调试日志。</p>
+<p>Grok Build 进入终端之后，可以更接近实际开发流程。</p>
+<p><a href="https://clawdo.com/2026/05/Grok-Build-Guide-2026/">点击查看文章：Grok Build 使用教程（2026 年最新版) </a></p>
+<h2 id="三、如何在-Grok-Build-中使用-Composer-2-5？"><a href="#三、如何在-Grok-Build-中使用-Composer-2-5？" class="headerlink" title="三、如何在 Grok Build 中使用 Composer 2.5？"></a>三、如何在 Grok Build 中使用 Composer 2.5？</h2><p>使用方式不复杂。</p>
+<p>如果还没有安装 Grok Build，可以使用官方安装命令： <code>curl -fsSL https://x.ai/cli/install.sh | bash</code></p>
+<p>安装完成后，进入你的项目目录： <code>cd your-project</code></p>
+<p>然后启动 Grok Build：<code>grok</code>。</p>
+<p>进入 Grok Build 后，可以通过模型菜单切换模型：<code>/model</code> 或者使用官方提到的 <code>/models</code> 菜单。</p>
+<p>在模型列表里选择： <code>Composer 2.5</code></p>
+<p><img src="https://pic3.zhimg.com/v2-9d2d2bd31e997eed33696690ee4e224a_1440w.jpg" alt="img"></p>
+<p>选择Composer 2.5</p>
+<p>选择完成后，当前会话就可以使用 Composer 2.5 来处理代码任务。</p>
+<h2 id="四、Composer-2-5-适合用在哪些场景？"><a href="#四、Composer-2-5-适合用在哪些场景？" class="headerlink" title="四、Composer 2.5 适合用在哪些场景？"></a>四、Composer 2.5 适合用在哪些场景？</h2><p>不是所有任务都需要切到 Composer 2.5。它更适合处理那些<strong>上下文长、步骤多、需要持续理解项目结构</strong>的任务。</p>
+<h3 id="1-多文件代码修改"><a href="#1-多文件代码修改" class="headerlink" title="1. 多文件代码修改"></a>1. 多文件代码修改</h3><p>比如登录功能，通常会涉及页面、接口请求、token 存储、路由守卫、用户状态管理和异常提示。 这类任务不是改一个文件就能完成的，如果模型只看局部，很容易改漏。Composer 2.5 更适合先理解整体，再分步骤修改。</p>
+<h3 id="2-项目重构"><a href="#2-项目重构" class="headerlink" title="2. 项目重构"></a>2. 项目重构</h3><p>项目重构通常包括拆分组件、整理目录、抽离工具函数、优化接口层、规范命名和删除重复代码。 这类任务很考验模型的上下文保持能力，Composer 2.5 更适合处理这种长任务。</p>
+<h3 id="3-长链路-Bug-排查"><a href="#3-长链路-Bug-排查" class="headerlink" title="3. 长链路 Bug 排查"></a>3. 长链路 Bug 排查</h3><p>真实项目里的 Bug 往往不是一行代码的问题，可能涉及页面、状态管理、接口、环境变量和构建配置。 Composer 2.5 适合顺着调用链持续分析，先定位问题，再给出修改方案。</p>
+<h3 id="4-文档生成和项目交接"><a href="#4-文档生成和项目交接" class="headerlink" title="4. 文档生成和项目交接"></a>4. 文档生成和项目交接</h3><p>比如生成 README、安装说明、运行步骤、API 文档、目录结构说明和部署文档。 这类任务需要模型理解整个项目，而不是凭空写文档，所以也适合交给 Composer 2.5。</p>
+<h2 id="五、推荐使用方式：不要一上来就让它改代码"><a href="#五、推荐使用方式：不要一上来就让它改代码" class="headerlink" title="五、推荐使用方式：不要一上来就让它改代码"></a>五、推荐使用方式：不要一上来就让它改代码</h2><p>这是我觉得最重要的一点。</p>
+<p>使用 Grok Build 或 Composer 2.5，不建议一上来就说： <code>帮我优化这个项目</code> 指令太宽泛。</p>
+<p>更好的方式是让它先分析，计划，最后执行。 例如：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">请先阅读当前项目结构，不要直接修改代码。</span><br><span class="line">先告诉我这个项目的主要模块、技术栈、入口文件和可能的风险点。</span><br><span class="line">分析完成后，再给我一个修改计划。</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这个提示词的好处是： 先让模型进入“理解项目”的状态，而不是直接进入“执行修改”的状态。</p>
+<p><img src="https://pic1.zhimg.com/v2-7f7810d5e1d997fd4adc2b77200007da_1440w.jpg" alt="img"></p>
+<p>输出效果</p>
+<h2 id="六、几个适合-Composer-2-5-的实战提示词"><a href="#六、几个适合-Composer-2-5-的实战提示词" class="headerlink" title="六、几个适合 Composer 2.5 的实战提示词"></a>六、几个适合 Composer 2.5 的实战提示词</h2><h3 id="1-项目分析"><a href="#1-项目分析" class="headerlink" title="1. 项目分析"></a>1. 项目分析</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">请先分析当前项目结构，不要修改任何文件。</span><br><span class="line">请输出：</span><br><span class="line">1. 项目技术栈</span><br><span class="line">2. 主要目录作用</span><br><span class="line">3. 核心入口文件</span><br><span class="line">4. 主要业务流程</span><br><span class="line">5. 目前代码中可能存在的结构问题</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="2-Bug-排查"><a href="#2-Bug-排查" class="headerlink" title="2. Bug 排查"></a>2. Bug 排查</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">请帮我排查当前项目的报错。</span><br><span class="line">要求：</span><br><span class="line">1. 先不要修改代码</span><br><span class="line">2. 先定位可能相关的文件</span><br><span class="line">3. 分析错误产生的调用链</span><br><span class="line">4. 给出 2-3 个可能原因</span><br><span class="line">5. 最后再给出建议修改方案</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="3-多文件修改"><a href="#3-多文件修改" class="headerlink" title="3. 多文件修改"></a>3. 多文件修改</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">我需要优化当前项目的登录流程。</span><br><span class="line">请先分析登录相关文件，包括页面、接口、token 存储、路由跳转和异常处理。</span><br><span class="line">先给出修改计划，等我确认后再执行代码修改。</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="4-README-生成"><a href="#4-README-生成" class="headerlink" title="4. README 生成"></a>4. README 生成</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">请基于当前项目生成一份适合开源发布的 README。</span><br><span class="line">需要包含：</span><br><span class="line">1. 项目介绍</span><br><span class="line">2. 技术栈</span><br><span class="line">3. 安装方式</span><br><span class="line">4. 本地运行</span><br><span class="line">5. 目录结构</span><br><span class="line">6. 环境变量说明</span><br><span class="line">7. 常见问题</span><br><span class="line">8. 后续开发计划</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="5-重构任务"><a href="#5-重构任务" class="headerlink" title="5. 重构任务"></a>5. 重构任务</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">请分析当前项目是否存在重复代码、目录混乱、组件职责不清的问题。</span><br><span class="line">先输出重构建议，不要直接修改。</span><br><span class="line">每一条建议都要说明：</span><br><span class="line">1. 涉及文件</span><br><span class="line">2. 为什么要改</span><br><span class="line">3. 改动风险</span><br><span class="line">4. 预期收益</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="七、Composer-2-5-和普通模型怎么选？"><a href="#七、Composer-2-5-和普通模型怎么选？" class="headerlink" title="七、Composer 2.5 和普通模型怎么选？"></a>七、Composer 2.5 和普通模型怎么选？</h2><p>建议是：</p>
+<p>如果只是简单问答、小范围代码生成、解释报错，默认模型就够用。</p>
+<p>但如果任务满足下面任意一个条件，就可以考虑切到 Composer 2.5：</p>
+<ul>
+<li>读取多个文件</li>
+<li>连续执行多个步骤</li>
+<li>先计划再修改</li>
+<li>长时间保持上下文</li>
+<li>复杂指令跟随</li>
+<li>处理真实项目结构</li>
+<li>做重构、排查、文档、迁移</li>
+</ul>
+<p><strong>小任务看速度，大任务看稳定。</strong></p>
+<p>Composer 2.5 的价值，主要体现在复杂任务和长任务里。</p>
+<h2 id="八、总结"><a href="#八、总结" class="headerlink" title="八、总结"></a>八、总结</h2><p>如果你已经在使用 Grok Build，这次 Composer 2.5 值得试一下。</p>
+<p>它的意义不是替代所有模型，而是让 Grok Build 多了一个更适合长任务和复杂指令的模型选择。</p>
+</body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
             <a href="/2026/05/Grok-Build-Error-Sending-Request-Fix/" itemprop="url">Grok Build error sending request 怎么解决？问题出在这里</a>
         
     </h1>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+<title>Tag: Dynamic Workflows - CNM 国内 AI 订阅升级与使用教程大全</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+
+
+<meta name="description" content="">
+
+
+
+
+
+
+
+
+
+<link rel="icon" type="image/png" href="/favicon.png?v=20260519-2">
+<link rel="shortcut icon" type="image/png" href="/favicon.png?v=20260519-2">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                <img src="/images/logo.png" alt="" height="28">
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="/">Home</a>
+            
+            <a class="navbar-item "
+               href="/archives">Archives</a>
+            
+            <a class="navbar-item "
+               href="/categories">Categories</a>
+            
+            <a class="navbar-item "
+               href="/tags">Tags</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section section-heading">
+    <div class="container">
+        <div class="content">
+            <h5>#Dynamic Workflows</h5>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2026/06/Claude-Dynamic-Workflows-Complete-Guide/" itemprop="url">Anthropic 最强功能：Claude Dynamic Workflows 完整教程（含提示词）</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <span>Jun 4 2026</span>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Anthropic/">Anthropic</a><span>></span><a class="article-category-link" href="/categories/Anthropic/Claude/">Claude</a><span>></span><a class="article-category-link" href="/categories/Anthropic/Claude/Dynamic-Workflows/">Dynamic Workflows</a><span>></span><a class="article-category-link" href="/categories/Anthropic/Claude/Dynamic-Workflows/Claude-Code/">Claude Code</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            15 minutes read (About 2196 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p><img src="https://picx.zhimg.com/70/v2-823027ac99d5ecd584c88127dac465dc_1440w.image?source=172ae18b&amp;biz_tag=Post" alt="Anthropic 最强功能：Claude Dynamic Workflows 完整教程（含提示词）"></p>
+<p>很多人刷到 Claude 4.8 更新就直接划走了——因为 Opus 4.8 的 benchmark 太亮眼了。</p>
+<p>但真正能让你的 <strong>Claude Code 生产力起飞 5-10 倍</strong> 的，是这个被大多数人忽略的 <strong>Dynamic Workflows</strong>（动态工作流）。</p>
+<p>它是让 Claude <strong>自己编写 JavaScript 编排脚本</strong>，在后台并行调用数十到数百个子代理（subagents），互相交叉验证、自我纠错，还能把整个流程保存成可复用的斜杠命令。</p>
+<p>本文基于 Anthropic 最新 Claude Code 功能和真实使用经验，给你最完整的技术原理、启动方式、监控保存全流程，以及内容创作者实用的提示词模板。读完就能上手。</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a><strong>目录</strong></h2><p>一、Dynamic Workflows 到底是什么？核心原理<br>二、三种启动方式（最新触发技巧）<br>三、实时监控与保存复用（必学操作）<br>四、实战案例 + 可直接复制的提示词<br>五、5 个高级技巧和避坑指南<br>六、总结和行动建议</p>
+<h3 id="一、Dynamic-Workflows-到底是什么？核心原理"><a href="#一、Dynamic-Workflows-到底是什么？核心原理" class="headerlink" title="一、Dynamic Workflows 到底是什么？核心原理"></a>一、Dynamic Workflows 到底是什么？核心原理</h3><p><img src="https://pic1.zhimg.com/80/v2-4db3823b82583f06b3818e0cf33c1116_1440w.webp" alt="img"></p>
+<p>Anthropic 官方定义：</p>
+<blockquote>
+<p>A dynamic workflow is a JavaScript script that orchestrates subagents at scale. Claude writes the script for the task you describe, and a runtime executes it in the background while your session stays responsive.</p>
+</blockquote>
+<p><strong>解释</strong>：<br>Claude 会根据你的任务描述，自动生成一个 JS 脚本。这个脚本把大任务拆成多个阶段，分配给不同的子代理并行执行。代理之间可以互相”挑刺“（ adversarial review ），结果不一致就重新验证。</p>
+<p>整个过程在后台运行，你的会话界面保持响应，还支持中途暂停和恢复。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-1ca882bf41b0e597ebcb51a9133ab7fa_1440w.webp" alt="img"></p>
+<p><strong>它能做到但传统方式做不到的 4 件事</strong>：</p>
+<ol>
+<li><strong>并行扇出（Fan Out）</strong>：一个任务拆成 10-100+ 个子任务同时跑，而不是串行等待。</li>
+<li><strong>自我验证机制</strong>：代理互相交叉验证，大幅降低幻觉和错误。</li>
+<li><strong>可恢复（Resumable）</strong>：长任务（几小时甚至几天）可以暂停，之后继续。</li>
+<li><strong>可复用编排</strong>：优秀的 workflow 可以保存成 <code>/your-command</code>，下次直接调用相同逻辑。</li>
+</ol>
+<p><strong>与 Skills、MCP/Connectors 的本质区别</strong>（很重要）：</p>
+<ul>
+<li><strong>Skills</strong>：教 Claude「怎么做」它已经会的事（SOP 化）。</li>
+<li><strong>MCP / Connectors</strong>：给 Claude 接入外部工具和实时数据。</li>
+<li><strong>Dynamic Workflows</strong>：<strong>协调整个团队</strong>去完成单次对话或单技能搞不定的大规模复杂任务。</li>
+</ul>
+<p>例如你写一篇深度研究报告。<br>Skills 负责结构和润色，Connectors 拉取最新数据，而 Dynamic Workflows 可以同时调用几十个来源搜索、多个代理交叉验证事实、过滤噪声，最后输出带引用、高可信度的报告。</p>
+<h3 id="二、三种启动-Dynamic-Workflows-的方式"><a href="#二、三种启动-Dynamic-Workflows-的方式" class="headerlink" title="二、三种启动 Dynamic Workflows 的方式"></a>二、三种启动 Dynamic Workflows 的方式</h3><p><strong>方式1：手动触发（最灵活，推荐新手先用这个）</strong><br>在 prompt 中直接包含 <strong>workflow</strong> 关键词（或根据最新更新，使用 <code>use a workflow for this</code> / <code>create a workflow</code>）。</p>
+<p>Claude 会立即切换到编排模式：</p>
+<ul>
+<li>分析任务并生成阶段计划</li>
+<li>展示给你看，请求批准</li>
+<li>后台启动多个代理并行执行</li>
+</ul>
+<p><strong>小贴士</strong>：如果不想每次都触发，可在 <code>/config</code> 里关闭 Workflow keyword trigger，或按 <strong>Alt + W</strong> 临时忽略。</p>
+<p><strong>方式2：使用内置 <code>/deep-research</code>（最推荐入门）</strong><br>直接输入：<br><code>/deep-research [你的研究问题]</code></p>
+<p>它会自动并行搜索多个来源、交叉验证每个主张、过滤不可靠信息，最后输出带引用来源的结构化报告。适合每天做市场情报、竞品分析、AI 工具研究。</p>
+<p><strong>方式3：Ultracode 自动模式（最强大）</strong><br>运行：<br><code>/effort ultracode</code></p>
+<p>开启后，Claude 会为每个有实质性的任务<strong>自动规划并执行 workflow + 高推理努力</strong>。<br>注意：token 消耗会明显增加，适合重要任务。</p>
+<blockquote>
+<p>推荐一个自用的 Claude Pro 订阅升级服务(稳定正规，操作简单)：<strong><a target="_blank" rel="noopener" href="https://cnmclaude.com/">http://cnmClaude.com</a></strong></p>
+</blockquote>
+<h3 id="三、实时监控与保存复用（最核心的操作）"><a href="#三、实时监控与保存复用（最核心的操作）" class="headerlink" title="三、实时监控与保存复用（最核心的操作）"></a>三、实时监控与保存复用（最核心的操作）</h3><p>工作流启动后，输入：<br><code>/workflows</code></p>
+<p>打开实时进度面板，可看到：</p>
+<ul>
+<li>每个阶段（phase）</li>
+<li>当前运行的代理数量</li>
+<li>Token 消耗情况</li>
+<li>已用时间</li>
+</ul>
+<p><strong>面板内快捷键</strong>（非常实用）：</p>
+<ul>
+<li><code>p</code>：暂停 / 恢复</li>
+<li><code>x</code>：停止选中代理或整个 workflow</li>
+<li><code>r</code>：重启某个代理</li>
+<li><code>s</code>：<strong>保存当前脚本为可复用命令</strong>（最重要！）</li>
+<li><code>Enter</code>：深入查看某个代理的 prompt、工具调用和结果</li>
+</ul>
+<p><strong>保存 workflow</strong>：按 <code>s</code> 后可保存到项目库或个人库。以后在任何对话输入 <code>/saved-workflow-name</code> 就能复用相同编排逻辑。这才是把重复工作真正变成 SOP 的关键。</p>
+<h3 id="四、实战案例-可直接复制提示词（内容创作者最爱）"><a href="#四、实战案例-可直接复制提示词（内容创作者最爱）" class="headerlink" title="四、实战案例 + 可直接复制提示词（内容创作者最爱）"></a>四、实战案例 + 可直接复制提示词（内容创作者最爱）</h3><p><strong>案例1：公众号爆款内容生产全流程工作流</strong>（强烈推荐）</p>
+<p>把一个 X 帖子或想法，自动完成从选题到成文的全流程。</p>
+<p><strong>提示词模板</strong>（直接复制修改使用）：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">使用 Dynamic Workflow 为我的微信公众号创建一个完整的内容生产流水线。</span><br><span class="line"></span><br><span class="line">任务：基于这个 X 帖子 [粘贴链接或内容]，产出一篇 3000-4000 字的技术干货公众号文章。</span><br><span class="line"></span><br><span class="line">工作流阶段要求：</span><br><span class="line">1. 内容角度挖掘与爆款标题变体生成（至少 5 个高点击标题）</span><br><span class="line">2. 深度研究与事实交叉验证（使用多个来源）</span><br><span class="line">3. 文章结构规划 + 钩子/结尾设计</span><br><span class="line">4. 正文撰写（技术干货风格，带实操步骤和提示词）</span><br><span class="line">5. 视觉生成提示词优化（封面 + 配图）</span><br><span class="line">6. SEO 优化 + 互动引导语</span><br><span class="line">7. 最终排版建议和发布 checklist</span><br><span class="line"></span><br><span class="line">请先展示完整计划，得到我批准后再执行。使用并行代理和交叉验证确保质量。</span><br></pre></td></tr></tbody></table></figure>
+
+<p>运行后在 <code>/workflows</code> 实时监督进度。</p>
+<p><strong>案例2：深度研究报告</strong><br>直接用：<br><code>/deep-research Claude Dynamic Workflows 最新技术细节、限制、最佳实践和真实用户案例，交叉验证官方文档与社区反馈</code></p>
+<p><strong>案例3：大型代码审计 / 重构</strong>（开发者向）<br>适合代码库级别的 bug hunting、安全审计、迁移重构等。多个代理可以互相 review 代码。</p>
+<h3 id="五、5-个高级技巧和避坑指南（技术干货核心）"><a href="#五、5-个高级技巧和避坑指南（技术干货核心）" class="headerlink" title="五、5 个高级技巧和避坑指南（技术干货核心）"></a>五、5 个高级技巧和避坑指南（技术干货核心）</h3><p>1.<br>   <strong>模型选择决定成本</strong><br>   大型 workflow 前先输入 <code>/model</code> 查看当前模型。Opus 4.8 跑几十上百个代理费用会很高，建议先用 Sonnet 测试逻辑，确认后再切强模型。<br>2.<br>   <strong>提前连接好 MCPs / Connectors</strong><br>   做研究类 workflow 前，先把 Notion、Drive、网页搜索、特定 API 等工具连好。来源越多，交叉验证越强。<br>3.<br>   <strong>与现有 Skills 深度结合</strong><br>   如果你已经有写钩子、润色、视觉提示等 Skills，可以在 workflow prompt 里指定调用它们，形成「技能包 + 编排」组合。<br>4.<br>   <strong>成本与停止条件意识</strong><br>   长任务一定要利用 resumable 特性，设置合理 stop conditions。时刻监控 <code>/workflows</code> 的 token 面板，及时干预。<br>5.<br>   <strong>最佳实践流程</strong></p>
+<ul>
+<li>小任务先手动测试 workflow 逻辑</li>
+<li>保存高质量的 workflow 形成个人AI 团队标准作业程序</li>
+<li>迷茫时直接问 Claude：<code>基于你对我的了解，我应该构建哪些 workflows？</code></li>
+</ul>
+<h3 id="六、总结和行动建议"><a href="#六、总结和行动建议" class="headerlink" title="六、总结和行动建议"></a>六、总结和行动建议</h3><p>Dynamic Workflows 把复杂、重复、高价值的工作，从我手动一步步催变成了我设计一次，团队自动跑。</p>
+<p>对于公众号运营者、内容创作者、研究员、开发者来说，这可能是 2026 年最值得深度掌握的 Claude 技能之一。</p>
+<p><strong>现在就行动起来</strong>：</p>
+<ol>
+<li>打开 Claude Code，试试输入 <code>workflow</code> 或 <code>/deep-research</code> 一个你当前的任务</li>
+<li>把你最常做的重复流程做成一个 workflow 并保存下来</li>
+</ol>
+</body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+    
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2026 dadaming&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        target="_blank" rel="noopener" href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" target="_blank" rel="noopener" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery > p > .gallery-item').unwrap();
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
+        }
+
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hljs .clipboard-btn:hover {
+          color: #8a8a8a;
+        }
+
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
+
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
+
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+        clipboard.on('success', function(e) {
+          e.clearSelection();
+        })
+      })
+    </script>
+
+    
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+    
+</body>
+</html>

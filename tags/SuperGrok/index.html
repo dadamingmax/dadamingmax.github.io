@@ -107,6 +107,187 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
+            <a href="/2026/06/Hermes-Agent-Grok-WeChat-Setup-Guide/" itemprop="url">微信里直接调用 Grok？Hermes Agent 配置教程来了</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <span>Jun 10 2026</span>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/SuperGrok/">SuperGrok</a><span>></span><a class="article-category-link" href="/categories/SuperGrok/Hermes-Agent/">Hermes Agent</a><span>></span><a class="article-category-link" href="/categories/SuperGrok/Hermes-Agent/Grok/">Grok</a><span>></span><a class="article-category-link" href="/categories/SuperGrok/Hermes-Agent/Grok/%E5%BE%AE%E4%BF%A1/">微信</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            16 minutes read (About 2360 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p><img src="https://pica.zhimg.com/70/v2-399d9367b151f059750371bf6e22188a_1440w.image?source=172ae18b&amp;biz_tag=Post" alt="微信里直接调用 Grok？Hermes Agent 配置教程来了"></p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a><strong>目录</strong></h2><ol>
+<li>这套方案能实现什么？</li>
+<li>准备条件</li>
+<li>打开 Mac 终端</li>
+<li>安装命令行工具</li>
+<li>安装 Hermes Agent</li>
+<li>启动 Hermes</li>
+<li>把 Grok 接入 Hermes</li>
+<li>安装微信接入依赖</li>
+<li>配置微信入口</li>
+<li>配置微信权限</li>
+<li>启动微信网关</li>
+<li>完整测试流程</li>
+<li>Hermes 接入 Grok 后的使用场景</li>
+<li>常见问题解决</li>
+<li>最终效果</li>
+</ol>
+<h2 id="一、这套方案能实现什么？"><a href="#一、这套方案能实现什么？" class="headerlink" title="一、这套方案能实现什么？"></a><strong>一、这套方案能实现什么？</strong></h2><p>这套方案可以让你在 Mac 上运行 Hermes Agent，然后把 Grok 接进去，最后通过微信和它聊天。</p>
+<p>整体流程是：</p>
+<p><img src="https://pic1.zhimg.com/80/v2-bfb84dd1eec162c10372c39d17500600_1440w.webp" alt="微信消息 → Hermes Gateway → Grok 模型 → Hermes 回复微信"></p>
+<p>也就是说，你可以把 Grok 变成一个微信里的 AI 助手。</p>
+<h2 id="二、准备条件"><a href="#二、准备条件" class="headerlink" title="二、准备条件"></a><strong>二、准备条件</strong></h2><p>该方案你需要准备：</p>
+<ol>
+<li>一台 Mac</li>
+<li>一个可用的 Grok 订阅账号</li>
+<li>一个微信账号</li>
+<li>终端 Terminal</li>
+<li>稳定网络环境</li>
+</ol>
+<p>Grok 账号建议使用 <strong>SuperGrok</strong> 或 <strong>X Premium</strong>+，因为 Hermes 接入 Grok 可以依赖 xAI Grok OAuth 授权。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-9b43d99389afdfb4087d3a332fe76b72_1440w.webp" alt="cnmGrok.com"></p>
+<h2 id="三、打开-Mac-终端"><a href="#三、打开-Mac-终端" class="headerlink" title="三、打开 Mac 终端"></a><strong>三、打开 Mac 终端</strong></h2><p>按下：<code>Command + 空格</code> ，搜索：<code>Terminal</code> ，打开终端。</p>
+<p>如果你的系统是中文，也可以搜索：<code>终端</code>。</p>
+<h2 id="四、安装命令行工具"><a href="#四、安装命令行工具" class="headerlink" title="四、安装命令行工具"></a><strong>四、安装命令行工具</strong></h2><p>第一次使用 Mac 终端开发工具，建议先安装 Apple Command Line Tools。</p>
+<p>在终端输入：<code>xcode-select --install</code></p>
+<p>弹出窗口后，点击安装。</p>
+<p>安装完成后，验证一下： <code>git --version</code></p>
+<p>如果能显示 git 版本，说明基础环境没问题。</p>
+<p><img src="https://picx.zhimg.com/80/v2-f7e90a4901827c57493a0a03e239e303_1440w.webp" alt="git --version"></p>
+<p><strong>五、安装 Hermes Agent</strong></p>
+<p>在终端输入： <code>curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash</code></p>
+<p>安装完成后，刷新终端配置： <code>source ~/.zshrc</code></p>
+<p>然后检查 Hermes 是否安装成功： <code>hermes --help</code></p>
+<p><img src="https://pica.zhimg.com/80/v2-4360bf83d4402a7e8db0357fbc858a38_1440w.webp" alt="img"></p>
+<p>如果能看到 Hermes 的命令说明，说明安装成功。</p>
+<p>也可以运行诊断： <code>hermes doctor</code></p>
+<p>如果有缺少的依赖，Hermes 会提示你怎么处理。</p>
+<h2 id="六、启动-Hermes"><a href="#六、启动-Hermes" class="headerlink" title="六、启动 Hermes"></a><strong>六、启动 Hermes</strong></h2><p>安装完成后，先直接启动一次 Hermes： <code>hermes</code></p>
+<p>如果想用终端界面模式，可以输入： <code>hermes --tui</code></p>
+<p><img src="https://picx.zhimg.com/80/v2-1d2e27aecf413aaa7686e4aadac0d847_1440w.webp" alt="img"></p>
+<p>第一次启动时，Hermes 可能会让你配置模型。</p>
+<p>如果没有自动弹出，也可以手动执行： <code>hermes model</code></p>
+<h2 id="七、把-Grok-接入-Hermes"><a href="#七、把-Grok-接入-Hermes" class="headerlink" title="七、把 Grok 接入 Hermes"></a><strong>七、把 Grok 接入 Hermes</strong></h2><p>执行： <code>hermes model</code></p>
+<p>在模型提供商里选择： <code>xAI Grok OAuth</code> 或者类似： <code>xAI Grok OAuth (SuperGrok Subscription)</code></p>
+<p><img src="https://pica.zhimg.com/80/v2-6a7081f3cbb4e683f708665b0d6691c0_1440w.webp" alt="img"></p>
+<p>选择授权 Grok ：</p>
+<p><img src="https://pic2.zhimg.com/80/v2-cd7b5b844f28fa0a008cdbb989ce6fbf_1440w.webp" alt="img"></p>
+<p>然后 Hermes 会打开浏览器，让你登录 xAI 或 X 账号。</p>
+<p><img src="https://picx.zhimg.com/80/v2-1d77fd4c9ade7dccc1013a72ad538861_1440w.webp" alt="允许即可"></p>
+<p>登录完成后，回到终端。</p>
+<p>选择 Grok 模型，例如： <code>grok-4.3</code></p>
+<p><img src="https://pic1.zhimg.com/80/v2-320fca734a620e0f615d0ad05191144e_1440w.webp" alt="img"></p>
+<p>配置完成后，测试一下：<code>hermes --tui</code></p>
+<p>输入：<code>hi，你现在是什么模型</code></p>
+<p>如果 Hermes 能正常回复，说明 Grok 已经接入成功。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-e193e03ca7825e49b9f5f756a744993a_1440w.webp" alt="img"></p>
+<h2 id="八、安装微信接入依赖"><a href="#八、安装微信接入依赖" class="headerlink" title="八、安装微信接入依赖"></a><strong>八、安装微信接入依赖</strong></h2><p>Hermes 接入微信需要安装额外依赖。</p>
+<p>在终端执行： <code>pip install aiohttp cryptography</code></p>
+<p>如果你希望终端里直接显示微信扫码二维码，再执行：<code>pip install hermes-agent[messaging]</code></p>
+<p>如果提示 pip 找不到，可以试试： <code>python3 -m pip install aiohttp cryptography</code></p>
+<p>或者：<code>python3 -m pip install "hermes-agent[messaging]"</code></p>
+<h2 id="九、配置微信入口"><a href="#九、配置微信入口" class="headerlink" title="九、配置微信入口"></a><strong>九、配置微信入口</strong></h2><p>执行：<code>hermes gateway setup</code>，然后在平台列表里选择：<code>Weixin / WeChat</code></p>
+<p><img src="https://pica.zhimg.com/80/v2-65947bbab8a668305a1ee4be832b90b0_1440w.webp" alt="img"></p>
+<p>接下来 Hermes 会生成一个微信扫码二维码。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-1ea38c746f92660e46924b44fd18befd_1440w.webp" alt="img"></p>
+<p>用手机微信扫码，然后在手机上确认登录。</p>
+<p>成功后，Hermes 会把微信账号凭证保存到：<code>~/.hermes/weixin/accounts/</code></p>
+<h2 id="十、配置微信权限"><a href="#十、配置微信权限" class="headerlink" title="十、配置微信权限"></a><strong>十、配置微信权限</strong></h2><p>打开 Hermes 配置文件：<code>nano ~/.hermes/.env</code></p>
+<p>如果你只是自己用，可以先写： <code>WEIXIN_DM_POLICY=open</code> <code>WEIXIN_GROUP_POLICY=disabled</code></p>
+<p>保存方式：<code>Control + O</code> 回车 <code>Control + X</code></p>
+<p>这里建议先关闭群聊，只用私聊测试。</p>
+<p>因为 Hermes 的 Weixin 接入通常更适合私聊，不一定能稳定收到普通微信群消息。</p>
+<h2 id="十一、启动微信网关"><a href="#十一、启动微信网关" class="headerlink" title="十一、启动微信网关"></a><strong>十一、启动微信网关</strong></h2><p>执行： <code>hermes gateway</code> ，这个窗口不要关闭。</p>
+<p>它会持续监听微信消息。</p>
+<p>然后你打开微信，给刚才绑定的 iLink Bot 发消息： <code>你好，帮我写一篇朋友圈文案</code></p>
+<p><img src="https://pic4.zhimg.com/80/v2-b235b0a7b3a39b82064a07f6418e8eb7_1440w.webp" alt="img"></p>
+<p>如果 Hermes 正常返回内容，说明链路已经跑通。</p>
+<h2 id="十二、完整测试流程"><a href="#十二、完整测试流程" class="headerlink" title="十二、完整测试流程"></a><strong>十二、完整测试流程</strong></h2><p>你可以按这个顺序测试：</p>
+<p>第一步，测试 Grok：<code>hermes --tui</code>，输入：<code>你好</code>。</p>
+<p>第二步，测试微信网关：<code>hermes gateway</code></p>
+<p>第三步，打开微信私聊发送：<code>帮我写一篇 Grok 接入微信的教程大纲</code></p>
+<p>如果微信能收到回复，说明配置成功。</p>
+<h2 id="十三、Hermes-接入-Grok-后的使用场景"><a href="#十三、Hermes-接入-Grok-后的使用场景" class="headerlink" title="十三、Hermes 接入 Grok 后的使用场景"></a><strong>十三、Hermes 接入 Grok 后的使用场景</strong></h2><p>接入成功后，你可以直接在微信里调用 Grok。平时有什么问题，不用打开网页，直接像发微信一样问它就行。</p>
+<h3 id="1-写日常文案"><a href="#1-写日常文案" class="headerlink" title="1. 写日常文案"></a><strong>1. 写日常文案</strong></h3><p>发朋友圈、写通知、写简单介绍，都可以直接让它帮你整理。</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">帮我写一条朋友圈文案，内容是今天开始健身打卡，语气自然一点，不要太夸张。</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="2-总结长内容"><a href="#2-总结长内容" class="headerlink" title="2. 总结长内容"></a><strong>2. 总结长内容</strong></h3><p>朋友发来一大段文字、文章、公告，看不完的时候，可以直接让 Grok 帮你提炼重点。</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">帮我总结一下这段内容，提炼出 3 个重点，用简单的话说明。</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="3-改写表达"><a href="#3-改写表达" class="headerlink" title="3. 改写表达"></a><strong>3. 改写表达</strong></h3><p>有些话不知道怎么说得更清楚、更礼貌，可以直接丢给它优化。</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">帮我把这句话改得更委婉一点：你这个文件发错了，重新发一下。</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="4-制定计划"><a href="#4-制定计划" class="headerlink" title="4. 制定计划"></a><strong>4. 制定计划</strong></h3><p>比如学习计划、健身计划、工作安排、旅行行程，都可以让它帮你整理。</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">帮我做一个一周健身计划，每天 30 分钟，适合新手。</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="5-解决生活问题"><a href="#5-解决生活问题" class="headerlink" title="5. 解决生活问题"></a><strong>5. 解决生活问题</strong></h3><p>遇到不会处理的小问题，也可以直接问。</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Mac 电脑突然连不上 Wi-Fi，可能是什么原因？怎么排查？</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="6-整理待办清单"><a href="#6-整理待办清单" class="headerlink" title="6. 整理待办清单"></a><strong>6. 整理待办清单</strong></h3><p>把一堆零散的事情发给它，让它帮你整理成清晰的任务列表。</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">帮我把下面这些事情整理成待办清单，并按重要程度排序：买菜、交房租、改文章、回复客户、整理电脑文件。</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="7-辅助学习"><a href="#7-辅助学习" class="headerlink" title="7. 辅助学习"></a><strong>7. 辅助学习</strong></h3><p>学习英语、写作文、看资料、理解概念时，都可以让它用更简单的话解释。</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">帮我解释一下“人工智能”是什么意思，用小白能听懂的话说。</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="十四、常见问题解决"><a href="#十四、常见问题解决" class="headerlink" title="十四、常见问题解决"></a><strong>十四、常见问题解决</strong></h2><h3 id="1-hermes-command-not-found"><a href="#1-hermes-command-not-found" class="headerlink" title="1. hermes: command not found"></a><strong>1. hermes: command not found</strong></h3><p>执行：<code>source ~/.zshrc</code></p>
+<p>如果还不行，执行：<code>echo 'export PATH="$HOME/.local/bin:$PATH"' &gt;&gt; ~/.zshrc source ~/.zshrc</code></p>
+<p>再检查：<code>hermes --help</code></p>
+<h3 id="2-curl-安装失败"><a href="#2-curl-安装失败" class="headerlink" title="2. curl 安装失败"></a><strong>2. curl 安装失败</strong></h3><p>检查网络，或者换成原始 GitHub 安装方式：</p>
+<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="3-Grok-授权失败"><a href="#3-Grok-授权失败" class="headerlink" title="3. Grok 授权失败"></a><strong>3. Grok 授权失败</strong></h3><p>重新执行：<code>hermes model</code></p>
+<p>重新选择 xAI Grok OAuth，然后重新登录。</p>
+<p>如果浏览器没有自动打开，可以复制终端里的登录链接到浏览器打开。</p>
+<h3 id="4-微信扫码后没反应"><a href="#4-微信扫码后没反应" class="headerlink" title="4. 微信扫码后没反应"></a><strong>4. 微信扫码后没反应</strong></h3><p>重新执行：<code>hermes gateway setup</code></p>
+<p>重新选择 Weixin / WeChat，再扫码。</p>
+<p>同时确认手机微信已经点击确认登录。</p>
+<h3 id="5-缺少-aiohttp-或-cryptography"><a href="#5-缺少-aiohttp-或-cryptography" class="headerlink" title="5. 缺少 aiohttp 或 cryptography"></a><strong>5. 缺少 aiohttp 或 cryptography</strong></h3><p>执行：<code>python3 -m pip install aiohttp cryptography</code></p>
+<p>然后重新启动：<code>hermes gateway</code></p>
+<h3 id="6-私聊可以，微信群不行"><a href="#6-私聊可以，微信群不行" class="headerlink" title="6. 私聊可以，微信群不行"></a><strong>6. 私聊可以，微信群不行</strong></h3><p>这是正常现象。</p>
+<p>Hermes 的微信接入使用的是 iLink Bot 身份，不等于完整控制你的个人微信号。</p>
+<p>很多情况下，它只能稳定处理私聊，普通微信群消息或 @ 消息不一定会推送到 Hermes。</p>
+<p>所以建议： 先用私聊，不要一开始就折腾微信群。</p>
+<h3 id="7-想停止-Hermes"><a href="#7-想停止-Hermes" class="headerlink" title="7. 想停止 Hermes"></a><strong>7. 想停止 Hermes</strong></h3><p>在终端按：<code>Control + C</code></p>
+<p>即可停止当前运行的 Hermes Gateway。</p>
+<blockquote>
+<p><strong>SuperGrok 官方订阅升级服务：<a target="_blank" rel="noopener" href="https://cnmgrok.com/">http://cnmGrok.com</a></strong></p>
+</blockquote>
+<h2 id="十五、最终效果"><a href="#十五、最终效果" class="headerlink" title="十五、最终效果"></a><strong>十五、最终效果</strong></h2><p>配置完成后，你就可以在 Mac 上运行 Hermes，用 Grok 作为大模型，然后直接在微信里和它聊天。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-748b6335587e5da608498b91532a9cb7_1440w.webp" alt="img"></p>
+<p>最大的好处是，不用每次打开 Grok 网页，也不用一直守着终端。</p>
+<p>你只需要在微信里发一句话，Hermes 就会调用 Grok 帮你处理。</p>
+</body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
             <a href="/2026/05/Grok-Build-Error-Sending-Request-Fix/" itemprop="url">Grok Build error sending request 怎么解决？问题出在这里</a>
         
     </h1>

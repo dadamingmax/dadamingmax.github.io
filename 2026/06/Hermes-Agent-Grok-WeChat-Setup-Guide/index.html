@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top">
 <head>
     <meta charset="utf-8">
-<title>Category: Grok - CNM 国内 AI 订阅升级与使用教程大全</title>
+<title>微信里直接调用 Grok？Hermes Agent 配置教程来了 - CNM 国内 AI 订阅升级与使用教程大全</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
@@ -94,20 +94,12 @@
     </div>
 </nav>
 
-    <section class="section section-heading">
+    <section class="section">
     <div class="container">
-        <div class="content">
-            <h5><i class="far fa-folder"></i>Grok</h5>
-        </div>
-    </div>
-</section>
-<section class="section">
-    <div class="container">
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
+    <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            <a href="/2026/06/Hermes-Agent-Grok-WeChat-Setup-Guide/" itemprop="url">微信里直接调用 Grok？Hermes Agent 配置教程来了</a>
+            微信里直接调用 Grok？Hermes Agent 配置教程来了
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
@@ -278,190 +270,35 @@
     
     </div>
     
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Grok/">#Grok</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/SuperGrok/">#SuperGrok</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Hermes-Agent/">#Hermes Agent</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/%E5%BE%AE%E4%BF%A1/">#微信</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-prev">
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2026/06/ChatGPT-Account-Suspension-Appeal-and-Data-Backup-Guide/">ChatGPT 封号自救指南：申诉入口、英文模板和数据备份方法</a>
+            
+        </span>
+    </div>
     
 </article>
 
 
 
 
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            <a href="/2026/05/Grok-Hermes-Agent-Windows-Setup-Guide/" itemprop="url">在 Windows 上用 Grok 订阅跑通 Hermes Agent(零 API key,15 分钟上手)</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            
-                <span>May 18 2026</span>
-            
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/SuperGrok/">SuperGrok</a><span>></span><a class="article-category-link" href="/categories/SuperGrok/Hermes-Agent/">Hermes Agent</a><span>></span><a class="article-category-link" href="/categories/SuperGrok/Hermes-Agent/Grok/">Grok</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            21 minutes read (About 3190 words)
-        </span>
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <html><head></head><body><p><img src="https://pic1.zhimg.com/70/v2-c090ccaade2ed437d2e5435b0b7d29d8_1440w.image?source=172ae18b&amp;biz_tag=Post" alt="在 Windows 上用 Grok 订阅跑通 Hermes Agent(零 API key,15 分钟上手)"></p>
-<blockquote>
-<p>趁着 xAI 把 Grok 订阅接进开源代理 Hermes 这条热点,这篇文章不谈观点,只带你在 <strong>Windows 10 / 11</strong> 上动手:从 PowerShell 安装到第一次对话,再到把它变成一个会定时干活的代理。全程不需要申请 API key,也不需要额外计费——你已经付费的 Grok 订阅就是入场券。</p>
-</blockquote>
-<h2 id="先说一句重要的话-原生-Windows-是早期-Beta"><a href="#先说一句重要的话-原生-Windows-是早期-Beta" class="headerlink" title="先说一句重要的话:原生 Windows 是早期 Beta"></a>先说一句重要的话:原生 Windows 是早期 Beta</h2><p>在动手之前,这一点必须摆在最前面,因为它会影响你的选择。</p>
-<p>Hermes 现在可以在 Windows 10 / 11 上<strong>原生运行</strong>——不需要 WSL、不需要 Cygwin、不需要 Docker。但官方明确把原生 Windows 标记为 <strong>early beta</strong>:它能装能跑,也通过了 Windows 相关的检查,但没有像 Linux/macOS/WSL2 路径那样被大规模实测过。粗糙的地方主要集中在子进程处理、路径怪癖和非 ASCII 控制台输出上。</p>
-<p>所以请按这个判断来选:</p>
-<ul>
-<li><strong>个人尝鲜、轻量 CLI、本地试用</strong> → 原生 Windows 完全够用,按本文走</li>
-<li><strong>要长期挂 gateway、跑长任务、多平台消息接入做生产自动化</strong> → 官方建议优先用 WSL2 或 Linux 服务器</li>
-</ul>
-<p>本文走原生 Windows 路径;文末会给出何时该切到 WSL2 的明确信号。</p>
-<h2 id="你将得到什么"><a href="#你将得到什么" class="headerlink" title="你将得到什么"></a>你将得到什么</h2><p>跟完这篇教程,你会在 Windows 上拥有一个本地运行的 Hermes Agent,它用你的 Grok 订阅做推理,能跨会话记事,并且可以挂一个定时任务在后台自动跑。整个过程大概 15 分钟。</p>
-<p>需要先确认的前提:</p>
-<ul>
-<li>Windows 10 或 Windows 11(64 位;32 位会缺失 bash,功能受限)</li>
-<li>一个<strong>仍在生效的 Grok 订阅</strong>(任意档位的 SuperGrok,或含 Grok 权益的 X Premium)</li>
-<li>一个能打开网页的浏览器(本机即可)</li>
-<li><strong>不需要</strong>预装 Python、Node.js 或 Git——安装器会自带一套隔离环境</li>
-</ul>
-<blockquote>
-<p>关于依赖:Hermes 采用”零依赖”安装哲学。安装器会自行provision uv、Python 3.11、Node.js、ripgrep、ffmpeg,以及一份便携式 Git Bash(PortableGit,解包到 <code>%LOCALAPPDATA%\hermes</code>,不需要管理员权限,也不会碰你系统里已有的 Git)。如果你已经装了 Git,它会检测到并直接用。</p>
-</blockquote>
-<h2 id="第一步-用-PowerShell-安装-Hermes-Agent"><a href="#第一步-用-PowerShell-安装-Hermes-Agent" class="headerlink" title="第一步:用 PowerShell 安装 Hermes Agent"></a>第一步:用 PowerShell 安装 Hermes Agent</h2><p><strong>用普通权限</strong>打开 PowerShell(不需要”以管理员身份运行”),执行官方一行安装命令:</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">irm https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1 | iex</span><br></pre></td></tr></tbody></table></figure>
-
-<p><img src="https://pic4.zhimg.com/80/v2-323509f6bd9c25c901f69e8bfcefcd0b_720w.webp" alt="img"></p>
-<p>这条命令会把文件部署到 <code>%LOCALAPPDATA%\hermes\</code>,并把 <code>hermes</code> 加到你的<strong>用户级 PATH</strong>。</p>
-<p>它在背后做的事大致是:装 uv、Python 3.11、Node.js、ripgrep、ffmpeg、便携 Git Bash,克隆仓库到 <code>%LOCALAPPDATA%\hermes\hermes-agent</code>,建虚拟环境,最后跑一遍首次设置向导(选模型、provider、工具集)。</p>
-<p><strong>装完后最关键的一步,也是 Windows 上最容易踩的坑:</strong> PATH 改动不会作用于已经开着的终端窗口。你必须<strong>关掉当前 PowerShell,再开一个新的窗口</strong>(或新开一个 Windows Terminal 标签页),<code>hermes</code> 命令才会生效。不要用 <code>$env:PATH += ...</code> 手工临时拼,除非你清楚自己在做什么。</p>
-<p>新开窗口后验证安装:</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hermes --version</span><br><span class="line">hermes doctor</span><br></pre></td></tr></tbody></table></figure>
-
-<p><img src="https://picx.zhimg.com/80/v2-95f2ccf887f81f61bd28f652287420e9_720w.webp" alt="img"></p>
-<p><code>hermes doctor</code> 是这篇教程里你会反复用到的”体检命令”。它会列出环境、依赖和各个认证 provider 的状态。现在你应该能看到一个 <code>◆ Auth Providers</code> 区块,里面的 <code>xai-oauth</code> 还是未登录状态——这正常,下一步解决。</p>
-<p><img src="https://pic1.zhimg.com/80/v2-6bb19075d67d5572c699095f57f76e24_720w.webp" alt="img"></p>
-<blockquote>
-<p>安全提醒:<code>irm ... | iex</code> 等于把远程脚本直接执行,和 Linux 上的 <code>curl | bash</code> 是一回事,值得谨慎。想先审一遍脚本,可以把那个 URL 在浏览器里打开读一遍,或者先 <code>irm &lt;url&gt; -OutFile install.ps1</code> 存下来检查后再运行。</p>
-<p>如果遇到 PowerShell 执行策略阻止脚本运行,可在当前会话临时放开(仅作用于这个窗口,不改全局):<code>Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass</code>,然后重跑安装命令。</p>
-</blockquote>
-<h2 id="第二步-用-Grok-订阅登录-核心步骤"><a href="#第二步-用-Grok-订阅登录-核心步骤" class="headerlink" title="第二步:用 Grok 订阅登录(核心步骤)"></a>第二步:用 Grok 订阅登录(核心步骤)</h2><p>这一步就是整条新闻的关键所在——浏览器一次授权,代替了传统的 API key 流程。</p>
-<p>在新开的 PowerShell 窗口里走模型选择器:</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hermes model</span><br></pre></td></tr></tbody></table></figure>
-
-<p>接下来会发生这些事:</p>
-<ol>
-<li>从 provider 列表里选择 <strong>“xAI Grok OAuth (SuperGrok Subscription)”</strong></li>
-</ol>
-<p><img src="https://pic4.zhimg.com/80/v2-9ca00c951b1f9a4ad893c2a218a45ea9_720w.webp" alt="img"></p>
-<ol start="2">
-<li>Hermes 自动打开你的默认浏览器,跳到 <code>accounts.x.ai</code></li>
-</ol>
-<p><img src="https://pic3.zhimg.com/80/v2-7646b4d6ed817a5ba8dc893a97ef3506_720w.webp" alt="img"></p>
-<ol start="3">
-<li>你在浏览器里登录(或确认已登录的会话)并点击批准</li>
-</ol>
-<p><img src="https://pic4.zhimg.com/80/v2-4fa460d0d5807344e85b95157970769b_720w.webp" alt="img"></p>
-<ol start="4">
-<li>xAI 重定向回 Hermes,令牌保存到 <code>%USERPROFILE%\.hermes\auth.json</code></li>
-<li>回到选择器,挑一个模型——<code>grok-4.3</code> 永远被钉在列表最上面</li>
-</ol>
-<p><img src="https://pic3.zhimg.com/80/v2-ae7be72e2b12c083a200474f1d4072da_720w.webp" alt="img"></p>
-<ol start="6">
-<li>完成</li>
-</ol>
-<p>如果你只想单独触发登录、不进模型选择器:</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hermes auth add xai-oauth</span><br></pre></td></tr></tbody></table></figure>
-
-<p>登录成功后,Hermes 会在每次会话前自动刷新令牌,你不用再管它,直到主动登出或在 xAI 账户设置里吊销授权。</p>
-<p>再体检一次确认:</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hermes doctor</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这次 <code>xai-oauth</code> 那一行应该显示为已认证。</p>
-<p><img src="https://pic3.zhimg.com/80/v2-00f9c0627c76aa9adf245bd5bed00c98_720w.webp" alt="img"></p>
-<blockquote>
-<p>Windows 数据目录说明:<code>%LOCALAPPDATA%\hermes</code> 是可丢弃的基础设施(删掉后重跑安装命令即可恢复);而 <code>%USERPROFILE%\.hermes</code> 是你的数据——配置、记忆、skills、会话历史,结构和 Linux 安装完全一致。把这个目录在机器间同步,你的 Hermes 就跟着走。</p>
-<p>常见小坑:浏览器授权有 180 秒超时窗口。点开浏览器后别去倒水了再回来,否则会看到 “Authorization timed out”。不要紧,重跑 <code>hermes auth add xai-oauth</code> 即可。</p>
-</blockquote>
-<p>关于 SuperGrok 订阅: 这是本教程唯一的付费前提。值得注意的是,这次集成对所有订阅档位开放(xAI 未限制在高级套餐),且同一个登录就覆盖文本、语音、图像、视频、转写——相比单独申请 API key 还要管理速率和计费,订阅路径对个人用户更省心。推荐 <strong>SuperGrok 官方订阅升级服务</strong> : <a target="_blank" rel="noopener" href="https://cnmgrok.com/">cnmGrok.com</a>。</p>
-<h2 id="第三步-第一次对话"><a href="#第三步-第一次对话" class="headerlink" title="第三步:第一次对话"></a>第三步:第一次对话</h2><p>万事俱备,直接启动:</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hermes</span><br></pre></td></tr></tbody></table></figure>
-
-<p><img src="https://pica.zhimg.com/80/v2-7037fdf293f769229242248ee77addac_720w.webp" alt="img"></p>
-<p>随便问点什么,确认 Grok 真的在背后回应——让它做一道需要推理的题,或者解释一段代码。</p>
-<p><img src="https://pic3.zhimg.com/80/v2-d950e9e47433101637ba3ae7924e797a_720w.webp" alt="img"></p>
-<p>确认或固定模型可以这样设默认值:</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hermes config set model.default grok-4.3</span><br><span class="line">hermes config set model.provider xai-oauth</span><br></pre></td></tr></tbody></table></figure>
-
-<p>设置完之后,<code>%USERPROFILE%\.hermes\config.yaml</code> 里会出现类似这样的内容:</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">model:</span><br><span class="line">  default: grok-4.3</span><br><span class="line">  provider: xai-oauth</span><br><span class="line">  base_url: https://api.x.ai/v1</span><br></pre></td></tr></tbody></table></figure>
-
-<p>到这里,你已经有了一个用 Grok 驱动、带长期记忆的本地代理。和普通聊天框的区别在于:它跨会话不丢上下文,而且能动手干活。</p>
-<h2 id="第四步-启用语音和图像-同一个登录-无需额外配置"><a href="#第四步-启用语音和图像-同一个登录-无需额外配置" class="headerlink" title="第四步:启用语音和图像(同一个登录,无需额外配置)"></a>第四步:启用语音和图像(同一个登录,无需额外配置)</h2><p>这次集成有个容易被忽略但很实用的点:同一个 OAuth 令牌不仅覆盖文本,还覆盖语音、图像、视频、转写,不用为每项能力再单独认证。</p>
-<p>打开工具选择器:</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hermes tools</span><br></pre></td></tr></tbody></table></figure>
-
-<p>在菜单里给对应工具挑后端:</p>
-<ul>
-<li><strong>Text-to-Speech</strong> → 选 “xAI TTS”</li>
-<li><strong>Image Generation</strong> → 选 “xAI Grok Imagine (image)”</li>
-<li><strong>Video Generation</strong> → 选 “xAI Grok Imagine”</li>
-</ul>
-<p>如果 OAuth 令牌已存在,选择器会直接确认并跳过凭证输入。</p>
-<blockquote>
-<p>提醒两点:第一,视频生成默认关闭,需要在 <code>hermes tools</code> 里进入 <code>🎬 Video Generation</code> 用空格键手动开启。第二,图像默认模型大约 5–10 秒出图,想要更高保真可以选 quality 版,代价是 10–20 秒。</p>
-</blockquote>
-<h2 id="第五步-让它在后台自动干活-Windows-上的关键差异"><a href="#第五步-让它在后台自动干活-Windows-上的关键差异" class="headerlink" title="第五步:让它在后台自动干活(Windows 上的关键差异)"></a>第五步:让它在后台自动干活(Windows 上的关键差异)</h2><p>Windows 关键差异: Linux 靠 cron / systemd;原生 Windows 上 gateway 跑成后台 PowerShell 进程,定时调度走 Windows 计划任务(Scheduled Task)。别处教程写 crontab 的地方,这里对应计划任务——照搬 Linux 教程最容易卡在这。 具体配置见官方文档:Windows (Native) Guide 的 “gateway as a Scheduled Task” 节,及 “Automate Anything with Cron” / “Daily Briefing Bot” 教程。三条纪律:</p>
-<ol>
-<li>先在 <code>hermes</code> 交互模式手动跑通,确认输出符合预期</li>
-<li>验证过的指令再固化成计划任务,别直接写没测过的调度</li>
-<li>要实时信息优先用 Grok 原生能力(模型层内置 X / 网络搜索,不必拼多步外部工具)</li>
-</ol>
-<h2 id="Windows-常见问题速查表"><a href="#Windows-常见问题速查表" class="headerlink" title="Windows 常见问题速查表"></a>Windows 常见问题速查表</h2><p>教程类文章最有用的部分往往是出问题时怎么办。下面是针对 Windows 整理的高频情况:</p>
-<ol>
-<li><strong><code>hermes</code> 命令找不到 / 不是可识别的命令</strong> 几乎都是因为没开新窗口。PATH 改动不作用于已打开的终端。解决:<strong>关掉当前 PowerShell,开一个全新的窗口</strong>,再 <code>Get-Command hermes</code> 验证。</li>
-<li><strong>控制台中文/emoji 显示乱码</strong> 原生 Windows 的非 ASCII 控制台输出是已知粗糙点。可以在环境变量里设 <code>HERMES_DISABLE_WINDOWS_UTF8=1</code> 回退到旧的 cp1252 stdio 路径(主要用于排查),或改用 Windows Terminal 而非老式 cmd 窗口。</li>
-<li><strong>“No xAI credentials found”(运行时报找不到凭证)</strong> 还没登录,或凭证文件被删了。解决:<code>hermes model</code> 选 xAI Grok OAuth provider,或直接 <code>hermes auth add xai-oauth</code>。</li>
-<li><strong>令牌过期但没自动重新登录</strong> Hermes 会在每次会话前及遇到 401 时刷新令牌。若刷新令牌被吊销(你在 xAI 那边撤了授权,或账户轮换),它会给出明确的重新认证提示而非崩溃。解决:重跑 <code>hermes auth add xai-oauth</code>。</li>
-<li><strong>“Authorization timed out”(授权超时)</strong> 回环监听有 180 秒有效窗口,没及时批准就超时。解决:重跑 <code>hermes auth add xai-oauth</code> 或 <code>hermes model</code>。</li>
-<li><strong>“State mismatch (possible CSRF)”</strong> Hermes 发现授权服务器返回的 <code>state</code> 与发出的不一致。解决:重新登录;反复出现就检查是否有代理或重定向在篡改 OAuth 响应。</li>
-<li><strong>PowerShell 报执行策略错误,脚本无法运行</strong> 当前会话临时放开:<code>Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass</code>,只作用于这个窗口。</li>
-<li><strong>想彻底登出</strong> :<code>hermes auth logout xai-oauth</code>, 只想删某一条凭证池记录:先 <code>hermes auth list xai-oauth</code> 看清单,再 <code>hermes auth remove xai-oauth &lt;index|id|label&gt;</code>。</li>
-<li><strong>想干净卸载整个 Hermes</strong> 官方卸载路径会移除 <code>schtasks</code> 计划任务条目、启动文件夹快捷方式、<code>hermes.cmd</code> 垫片,删除 <code>%LOCALAPPDATA%\hermes\hermes-agent\</code>,并清理用户 PATH。注意:你的数据目录 <code>%USERPROFILE%\.hermes</code> 不在自动清理范围内,需要保留或手动删除自行决定。</li>
-</ol>
-<h2 id="什么时候该切到-WSL2"><a href="#什么时候该切到-WSL2" class="headerlink" title="什么时候该切到 WSL2"></a>什么时候该切到 WSL2</h2><p>出现以下任一信号,转 WSL2:</p>
-<ul>
-<li>需要 dashboard 网页内嵌终端面板(原生 Windows 无 POSIX PTY,仅此功能被禁,其余原生可用)</li>
-<li>要做稳定的生产自动化(长任务、常驻 gateway、多平台消息)——官方明确建议优先 WSL2 / Linux</li>
-<li>频繁遇到子进程、信号、路径分隔符的怪问题</li>
-</ul>
-<p>切换:PowerShell 里 <code>wsl --install</code> 装 Ubuntu,在 WSL 里跑 <code>curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash</code>。两套可共存——原生数据在 <code>%LOCALAPPDATA%\hermes,WSL</code> 在 <code>~/.hermes</code>。</p>
-<h2 id="几条值得记住的实践纪律"><a href="#几条值得记住的实践纪律" class="headerlink" title="几条值得记住的实践纪律"></a>几条值得记住的实践纪律</h2><ol>
-<li>实时数据 ≠ 准确数据。 Grok 可能把过时或讽刺内容当事实。高风险决策(金融、法律、危机)行动前交叉验证。</li>
-<li>搜索成本会累积。 xAI 服务端搜索约 千次每天两三百次1/天,规模化要算进预算。</li>
-<li>凭证当密码对待。 令牌在 <code>%USERPROFILE%\.hermes\auth.json</code>,能花你的订阅额度。别打包上传,别留在不可信机器,登出真的跑 <code>hermes auth logout</code>。</li>
-<li>先手动跑通,再固化成计划任务。 摩擦降到只剩”点一下授权”后,决定成败的是你有没有先想清楚它会在哪出错。</li>
-</ol>
-</body></html>
-    
-    </div>
-    
-    
-</article>
-
-
-
-
-    
-    
     </div>
 </section>
     <footer class="footer">

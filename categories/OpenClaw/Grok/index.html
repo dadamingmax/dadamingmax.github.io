@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+<title>Category: Grok - CNM 国内 AI 订阅升级与使用教程大全</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+
+
+<meta name="description" content="">
+
+
+
+
+
+
+
+
+
+<link rel="icon" type="image/png" href="/favicon.png?v=20260519-2">
+<link rel="shortcut icon" type="image/png" href="/favicon.png?v=20260519-2">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                <img src="/images/logo.png" alt="" height="28">
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="/">Home</a>
+            
+            <a class="navbar-item "
+               href="/archives">Archives</a>
+            
+            <a class="navbar-item "
+               href="/categories">Categories</a>
+            
+            <a class="navbar-item "
+               href="/tags">Tags</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section section-heading">
+    <div class="container">
+        <div class="content">
+            <h5><i class="far fa-folder"></i>Grok</h5>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2026/06/OpenClaw-Mac-App-Connection-Guide/" itemprop="url">OpenClaw Mac 安装与手机 App 连接教程：把你的手机变成 AI 助手节点</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <span>Jun 30 2026</span>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/OpenClaw/">OpenClaw</a><span>></span><a class="article-category-link" href="/categories/OpenClaw/Grok/">Grok</a><span>></span><a class="article-category-link" href="/categories/OpenClaw/Grok/SuperGrok/">SuperGrok</a><span>></span><a class="article-category-link" href="/categories/OpenClaw/Grok/SuperGrok/OpenClaw-App/">OpenClaw App</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            14 minutes read (About 2127 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p><img src="https://picx.zhimg.com/70/v2-713b533a454ea5a3d4bead405daf93b9_1440w.image?source=172ae18b&amp;biz_tag=Post" alt="OpenClaw Mac 安装与手机 App 连接教程：把你的手机变成 AI 助手节点"></p>
+<p>OpenClaw 可以理解成一个“本地 AI 助手网关”。它不是单纯的聊天机器人，而是把模型、工具、设备和聊天入口串起来：你可以在电脑上运行 Gateway，再用 Telegram、WhatsApp、Slack、Discord、Signal、iMessage，或者手机 OpenClaw App 接入它。官方首页对它的定位是：在你常用的聊天软件里，让 AI 帮你处理邮件、日程、任务等操作。</p>
+<p>这篇教程以 <strong>Mac 安装 OpenClaw + 手机 OpenClaw App 连接 Gateway</strong>为主。</p>
+<h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><p>你需要准备：</p>
+<ol>
+<li>一台 Mac</li>
+<li>一个可用网络</li>
+<li>终端 Terminal</li>
+<li>手机 OpenClaw App 手机 OpenClaw 应用程序</li>
+<li>一个可用模型，例如 Grok / xAI、OpenAI、Anthropic 等</li>
+<li>如果要接 Grok，建议准备 SuperGrok 或 X Premium 订阅（ <strong>SuperGrok 官方订阅升级服务：<a target="_blank" rel="noopener" href="https://cnmgrok.com/">http://cnmGrok.com</a></strong> ）</li>
+</ol>
+<p>OpenClaw 官方文档建议使用 <strong>Node 24</strong>，最低要求是 <strong>Node 22.19</strong>+；</p>
+<p>不过官方安装脚本会自动处理 Node 检测和安装。</p>
+<h2 id="二、Mac-安装-OpenClaw"><a href="#二、Mac-安装-OpenClaw" class="headerlink" title="二、Mac 安装 OpenClaw"></a>二、Mac 安装 OpenClaw</h2><h3 id="方式一：一键安装，推荐新手使用"><a href="#方式一：一键安装，推荐新手使用" class="headerlink" title="方式一：一键安装，推荐新手使用"></a>方式一：一键安装，推荐新手使用</h3><p>打开 Mac 的 <strong>终端 Terminal</strong>，复制执行： <code>curl -fsSL https://openclaw.ai/install.sh | bash</code></p>
+<p><img src="https://pic2.zhimg.com/80/v2-20924c0272ea4fb7310a6c6e7c533c8b_1440w.webp" alt="img"></p>
+<p>这个官方安装脚本会自动检测系统、安装所需 Node、安装 OpenClaw，并启动 onboarding 初始化流程。</p>
+<p>安装完成后，检查版本： <code>openclaw --version</code></p>
+<p><img src="https://pic2.zhimg.com/80/v2-a0da03d7c53a36490627241355740cb1_1440w.webp" alt="img"></p>
+<p>如果能看到版本号，说明安装成功。</p>
+<p>然后进入初始化配置： <code>openclaw onboard</code></p>
+<p>如果你希望顺便安装后台 daemon，可以执行： <code>openclaw onboard --install-daemon</code></p>
+<h3 id="方式二：npm-手动安装"><a href="#方式二：npm-手动安装" class="headerlink" title="方式二：npm 手动安装"></a>方式二：npm 手动安装</h3><p>如果你本机已经有 Node，也可以直接用 npm 安装： <code>npm install -g openclaw@latest openclaw onboard --install-daemon</code></p>
+<p>官方文档也提供 npm、pnpm、bun 等安装方式；如果你已经自己管理 Node，npm 方式会更直接。</p>
+<h2 id="三、连接模型：以-Grok-xAI-为例"><a href="#三、连接模型：以-Grok-xAI-为例" class="headerlink" title="三、连接模型：以 Grok / xAI 为例"></a>三、连接模型：以 Grok / xAI 为例</h2><p>如果你想让 OpenClaw 使用 Grok，可以走 xAI OAuth 授权。</p>
+<p>新装 OpenClaw 时直接运行： <code>openclaw onboard --install-daemon</code></p>
+<p>到模型授权步骤时，选择 <strong>xAI / Grok OAuth</strong>。</p>
+<p><img src="https://pica.zhimg.com/80/v2-5bf033058fec145e2caf9fba26a146e6_1440w.webp" alt="img"></p>
+<p>如果你已经安装好了 OpenClaw，只是想单独登录 Grok，不需要重新跑完整 onboarding，直接执行： <code>openclaw models auth login --provider xai --method oauth</code></p>
+<p><img src="https://picx.zhimg.com/80/v2-5aeb089b043391f523cced233f9c6a43_1440w.webp" alt="img"></p>
+<p>登录完成后，可以把 Grok 设置成默认模型： <code>openclaw models set xai/grok-4.3</code></p>
+<p>官方文档说明，OpenClaw 内置 xAI provider，推荐普通用户通过 Grok OAuth 使用；这种方式不需要 xAI API Key，也不需要 Grok Build App。</p>
+<h2 id="四、启动-OpenClaw-Gateway"><a href="#四、启动-OpenClaw-Gateway" class="headerlink" title="四、启动 OpenClaw Gateway"></a>四、启动 OpenClaw Gateway</h2><p>手机 App 不是单独运行完整 OpenClaw 的主机，它更像一个 <strong>companion node / 设备节点</strong>。真正的 Gateway 需要跑在 Mac、Linux 或 Windows WSL2 上。iOS 文档明确说明，iPhone App 会通过 WebSocket 连接到 Gateway；Android 文档也说明 Android App 是 companion node，需要一个正在运行的 Gateway。</p>
+<p>在 Mac 终端执行： <code>openclaw gateway --port 18789</code></p>
+<p>如果想看更详细日志： <code>openclaw gateway --port 18789 --verbose</code></p>
+<p>正常情况下，日志里应该能看到类似： <code>listening on ws://0.0.0.0:18789</code></p>
+<p>这说明 Mac 上的 Gateway 已经启动。</p>
+<h2 id="五、让手机和-Mac-在同一个网络"><a href="#五、让手机和-Mac-在同一个网络" class="headerlink" title="五、让手机和 Mac 在同一个网络"></a>五、让手机和 Mac 在同一个网络</h2><p>最简单的连接方式是： Mac 和手机连接同一个 Wi-Fi</p>
+<p>然后在 Mac 上查看本机局域网 IP： <code>ipconfig getifaddr en0</code></p>
+<p>通常会得到类似： <code>192.168.1.23</code></p>
+<p>那么你的 Gateway 地址就是： <code>ws://192.168.1.23:18789</code></p>
+<p>如果你的 Mac 是有线网络，可能需要查： <code>ipconfig getifaddr en1</code></p>
+<h2 id="六、手机-OpenClaw-App-连接-Gateway"><a href="#六、手机-OpenClaw-App-连接-Gateway" class="headerlink" title="六、手机 OpenClaw App 连接 Gateway"></a>六、手机 OpenClaw App 连接 Gateway</h2><h3 id="iPhone-连接方式"><a href="#iPhone-连接方式" class="headerlink" title="iPhone 连接方式"></a>iPhone 连接方式</h3><p>iOS 版 OpenClaw App 的官方说明是：它会连接到 Gateway，并暴露 Canvas、屏幕快照、相机、定位、Talk mode、Voice wake 等能力；iPhone App 版本会在对应 release 启用时通过 Apple 渠道分发，本地开发者也可以从源码构建。</p>
+<ol>
+<li>打开 Mac 终端，先确认 OpenClaw 能用：<code>openclaw --version</code></li>
+<li>如果还没初始化，先跑：<code>openclaw onboard --mode local</code></li>
+<li>启动 Gateway：<code>openclaw gateway --port 18789</code></li>
+<li>再开一个新的终端窗口，先查 Mac 的局域网 IP：<code>ipconfig getifaddr en0</code> ，返回类似：<code>192.168.1.23</code></li>
+<li>执行：<code>openclaw qr --url ws://192.168.1.23:18789</code> （把里面的 IP 换成你自己 Mac 查出来的 IP）</li>
+</ol>
+<p><img src="https://picx.zhimg.com/80/v2-afaf60cf4618eb1d23ddc30ed7ee778b_1440w.webp" alt="img"></p>
+<blockquote>
+<p>官方 CLI 文档里，<code>openclaw qr</code> 就是用来生成移动端配对二维码和 setup code 的命令，也支持 <code>--url</code> 指定 Gateway 地址。</p>
+</blockquote>
+<ol>
+<li>打开手机 OpenClaw App</li>
+<li>直接选择 Connect Gateway，并点击<code>Scan QR Code</code>扫描 Mac 终端里生成的二维码。（或者点击 setting 选择 scan qp）</li>
+</ol>
+<p><img src="https://pica.zhimg.com/80/v2-b3ee12e333c66f27eaf0bf90fabdbc9a_1440w.webp" alt="img"></p>
+<h2 id="七、批准手机设备配对"><a href="#七、批准手机设备配对" class="headerlink" title="七、批准手机设备配对"></a>七、批准手机设备配对</h2><p>手机第一次连接 Gateway 时，Mac 端需要批准这个设备。</p>
+<p>在 Mac 终端新开一个窗口，执行： <code>openclaw devices list</code></p>
+<p>你会看到一个 pending 的设备请求，里面有一个 <code>requestId</code>。</p>
+<p>批准它： <code>openclaw devices approve &lt;requestId&gt;</code></p>
+<p>如果不想批准，可以拒绝： <code>openclaw devices reject &lt;requestId&gt;</code></p>
+<p>官方 pairing 文档说明，iOS、Android、macOS、headless nodes 都会以 <code>role: node</code> 的方式连接 Gateway，首次连接需要 Gateway 创建并批准设备配对请求。</p>
+<p>批准后，再检查节点状态： <code>openclaw nodes status</code> 或者： <code>openclaw gateway call node.list --params "{}"</code></p>
+<p>如果能看到手机节点在线，说明连接成功。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-0d548b06bf988d4b8a86bfab3b2782a9_1440w.webp" alt="img"></p>
+<h2 id="八、通过-Telegram-生成手机配对码"><a href="#八、通过-Telegram-生成手机配对码" class="headerlink" title="八、通过 Telegram 生成手机配对码"></a>八、通过 Telegram 生成手机配对码</h2><p>如果你已经把 Telegram Bot 接入 OpenClaw，也可以用 Telegram 做首次配对。</p>
+<p>步骤如下：</p>
+<ol>
+<li>在 Telegram 里给你的 OpenClaw Bot 发送： <code>/pair</code></li>
+<li>Bot 会返回一条说明和一个 setup code</li>
+<li>打开手机 OpenClaw App</li>
+<li>进入：<code>Settings 选择 Gateway</code></li>
+<li>扫描二维码，或者粘贴 setup code</li>
+<li>回到 Telegram，输入： <code>/pair pending</code></li>
+<li>查看待批准设备，然后批准</li>
+</ol>
+<p>官方文档推荐 iOS 用户通过 Telegram 进行首次设备配对；setup code 本质上是一个包含 Gateway WebSocket 地址和短期 bootstrap token 的编码 payload，所以有效期内要像密码一样保管。</p>
+<p><img src="https://pica.zhimg.com/80/v2-3e288c0ae0fbbf9540aa3c233573d5fa_1440w.webp" alt="cnmGrok.com"></p>
+<h2 id="九、常见问题排查"><a href="#九、常见问题排查" class="headerlink" title="九、常见问题排查"></a>九、常见问题排查</h2><h3 id="1-手机搜不到-Mac-Gateway"><a href="#1-手机搜不到-Mac-Gateway" class="headerlink" title="1. 手机搜不到 Mac Gateway"></a>1. 手机搜不到 Mac Gateway</h3><p>先确认 Mac 和手机在同一个 Wi-Fi。</p>
+<p>然后确认 Mac Gateway 是否启动： <code>openclaw gateway --port 18789 --verbose</code></p>
+<p>再确认 Mac 的 IP： <code>ipconfig getifaddr en0</code></p>
+<p>最后在手机里手动填写： <code>ws://你的Mac局域网IP:18789</code></p>
+<p>例如： <code>ws://192.168.1.23:18789</code></p>
+<h3 id="2-连接后一直-pending"><a href="#2-连接后一直-pending" class="headerlink" title="2. 连接后一直 pending"></a>2. 连接后一直 pending</h3><p>在 Mac 上执行： <code>openclaw devices list</code></p>
+<p>如果看到 pending 请求，批准： <code>openclaw devices approve &lt;requestId&gt;</code></p>
+<p>批准后再查： <code>openclaw nodes status</code></p>
+<h3 id="3-Mac-上-openclaw-命令不存在"><a href="#3-Mac-上-openclaw-命令不存在" class="headerlink" title="3. Mac 上 openclaw 命令不存在"></a>3. Mac 上 <code>openclaw</code> 命令不存在</h3><p>先检查 npm 全局路径： <code>npm bin -g echo $PATH</code></p>
+<p>如果 PATH 没包含 npm 全局路径，可以临时执行： <code>export PATH="$(npm bin -g):$PATH"</code></p>
+<p>如果还是不行，重新安装： <code>npm install -g openclaw@latest</code></p>
+<h3 id="4-手机和-Mac-不在同一网络"><a href="#4-手机和-Mac-不在同一网络" class="headerlink" title="4. 手机和 Mac 不在同一网络"></a>4. 手机和 Mac 不在同一网络</h3><p>如果手机不在同一个局域网，比如你人在外面，Mac 在家里，就不能直接用普通 <code>ws://192.168.x.x:18789</code>。</p>
+<p>这种场景推荐用： <code>Tailscale Serve / Funnel</code></p>
+<p>或者其他带 TLS 的公网 <code>wss://</code> Gateway 地址。</p>
+<p>Android 官方文档明确说明，Tailscale 或公网主机建议使用安全端点，例如 <code>wss://</code>，而不是直接使用裸的 tailnet IP <code>ws://</code>。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>OpenClaw 的正确理解方式不是“又一个聊天软件”，而是一个 <strong>本地 Gateway + 多端节点 + 多模型 + 多工具</strong> 的 AI 助手系统。</p>
+<p>Mac 负责运行 Gateway。 手机 App 负责作为移动节点接入。 模型负责思考和生成。 聊天入口负责和你交互。</p>
+<p>如果只是想聊天，普通 ChatGPT、Grok、Claude App 就够了。</p>
+<p>但如果你想把手机、Mac、聊天软件、模型和本地工具串成一个能执行任务的 AI 系统，OpenClaw 才真正有意义。</p>
+</body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+    
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2026 dadaming&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        target="_blank" rel="noopener" href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" target="_blank" rel="noopener" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery > p > .gallery-item').unwrap();
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
+        }
+
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hljs .clipboard-btn:hover {
+          color: #8a8a8a;
+        }
+
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
+
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
+
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+        clipboard.on('success', function(e) {
+          e.clearSelection();
+        })
+      })
+    </script>
+
+    
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+    
+</body>
+</html>

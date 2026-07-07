@@ -290,7 +290,7 @@
   </url>
   
   <url>
-    <loc>https://clawdo.com/2026/02/minmax-2-5/</loc>
+    <loc>https://clawdo.com/2026/05/Why-ChatGPT-Asks-for-Phone-Verification/</loc>
     
     <lastmod>2026-05-15</lastmod>
     
@@ -299,7 +299,7 @@
   </url>
   
   <url>
-    <loc>https://clawdo.com/2026/05/Why-ChatGPT-Asks-for-Phone-Verification/</loc>
+    <loc>https://clawdo.com/2026/02/minmax-2-5/</loc>
     
     <lastmod>2026-05-15</lastmod>
     
@@ -452,6 +452,20 @@
   </url>
   
   <url>
+    <loc>https://clawdo.com/tags/%E6%89%8B%E6%9C%BA%E9%AA%8C%E8%AF%81/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://clawdo.com/tags/OpenAI/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://clawdo.com/tags/Composer-2-5/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -474,20 +488,6 @@
   
   <url>
     <loc>https://clawdo.com/tags/Grok-Build/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://clawdo.com/tags/%E6%89%8B%E6%9C%BA%E9%AA%8C%E8%AF%81/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://clawdo.com/tags/OpenAI/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -550,14 +550,21 @@
   </url>
   
   <url>
-    <loc>https://clawdo.com/tags/Google-AI-Studio/</loc>
+    <loc>https://clawdo.com/tags/Hermes-Agent/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://clawdo.com/tags/Android/</loc>
+    <loc>https://clawdo.com/tags/grok%E5%BC%80%E9%80%9A%E8%AE%A2%E9%98%85/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://clawdo.com/tags/%E5%BE%AE%E4%BF%A1/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -578,21 +585,14 @@
   </url>
   
   <url>
-    <loc>https://clawdo.com/tags/Hermes-Agent/</loc>
+    <loc>https://clawdo.com/tags/Google-AI-Studio/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://clawdo.com/tags/grok%E5%BC%80%E9%80%9A%E8%AE%A2%E9%98%85/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://clawdo.com/tags/%E5%BE%AE%E4%BF%A1/</loc>
+    <loc>https://clawdo.com/tags/Android/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -615,14 +615,14 @@
   </url>
   
   <url>
-    <loc>https://clawdo.com/categories/ChatGPT/%E5%B0%81%E5%8F%B7%E8%87%AA%E6%95%91/</loc>
+    <loc>https://clawdo.com/categories/Anthropic/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://clawdo.com/categories/Anthropic/</loc>
+    <loc>https://clawdo.com/categories/ChatGPT/%E5%B0%81%E5%8F%B7%E8%87%AA%E6%95%91/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -650,7 +650,7 @@
   </url>
   
   <url>
-    <loc>https://clawdo.com/categories/ChatGPT/%E5%B0%81%E5%8F%B7%E8%87%AA%E6%95%91/%E7%94%B3%E8%AF%89%E5%85%A5%E5%8F%A3/</loc>
+    <loc>https://clawdo.com/categories/Anthropic/Claude/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -678,14 +678,7 @@
   </url>
   
   <url>
-    <loc>https://clawdo.com/categories/SuperGrok/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://clawdo.com/categories/Anthropic/Claude/</loc>
+    <loc>https://clawdo.com/categories/ChatGPT/%E5%B0%81%E5%8F%B7%E8%87%AA%E6%95%91/%E7%94%B3%E8%AF%89%E5%85%A5%E5%8F%A3/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -699,7 +692,7 @@
   </url>
   
   <url>
-    <loc>https://clawdo.com/categories/Google-AI-Studio/</loc>
+    <loc>https://clawdo.com/categories/SuperGrok/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -734,28 +727,7 @@
   </url>
   
   <url>
-    <loc>https://clawdo.com/categories/ChatGPT/%E5%B0%81%E5%8F%B7%E8%87%AA%E6%95%91/%E7%94%B3%E8%AF%89%E5%85%A5%E5%8F%A3/%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://clawdo.com/categories/Composer-2-5/Grok/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://clawdo.com/categories/Codex/OpenAI/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://clawdo.com/categories/Gemini/Google/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -769,6 +741,27 @@
   </url>
   
   <url>
+    <loc>https://clawdo.com/categories/Composer-2-5/Grok/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://clawdo.com/categories/Gemini/Google/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://clawdo.com/categories/ChatGPT/%E5%B0%81%E5%8F%B7%E8%87%AA%E6%95%91/%E7%94%B3%E8%AF%89%E5%85%A5%E5%8F%A3/%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://clawdo.com/categories/Grok-Build/Grok/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -776,14 +769,14 @@
   </url>
   
   <url>
-    <loc>https://clawdo.com/categories/Google-AI-Studio/Gemini/</loc>
+    <loc>https://clawdo.com/categories/SuperGrok/Hermes-Agent/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://clawdo.com/categories/SuperGrok/%E9%A2%9D%E5%BA%A6/</loc>
+    <loc>https://clawdo.com/categories/SuperGrok/grok%E5%8D%87%E7%BA%A7%E8%AE%A2%E9%98%85/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -804,7 +797,7 @@
   </url>
   
   <url>
-    <loc>https://clawdo.com/categories/SuperGrok/Hermes-Agent/</loc>
+    <loc>https://clawdo.com/categories/SuperGrok/%E9%A2%9D%E5%BA%A6/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -818,28 +811,7 @@
   </url>
   
   <url>
-    <loc>https://clawdo.com/categories/ChatGPT/%E5%B0%81%E5%8F%B7%E8%87%AA%E6%95%91/%E7%94%B3%E8%AF%89%E5%85%A5%E5%8F%A3/%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD%E6%96%B9%E6%B3%95/%E8%87%AA%E6%9F%A5/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://clawdo.com/categories/Composer-2-5/Grok/xAI/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://clawdo.com/categories/Codex/OpenAI/ChatGPT/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://clawdo.com/categories/Gemini/Google/Antigravity-CLI/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -853,6 +825,27 @@
   </url>
   
   <url>
+    <loc>https://clawdo.com/categories/Composer-2-5/Grok/xAI/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://clawdo.com/categories/Gemini/Google/Antigravity-CLI/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://clawdo.com/categories/ChatGPT/%E5%B0%81%E5%8F%B7%E8%87%AA%E6%95%91/%E7%94%B3%E8%AF%89%E5%85%A5%E5%8F%A3/%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD%E6%96%B9%E6%B3%95/%E8%87%AA%E6%9F%A5/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://clawdo.com/categories/Grok-Build/Grok/SuperGrok/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -860,14 +853,14 @@
   </url>
   
   <url>
-    <loc>https://clawdo.com/categories/Google-AI-Studio/Gemini/Google/</loc>
+    <loc>https://clawdo.com/categories/SuperGrok/Hermes-Agent/Grok/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://clawdo.com/categories/SuperGrok/%E9%A2%9D%E5%BA%A6/Grok/</loc>
+    <loc>https://clawdo.com/categories/SuperGrok/grok%E5%8D%87%E7%BA%A7%E8%AE%A2%E9%98%85/Grok/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -881,7 +874,7 @@
   </url>
   
   <url>
-    <loc>https://clawdo.com/categories/SuperGrok/Hermes-Agent/Grok/</loc>
+    <loc>https://clawdo.com/categories/SuperGrok/%E9%A2%9D%E5%BA%A6/Grok/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -902,7 +895,14 @@
   </url>
   
   <url>
-    <loc>https://clawdo.com/categories/SuperGrok/%E9%A2%9D%E5%BA%A6/Grok/Grok-Build/</loc>
+    <loc>https://clawdo.com/categories/SuperGrok/grok%E5%8D%87%E7%BA%A7%E8%AE%A2%E9%98%85/Grok/Grok-Build/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://clawdo.com/categories/SuperGrok/Hermes-Agent/Grok/%E5%BE%AE%E4%BF%A1/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -910,6 +910,13 @@
   
   <url>
     <loc>https://clawdo.com/categories/OpenClaw/Grok/SuperGrok/OpenClaw-App/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://clawdo.com/categories/SuperGrok/%E9%A2%9D%E5%BA%A6/Grok/Grok-Build/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -930,28 +937,21 @@
   </url>
   
   <url>
-    <loc>https://clawdo.com/categories/SuperGrok/grok%E5%8D%87%E7%BA%A7%E8%AE%A2%E9%98%85/</loc>
+    <loc>https://clawdo.com/categories/Google-AI-Studio/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://clawdo.com/categories/SuperGrok/Hermes-Agent/Grok/%E5%BE%AE%E4%BF%A1/</loc>
+    <loc>https://clawdo.com/categories/Google-AI-Studio/Gemini/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://clawdo.com/categories/SuperGrok/grok%E5%8D%87%E7%BA%A7%E8%AE%A2%E9%98%85/Grok/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://clawdo.com/categories/SuperGrok/grok%E5%8D%87%E7%BA%A7%E8%AE%A2%E9%98%85/Grok/Grok-Build/</loc>
+    <loc>https://clawdo.com/categories/Google-AI-Studio/Gemini/Google/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

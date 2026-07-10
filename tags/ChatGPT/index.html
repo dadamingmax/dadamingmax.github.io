@@ -108,6 +108,83 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
+            <a href="/2026/07/GPT-5-6-Launch-Codex-Icon-Removed/" itemprop="url">GPT-5.6上线,Codex图标没了,OpenAI这次是真的把聊天框玩明白了</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <span>Jul 10 2026</span>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/GPT-5-6-Codex-Work-Sites-Sol-Terra-Codex-OpenAI-ChatGPT-Luna/">GPT-5.6 - Codex - Work - Sites - Sol - Terra - Codex - OpenAI - ChatGPT - Luna</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            13 minutes read (About 2017 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p><img src="https://camo.githubusercontent.com/9b3793483be277cd391a880c31077a98c10f9b2780b0f0c2fa193e7ae26d2d00/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f38383435663833392d653631612d343637632d383137632d3837613538373261396161332e6a7067" alt="img"></p>
+<p>今天早上一堆人更新完Codex发现,图标不见了,取而代之的是个新版ChatGPT桌面应用,里面多了Work、Codex、Scheduled、Sites几个入口。</p>
+<p><img src="https://camo.githubusercontent.com/dfca8f2cdac8b57043521d4842c417e62ea4872ad236c31ad631294067e1a9fe/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f33396236323761362d353038302d346134382d386365392d3534653162616662306562622e6a7067" alt="img"></p>
+<p>同一天,GPT-5.6系列也正式上线,分成三档:<strong>Sol(旗舰)、Terra(均衡)、Luna(便宜量大)</strong>。</p>
+<p><img src="https://camo.githubusercontent.com/a874e17a45975da0d1fbe4f8df390c2e884ac4e7913a1248b44205b8a8072c9c/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f61313766656561342d313532332d343432352d623063382d3337366437373839633634312e706e67" alt="img"></p>
+<p>Codex和ChatGPT其实不是合并了，<strong>Codex这个产品没死</strong>,在新应用里还是独立模式,继续干代码修改、审查PR这些活,你甚至可以把Codex设成默认启动界面。真正的变化是:<strong>Codex从一个单独的App,变成了塞进ChatGPT里的一个引擎</strong>。</p>
+<p>另外也别急着以为GPT-5.6全面换掉了5.5——<strong>日常聊天默认还是5.5 Instant在跑</strong>,只有你手动选Medium、High这些推理档位,才会调用到Sol。Terra和Luna基本活在Work、Codex和API里,普通聊天窗口碰不到。</p>
+<h3 id="Sol-Terra-Luna这套分级什么意思"><a href="#Sol-Terra-Luna这套分级什么意思" class="headerlink" title="Sol/Terra/Luna这套分级什么意思"></a>Sol/Terra/Luna这套分级什么意思</h3><p>太阳系命名法,不只是好听。以前OpenAI是版本号打法,GPT-4→4.5→5,现在改成档位打法:<strong>不管底层模型怎么迭代,Sol永远代表最强,Terra永远是性价比,Luna永远是又快又便宜那个</strong>。 <img src="https://camo.githubusercontent.com/abc31e800ea0a3f0807f4eb4f22495ca8e49625cbd3958c27b5cf9104c8f1fc7/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f36363865636535322d393234392d343261352d396234662d6439306164373837346637612e706e67" alt="img"></p>
+<p>价格差得也挺明显,按百万Token算:</p>
+<ul>
+<li><strong>Sol</strong>:输入5美元/输出30美元</li>
+<li><strong>Terra</strong>:输入2.5美元/输出15美元</li>
+<li><strong>Luna</strong>:输入1美元/输出6美元</li>
+</ul>
+<p><strong>Luna的输出价格只有Sol的五分之一</strong>,这意味着以后大批量的分类、抽取、批处理任务,不用再硬着头皮全塞给最贵的模型了。</p>
+<h3 id="跑分是真的能打"><a href="#跑分是真的能打" class="headerlink" title="跑分是真的能打"></a>跑分是真的能打</h3><p>官方数据,Sol在Agents’ Last Exam(55个专业领域的长周期任务测试)拿了<strong>53.6分,比Claude Fable 5高13.1分</strong>;中等推理强度下依然领先11.4分,但成本大概只有对方四分之一。</p>
+<p>Coding Agent Index上Sol拿<strong>80分,比Fable 5高2.8分</strong>,输出Token不到一半,时间不到一半,成本低三分之一左右。Terminal-Bench 2.1里Sol是88.8%,开Ultra到91.9%,Fable 5是83.1%。</p>
+<p><img src="https://camo.githubusercontent.com/d7ab8b1f3ca07107c4207d6638b45447bcbcb0aca1a54a6b591bfd2435c4c09c/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f61333037316639332d336635372d343031612d386436652d6137336231373263323237652e706e67" alt="img"><br>跑分归跑分,但方向挺清楚:以前旗舰模型基本约等于”更慢更贵更烧钱”,这次OpenAI想证明<strong>旗舰也能又快又便宜</strong>。对普通用户来说,重点不是又赢了几分,是<strong>原来舍不得天天用的顶配能力,现在可能真用得起了</strong>。</p>
+<h3 id="Ultra不是让模型多想-是直接拉了个四人小队"><a href="#Ultra不是让模型多想-是直接拉了个四人小队" class="headerlink" title="Ultra不是让模型多想,是直接拉了个四人小队"></a>Ultra不是让模型多想,是直接拉了个四人小队</h3><p>以前调高推理档位,基本等于让模型自己多琢磨一会儿。Ultra不一样,<strong>它默认拉4个Agent同时干活</strong>——一个查资料、一个分析、一个执行、一个检查,最后汇总。官方跑分里的Ultra也是4个Agent配置。</p>
+<p><img src="https://camo.githubusercontent.com/0954d19151faadbd9372b546936e6f4bba7b32ebeaf6801aa0d44c573079d7dd/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f31653134376332372d326536372d346534322d613930392d3333663334373834303665302e706e67" alt="img"><br>好处是能并行的活儿真能并行,复杂任务等待时间短,漏活的概率也低。代价是<strong>Token消耗可能不降反升</strong>,不少人实测下来一边夸它干活猛,一边吐槽额度掉得肉疼。</p>
+<p>所以日常改bug、写脚本用Medium或High基本够了,<strong>Ultra留给大重构、跨系统研究这种真正的硬骨头</strong>,别把最高档当默认档,不然模型活还没干完,你的额度先没了。</p>
+<h3 id="比模型本身更值得关注的-是ChatGPT-Work"><a href="#比模型本身更值得关注的-是ChatGPT-Work" class="headerlink" title="比模型本身更值得关注的,是ChatGPT Work"></a>比模型本身更值得关注的,是ChatGPT Work</h3><p>这次发布真正可能改变工作方式的,其实是Work这个入口。OpenAI给它的定位不是聊天助手,是<strong>能跨应用跨文件、连续干活好几个小时的Agent</strong>。</p>
+<p>它能接Gmail、Google Drive、Slack、Teams、SharePoint、日历、CRM这些,从各处取资料,然后直接产出Excel表格、Word文档、PPT、分析报告,甚至能做交互式网站。桌面端还能读本地文件、开内置浏览器、用Computer Use点鼠标敲键盘挪文件。</p>
+<p><img src="https://camo.githubusercontent.com/d94410356c689fd7aec5724ce6eb46e2c38e2f87ce806cbf6a908af098d35e94/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f35666236656564612d633637392d343733312d623833652d3239613437303431333864392e6a7067" alt="img"></p>
+<p>这跟以前的ChatGPT差别挺大。以前你让它”根据这些资料写份报告”,它给你的是一段文字,你自己还得排版做成PPT。现在你直接说”从Drive里把上月销售数据拉出来,对比预算,找出异常,更新Excel,再按公司模板做张汇报PPT”,<strong>它给你的就是处理好的成品文件</strong>。</p>
+<h3 id="Sites这个功能容易被忽略-但挺有意思"><a href="#Sites这个功能容易被忽略-但挺有意思" class="headerlink" title="Sites这个功能容易被忽略,但挺有意思"></a>Sites这个功能容易被忽略,但挺有意思</h3><p>Work里还带了个Sites,能把数据方案直接做成可交互网站,发链接就能分享或公开访问——数据看板、项目进度页、活动日历、产品原型都行,而且<strong>底层数据变了,网站还能跟着自动更新</strong>。</p>
+<p><img src="https://camo.githubusercontent.com/249db4a11bb08119c86b05da7a408154b82c40dee9d3f219ff238e977f0ab482/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f66333535383930662d376461342d343765642d616634322d3163636162316438643931642e706e67" alt="img"></p>
+<p>对程序员来说这可能就是多了种部署方式,但对不会写代码的人来说完全是另一回事。以前从一个想法到能分享出去的网页,中间隔着设计、前端、服务器、域名、部署一整条链路;<strong>现在可能就是一句话的事</strong>。</p>
+<h3 id="Chat、Work、Codex到底怎么分工"><a href="#Chat、Work、Codex到底怎么分工" class="headerlink" title="Chat、Work、Codex到底怎么分工"></a>Chat、Work、Codex到底怎么分工</h3><ul>
+<li><strong>Chat</strong>:讨论、问问题、改文案、头脑风暴,不涉及大量文件操作的轻活儿。</li>
+<li><strong>Work</strong>:研究、数据分析、做PPT整表格、连办公应用、需要跑几个小时的任务,你说目标,它出成品。</li>
+<li><strong>Codex</strong>:写代码、审PR、重构、跑测试、Git操作,过程会留痕,方便开发者知道模型改了什么、跑了什么命令。</li>
+</ul>
+<p>底层能力大量共用,区别主要在界面和交付方式上。</p>
+<p><a href="https://clawdo.com/2026/07/ChatGPT-Plans-2026/">2026 ChatGPT 各套餐额度对比：免费版、Go、Plus、Pro 100/200刀</a></p>
+<h3 id="有没有缺点-肯定有"><a href="#有没有缺点-肯定有" class="headerlink" title="有没有缺点?肯定有"></a>有没有缺点?肯定有</h3><p><strong>额度依然是老问题</strong>,尤其浏览器操作、多Agent并行、Ultra模式,吃额度很快。实测体验也不完全等于官方跑分,几篇实测文章和评论区比较一致的说法是:<strong>规划、代码执行、长任务稳定性进步明显,但中文长文、情绪表达、部分审美这块,未必能完全替代Claude</strong>。</p>
+<p><img src="https://camo.githubusercontent.com/2e78b7db536af98a41e42110fd370e81b4f3aed10887f0defbcb005ef61cb636/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f37306533383939662d356663622d346630642d383337392d3732336562643331323664322e706e67" alt="Plus用户现在已经可以在页面端看到Sol了"></p>
+<p>最后一点也是最实际的:<strong>Agent能操作电脑的权限越大,越需要人盯着</strong>。能读文件、登网站、发邮件、改数据,意味着一次误操作影响的不再只是”回答错一句话”。执行可以交给AI,权限和最终拍板,还是得握在人手里。</p>
+</body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
             <a href="/2026/07/ChatGPT-Plans-2026/" itemprop="url">2026 ChatGPT 各套餐额度对比：免费版、Go、Plus、Pro 100/200刀</a>
         
     </h1>

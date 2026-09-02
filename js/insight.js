@@ -176,14 +176,29 @@
     function normalizeSearchData (json) {
         if (!Array.isArray(json)) return json;
 
+        // Keep taxonomy URLs consistent with Hexo's slugize() helper. SearchDB
+        // only exposes tag/category names, and using encodeURIComponent(name)
+        // produced URLs such as `ChatGPT%20账号注册`, while Hexo generates
+        // `ChatGPT-账号注册`; those search results therefore opened a 404.
+        function slugize (value) {
+            var result = String(value || '');
+            if (result.normalize) {
+                result = result.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            }
+            return result.replace(/[\u0000-\u001f]/g, '')
+                .replace(/[\s~`!@#$%^&*()\-_+=[\]{}|\\;:"'<>,.?/]+/g, '-')
+                .replace(/-{2,}/g, '-')
+                .replace(/^-+|-+$/g, '');
+        }
+
         function taxonomy (items, directory) {
             return (items || []).map(function (item) {
                 var name = typeof item === 'string' ? item : item.name;
                 var slug = typeof item === 'string' ? item : (item.slug || item.name);
                 return {
                     name: name || '',
-                    slug: slug || '',
-                    permalink: CONFIG.ROOT_URL + directory + '/' + encodeURIComponent(slug || '') + '/'
+                    slug: slugize(slug),
+                    permalink: CONFIG.ROOT_URL + directory + '/' + encodeURIComponent(slugize(slug)) + '/'
                 };
             });
         }

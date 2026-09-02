@@ -1,144 +1,160 @@
 <!DOCTYPE html>
-<html class="has-navbar-fixed-top">
+<html>
 <head>
-    <meta charset="utf-8">
-<meta name="baidu-site-verification" content="codeva-GZcqE7woK0" />
-<title>Windows 安装 OpenClaw + Grok 完整教程</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="utf-8">
+  
+  <title>【保姆级】Windows 装 OpenClaw + Grok 全流程：自启动、网页搜索、Telegram 接入 | CNM 国内 AI 订阅升级与使用教程大全</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="GrokWindowsSuperGrokOpenClaw" />
+  
+  
+  
+  
+  <meta name="description" content="Windows 安装 OpenClaw 与 Grok 的保姆级教程，涵盖环境准备、自启动、模型配置、网页搜索和 Telegram 接入，快速搭建可全天运行的本地 AI 助手。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【保姆级】Windows 装 OpenClaw + Grok 全流程：自启动、网页搜索、Telegram 接入">
+<meta property="og:url" content="https://clawdo.com/2026/05/Windows-OpenClaw-Grok-Complete-Setup-Guide/index.html">
+<meta property="og:site_name" content="CNM 国内 AI 订阅升级与使用教程大全">
+<meta property="og:description" content="Windows 安装 OpenClaw 与 Grok 的保姆级教程，涵盖环境准备、自启动、模型配置、网页搜索和 Telegram 接入，快速搭建可全天运行的本地 AI 助手。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-dc5394e0622588893dabd05dc95c358a_1440w.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/100/v2-b67ac2d9c1b3b0a5de298fc7e5e7e84d_r.jpg">
+<meta property="og:image" content="https://picx.zhimg.com/v2-f535b84fae9380003323a480bd3f6401_1440w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-522f8d39371f3c84fb7afa4d9fcd5ec6_1440w.jpg">
+<meta property="og:image" content="https://picx.zhimg.com/v2-6488e6358e545744d3ea3bcf52c37619_1440w.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-4fa460d0d5807344e85b95157970769b_1440w.jpg">
+<meta property="og:image" content="https://picx.zhimg.com/v2-404791dc481fe14f3a59623b2c6ce819_1440w.jpg">
+<meta property="og:image" content="https://pica.zhimg.com/v2-3e2a7f5661346c50ddbf0a80bbddb0be_1440w.jpg">
+<meta property="og:image" content="https://pica.zhimg.com/v2-5aef6a195bdeffce46a5931a14db9614_1440w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-78c98bf188aa2aaf7031ae4ae0a942e0_1440w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-62aa3c28cd3a80cc8e9264396d3fd0c8_1440w.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-d0e8404f69d8dc3a90802b865917faf7_1440w.jpg">
+<meta property="article:published_time" content="2026-05-20T09:18:01.000Z">
+<meta property="article:modified_time" content="2026-08-20T02:56:35.144Z">
+<meta property="article:author" content="dadaming">
+<meta property="article:tag" content="Grok">
+<meta property="article:tag" content="OpenClaw">
+<meta property="article:tag" content="SuperGrok">
+<meta property="article:tag" content="Windows">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic3.zhimg.com/v2-dc5394e0622588893dabd05dc95c358a_1440w.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="CNM 国内 AI 订阅升级与使用教程大全" type="application/atom+xml">
+  
+  <link rel="icon" href="/favicon.png">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
-
-
-
-
-<meta name="description" content="Windows 安装 OpenClaw 与 Grok 的保姆级教程，涵盖环境准备、自启动、模型配置、网页搜索和 Telegram 接入，快速搭建可全天运行的本地 AI 助手。">
-
-
-
-
-
-
-
-
-
-<link rel="icon" type="image/png" href="/favicon.png?v=20260519-2">
-<link rel="shortcut icon" type="image/png" href="/favicon.png?v=20260519-2">
-
-
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
-
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
-
-
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
 <link rel="stylesheet" href="/css/style.css">
 
 
-<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?05f73ede0440dbfdffc6c599c938373e";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
 
 
-
-    
-    
-    
-    
-    
-
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
 
 <meta name="generator" content="Hexo 8.1.1"></head>
-<body>
-    
-<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
-    <div class="container">
-        <div class="navbar-brand">
-            <a class="navbar-item navbar-logo" href="/">
-                
-                <img src="/images/logo.png" alt="CNM 国内 AI 订阅升级与使用教程大全" height="28">
-                
-            </a>
-            <div class="navbar-burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        
-        <div class="navbar-menu navbar-start">
-            
-            <a class="navbar-item "
-               href="/">Home</a>
-            
-            <a class="navbar-item "
-               href="/archives">Archives</a>
-            
-            <a class="navbar-item "
-               href="/categories">Categories</a>
-            
-            <a class="navbar-item "
-               href="/tags">Tags</a>
-            
-        </div>
-        
-        <div class="navbar-menu navbar-end">
-            
-            <a class="navbar-item search" title="Search" href="javascript:;">
-                <i class="fas fa-search"></i>
-            </a>
-            
-            
-            
-        </div>
-    </div>
-</nav>
 
-    <section class="section">
-    <div class="container">
-    <article class="article content gallery" itemscope itemprop="blogPost">
+
+
+  <body>
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="CNM 国内 AI 订阅升级与使用教程大全" rel="home"> CNM 国内 AI 订阅升级与使用教程大全 </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">分享 ChatGPT、Claude、Grok、Gemini、Codex 和 OpenClaw 等 AI 工具的注册、订阅升级、功能使用、效率技巧与常见问题解决教程。</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/archives/"> <a class="" href="/archives/">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/categories/"> <a class="" href="/categories/">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/tags/"> <a class="" href="/tags/">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/about/"> <a class="" href="/about/">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-Windows-OpenClaw-Grok-Complete-Setup-Guide" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        【保姆级】Windows 装 OpenClaw + Grok 全流程：自启动、网页搜索、Telegram 接入
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      【保姆级】Windows 装 OpenClaw + Grok 全流程：自启动、网页搜索、Telegram 接入
     </h1>
+  
+
+      </header>
     
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            
-                <span>May 20 2026</span>
-            
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/OpenClaw/">OpenClaw</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            11 minutes read (About 1705 words)
-        </span>
-        
+    <div class="article-meta">
+      
+	<a href="/2026/05/Windows-OpenClaw-Grok-Complete-Setup-Guide/" class="article-date">
+	  <time datetime="2026-05-20T09:18:01.000Z" itemprop="datePublished">May 20, 2026</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/OpenClaw/">OpenClaw</a>
+ 
     </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <html><head></head><body><p><strong>本地 AI 代理神器 + Grok 模型，5–15 分钟搞定 24/7 智能助手</strong></p>
-<p>OpenClaw（原 Clawdbot/Moltbot）是目前最火的开源本地 AI 代理框架。它能通过 WhatsApp、Telegram、Discord 等聊天工具，让 Grok 等大模型真正”动手”做事——发邮件、管理日历、运行脚本、搜索网页、生成图片视频。</p>
-<p>Grok（xAI）已<strong>原生深度集成</strong>到 OpenClaw 中，支持网页搜索、X 搜索、代码执行、图像/视频生成等高级功能，性价比高、工具调用稳定。</p>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>本地 AI 代理神器 + Grok 模型，5–15 分钟搞定 24&#x2F;7 智能助手</strong></p>
+<p>OpenClaw（原 Clawdbot&#x2F;Moltbot）是目前最火的开源本地 AI 代理框架。它能通过 WhatsApp、Telegram、Discord 等聊天工具，让 Grok 等大模型真正”动手”做事——发邮件、管理日历、运行脚本、搜索网页、生成图片视频。</p>
+<p>Grok（xAI）已<strong>原生深度集成</strong>到 OpenClaw 中，支持网页搜索、X 搜索、代码执行、图像&#x2F;视频生成等高级功能，性价比高、工具调用稳定。</p>
 <p><img src="https://pic3.zhimg.com/v2-dc5394e0622588893dabd05dc95c358a_1440w.jpg" alt="img"></p>
 <p>本文针对 <strong>Windows 用户</strong>，提供最详细、最实操的干货教程，全程使用<strong>原生 Windows 方案</strong>（无需 WSL）。</p>
 <h2 id="目录："><a href="#目录：" class="headerlink" title="目录："></a>目录：</h2><p><strong>一、为什么在 Windows 上用 OpenClaw + Grok？</strong></p>
@@ -166,10 +182,10 @@ var _hmt = _hmt || [];
 </tr>
 <tr>
 <td>多渠道交互</td>
-<td>手机 Telegram/WhatsApp 就能指挥</td>
+<td>手机 Telegram&#x2F;WhatsApp 就能指挥</td>
 </tr>
 <tr>
-<td>24/7 运行</td>
+<td>24&#x2F;7 运行</td>
 <td>设置守护进程后开机自启</td>
 </tr>
 <tr>
@@ -180,26 +196,26 @@ var _hmt = _hmt || [];
 <p><strong>推荐模型（2026 年最新）：</strong></p>
 <ul>
 <li>日常主力：<code>grok-4.3</code>（最均衡）</li>
-<li>追求速度：<code>grok-4-fast</code> / <code>grok-4.1-fast</code></li>
+<li>追求速度：<code>grok-4-fast</code> &#x2F; <code>grok-4.1-fast</code></li>
 <li>代码开发：<code>grok-code-fast-1</code></li>
 </ul>
 <h2 id="二、前置准备"><a href="#二、前置准备" class="headerlink" title="二、前置准备"></a>二、前置准备</h2><p><img src="https://pic2.zhimg.com/100/v2-b67ac2d9c1b3b0a5de298fc7e5e7e84d_r.jpg" alt="preview"></p>
 <ol>
-<li>Windows 10 / 11（推荐 Windows 11）</li>
+<li>Windows 10 &#x2F; 11（推荐 Windows 11）</li>
 <li>下载安装最新版 <strong>Node.js</strong>（官网 LTS 版本）</li>
 <li><strong>SuperGrok</strong> 或 <strong>X Premium</strong> 订阅（推荐 <strong>SuperGrok 官方订阅升级服务</strong> : <a target="_blank" rel="noopener" href="https://cnmgrok.com/">cnmGrok.com</a>）</li>
 </ol>
 <h2 id="三、原生-Windows-安装"><a href="#三、原生-Windows-安装" class="headerlink" title="三、原生 Windows 安装"></a>三、原生 Windows 安装</h2><h3 id="1-以管理员身份打开-PowerShell"><a href="#1-以管理员身份打开-PowerShell" class="headerlink" title="1. 以管理员身份打开 PowerShell"></a>1. 以管理员身份打开 PowerShell</h3><p><code>Win + X</code>，选择 <strong>PowerShell（管理员）</strong>。</p>
 <p><img src="https://picx.zhimg.com/v2-f535b84fae9380003323a480bd3f6401_1440w.jpg" alt="img"></p>
 <p>Win+X 选择 PowerShell（管理员）</p>
-<h3 id="2-执行安装命令"><a href="#2-执行安装命令" class="headerlink" title="2. 执行安装命令"></a>2. 执行安装命令</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iwr -useb https://openclaw.ai/install.ps1 | iex</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="2-执行安装命令"><a href="#2-执行安装命令" class="headerlink" title="2. 执行安装命令"></a>2. 执行安装命令</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iwr -useb https://openclaw.ai/install.ps1 | iex</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://pic3.zhimg.com/v2-522f8d39371f3c84fb7afa4d9fcd5ec6_1440w.jpg" alt="img"></p>
 <p>执行命令</p>
 <p>如果提示执行策略问题，先运行下面这条，再重试上一步：</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</span><br></pre></td></tr></table></figure>
 
-<h3 id="3-运行配置向导"><a href="#3-运行配置向导" class="headerlink" title="3. 运行配置向导"></a>3. 运行配置向导</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openclaw onboard --install-daemon</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="3-运行配置向导"><a href="#3-运行配置向导" class="headerlink" title="3. 运行配置向导"></a>3. 运行配置向导</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openclaw onboard --install-daemon</span><br></pre></td></tr></table></figure>
 
 <p>按提示操作：</p>
 <ul>
@@ -213,23 +229,23 @@ var _hmt = _hmt || [];
 <p>允许即可连接成功</p>
 <h3 id="4-自启动机制说明"><a href="#4-自启动机制说明" class="headerlink" title="4. 自启动机制说明"></a>4. 自启动机制说明</h3><p>原生 Windows 会优先尝试创建<strong>计划任务（Scheduled Task）</strong> 实现开机自启，若失败则回退到用户启动文件夹。无需手动干预。</p>
 <h2 id="四、Grok-模型配置与验证"><a href="#四、Grok-模型配置与验证" class="headerlink" title="四、Grok 模型配置与验证"></a>四、Grok 模型配置与验证</h2><h3 id="1-手动配置模型（可选）"><a href="#1-手动配置模型（可选）" class="headerlink" title="1. 手动配置模型（可选）"></a>1. 手动配置模型（可选）</h3><p>配置文件路径：</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\你的用户名\.openclaw\openclaw.json</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\你的用户名\.openclaw\openclaw.json</span><br></pre></td></tr></table></figure>
 
 <p>推荐配置：</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">  "agents": {</span><br><span class="line">    "defaults": {</span><br><span class="line">      "model": {</span><br><span class="line">        "primary": "xai/grok-4.3"</span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;agents&quot;: &#123;</span><br><span class="line">    &quot;defaults&quot;: &#123;</span><br><span class="line">      &quot;model&quot;: &#123;</span><br><span class="line">        &quot;primary&quot;: &quot;xai/grok-4.3&quot;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>如需切换其他模型（例如 <code>grok-4-fast</code>），直接修改 <code>primary</code> 字段即可。</p>
 <h3 id="2-永久设置-API-Key（可选）"><a href="#2-永久设置-API-Key（可选）" class="headerlink" title="2. 永久设置 API Key（可选）"></a>2. 永久设置 API Key（可选）</h3><p>若使用 API Key 方式认证，建议通过系统<strong>环境变量图形界面</strong>添加 <code>XAI_API_KEY</code>，避免每次启动重新输入。</p>
-<h3 id="3-重启-Gateway"><a href="#3-重启-Gateway" class="headerlink" title="3. 重启 Gateway"></a>3. 重启 Gateway</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openclaw gateway restart</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="3-重启-Gateway"><a href="#3-重启-Gateway" class="headerlink" title="3. 重启 Gateway"></a>3. 重启 Gateway</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openclaw gateway restart</span><br></pre></td></tr></table></figure>
 
 <h3 id="4-验证是否成功"><a href="#4-验证是否成功" class="headerlink" title="4. 验证是否成功"></a>4. 验证是否成功</h3><p>打开 Dashboard：</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openclaw dashboard</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openclaw dashboard</span><br></pre></td></tr></table></figure>
 
 <p>浏览器访问 <code>http://127.0.0.1:18789/</code>，在聊天框输入测试：<code>你是什么模型？</code></p>
 <p><img src="https://picx.zhimg.com/v2-404791dc481fe14f3a59623b2c6ce819_1440w.jpg" alt="img"></p>
 <p>验证模型</p>
 <p>如果回复中提到 Grok，说明整合成功。</p>
-<h2 id="五、启用-Grok-高级功能"><a href="#五、启用-Grok-高级功能" class="headerlink" title="五、启用 Grok 高级功能"></a>五、启用 Grok 高级功能</h2><h3 id="网页搜索（强烈推荐开启）"><a href="#网页搜索（强烈推荐开启）" class="headerlink" title="网页搜索（强烈推荐开启）"></a>网页搜索（强烈推荐开启）</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openclaw config set tools.web.search.provider grok</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="五、启用-Grok-高级功能"><a href="#五、启用-Grok-高级功能" class="headerlink" title="五、启用 Grok 高级功能"></a>五、启用 Grok 高级功能</h2><h3 id="网页搜索（强烈推荐开启）"><a href="#网页搜索（强烈推荐开启）" class="headerlink" title="网页搜索（强烈推荐开启）"></a>网页搜索（强烈推荐开启）</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openclaw config set tools.web.search.provider grok</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://pica.zhimg.com/v2-3e2a7f5661346c50ddbf0a80bbddb0be_1440w.jpg" alt="img"></p>
 <p>开启网页搜索</p>
@@ -238,7 +254,7 @@ var _hmt = _hmt || [];
 <li><strong>视频生成</strong>：支持 <code>grok-imagine-video</code></li>
 <li><strong>X 搜索（x_search）</strong>：自动可用</li>
 <li><strong>代码执行</strong>：自动可用</li>
-<li><strong>文字转语音 / 语音转文字</strong>：已内置支持</li>
+<li><strong>文字转语音 &#x2F; 语音转文字</strong>：已内置支持</li>
 </ul>
 <h2 id="六、连接-Telegram，实现手机远程指挥"><a href="#六、连接-Telegram，实现手机远程指挥" class="headerlink" title="六、连接 Telegram，实现手机远程指挥"></a>六、连接 Telegram，实现手机远程指挥</h2><h3 id="1-创建-Telegram-Bot"><a href="#1-创建-Telegram-Bot" class="headerlink" title="1. 创建 Telegram Bot"></a>1. 创建 Telegram Bot</h3><p>打开 Telegram，搜索 <code>@BotFather</code>：</p>
 <p><img src="https://pica.zhimg.com/v2-5aef6a195bdeffce46a5931a14db9614_1440w.jpg" alt="img"></p>
@@ -246,10 +262,10 @@ var _hmt = _hmt || [];
 <p>发送 <code>/newbot</code>，按提示创建机器人。完成后复制 Bot Token，格式类似 <code>1234567890:AAxxxxxx</code>。</p>
 <p><img src="https://pic3.zhimg.com/v2-78c98bf188aa2aaf7031ae4ae0a942e0_1440w.jpg" alt="img"></p>
 <p>获取 Bot Token</p>
-<h3 id="2-配置-OpenClaw"><a href="#2-配置-OpenClaw" class="headerlink" title="2. 配置 OpenClaw"></a>2. 配置 OpenClaw</h3><p>在 PowerShell 输入： <code>notepad "$env:USERPROFILE\.openclaw\openclaw.json"</code></p>
+<h3 id="2-配置-OpenClaw"><a href="#2-配置-OpenClaw" class="headerlink" title="2. 配置 OpenClaw"></a>2. 配置 OpenClaw</h3><p>在 PowerShell 输入： <code>notepad &quot;$env:USERPROFILE\.openclaw\openclaw.json&quot;</code></p>
 <p>打开配置文件</p>
 <p>添加 Telegram 配置：</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">  "channels": {</span><br><span class="line">    "telegram": {</span><br><span class="line">      "enabled": true,</span><br><span class="line">      "botToken": "你的Bot Token",</span><br><span class="line">      "dmPolicy": "pairing"</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;channels&quot;: &#123;</span><br><span class="line">    &quot;telegram&quot;: &#123;</span><br><span class="line">      &quot;enabled&quot;: true,</span><br><span class="line">      &quot;botToken&quot;: &quot;你的Bot Token&quot;,</span><br><span class="line">      &quot;dmPolicy&quot;: &quot;pairing&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>如果文件里已有内容，<strong>不要整份覆盖</strong>，只合并 <code>channels.telegram</code> 字段。</p>
@@ -285,7 +301,7 @@ var _hmt = _hmt || [];
 </tr>
 <tr>
 <td>想远程访问</td>
-<td>配置 Telegram / Discord，或使用 Tailscale 组网</td>
+<td>配置 Telegram &#x2F; Discord，或使用 Tailscale 组网</td>
 </tr>
 <tr>
 <td>更新 OpenClaw</td>
@@ -299,7 +315,7 @@ var _hmt = _hmt || [];
 <li><strong>配置备份</strong>：定期备份 <code>C:\Users\你的用户名\.openclaw\</code> 整个文件夹</li>
 <li><strong>多 Agent 进阶</strong>：后期可配置多个专业 Agent（研究、coding、自动化等）分工协作</li>
 </ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>到这里，你已经在 Windows 上完成了 <strong>OpenClaw + Grok</strong> 的完整本地部署，拥有一个真正能”干活”的 24/7 AI 助手。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>到这里，你已经在 Windows 上完成了 <strong>OpenClaw + Grok</strong> 的完整本地部署，拥有一个真正能”干活”的 24&#x2F;7 AI 助手。</p>
 <p>建议的体验路径：</p>
 <ol>
 <li><strong>先用 Dashboard 测试</strong>——确认模型、工具、生成能力都正常</li>
@@ -307,209 +323,187 @@ var _hmt = _hmt || [];
 <li><strong>最后做自动化</strong>——把高频任务串成 Agent 工作流</li>
 </ol>
 <p>至此，本地 AI 代理就真正跑起来了。</p>
-</body></html>
-    
+
+      
     </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/OpenClaw/">OpenClaw</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Grok/" rel="tag">Grok</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OpenClaw/" rel="tag">OpenClaw</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SuperGrok/" rel="tag">SuperGrok</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
     
-    <div class="columns is-variable is-1 is-multiline is-mobile">
-    
-        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Grok/">#Grok</a></span>
-    
-        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Windows/">#Windows</a></span>
-    
-        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/SuperGrok/">#SuperGrok</a></span>
-    
-        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/OpenClaw/">#OpenClaw</a></span>
-    
-    </div>
-    
-    
-    <div class="columns is-mobile is-multiline article-nav">
-        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
-            
-            <a href="/2026/05/How-to-Build-an-Android-App-with-Google-AI-Studio/">10 分钟实战:手把手教你用 Google AI Studio 做一个能用的安卓 App</a>
-            
-        </span>
-        <span class="column is-12-mobile is-half-desktop  article-nav-next">
-            
-            <a href="/2026/05/Grok-Hermes-Agent-Windows-Setup-Guide/">在 Windows 上用 Grok 订阅跑通 Hermes Agent(零 API key,15 分钟上手)</a>
-            
-        </span>
-    </div>
-    
+<nav id="article-nav">
+  
+    <a href="/2026/05/How-to-Build-an-Android-App-with-Google-AI-Studio/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          10 分钟实战:手把手教你用 Google AI Studio 做一个能用的安卓 App
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2026/05/Grok-Hermes-Agent-Windows-Setup-Guide/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">在 Windows 上用 Grok 订阅跑通 Hermes Agent(零 API key,15 分钟上手)</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
+<!-- Table of Contents -->
 
-
-
-
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">目录：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8-Windows-%E4%B8%8A%E7%94%A8-OpenClaw-Grok%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">一、为什么在 Windows 上用 OpenClaw + Grok？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%89%8D%E7%BD%AE%E5%87%86%E5%A4%87"><span class="nav-number">3.</span> <span class="nav-text">二、前置准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%8E%9F%E7%94%9F-Windows-%E5%AE%89%E8%A3%85"><span class="nav-number">4.</span> <span class="nav-text">三、原生 Windows 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BB%A5%E7%AE%A1%E7%90%86%E5%91%98%E8%BA%AB%E4%BB%BD%E6%89%93%E5%BC%80-PowerShell"><span class="nav-number">4.1.</span> <span class="nav-text">1. 以管理员身份打开 PowerShell</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%89%A7%E8%A1%8C%E5%AE%89%E8%A3%85%E5%91%BD%E4%BB%A4"><span class="nav-number">4.2.</span> <span class="nav-text">2. 执行安装命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%BF%90%E8%A1%8C%E9%85%8D%E7%BD%AE%E5%90%91%E5%AF%BC"><span class="nav-number">4.3.</span> <span class="nav-text">3. 运行配置向导</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E8%87%AA%E5%90%AF%E5%8A%A8%E6%9C%BA%E5%88%B6%E8%AF%B4%E6%98%8E"><span class="nav-number">4.4.</span> <span class="nav-text">4. 自启动机制说明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81Grok-%E6%A8%A1%E5%9E%8B%E9%85%8D%E7%BD%AE%E4%B8%8E%E9%AA%8C%E8%AF%81"><span class="nav-number">5.</span> <span class="nav-text">四、Grok 模型配置与验证</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%89%8B%E5%8A%A8%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%9E%8B%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="nav-number">5.1.</span> <span class="nav-text">1. 手动配置模型（可选）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%B0%B8%E4%B9%85%E8%AE%BE%E7%BD%AE-API-Key%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="nav-number">5.2.</span> <span class="nav-text">2. 永久设置 API Key（可选）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E9%87%8D%E5%90%AF-Gateway"><span class="nav-number">5.3.</span> <span class="nav-text">3. 重启 Gateway</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E9%AA%8C%E8%AF%81%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F"><span class="nav-number">5.4.</span> <span class="nav-text">4. 验证是否成功</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%90%AF%E7%94%A8-Grok-%E9%AB%98%E7%BA%A7%E5%8A%9F%E8%83%BD"><span class="nav-number">6.</span> <span class="nav-text">五、启用 Grok 高级功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E9%A1%B5%E6%90%9C%E7%B4%A2%EF%BC%88%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90%E5%BC%80%E5%90%AF%EF%BC%89"><span class="nav-number">6.1.</span> <span class="nav-text">网页搜索（强烈推荐开启）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%8E%9F%E7%94%9F%E6%94%AF%E6%8C%81%E5%8A%9F%E8%83%BD%EF%BC%88%E6%97%A0%E9%9C%80%E9%A2%9D%E5%A4%96%E9%85%8D%E7%BD%AE%EF%BC%89"><span class="nav-number">6.2.</span> <span class="nav-text">其他原生支持功能（无需额外配置）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E8%BF%9E%E6%8E%A5-Telegram%EF%BC%8C%E5%AE%9E%E7%8E%B0%E6%89%8B%E6%9C%BA%E8%BF%9C%E7%A8%8B%E6%8C%87%E6%8C%A5"><span class="nav-number">7.</span> <span class="nav-text">六、连接 Telegram，实现手机远程指挥</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA-Telegram-Bot"><span class="nav-number">7.1.</span> <span class="nav-text">1. 创建 Telegram Bot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%85%8D%E7%BD%AE-OpenClaw"><span class="nav-number">7.2.</span> <span class="nav-text">2. 配置 OpenClaw</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%90%AF%E5%8A%A8-Gateway"><span class="nav-number">7.3.</span> <span class="nav-text">3. 启动 Gateway</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E7%A7%81%E8%81%8A-Bot-%E8%A7%A6%E5%8F%91%E9%85%8D%E5%AF%B9"><span class="nav-number">7.4.</span> <span class="nav-text">4. 私聊 Bot 触发配对</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%9C%A8-PowerShell-%E6%89%B9%E5%87%86%E9%85%8D%E5%AF%B9"><span class="nav-number">7.5.</span> <span class="nav-text">5. 在 PowerShell 批准配对</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E6%B5%8B%E8%AF%95%E8%BF%9E%E6%8E%A5"><span class="nav-number">7.6.</span> <span class="nav-text">6. 测试连接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-number">8.</span> <span class="nav-text">七、常见问题与解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AB%E3%80%81%E7%BB%B4%E6%8A%A4%E4%B8%8E%E8%BF%9B%E9%98%B6%E5%BB%BA%E8%AE%AE"><span class="nav-number">9.</span> <span class="nav-text">八、维护与进阶建议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">10.</span> <span class="nav-text">总结</span></a></li></ol>
+    
     </div>
+  </aside>
+
 </section>
-    <footer class="footer">
-    <div class="container">
-        <div class="columns content">
-            <div class="column is-narrow has-text-centered">
-                &copy; 2026 dadaming&nbsp;
-                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
-                        target="_blank" rel="noopener" href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
-            </div>
-            <div class="column is-hidden-mobile"></div>
+        
+      </div>
 
-            
-            
-        </div>
     </div>
-</footer>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives/" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories/" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags/" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about/" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
 
-<!-- test if the browser is outdated -->
-<div id="outdated">
-    <h6>Your browser is out-of-date!</h6>
-    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" target="_blank" rel="noopener" href="http://outdatedbrowser.com/">Update my browser now </a></p>
-    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
-</div>
-<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2026 CNM 国内 AI 订阅升级与使用教程大全 All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
 <script>
-    $(document).ready(function () {
-        // plugin function, place inside DOM ready function
-        outdatedBrowser({
-            bgColor: '#f25648',
-            color: '#ffffff',
-            lowerThan: 'flex'
-        })
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
     });
 </script>
 
-<script>
-    window.FontAwesomeConfig = {
-        searchPseudoElements: true
-    }
-    moment.locale("en-AU");
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 
-    
-    
-<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
-<script>
-    (function ($) {
-        $(document).ready(function () {
-            if (typeof($.fn.lightGallery) === 'function') {
-                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof($.fn.justifiedGallery) === 'function') {
-                $('.justified-gallery > p > .gallery-item').unwrap();
-                $('.justified-gallery').justifiedGallery();
-            }
-        });
-    })(jQuery);
-</script>
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
-    <style>
-        .hljs {
-            position: relative;
-        }
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
-        .hljs .clipboard-btn {
-            float: right;
-            color: #9a9a9a;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        .hljs .clipboard-btn:hover {
-          color: #8a8a8a;
-        }
-
-        .hljs > .clipboard-btn {
-            display: none;
-            position: absolute;
-            right: 4px;
-            top: 4px;
-        }
-
-        .hljs:hover > .clipboard-btn {
-            display: inline;
-        }
-
-        .hljs > figcaption > .clipboard-btn {
-            margin-right: 4px;
-        }
-    </style>
-    <script>
-      $(document).ready(function () {
-        $('figure.hljs').each(function(i, figure) {
-          var codeId = 'code-' + i;
-          var code = figure.querySelector('.code');
-          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
-          code.id = codeId;
-          copyButton.addClass('clipboard-btn');
-          copyButton.attr('data-clipboard-target-id', codeId);
-
-          var figcaption = figure.querySelector('figcaption');
-
-          if (figcaption) {
-            figcaption.append(copyButton[0]);
-          } else {
-            figure.prepend(copyButton[0]);
-          }
-        })
-
-        var clipboard = new ClipboardJS('.clipboard-btn', {
-          target: function(trigger) {
-            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
-          }
-        });
-        clipboard.on('success', function(e) {
-          e.clearSelection();
-        })
-      })
-    </script>
-
-    
 
 
 
 <script src="/js/script.js"></script>
 
 
-    
-    <div class="searchbox ins-search">
-    <div class="searchbox-mask"></div>
-    <div class="searchbox-container ins-search-container">
-        <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
-            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="searchbox-result-wrapper ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-    (function (window) {
-        var INSIGHT_CONFIG = {
-            TRANSLATION: {
-                POSTS: 'Posts',
-                PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
-                UNTITLED: '(Untitled)',
-            },
-            CONTENT_URL: '/content.json',
-        };
-        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-    })(window);
-</script>
+<script src="/js/bootstrap.js"></script>
 
-<script src="/js/insight.js"></script>
 
-    
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
 </body>
 </html>

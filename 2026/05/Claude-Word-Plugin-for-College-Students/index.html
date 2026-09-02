@@ -1,142 +1,155 @@
 <!DOCTYPE html>
-<html class="has-navbar-fixed-top">
+<html>
 <head>
-    <meta charset="utf-8">
-<meta name="baidu-site-verification" content="codeva-GZcqE7woK0" />
-<title>Claude Word 插件教程：论文降重、报告与 PPT 大纲</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="utf-8">
+  
+  <title>把 Claude Word 插件塞进了大学生的 Word 里,论文降重、报告生成、PPT 大纲全搞定(含完整操作流程) | CNM 国内 AI 订阅升级与使用教程大全</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="Claude" />
+  
+  
+  
+  
+  <meta name="description" content="面向大学生的 Claude Word 插件教程，涵盖安装与首次配置，以及论文降重、课程报告、实习简历、社团策划和 PPT 大纲等场景的操作步骤与提示词。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="把 Claude Word 插件塞进了大学生的 Word 里,论文降重、报告生成、PPT 大纲全搞定(含完整操作流程)">
+<meta property="og:url" content="https://clawdo.com/2026/05/Claude-Word-Plugin-for-College-Students/index.html">
+<meta property="og:site_name" content="CNM 国内 AI 订阅升级与使用教程大全">
+<meta property="og:description" content="面向大学生的 Claude Word 插件教程，涵盖安装与首次配置，以及论文降重、课程报告、实习简历、社团策划和 PPT 大纲等场景的操作步骤与提示词。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-152f83892a6e8b1d429a4af03ea38a9d_720w.jpg?source=172ae18b">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-c19b480e5935e3d55714606d18be17ee_1440w.jpg">
+<meta property="og:image" content="https://picx.zhimg.com/v2-c2644d3b72c65e71c3629f11a46d9e53_1440w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-c76549241430830261ecb5e3e156ab26_1440w.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-f97e391852ef8ea7ff690fc8484069b7_1440w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-4f9169c7de45ae68c2c1b498b896631e_1440w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-91dc91e946276b49e30d31dbbd6cd7d8_1440w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-d577cd3e9bed56132fce711e23281a86_1440w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-1de7e661b970ab4f4212b6a3438b7eee_1440w.jpg">
+<meta property="og:image" content="https://pica.zhimg.com/v2-15c30dad1f451fe5f9e604996ae29230_1440w.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-6fa77d7aaad9eb102a251b0477704d35_1440w.jpg">
+<meta property="og:image" content="https://pica.zhimg.com/v2-1c48765cc592f6731bb4793288e6ebfc_1440w.jpg">
+<meta property="article:published_time" content="2026-05-15T05:44:40.000Z">
+<meta property="article:modified_time" content="2026-08-20T02:56:03.976Z">
+<meta property="article:author" content="dadaming">
+<meta property="article:tag" content="Claude">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic1.zhimg.com/v2-152f83892a6e8b1d429a4af03ea38a9d_720w.jpg?source=172ae18b">
+  
+    <link rel="alternate" href="/atom.xml" title="CNM 国内 AI 订阅升级与使用教程大全" type="application/atom+xml">
+  
+  <link rel="icon" href="/favicon.png">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
-
-
-
-
-<meta name="description" content="面向大学生的 Claude Word 插件教程，涵盖安装与首次配置，以及论文降重、课程报告、实习简历、社团策划和 PPT 大纲等场景的操作步骤与提示词。">
-
-
-
-
-
-
-
-
-
-<link rel="icon" type="image/png" href="/favicon.png?v=20260519-2">
-<link rel="shortcut icon" type="image/png" href="/favicon.png?v=20260519-2">
-
-
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
-
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
-
-
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
 <link rel="stylesheet" href="/css/style.css">
 
 
-<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?05f73ede0440dbfdffc6c599c938373e";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
 
 
-
-    
-    
-    
-    
-    
-
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
 
 <meta name="generator" content="Hexo 8.1.1"></head>
-<body>
-    
-<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
-    <div class="container">
-        <div class="navbar-brand">
-            <a class="navbar-item navbar-logo" href="/">
-                
-                <img src="/images/logo.png" alt="CNM 国内 AI 订阅升级与使用教程大全" height="28">
-                
-            </a>
-            <div class="navbar-burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        
-        <div class="navbar-menu navbar-start">
-            
-            <a class="navbar-item "
-               href="/">Home</a>
-            
-            <a class="navbar-item "
-               href="/archives">Archives</a>
-            
-            <a class="navbar-item "
-               href="/categories">Categories</a>
-            
-            <a class="navbar-item "
-               href="/tags">Tags</a>
-            
-        </div>
-        
-        <div class="navbar-menu navbar-end">
-            
-            <a class="navbar-item search" title="Search" href="javascript:;">
-                <i class="fas fa-search"></i>
-            </a>
-            
-            
-            
-        </div>
-    </div>
-</nav>
 
-    <section class="section">
-    <div class="container">
-    <article class="article content gallery" itemscope itemprop="blogPost">
+
+
+  <body>
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="CNM 国内 AI 订阅升级与使用教程大全" rel="home"> CNM 国内 AI 订阅升级与使用教程大全 </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">分享 ChatGPT、Claude、Grok、Gemini、Codex 和 OpenClaw 等 AI 工具的注册、订阅升级、功能使用、效率技巧与常见问题解决教程。</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/archives/"> <a class="" href="/archives/">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/categories/"> <a class="" href="/categories/">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/tags/"> <a class="" href="/tags/">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/about/"> <a class="" href="/about/">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-Claude-Word-Plugin-for-College-Students" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        把 Claude Word 插件塞进了大学生的 Word 里,论文降重、报告生成、PPT 大纲全搞定(含完整操作流程)
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      把 Claude Word 插件塞进了大学生的 Word 里,论文降重、报告生成、PPT 大纲全搞定(含完整操作流程)
     </h1>
+  
+
+      </header>
     
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            
-                <span>May 15 2026</span>
-            
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/Claude/">Claude</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            39 minutes read (About 5879 words)
-        </span>
-        
+    <div class="article-meta">
+      
+	<a href="/2026/05/Claude-Word-Plugin-for-College-Students/" class="article-date">
+	  <time datetime="2026-05-15T05:44:40.000Z" itemprop="datePublished">May 15, 2026</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Claude/">Claude</a>
+ 
     </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <html><head></head><body><p><img src="https://pic1.zhimg.com/v2-152f83892a6e8b1d429a4af03ea38a9d_720w.jpg?source=172ae18b" alt="把 Claude Word 插件塞进了大学生的 Word 里,论文降重、报告生成、PPT 大纲全搞定(含完整操作流程)"></p>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://pic1.zhimg.com/v2-152f83892a6e8b1d429a4af03ea38a9d_720w.jpg?source=172ae18b" alt="把 Claude Word 插件塞进了大学生的 Word 里,论文降重、报告生成、PPT 大纲全搞定(含完整操作流程)"></p>
 <p><strong>写给谁:</strong> 正在被论文、课程报告、实习简历、社团策划折磨的大学生<br><strong>读完需要:</strong> 10 分钟<br><strong>你能拿走什么:</strong> 7 个真实场景 + 可直接复制的 Prompt 模板 + 每个场景的完整操作步骤<br><strong>门槛:</strong> 零,不需要会 Python、不需要懂 AI</p>
 <h2 id="一、为什么大学生最该用-Claude-Word"><a href="#一、为什么大学生最该用-Claude-Word" class="headerlink" title="一、为什么大学生最该用 Claude Word?"></a><strong>一、为什么大学生最该用 Claude Word?</strong></h2><p>先说结论:<strong>大学生是性价比最高的用户群体。</strong></p>
 <p><strong>1. 你写的东西,绝大多数都在 Word 里</strong></p>
@@ -189,7 +202,7 @@ var _hmt = _hmt || [];
 <li><strong>以修订模式插入</strong>:点击 <strong>Insert as tracked changes</strong>，所有改动都带修订标记,你可以逐条接受或拒绝</li>
 </ol>
 <p><img src="https://pica.zhimg.com/v2-15c30dad1f451fe5f9e604996ae29230_1440w.jpg" alt="img"></p>
-<h3 id="操作-C-接受-拒绝-Claude-的修改"><a href="#操作-C-接受-拒绝-Claude-的修改" class="headerlink" title="操作 C:接受 / 拒绝 Claude 的修改"></a><strong>操作 C:接受 / 拒绝 Claude 的修改</strong></h3><p>Claude 用 Tracked Changes 模式给你修改后,在 Word 中:</p>
+<h3 id="操作-C-接受-拒绝-Claude-的修改"><a href="#操作-C-接受-拒绝-Claude-的修改" class="headerlink" title="操作 C:接受 &#x2F; 拒绝 Claude 的修改"></a><strong>操作 C:接受 &#x2F; 拒绝 Claude 的修改</strong></h3><p>Claude 用 Tracked Changes 模式给你修改后,在 Word 中:</p>
 <ol>
 <li>点击顶部菜单<strong>审阅</strong>选项卡</li>
 <li>看到<strong>修订</strong>工作组</li>
@@ -222,7 +235,7 @@ var _hmt = _hmt || [];
 <li>确认面板顶部显示”已连接到当前文档”</li>
 </ul>
 <p><strong>Step 3:粘贴 Prompt 模板</strong></p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">角色:以我所在学科(请填:[学科名,例如 教育学/经济学/计算机])</span><br><span class="line">的资深教授身份,帮我打磨这篇课程论文。</span><br><span class="line"></span><br><span class="line">我的基本信息:</span><br><span class="line">- 课程:[课程名称]</span><br><span class="line">- 论文题目:[你的题目]</span><br><span class="line">- 字数要求:[例如 6000-8000 字]</span><br><span class="line">- 提交对象:[严格/宽松的老师,或 不确定]</span><br><span class="line">- 我目前的进度:[只有开题/已完成初稿/卡在某章节]</span><br><span class="line"></span><br><span class="line">任务:</span><br><span class="line">1. 先帮我审视题目本身——</span><br><span class="line">   是否过大、过小、过宽泛、能否在规定字数内说清楚?</span><br><span class="line">2. 如果题目可行,给出本科课程论文规格的标准结构</span><br><span class="line">   (引言-文献综述-理论框架-分析-结论)</span><br><span class="line">3. 针对每个章节,列出 3-5 个我应该回答的核心问题</span><br><span class="line">4. 在文末用 Tracked Changes 模式标注我现有内容中</span><br><span class="line">   逻辑跳跃、论证薄弱、引用缺失的地方</span><br><span class="line"></span><br><span class="line">约束:</span><br><span class="line">- 不要直接替我写论文(会被查重系统标记 AI 生成)</span><br><span class="line">- 你的角色是"指导老师",不是"代笔"</span><br><span class="line">- 提出建议,但保留我自己的表达</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">角色:以我所在学科(请填:[学科名,例如 教育学/经济学/计算机])</span><br><span class="line">的资深教授身份,帮我打磨这篇课程论文。</span><br><span class="line"></span><br><span class="line">我的基本信息:</span><br><span class="line">- 课程:[课程名称]</span><br><span class="line">- 论文题目:[你的题目]</span><br><span class="line">- 字数要求:[例如 6000-8000 字]</span><br><span class="line">- 提交对象:[严格/宽松的老师,或 不确定]</span><br><span class="line">- 我目前的进度:[只有开题/已完成初稿/卡在某章节]</span><br><span class="line"></span><br><span class="line">任务:</span><br><span class="line">1. 先帮我审视题目本身——</span><br><span class="line">   是否过大、过小、过宽泛、能否在规定字数内说清楚?</span><br><span class="line">2. 如果题目可行,给出本科课程论文规格的标准结构</span><br><span class="line">   (引言-文献综述-理论框架-分析-结论)</span><br><span class="line">3. 针对每个章节,列出 3-5 个我应该回答的核心问题</span><br><span class="line">4. 在文末用 Tracked Changes 模式标注我现有内容中</span><br><span class="line">   逻辑跳跃、论证薄弱、引用缺失的地方</span><br><span class="line"></span><br><span class="line">约束:</span><br><span class="line">- 不要直接替我写论文(会被查重系统标记 AI 生成)</span><br><span class="line">- 你的角色是&quot;指导老师&quot;,不是&quot;代笔&quot;</span><br><span class="line">- 提出建议,但保留我自己的表达</span><br></pre></td></tr></table></figure>
 
 <p><strong>Step 4:替换占位符 → 发送</strong></p>
 <ul>
@@ -258,7 +271,7 @@ var _hmt = _hmt || [];
 <li>确认选中状态(被高亮)</li>
 </ul>
 <p><strong>Step 3:打开 Claude 面板,输入 Prompt</strong></p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">我有一份文献综述初稿(我已选中),正在写一篇关于</span><br><span class="line">[研究主题] 的论文。</span><br><span class="line"></span><br><span class="line">请帮我做三件事:</span><br><span class="line"></span><br><span class="line">1. 识别问题:</span><br><span class="line">   - 哪些段落只是在"复述文献",没有"对话与比较"?</span><br><span class="line">   - 哪些观点之间存在矛盾,但我没指出来?</span><br><span class="line">   - 哪些文献明显与我的研究问题相关性较弱?</span><br><span class="line"></span><br><span class="line">2. 重组逻辑:</span><br><span class="line">   - 按"研究脉络"(时间线/学派分歧/方法演变)而不是"按作者"</span><br><span class="line">     重新组织,用 Tracked Changes 给出修改建议</span><br><span class="line"></span><br><span class="line">3. 补强批判性:</span><br><span class="line">   - 在每个主要研究方向后,提示我应该加入的批判性评价</span><br><span class="line">     (而不是替我写完)</span><br><span class="line"></span><br><span class="line">注意:</span><br><span class="line">- 我不需要你帮我编造新的引用</span><br><span class="line">- 不要替换我已有的文献,只对现有材料做结构优化</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">我有一份文献综述初稿(我已选中),正在写一篇关于</span><br><span class="line">[研究主题] 的论文。</span><br><span class="line"></span><br><span class="line">请帮我做三件事:</span><br><span class="line"></span><br><span class="line">1. 识别问题:</span><br><span class="line">   - 哪些段落只是在&quot;复述文献&quot;,没有&quot;对话与比较&quot;?</span><br><span class="line">   - 哪些观点之间存在矛盾,但我没指出来?</span><br><span class="line">   - 哪些文献明显与我的研究问题相关性较弱?</span><br><span class="line"></span><br><span class="line">2. 重组逻辑:</span><br><span class="line">   - 按&quot;研究脉络&quot;(时间线/学派分歧/方法演变)而不是&quot;按作者&quot;</span><br><span class="line">     重新组织,用 Tracked Changes 给出修改建议</span><br><span class="line"></span><br><span class="line">3. 补强批判性:</span><br><span class="line">   - 在每个主要研究方向后,提示我应该加入的批判性评价</span><br><span class="line">     (而不是替我写完)</span><br><span class="line"></span><br><span class="line">注意:</span><br><span class="line">- 我不需要你帮我编造新的引用</span><br><span class="line">- 不要替换我已有的文献,只对现有材料做结构优化</span><br></pre></td></tr></table></figure>
 
 <p><strong>Step 4:接收输出</strong></p>
 <ul>
@@ -274,9 +287,9 @@ var _hmt = _hmt || [];
 <li>这样你能看到:</li>
 </ul>
 <ol>
-<li>红色删除线 = Claude 建议删除的内容</li>
-<li>红色下划线 = Claude 建议新增的内容</li>
-<li>批注气泡 = Claude 给你的建议说明</li>
+<li>红色删除线 &#x3D; Claude 建议删除的内容</li>
+<li>红色下划线 &#x3D; Claude 建议新增的内容</li>
+<li>批注气泡 &#x3D; Claude 给你的建议说明</li>
 </ol>
 <ul>
 <li>一条一条审视,接受合理的,拒绝你不认同的</li>
@@ -286,15 +299,15 @@ var _hmt = _hmt || [];
 <li>完成后另存为 <code>文献综述_Claude修改版.docx</code></li>
 <li>保留原版,方便后续对比</li>
 </ul>
-<h3 id="场景-3-实验报告-课程作业报告"><a href="#场景-3-实验报告-课程作业报告" class="headerlink" title="场景 3:实验报告 / 课程作业报告"></a><strong>场景 3:实验报告 / 课程作业报告</strong></h3><p><strong>痛点:</strong> 实验做完了不知道怎么写,数据有了但分析像在记流水账。</p>
+<h3 id="场景-3-实验报告-课程作业报告"><a href="#场景-3-实验报告-课程作业报告" class="headerlink" title="场景 3:实验报告 &#x2F; 课程作业报告"></a><strong>场景 3:实验报告 &#x2F; 课程作业报告</strong></h3><p><strong>痛点:</strong> 实验做完了不知道怎么写,数据有了但分析像在记流水账。</p>
 <h3 id="完整操作步骤-2"><a href="#完整操作步骤-2" class="headerlink" title="完整操作步骤"></a><strong>完整操作步骤</strong></h3><p><strong>Step 1:在 Word 中整理原始素材</strong></p>
 <p>按以下结构粘贴:</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">【实验目的】</span><br><span class="line">（你的描述）</span><br><span class="line"></span><br><span class="line">【操作步骤】</span><br><span class="line">1. ...</span><br><span class="line">2. ...</span><br><span class="line"></span><br><span class="line">【原始数据】</span><br><span class="line">（粘贴数据表格或数值）</span><br><span class="line"></span><br><span class="line">【我的初步判断】</span><br><span class="line">（你认为的结论）</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">【实验目的】</span><br><span class="line">（你的描述）</span><br><span class="line"></span><br><span class="line">【操作步骤】</span><br><span class="line">1. ...</span><br><span class="line">2. ...</span><br><span class="line"></span><br><span class="line">【原始数据】</span><br><span class="line">（粘贴数据表格或数值）</span><br><span class="line"></span><br><span class="line">【我的初步判断】</span><br><span class="line">（你认为的结论）</span><br></pre></td></tr></table></figure>
 
 <p><strong>Step 2:全选文档(Ctrl+A 或 Cmd+A)</strong></p>
 <p>确认所有素材都被选中。</p>
 <p><strong>Step 3:打开 Claude 面板,输入 Prompt</strong></p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">角色:以 [学科,例如 化学/心理学/计算机] 课程助教身份,</span><br><span class="line">帮我把这份实验数据/原始记录整理成规范的实验报告。</span><br><span class="line"></span><br><span class="line">我已选中所有素材。</span><br><span class="line"></span><br><span class="line">输出要求:</span><br><span class="line">1. 标准实验报告结构(摘要 / 引言 / 方法 / 结果 / 讨论 / 结论)</span><br><span class="line">2. 帮我把"流水账描述"改写为"现象 → 数据 → 分析"的科学表达</span><br><span class="line">3. 在讨论部分,提示我应该补充的对照、误差来源、改进方向</span><br><span class="line">   (用注释功能标出,不要直接写死)</span><br><span class="line">4. 全文使用第三人称被动语态(学术规范)</span><br><span class="line">5. 直接在我的文档中输出最终版本</span><br><span class="line"></span><br><span class="line">不要做的事:</span><br><span class="line">- 不要编造我没有的数据</span><br><span class="line">- 不要替我下结论,只规范我的表达方式</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">角色:以 [学科,例如 化学/心理学/计算机] 课程助教身份,</span><br><span class="line">帮我把这份实验数据/原始记录整理成规范的实验报告。</span><br><span class="line"></span><br><span class="line">我已选中所有素材。</span><br><span class="line"></span><br><span class="line">输出要求:</span><br><span class="line">1. 标准实验报告结构(摘要 / 引言 / 方法 / 结果 / 讨论 / 结论)</span><br><span class="line">2. 帮我把&quot;流水账描述&quot;改写为&quot;现象 → 数据 → 分析&quot;的科学表达</span><br><span class="line">3. 在讨论部分,提示我应该补充的对照、误差来源、改进方向</span><br><span class="line">   (用注释功能标出,不要直接写死)</span><br><span class="line">4. 全文使用第三人称被动语态(学术规范)</span><br><span class="line">5. 直接在我的文档中输出最终版本</span><br><span class="line"></span><br><span class="line">不要做的事:</span><br><span class="line">- 不要编造我没有的数据</span><br><span class="line">- 不要替我下结论,只规范我的表达方式</span><br></pre></td></tr></table></figure>
 
 <p><strong>Step 4:让 Claude 直接插入</strong></p>
 <ul>
@@ -334,7 +347,7 @@ var _hmt = _hmt || [];
 <li>(后面 Claude 处理完会删掉这部分)</li>
 </ul>
 <p><strong>Step 4:打开 Claude 面板,输入 Prompt</strong></p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">角色:以资深 HR + [目标岗位类别,例如 互联网产品/快消管培生/咨询]</span><br><span class="line">招聘官的双重身份,帮我改简历。</span><br><span class="line"></span><br><span class="line">我的原始简历在文档上半部分,</span><br><span class="line">我要应聘的岗位 JD 在文档下半部分。</span><br><span class="line"></span><br><span class="line">我现在要投递的岗位:</span><br><span class="line">- 公司:[公司名]</span><br><span class="line">- 岗位:[岗位名]</span><br><span class="line">- 我最希望突出的优势:[一句话]</span><br><span class="line"></span><br><span class="line">改写要求:</span><br><span class="line">1. STAR 原则审视我每一段经历——</span><br><span class="line">   情境(Situation)/任务(Task)/行动(Action)/结果(Result)</span><br><span class="line">   是否齐全?用 Tracked Changes 直接修改</span><br><span class="line">2. 量化薄弱处用 [量化占位符] 标出(让我自己补数据)</span><br><span class="line">3. 删除与该岗位无关的内容(用删除线标记,我决定是否真删)</span><br><span class="line">4. 关键词与 JD 对齐——</span><br><span class="line">   你写的描述里应该自然出现 JD 关键词</span><br><span class="line">5. 一页纸限制</span><br><span class="line"></span><br><span class="line">注意:</span><br><span class="line">- 不要凭空捏造经历或数据</span><br><span class="line">- 不要使用"积极乐观、吃苦耐劳"这类无效形容词</span><br><span class="line">- 修改完后告诉我:简历末尾的 JD 内容可以删除了</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">角色:以资深 HR + [目标岗位类别,例如 互联网产品/快消管培生/咨询]</span><br><span class="line">招聘官的双重身份,帮我改简历。</span><br><span class="line"></span><br><span class="line">我的原始简历在文档上半部分,</span><br><span class="line">我要应聘的岗位 JD 在文档下半部分。</span><br><span class="line"></span><br><span class="line">我现在要投递的岗位:</span><br><span class="line">- 公司:[公司名]</span><br><span class="line">- 岗位:[岗位名]</span><br><span class="line">- 我最希望突出的优势:[一句话]</span><br><span class="line"></span><br><span class="line">改写要求:</span><br><span class="line">1. STAR 原则审视我每一段经历——</span><br><span class="line">   情境(Situation)/任务(Task)/行动(Action)/结果(Result)</span><br><span class="line">   是否齐全?用 Tracked Changes 直接修改</span><br><span class="line">2. 量化薄弱处用 [量化占位符] 标出(让我自己补数据)</span><br><span class="line">3. 删除与该岗位无关的内容(用删除线标记,我决定是否真删)</span><br><span class="line">4. 关键词与 JD 对齐——</span><br><span class="line">   你写的描述里应该自然出现 JD 关键词</span><br><span class="line">5. 一页纸限制</span><br><span class="line"></span><br><span class="line">注意:</span><br><span class="line">- 不要凭空捏造经历或数据</span><br><span class="line">- 不要使用&quot;积极乐观、吃苦耐劳&quot;这类无效形容词</span><br><span class="line">- 修改完后告诉我:简历末尾的 JD 内容可以删除了</span><br></pre></td></tr></table></figure>
 
 <p><strong>Step 5:逐条接受修改</strong></p>
 <ul>
@@ -353,14 +366,14 @@ var _hmt = _hmt || [];
 <li>一定要导出 PDF,<strong>直接发 Word 给 HR 是新手错误</strong>(格式可能错位)</li>
 </ul>
 <p><strong>进阶玩法:</strong> 改完一份之后,换一个岗位 JD 再让 Claude 改一次,你会得到针对不同公司的”精准弹药”。</p>
-<h3 id="场景-5-课程-PPT-大纲-演讲稿"><a href="#场景-5-课程-PPT-大纲-演讲稿" class="headerlink" title="场景 5:课程 PPT 大纲 / 演讲稿"></a><strong>场景 5:课程 PPT 大纲 / 演讲稿</strong></h3><p><strong>痛点:</strong> 5 分钟演讲稿要么写得像论文(信息密度太高观众跟不上),要么写得像段子(显得不够专业)。</p>
+<h3 id="场景-5-课程-PPT-大纲-演讲稿"><a href="#场景-5-课程-PPT-大纲-演讲稿" class="headerlink" title="场景 5:课程 PPT 大纲 &#x2F; 演讲稿"></a><strong>场景 5:课程 PPT 大纲 &#x2F; 演讲稿</strong></h3><p><strong>痛点:</strong> 5 分钟演讲稿要么写得像论文(信息密度太高观众跟不上),要么写得像段子(显得不够专业)。</p>
 <h3 id="完整操作步骤-4"><a href="#完整操作步骤-4" class="headerlink" title="完整操作步骤"></a><strong>完整操作步骤</strong></h3><p><strong>Step 1:新建大纲文档</strong></p>
 <ul>
 <li>新建 Word:<code>[课程名]_展示大纲.docx</code></li>
 <li>这份文档将作为你 PPT 的”内容母本”</li>
 </ul>
 <p><strong>Step 2:打开 Claude 面板,输入 Prompt</strong></p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">角色:以大学课堂演讲教练身份,帮我准备这次课堂展示。</span><br><span class="line"></span><br><span class="line">基本信息:</span><br><span class="line">- 课程:[课程名]</span><br><span class="line">- 主题:[展示主题]</span><br><span class="line">- 时长:[例如 8 分钟]</span><br><span class="line">- 观众:[例如 30 个同学 + 1 位老师,大多数对该主题陌生]</span><br><span class="line">- 评分维度:[逻辑清晰 30% / 内容深度 40% / 表达 30%]</span><br><span class="line"></span><br><span class="line">输出要求(都直接写入我当前的 Word 文档):</span><br><span class="line"></span><br><span class="line">1. 演讲大纲(分钟级时间分配,例如):</span><br><span class="line">   - 0:00-1:00 引入(钩子)</span><br><span class="line">   - 1:00-3:00 核心观点 1</span><br><span class="line">   - ...</span><br><span class="line"></span><br><span class="line">2. 每个章节配:</span><br><span class="line">   - 演讲要点(口语化,不是书面语)</span><br><span class="line">   - 一句必说的"金句"(加粗显示)</span><br><span class="line">   - PPT 上对应的关键词(不要把整段话写在 PPT 上)</span><br><span class="line"></span><br><span class="line">3. 三个"老师可能会问的刁钻问题"+ 应对思路</span><br><span class="line"></span><br><span class="line">约束:</span><br><span class="line">- 演讲稿用口语,不要"综上所述"这种书面词</span><br><span class="line">- 替我想 3 个不同风格的开场(故事型/数据型/提问型),让我选</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">角色:以大学课堂演讲教练身份,帮我准备这次课堂展示。</span><br><span class="line"></span><br><span class="line">基本信息:</span><br><span class="line">- 课程:[课程名]</span><br><span class="line">- 主题:[展示主题]</span><br><span class="line">- 时长:[例如 8 分钟]</span><br><span class="line">- 观众:[例如 30 个同学 + 1 位老师,大多数对该主题陌生]</span><br><span class="line">- 评分维度:[逻辑清晰 30% / 内容深度 40% / 表达 30%]</span><br><span class="line"></span><br><span class="line">输出要求(都直接写入我当前的 Word 文档):</span><br><span class="line"></span><br><span class="line">1. 演讲大纲(分钟级时间分配,例如):</span><br><span class="line">   - 0:00-1:00 引入(钩子)</span><br><span class="line">   - 1:00-3:00 核心观点 1</span><br><span class="line">   - ...</span><br><span class="line"></span><br><span class="line">2. 每个章节配:</span><br><span class="line">   - 演讲要点(口语化,不是书面语)</span><br><span class="line">   - 一句必说的&quot;金句&quot;(加粗显示)</span><br><span class="line">   - PPT 上对应的关键词(不要把整段话写在 PPT 上)</span><br><span class="line"></span><br><span class="line">3. 三个&quot;老师可能会问的刁钻问题&quot;+ 应对思路</span><br><span class="line"></span><br><span class="line">约束:</span><br><span class="line">- 演讲稿用口语,不要&quot;综上所述&quot;这种书面词</span><br><span class="line">- 替我想 3 个不同风格的开场(故事型/数据型/提问型),让我选</span><br></pre></td></tr></table></figure>
 
 <p><strong>Step 3:Claude 输出后,直接 Insert</strong></p>
 <p><strong>Step 4:从大纲到 PPT 的衔接</strong></p>
@@ -378,14 +391,14 @@ var _hmt = _hmt || [];
 <li>设置为大字号(20 号以上)</li>
 <li>打印出来,演讲时偷瞄(比看手机自然)</li>
 </ul>
-<h3 id="场景-6-论文降重-改写-合法使用边界"><a href="#场景-6-论文降重-改写-合法使用边界" class="headerlink" title="场景 6:论文降重 / 改写(合法使用边界)"></a><strong>场景 6:论文降重 / 改写(合法使用边界)</strong></h3><p><strong>重要提醒:</strong> 这里指的是<strong>改善表达</strong>,不是规避学术不端。如果你大段抄袭,任何工具都帮不了你也不该帮你。</p>
+<h3 id="场景-6-论文降重-改写-合法使用边界"><a href="#场景-6-论文降重-改写-合法使用边界" class="headerlink" title="场景 6:论文降重 &#x2F; 改写(合法使用边界)"></a><strong>场景 6:论文降重 &#x2F; 改写(合法使用边界)</strong></h3><p><strong>重要提醒:</strong> 这里指的是<strong>改善表达</strong>,不是规避学术不端。如果你大段抄袭,任何工具都帮不了你也不该帮你。</p>
 <h3 id="完整操作步骤-5"><a href="#完整操作步骤-5" class="headerlink" title="完整操作步骤"></a><strong>完整操作步骤</strong></h3><p><strong>Step 1:精确选中要改的段落</strong></p>
 <ul>
 <li>不要全选!<strong>只选中具体觉得啰嗦的那几段</strong></li>
 <li>Claude 在小范围处理时质量更高</li>
 </ul>
 <p><strong>Step 2:在 Claude 面板输入 Prompt</strong></p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">我已选中一段我自己写的文字,感觉太啰嗦/太书面/重复用词太多。</span><br><span class="line"></span><br><span class="line">要求:</span><br><span class="line">1. 保持原意 100% 不变</span><br><span class="line">2. 表达更精炼、更地道</span><br><span class="line">3. 替换重复出现的连接词("因此""所以""综上"——</span><br><span class="line">   这些不要全删,但不要每段都用)</span><br><span class="line">4. 用 Tracked Changes,我能看到每一处改动</span><br><span class="line">5. 如果某个句子有更合适的学术表达,</span><br><span class="line">   用批注标注出来让我选(给 2-3 个选项)</span><br><span class="line"></span><br><span class="line">不要做:</span><br><span class="line">- 不要改变我的论点</span><br><span class="line">- 不要用更华丽但更空洞的词替换</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">我已选中一段我自己写的文字,感觉太啰嗦/太书面/重复用词太多。</span><br><span class="line"></span><br><span class="line">要求:</span><br><span class="line">1. 保持原意 100% 不变</span><br><span class="line">2. 表达更精炼、更地道</span><br><span class="line">3. 替换重复出现的连接词(&quot;因此&quot;&quot;所以&quot;&quot;综上&quot;——</span><br><span class="line">   这些不要全删,但不要每段都用)</span><br><span class="line">4. 用 Tracked Changes,我能看到每一处改动</span><br><span class="line">5. 如果某个句子有更合适的学术表达,</span><br><span class="line">   用批注标注出来让我选(给 2-3 个选项)</span><br><span class="line"></span><br><span class="line">不要做:</span><br><span class="line">- 不要改变我的论点</span><br><span class="line">- 不要用更华丽但更空洞的词替换</span><br></pre></td></tr></table></figure>
 
 <p><strong>Step 3:点击 Insert as tracked changes</strong></p>
 <p><strong>Step 4:对比修订(关键步骤)</strong></p>
@@ -409,7 +422,7 @@ var _hmt = _hmt || [];
 <li><strong>在每段开头加标注</strong>:<code>【组员A 撰写部分】</code>、<code>【组员B 撰写部分】</code> 作用:方便 Claude 识别风格差异</li>
 </ul>
 <p><strong>Step 2:打开 Claude 面板,输入 Prompt</strong></p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">这是一份四人小组完成的报告(已粘贴),</span><br><span class="line">我用【组员A】【组员B】【组员C】【组员D】标注了每个人写的部分。</span><br><span class="line">四个人的写作风格差异很大。</span><br><span class="line"></span><br><span class="line">任务:</span><br><span class="line">1. 统一全文语气和用词风格(以"严谨学术 + 适度通俗"为基准)</span><br><span class="line">2. 修复段落之间的过渡(很多地方明显是"硬接")</span><br><span class="line">3. 检查事实矛盾——</span><br><span class="line">   不同人写的章节是否有相互冲突的论点或数据?</span><br><span class="line">4. 用 Tracked Changes 显示所有修改,</span><br><span class="line">   并在每一处大改的地方加批注说明原因</span><br><span class="line">5. 完成后告诉我【组员A】【组员B】标签可以删除</span><br><span class="line"></span><br><span class="line">约束:</span><br><span class="line">- 不要重写,只做"打磨"</span><br><span class="line">- 保留每位组员核心观点,只统一表达方式</span><br><span class="line">- 如果发现严重的逻辑矛盾,先用批注提示,不要自己强行调和</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">这是一份四人小组完成的报告(已粘贴),</span><br><span class="line">我用【组员A】【组员B】【组员C】【组员D】标注了每个人写的部分。</span><br><span class="line">四个人的写作风格差异很大。</span><br><span class="line"></span><br><span class="line">任务:</span><br><span class="line">1. 统一全文语气和用词风格(以&quot;严谨学术 + 适度通俗&quot;为基准)</span><br><span class="line">2. 修复段落之间的过渡(很多地方明显是&quot;硬接&quot;)</span><br><span class="line">3. 检查事实矛盾——</span><br><span class="line">   不同人写的章节是否有相互冲突的论点或数据?</span><br><span class="line">4. 用 Tracked Changes 显示所有修改,</span><br><span class="line">   并在每一处大改的地方加批注说明原因</span><br><span class="line">5. 完成后告诉我【组员A】【组员B】标签可以删除</span><br><span class="line"></span><br><span class="line">约束:</span><br><span class="line">- 不要重写,只做&quot;打磨&quot;</span><br><span class="line">- 保留每位组员核心观点,只统一表达方式</span><br><span class="line">- 如果发现严重的逻辑矛盾,先用批注提示,不要自己强行调和</span><br></pre></td></tr></table></figure>
 
 <p><strong>Step 3:处理完后,先和组员同步</strong></p>
 <ul>
@@ -424,10 +437,10 @@ var _hmt = _hmt || [];
 <li>重复处理其他标签</li>
 <li><strong>设计</strong>选项卡，选择统一的样式集</li>
 </ul>
-<h2 id="五、Prompt-万能公式"><a href="#五、Prompt-万能公式" class="headerlink" title="五、Prompt 万能公式"></a><strong>五、Prompt 万能公式</strong></h2><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[角色]   +   [场景]   +   [输出要求]   +   [约束]</span><br><span class="line">  ↓           ↓             ↓              ↓</span><br><span class="line">你扮演谁    我是谁、     格式、长度、    不要做什么、</span><br><span class="line">            在做什么     结构、风格      避免什么坑</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="五、Prompt-万能公式"><a href="#五、Prompt-万能公式" class="headerlink" title="五、Prompt 万能公式"></a><strong>五、Prompt 万能公式</strong></h2><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[角色]   +   [场景]   +   [输出要求]   +   [约束]</span><br><span class="line">  ↓           ↓             ↓              ↓</span><br><span class="line">你扮演谁    我是谁、     格式、长度、    不要做什么、</span><br><span class="line">            在做什么     结构、风格      避免什么坑</span><br></pre></td></tr></table></figure>
 
 <p><strong>举个例子,同一个问题,两种问法:</strong></p>
-<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">"帮我写一份关于人工智能的报告"</span><br><span class="line">"以人工智能专业大三学生的视角(角色),为《AI 与社会伦理》课程 写一份 3000 字课程报告(场景),要求包含三个真实案例分析、 一个原创观点、标准 APA 引用格式(输出要求),不要用太学术化 的语言让普通读者也能看懂,不要使用 GPT/Claude 等模型作为案例 (这种例子太烂大街了)(约束)。"</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;帮我写一份关于人工智能的报告&quot;</span><br><span class="line">&quot;以人工智能专业大三学生的视角(角色),为《AI 与社会伦理》课程 写一份 3000 字课程报告(场景),要求包含三个真实案例分析、 一个原创观点、标准 APA 引用格式(输出要求),不要用太学术化 的语言让普通读者也能看懂,不要使用 GPT/Claude 等模型作为案例 (这种例子太烂大街了)(约束)。&quot;</span><br></pre></td></tr></table></figure>
 
 <p><strong>两个版本的输出质量,差出三个数量级。</strong></p>
 <h2 id="六、4-个新手常踩的坑"><a href="#六、4-个新手常踩的坑" class="headerlink" title="六、4 个新手常踩的坑"></a><strong>六、4 个新手常踩的坑</strong></h2><p><strong>坑 1:把它当 Google 用</strong><br>Claude 不是搜索引擎,它的强项是<strong>重组、改写、结构化</strong>你提供的信息,不是替你查最新数据。</p>
@@ -439,7 +452,7 @@ var _hmt = _hmt || [];
 <ul>
 <li><strong>不要让它替你写完整篇论文,然后改个名字交上去</strong> —— 这是学术不端</li>
 <li><strong>不要让它编造引用和数据</strong> —— 后果可能严重到无法挽回</li>
-<li><strong>不要在禁止使用 AI 的考试 / 闭卷作业里使用</strong> —— 没有例外</li>
+<li><strong>不要在禁止使用 AI 的考试 &#x2F; 闭卷作业里使用</strong> —— 没有例外</li>
 </ul>
 <p>你所在的学校大概率有明确的 AI 使用政策,<strong>写论文之前先去查一下你们学校的具体规定</strong>。</p>
 <blockquote>
@@ -455,203 +468,187 @@ var _hmt = _hmt || [];
 <li><input disabled="" type="checkbox"> 把”我的 Claude 模板库.docx”建起来,保存第一个 Prompt</li>
 </ol>
 <p><strong>三天后回来看你节省了多少时间。</strong> 如果你发现自己已经每天都在用,那升级 Pro 这件事就不需要纠结——工具的价值在于使用频率,你高频用它,它就值这个钱。</p>
-</body></html>
-    
+
+      
     </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Claude/">Claude</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Claude/" rel="tag">Claude</a></li></ul>
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
     
-    <div class="columns is-variable is-1 is-multiline is-mobile">
-    
-        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Claude/">#Claude</a></span>
-    
-    </div>
-    
-    
-    <div class="columns is-mobile is-multiline article-nav">
-        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
-            
-            <a href="/2026/05/Why-ChatGPT-Asks-for-Phone-Verification/">ChatGPT 突然要验证手机号？99%的人不知道真实原因</a>
-            
-        </span>
-        <span class="column is-12-mobile is-half-desktop  article-nav-next">
-            
-            <a href="/2026/05/Claude-5-Stage-Advanced-Guide/">Claude 的5阶段进阶指南：当搜索框，真的太浪费了</a>
-            
-        </span>
-    </div>
-    
+<nav id="article-nav">
+  
+    <a href="/2026/05/Why-ChatGPT-Asks-for-Phone-Verification/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ChatGPT 突然要验证手机号？99%的人不知道真实原因
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2026/05/Claude-5-Stage-Advanced-Guide/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Claude 的5阶段进阶指南：当搜索框，真的太浪费了</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
+<!-- Table of Contents -->
 
-
-
-
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%9C%80%E8%AF%A5%E7%94%A8-Claude-Word"><span class="nav-number">1.</span> <span class="nav-text">一、为什么大学生最该用 Claude Word?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%AE%89%E8%A3%85-%E9%A6%96%E6%AC%A1%E4%BD%BF%E7%94%A8-5-%E5%88%86%E9%92%9F%E5%AE%8C%E6%88%90"><span class="nav-number">2.</span> <span class="nav-text">二、安装 + 首次使用:5 分钟完成</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.1.</span> <span class="nav-text">安装步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%90%AF%E5%8A%A8-Claude-%E9%9D%A2%E6%9D%BF"><span class="nav-number">2.2.</span> <span class="nav-text">第一次启动 Claude 面板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E8%B4%A6%E5%8F%B7%E9%80%89%E6%8B%A9-%E5%BE%88%E5%A4%9A%E4%BA%BA%E6%B2%A1%E6%84%8F%E8%AF%86%E5%88%B0%E8%BF%99%E4%B8%80%E7%82%B9"><span class="nav-number">2.3.</span> <span class="nav-text">关于账号选择(很多人没意识到这一点)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%89%80%E6%9C%89%E5%9C%BA%E6%99%AF%E5%85%B1%E7%94%A8%E7%9A%84-4-%E4%B8%AA%E6%A0%B8%E5%BF%83%E6%93%8D%E4%BD%9C"><span class="nav-number">3.</span> <span class="nav-text">三、所有场景共用的 4 个核心操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C-A-%E6%8A%8A%E5%86%85%E5%AE%B9%E5%96%82%E7%BB%99-Claude-%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="nav-number">3.1.</span> <span class="nav-text">操作 A:把内容喂给 Claude 的三种方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C-B-%E6%8E%A5%E6%94%B6-Claude-%E8%BE%93%E5%87%BA%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="nav-number">3.2.</span> <span class="nav-text">操作 B:接收 Claude 输出的两种方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C-C-%E6%8E%A5%E5%8F%97-%E6%8B%92%E7%BB%9D-Claude-%E7%9A%84%E4%BF%AE%E6%94%B9"><span class="nav-number">3.3.</span> <span class="nav-text">操作 C:接受 &#x2F; 拒绝 Claude 的修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C-D-%E4%BF%9D%E5%AD%98-Prompt-%E6%A8%A1%E6%9D%BF%E4%BE%9B%E5%8F%8D%E5%A4%8D%E4%BD%BF%E7%94%A8"><span class="nav-number">3.4.</span> <span class="nav-text">操作 D:保存 Prompt 模板供反复使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%817-%E4%B8%AA%E7%9C%9F%E5%AE%9E%E5%9C%BA%E6%99%AF-%E5%AE%8C%E6%95%B4%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="nav-number">4.</span> <span class="nav-text">四、7 个真实场景 + 完整操作流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%BA%E6%99%AF-1-%E8%AF%BE%E7%A8%8B%E8%AE%BA%E6%96%87%E2%80%94%E2%80%94%E4%BB%8E%E5%BC%80%E9%A2%98%E5%88%B0%E5%AE%9A%E7%A8%BF"><span class="nav-number">4.1.</span> <span class="nav-text">场景 1:课程论文——从开题到定稿</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="nav-number">4.2.</span> <span class="nav-text">完整操作步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%BA%E6%99%AF-2-%E6%96%87%E7%8C%AE%E7%BB%BC%E8%BF%B0%E2%80%94%E2%80%94%E5%91%8A%E5%88%AB%E5%A0%86%E7%A0%8C"><span class="nav-number">4.3.</span> <span class="nav-text">场景 2:文献综述——告别堆砌</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4-1"><span class="nav-number">4.4.</span> <span class="nav-text">完整操作步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%BA%E6%99%AF-3-%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A-%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A%E6%8A%A5%E5%91%8A"><span class="nav-number">4.5.</span> <span class="nav-text">场景 3:实验报告 &#x2F; 课程作业报告</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4-2"><span class="nav-number">4.6.</span> <span class="nav-text">完整操作步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%BA%E6%99%AF-4-%E6%B1%82%E8%81%8C%E7%AE%80%E5%8E%86%E2%80%94%E2%80%94%E4%B8%80%E4%BB%BD%E7%AE%80%E5%8E%86%E5%A4%9A%E4%B8%AA%E7%89%88%E6%9C%AC"><span class="nav-number">4.7.</span> <span class="nav-text">场景 4:求职简历——一份简历多个版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4-3"><span class="nav-number">4.8.</span> <span class="nav-text">完整操作步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%BA%E6%99%AF-5-%E8%AF%BE%E7%A8%8B-PPT-%E5%A4%A7%E7%BA%B2-%E6%BC%94%E8%AE%B2%E7%A8%BF"><span class="nav-number">4.9.</span> <span class="nav-text">场景 5:课程 PPT 大纲 &#x2F; 演讲稿</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4-4"><span class="nav-number">4.10.</span> <span class="nav-text">完整操作步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%BA%E6%99%AF-6-%E8%AE%BA%E6%96%87%E9%99%8D%E9%87%8D-%E6%94%B9%E5%86%99-%E5%90%88%E6%B3%95%E4%BD%BF%E7%94%A8%E8%BE%B9%E7%95%8C"><span class="nav-number">4.11.</span> <span class="nav-text">场景 6:论文降重 &#x2F; 改写(合法使用边界)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4-5"><span class="nav-number">4.12.</span> <span class="nav-text">完整操作步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%BA%E6%99%AF-7-%E5%B0%8F%E7%BB%84%E4%BD%9C%E4%B8%9A%E2%80%94%E2%80%94%E4%BD%A0%E5%86%99%E5%AE%8C%E4%BA%86%E5%88%AB%E4%BA%BA%E6%B2%A1%E5%8A%A8"><span class="nav-number">4.13.</span> <span class="nav-text">场景 7:小组作业——你写完了别人没动?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4-6"><span class="nav-number">4.14.</span> <span class="nav-text">完整操作步骤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81Prompt-%E4%B8%87%E8%83%BD%E5%85%AC%E5%BC%8F"><span class="nav-number">5.</span> <span class="nav-text">五、Prompt 万能公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%814-%E4%B8%AA%E6%96%B0%E6%89%8B%E5%B8%B8%E8%B8%A9%E7%9A%84%E5%9D%91"><span class="nav-number">6.</span> <span class="nav-text">六、4 个新手常踩的坑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E5%AD%A6%E6%9C%AF%E8%AF%9A%E4%BF%A1-%E4%B8%80%E6%9D%A1%E4%B8%8D%E8%83%BD%E8%B6%8A%E8%BF%87%E7%9A%84%E7%BA%BF"><span class="nav-number">7.</span> <span class="nav-text">七、学术诚信:一条不能越过的线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AB%E3%80%81%E4%B8%80%E4%BB%BD%E2%80%9D%E4%BB%8A%E6%99%9A%E5%B0%B1%E8%83%BD%E7%94%A8%E2%80%9D%E7%9A%84%E8%A1%8C%E5%8A%A8%E6%B8%85%E5%8D%95"><span class="nav-number">8.</span> <span class="nav-text">八、一份”今晚就能用”的行动清单</span></a></li></ol>
+    
     </div>
+  </aside>
+
 </section>
-    <footer class="footer">
-    <div class="container">
-        <div class="columns content">
-            <div class="column is-narrow has-text-centered">
-                &copy; 2026 dadaming&nbsp;
-                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
-                        target="_blank" rel="noopener" href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
-            </div>
-            <div class="column is-hidden-mobile"></div>
+        
+      </div>
 
-            
-            
-        </div>
     </div>
-</footer>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives/" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories/" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags/" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about/" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
 
-<!-- test if the browser is outdated -->
-<div id="outdated">
-    <h6>Your browser is out-of-date!</h6>
-    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" target="_blank" rel="noopener" href="http://outdatedbrowser.com/">Update my browser now </a></p>
-    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
-</div>
-<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2026 CNM 国内 AI 订阅升级与使用教程大全 All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
 <script>
-    $(document).ready(function () {
-        // plugin function, place inside DOM ready function
-        outdatedBrowser({
-            bgColor: '#f25648',
-            color: '#ffffff',
-            lowerThan: 'flex'
-        })
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
     });
 </script>
 
-<script>
-    window.FontAwesomeConfig = {
-        searchPseudoElements: true
-    }
-    moment.locale("en-AU");
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 
-    
-    
-<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
-<script>
-    (function ($) {
-        $(document).ready(function () {
-            if (typeof($.fn.lightGallery) === 'function') {
-                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof($.fn.justifiedGallery) === 'function') {
-                $('.justified-gallery > p > .gallery-item').unwrap();
-                $('.justified-gallery').justifiedGallery();
-            }
-        });
-    })(jQuery);
-</script>
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
-    <style>
-        .hljs {
-            position: relative;
-        }
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
-        .hljs .clipboard-btn {
-            float: right;
-            color: #9a9a9a;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        .hljs .clipboard-btn:hover {
-          color: #8a8a8a;
-        }
-
-        .hljs > .clipboard-btn {
-            display: none;
-            position: absolute;
-            right: 4px;
-            top: 4px;
-        }
-
-        .hljs:hover > .clipboard-btn {
-            display: inline;
-        }
-
-        .hljs > figcaption > .clipboard-btn {
-            margin-right: 4px;
-        }
-    </style>
-    <script>
-      $(document).ready(function () {
-        $('figure.hljs').each(function(i, figure) {
-          var codeId = 'code-' + i;
-          var code = figure.querySelector('.code');
-          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
-          code.id = codeId;
-          copyButton.addClass('clipboard-btn');
-          copyButton.attr('data-clipboard-target-id', codeId);
-
-          var figcaption = figure.querySelector('figcaption');
-
-          if (figcaption) {
-            figcaption.append(copyButton[0]);
-          } else {
-            figure.prepend(copyButton[0]);
-          }
-        })
-
-        var clipboard = new ClipboardJS('.clipboard-btn', {
-          target: function(trigger) {
-            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
-          }
-        });
-        clipboard.on('success', function(e) {
-          e.clearSelection();
-        })
-      })
-    </script>
-
-    
 
 
 
 <script src="/js/script.js"></script>
 
 
-    
-    <div class="searchbox ins-search">
-    <div class="searchbox-mask"></div>
-    <div class="searchbox-container ins-search-container">
-        <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
-            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="searchbox-result-wrapper ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-    (function (window) {
-        var INSIGHT_CONFIG = {
-            TRANSLATION: {
-                POSTS: 'Posts',
-                PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
-                UNTITLED: '(Untitled)',
-            },
-            CONTENT_URL: '/content.json',
-        };
-        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-    })(window);
-</script>
+<script src="/js/bootstrap.js"></script>
 
-<script src="/js/insight.js"></script>
 
-    
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
 </body>
 </html>

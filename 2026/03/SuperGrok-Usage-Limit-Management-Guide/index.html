@@ -1,142 +1,146 @@
 <!DOCTYPE html>
-<html class="has-navbar-fixed-top">
+<html>
 <head>
-    <meta charset="utf-8">
-<meta name="baidu-site-verification" content="codeva-GZcqE7woK0" />
-<title>SuperGrok 额度管理与省额度 Prompt 指南</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="utf-8">
+  
+  <title>SuperGrok 额度管理全攻略：从查看剩余到永久省额度，一文搞定（附带高ROI Prompt 模板） | CNM 国内 AI 订阅升级与使用教程大全</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="SuperGrok" />
+  
+  
+  
+  
+  <meta name="description" content="SuperGrok 额度管理完整攻略，介绍聊天、图像和视频限额的查看与重置规则，提供五种省额度方法、黄金 Prompt 公式及高回报提示词模板。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SuperGrok 额度管理全攻略：从查看剩余到永久省额度，一文搞定（附带高ROI Prompt 模板）">
+<meta property="og:url" content="https://clawdo.com/2026/03/SuperGrok-Usage-Limit-Management-Guide/index.html">
+<meta property="og:site_name" content="CNM 国内 AI 订阅升级与使用教程大全">
+<meta property="og:description" content="SuperGrok 额度管理完整攻略，介绍聊天、图像和视频限额的查看与重置规则，提供五种省额度方法、黄金 Prompt 公式及高回报提示词模板。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://picx.zhimg.com/v2-d65e01c0108b3f3396e0214b39812daa_720w.jpg?source=d16d100b">
+<meta property="og:image" content="https://picx.zhimg.com/v2-60b1a96c0e9daae9761006e5f3c210e4_720w.jpg?source=d16d100b">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-e11ce92aeb0d124a3cfe4e84491f39a5_720w.jpg?source=d16d100b">
+<meta property="article:published_time" content="2026-03-23T06:47:58.000Z">
+<meta property="article:modified_time" content="2026-08-20T02:56:04.195Z">
+<meta property="article:author" content="dadaming">
+<meta property="article:tag" content="SuperGrok">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://picx.zhimg.com/v2-d65e01c0108b3f3396e0214b39812daa_720w.jpg?source=d16d100b">
+  
+    <link rel="alternate" href="/atom.xml" title="CNM 国内 AI 订阅升级与使用教程大全" type="application/atom+xml">
+  
+  <link rel="icon" href="/favicon.png">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
-
-
-
-
-<meta name="description" content="SuperGrok 额度管理完整攻略，介绍聊天、图像和视频限额的查看与重置规则，提供五种省额度方法、黄金 Prompt 公式及高回报提示词模板。">
-
-
-
-
-
-
-
-
-
-<link rel="icon" type="image/png" href="/favicon.png?v=20260519-2">
-<link rel="shortcut icon" type="image/png" href="/favicon.png?v=20260519-2">
-
-
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
-
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
-
-
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
 <link rel="stylesheet" href="/css/style.css">
 
 
-<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?05f73ede0440dbfdffc6c599c938373e";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
 
 
-
-    
-    
-    
-    
-    
-
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
 
 <meta name="generator" content="Hexo 8.1.1"></head>
-<body>
-    
-<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
-    <div class="container">
-        <div class="navbar-brand">
-            <a class="navbar-item navbar-logo" href="/">
-                
-                <img src="/images/logo.png" alt="CNM 国内 AI 订阅升级与使用教程大全" height="28">
-                
-            </a>
-            <div class="navbar-burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        
-        <div class="navbar-menu navbar-start">
-            
-            <a class="navbar-item "
-               href="/">Home</a>
-            
-            <a class="navbar-item "
-               href="/archives">Archives</a>
-            
-            <a class="navbar-item "
-               href="/categories">Categories</a>
-            
-            <a class="navbar-item "
-               href="/tags">Tags</a>
-            
-        </div>
-        
-        <div class="navbar-menu navbar-end">
-            
-            <a class="navbar-item search" title="Search" href="javascript:;">
-                <i class="fas fa-search"></i>
-            </a>
-            
-            
-            
-        </div>
-    </div>
-</nav>
 
-    <section class="section">
-    <div class="container">
-    <article class="article content gallery" itemscope itemprop="blogPost">
+
+
+  <body>
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="CNM 国内 AI 订阅升级与使用教程大全" rel="home"> CNM 国内 AI 订阅升级与使用教程大全 </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">分享 ChatGPT、Claude、Grok、Gemini、Codex 和 OpenClaw 等 AI 工具的注册、订阅升级、功能使用、效率技巧与常见问题解决教程。</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/archives/"> <a class="" href="/archives/">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/categories/"> <a class="" href="/categories/">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/tags/"> <a class="" href="/tags/">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/about/"> <a class="" href="/about/">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-SuperGrok-Usage-Limit-Management-Guide" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        SuperGrok 额度管理全攻略：从查看剩余到永久省额度，一文搞定（附带高ROI Prompt 模板）
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      SuperGrok 额度管理全攻略：从查看剩余到永久省额度，一文搞定（附带高ROI Prompt 模板）
     </h1>
+  
+
+      </header>
     
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            
-                <span>Mar 23 2026</span>
-            
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/SuperGrok/">SuperGrok</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            12 minutes read (About 1801 words)
-        </span>
-        
+    <div class="article-meta">
+      
+	<a href="/2026/03/SuperGrok-Usage-Limit-Management-Guide/" class="article-date">
+	  <time datetime="2026-03-23T06:47:58.000Z" itemprop="datePublished">March 23, 2026</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/SuperGrok/">SuperGrok</a>
+ 
     </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <html><head></head><body><p>最近很多 SuperGrok 用户都遇到这个问题，包括重度 Prompt 玩家，尤其是视频生成和图像生成限额收紧了。这是 xAI 因需求激增做了临时调整，不是 bug 。</p>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近很多 SuperGrok 用户都遇到这个问题，包括重度 Prompt 玩家，尤其是视频生成和图像生成限额收紧了。这是 xAI 因需求激增做了临时调整，不是 bug 。</p>
 <p><strong>当前 SuperGrok 真实限额情况</strong>：</p>
 <table>
 <thead>
@@ -160,14 +164,14 @@ var _hmt = _hmt || [];
 <td>快速连发容易触发</td>
 </tr>
 <tr>
-<td>消息/聊天</td>
+<td>消息&#x2F;聊天</td>
 <td>几千条（实际几乎不限）</td>
 <td>滚动恢复</td>
 <td>长上下文会多消耗</td>
 </tr>
 <tr>
 <td>Deep Search</td>
-<td>30–60 分钟/月额外</td>
+<td>30–60 分钟&#x2F;月额外</td>
 <td>每月重置</td>
 <td>复杂搜索专用</td>
 </tr>
@@ -188,287 +192,271 @@ var _hmt = _hmt || [];
 </ul>
 <p>2.一个 Prompt 搞定多件事：别反复迭代生成，用Chain of Thought + 批量要求</p>
 <p>示例（直接复制）：</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">先思考，再一次性生成3张不同风格的[你的描述]，并告诉我哪张最好 + 优化建议。风格要求：赛博朋克、写实、卡通。</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">先思考，再一次性生成3张不同风格的[你的描述]，并告诉我哪张最好 + 优化建议。风格要求：赛博朋克、写实、卡通。</span><br></pre></td></tr></table></figure>
 
 <p>3.开启 <strong>Custom Instructions</strong>（永久省额度）：</p>
 <p>Settings → Custom Instructions 粘贴下面，改成你的需求：</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">你现在是超级高效AI助手。优先用文字回复、总结、优化Prompt，只有用户明确说“生成图像/视频”时才调用生成。每次输出必须精炼、一次性解决多个需求，避免重复生成。输出格式：先文字方案 + 优化后Prompt，最后才生成。永远中文回复。</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">你现在是超级高效AI助手。优先用文字回复、总结、优化Prompt，只有用户明确说“生成图像/视频”时才调用生成。每次输出必须精炼、一次性解决多个需求，避免重复生成。输出格式：先文字方案 + 优化后Prompt，最后才生成。永远中文回复。</span><br></pre></td></tr></table></figure>
 
-<p>4.优化图像/视频Prompt：一次描述超详细（颜色、风格、镜头、氛围全说清），成功率高、浪费少</p>
+<p>4.优化图像&#x2F;视频Prompt：一次描述超详细（颜色、风格、镜头、氛围全说清），成功率高、浪费少</p>
 <p>5.错峰 + 新聊天技巧</p>
 <ul>
-<li>高峰期（美国晚8-12点）避开，改早上/下午用</li>
+<li>高峰期（美国晚8-12点）避开，改早上&#x2F;下午用</li>
 <li>每次撞限立刻New Chat，避免长对话吃掉额外额度</li>
-<li>不同设备/浏览器/无痕模式有时重置更快</li>
+<li>不同设备&#x2F;浏览器&#x2F;无痕模式有时重置更快</li>
 </ul>
 <blockquote>
 <p>如需<strong>订阅升级Grok</strong>，推荐前往<strong>官方代充网站</strong>升级订阅（直接点击即可升级，<strong>安全稳定</strong>，秒到账）： <strong><a target="_blank" rel="noopener" href="http://cnmgrok.com/">cnmGrok.com</a></strong></p>
 </blockquote>
 <h2 id="黄金Prompt公式（2026最强4部分结构）"><a href="#黄金Prompt公式（2026最强4部分结构）" class="headerlink" title="黄金Prompt公式（2026最强4部分结构）"></a>黄金Prompt公式（2026最强4部分结构）</h2><p>每次写Prompt都按这个模板，效果翻倍：</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">textGOAL: （一个清晰目标）</span><br><span class="line">CONTEXT: （背景+受众+输入数据+限制）</span><br><span class="line">OUTPUT FORMAT: （具体格式，如表格/步骤/JSON）</span><br><span class="line">QUALITY BAR: （必须包含什么、禁止什么、不确定时怎么做）</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">textGOAL: （一个清晰目标）</span><br><span class="line">CONTEXT: （背景+受众+输入数据+限制）</span><br><span class="line">OUTPUT FORMAT: （具体格式，如表格/步骤/JSON）</span><br><span class="line">QUALITY BAR: （必须包含什么、禁止什么、不确定时怎么做）</span><br></pre></td></tr></table></figure>
 
 <p>示例（直接复制改就行）：</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">textGOAL: 帮我写一篇抖音爆款文案</span><br><span class="line">CONTEXT: 卖空气炸锅，目标25-35岁宝妈，受众喜欢实用+幽默，输入：产品特点是无油健康、10分钟出锅</span><br><span class="line">OUTPUT FORMAT: 标题 + 3段正文 + 3个emoji呼吁购买</span><br><span class="line">QUALITY BAR: 必须幽默、带数据、避免夸大其词，如果不确定价格就问我</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">textGOAL: 帮我写一篇抖音爆款文案</span><br><span class="line">CONTEXT: 卖空气炸锅，目标25-35岁宝妈，受众喜欢实用+幽默，输入：产品特点是无油健康、10分钟出锅</span><br><span class="line">OUTPUT FORMAT: 标题 + 3段正文 + 3个emoji呼吁购买</span><br><span class="line">QUALITY BAR: 必须幽默、带数据、避免夸大其词，如果不确定价格就问我</span><br></pre></td></tr></table></figure>
 
-<h2 id="Prompt-模板合集"><a href="#Prompt-模板合集" class="headerlink" title="Prompt 模板合集"></a>Prompt 模板合集</h2><h2 id="内容创作类（营销-文案-脚本）"><a href="#内容创作类（营销-文案-脚本）" class="headerlink" title="内容创作类（营销/文案/脚本）"></a>内容创作类（营销/文案/脚本）</h2><ol>
+<h2 id="Prompt-模板合集"><a href="#Prompt-模板合集" class="headerlink" title="Prompt 模板合集"></a>Prompt 模板合集</h2><h2 id="内容创作类（营销-文案-脚本）"><a href="#内容创作类（营销-文案-脚本）" class="headerlink" title="内容创作类（营销&#x2F;文案&#x2F;脚本）"></a>内容创作类（营销&#x2F;文案&#x2F;脚本）</h2><ol>
 <li>爆款短视频脚本</li>
 </ol>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">GOAL: 生成抖音15秒短视频脚本   </span><br><span class="line">CONTEXT: 主题是[你的主题]，目标年轻白领   </span><br><span class="line">OUTPUT FORMAT: 开场钩子（5秒）+ 3个痛点+解决方案+呼吁购买   </span><br><span class="line">QUALITY BAR: 幽默+带数据+加3个表情包建议</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">GOAL: 生成抖音15秒短视频脚本   </span><br><span class="line">CONTEXT: 主题是[你的主题]，目标年轻白领   </span><br><span class="line">OUTPUT FORMAT: 开场钩子（5秒）+ 3个痛点+解决方案+呼吁购买   </span><br><span class="line">QUALITY BAR: 幽默+带数据+加3个表情包建议</span><br></pre></td></tr></table></figure>
 
 <ol>
 <li>SEO博客大纲</li>
 </ol>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GOAL: 为[关键词]写一篇SEO优化博客大纲   </span><br><span class="line">OUTPUT FORMAT: H1 + 5个H2 + 每个H2下3个H3 + FAQ 8个</span><br><span class="line">Newsletter </span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GOAL: 为[关键词]写一篇SEO优化博客大纲   </span><br><span class="line">OUTPUT FORMAT: H1 + 5个H2 + 每个H2下3个H3 + FAQ 8个</span><br><span class="line">Newsletter </span><br></pre></td></tr></table></figure>
 
 <ol>
 <li>周刊</li>
 </ol>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GOAL: 写一期每周Newsletter   </span><br><span class="line">CONTEXT: 我的领域是[领域]，上周热点是[列出]   </span><br><span class="line">OUTPUT FORMAT: 主题 + 开头引言 + 3条精选内容 + CTA</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GOAL: 写一期每周Newsletter   </span><br><span class="line">CONTEXT: 我的领域是[领域]，上周热点是[列出]   </span><br><span class="line">OUTPUT FORMAT: 主题 + 开头引言 + 3条精选内容 + CTA</span><br></pre></td></tr></table></figure>
 
-<h2 id="编程-代码类（SuperGrok最强场景）"><a href="#编程-代码类（SuperGrok最强场景）" class="headerlink" title="编程/代码类（SuperGrok最强场景）"></a>编程/代码类（SuperGrok最强场景）</h2><ol>
+<h2 id="编程-代码类（SuperGrok最强场景）"><a href="#编程-代码类（SuperGrok最强场景）" class="headerlink" title="编程&#x2F;代码类（SuperGrok最强场景）"></a>编程&#x2F;代码类（SuperGrok最强场景）</h2><ol>
 <li>代码重构（官方推荐）</li>
 </ol>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GOAL: 重构以下代码让它更高效   </span><br><span class="line">CONTEXT: 语言Python，输入代码：[粘贴代码]，约束：保持功能不变，提升可读性   </span><br><span class="line">OUTPUT FORMAT: 重构后代码 + 改动说明 + 性能提升百分比</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GOAL: 重构以下代码让它更高效   </span><br><span class="line">CONTEXT: 语言Python，输入代码：[粘贴代码]，约束：保持功能不变，提升可读性   </span><br><span class="line">OUTPUT FORMAT: 重构后代码 + 改动说明 + 性能提升百分比</span><br></pre></td></tr></table></figure>
 
 <ol>
 <li>Bug 诊断</li>
 </ol>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GOAL: 诊断并修复这个Bug   </span><br><span class="line">CONTEXT: 错误日志：[粘贴]，项目环境[描述]   </span><br><span class="line">OUTPUT FORMAT: 3个可能原因（概率排序）+ 修复代码 + 测试步骤</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GOAL: 诊断并修复这个Bug   </span><br><span class="line">CONTEXT: 错误日志：[粘贴]，项目环境[描述]   </span><br><span class="line">OUTPUT FORMAT: 3个可能原因（概率排序）+ 修复代码 + 测试步骤</span><br></pre></td></tr></table></figure>
 
 <ol>
 <li>完整功能开发</li>
 </ol>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GOAL: 用Python写一个[功能描述]   </span><br><span class="line">OUTPUT FORMAT: 完整代码 + 安装依赖 + 使用说明 + 单元测试</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GOAL: 用Python写一个[功能描述]   </span><br><span class="line">OUTPUT FORMAT: 完整代码 + 安装依赖 + 使用说明 + 单元测试</span><br></pre></td></tr></table></figure>
 
-<h2 id="投资-Crypto分析类（实时X优势）"><a href="#投资-Crypto分析类（实时X优势）" class="headerlink" title="投资/Crypto分析类（实时X优势）"></a>投资/Crypto分析类（实时X优势）</h2><ol>
+<h2 id="投资-Crypto分析类（实时X优势）"><a href="#投资-Crypto分析类（实时X优势）" class="headerlink" title="投资&#x2F;Crypto分析类（实时X优势）"></a>投资&#x2F;Crypto分析类（实时X优势）</h2><ol>
 <li>市场情绪分析</li>
 </ol>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GOAL: 分析[币种/股票]当前市场情绪   </span><br><span class="line">CONTEXT: 引用最新X舆情 + 链上数据   </span><br><span class="line">OUTPUT FORMAT: 看涨/看跌比例 + 3个关键KOL观点 + 我的风险评估</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GOAL: 分析[币种/股票]当前市场情绪   </span><br><span class="line">CONTEXT: 引用最新X舆情 + 链上数据   </span><br><span class="line">OUTPUT FORMAT: 看涨/看跌比例 + 3个关键KOL观点 + 我的风险评估</span><br></pre></td></tr></table></figure>
 
 <ol>
 <li>投资组合建议</li>
 </ol>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GOAL: 帮我优化投资组合   </span><br><span class="line">CONTEXT: 当前持有[列出资产]，风险偏好中性，目标年化15%  </span><br><span class="line">OUTPUT FORMAT: 表格（资产+比例+理由）+ 潜在风险</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GOAL: 帮我优化投资组合   </span><br><span class="line">CONTEXT: 当前持有[列出资产]，风险偏好中性，目标年化15%  </span><br><span class="line">OUTPUT FORMAT: 表格（资产+比例+理由）+ 潜在风险</span><br></pre></td></tr></table></figure>
 
-<h2 id="图像-视频生成类（Imagine功能）"><a href="#图像-视频生成类（Imagine功能）" class="headerlink" title="图像/视频生成类（Imagine功能）"></a>图像/视频生成类（Imagine功能）</h2><ol>
+<h2 id="图像-视频生成类（Imagine功能）"><a href="#图像-视频生成类（Imagine功能）" class="headerlink" title="图像&#x2F;视频生成类（Imagine功能）"></a>图像&#x2F;视频生成类（Imagine功能）</h2><ol>
 <li>高级图像Prompt（2026最佳实践） <code>画一个[主体]，[详细描述外貌+动作]，[艺术风格如赛博朋克/吉卜力]，[灯光+氛围]，[镜头如85mm f/1.8]，超高细节，8K精选示例（直接复制）</code>：</li>
 </ol>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">“Cosmic Double Exposure Portrait: Woman portrait in profile, flowing blonde hair blending with starry galaxy, golden light particles...”</span><br><span class="line">“Cyberpunk Street Scene: Neon-lit alleyway in futuristic Tokyo, holographic ads... Blade Runner atmosphere”</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">“Cosmic Double Exposure Portrait: Woman portrait in profile, flowing blonde hair blending with starry galaxy, golden light particles...”</span><br><span class="line">“Cyberpunk Street Scene: Neon-lit alleyway in futuristic Tokyo, holographic ads... Blade Runner atmosphere”</span><br></pre></td></tr></table></figure>
 
 <ol>
 <li>视频生成</li>
 </ol>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">生成6秒视频：[主体] energetically dancing in [场景]，smooth 30fps，详细动作时间轴：0-1s [动作1]，1-2s [动作2]...</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">生成6秒视频：[主体] energetically dancing in [场景]，smooth 30fps，详细动作时间轴：0-1s [动作1]，1-2s [动作2]...</span><br></pre></td></tr></table></figure>
 
-<h2 id="研究-文档分析类"><a href="#研究-文档分析类" class="headerlink" title="研究/文档分析类"></a>研究/文档分析类</h2><ol>
-<li>PDF/长文档总结</li>
+<h2 id="研究-文档分析类"><a href="#研究-文档分析类" class="headerlink" title="研究&#x2F;文档分析类"></a>研究&#x2F;文档分析类</h2><ol>
+<li>PDF&#x2F;长文档总结</li>
 </ol>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GOAL: 总结这份文件核心观点   </span><br><span class="line">CONTEXT: [上传PDF]   </span><br><span class="line">OUTPUT FORMAT: 3个关键发现 + 5个风险点 + 行动建议</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GOAL: 总结这份文件核心观点   </span><br><span class="line">CONTEXT: [上传PDF]   </span><br><span class="line">OUTPUT FORMAT: 3个关键发现 + 5个风险点 + 行动建议</span><br></pre></td></tr></table></figure>
 
 <h2 id="个性化Custom-Instructions（永久生效！）"><a href="#个性化Custom-Instructions（永久生效！）" class="headerlink" title="个性化Custom Instructions（永久生效！）"></a>个性化Custom Instructions（永久生效！）</h2><p>进入 Settings → Custom Instructions，粘贴下面（改成你的风格）：</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">text你现在是我的专属[角色，如超级投资顾问+幽默程序员]。  </span><br><span class="line">永远用中文回复，语气幽默但专业。  </span><br><span class="line">输出必须带emoji和表格。  </span><br><span class="line">如果不确定就直接问我，不要猜。</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">text你现在是我的专属[角色，如超级投资顾问+幽默程序员]。  </span><br><span class="line">永远用中文回复，语气幽默但专业。  </span><br><span class="line">输出必须带emoji和表格。  </span><br><span class="line">如果不确定就直接问我，不要猜。</span><br></pre></td></tr></table></figure>
 
-<h2 id="其他高ROI模板（税务-合同-学习）"><a href="#其他高ROI模板（税务-合同-学习）" class="headerlink" title="其他高ROI模板（税务/合同/学习）"></a>其他高ROI模板（税务/合同/学习）</h2><ol>
+<h2 id="其他高ROI模板（税务-合同-学习）"><a href="#其他高ROI模板（税务-合同-学习）" class="headerlink" title="其他高ROI模板（税务&#x2F;合同&#x2F;学习）"></a>其他高ROI模板（税务&#x2F;合同&#x2F;学习）</h2><ol>
 <li>合同审查</li>
 </ol>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GOAL: 审查这份合同风险   </span><br><span class="line">OUTPUT FORMAT: 表格（条款+风险等级+修改建议）</span><br></pre></td></tr></tbody></table></figure>
-</body></html>
-    
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GOAL: 审查这份合同风险   </span><br><span class="line">OUTPUT FORMAT: 表格（条款+风险等级+修改建议）</span><br></pre></td></tr></table></figure>
+
+      
     </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/SuperGrok/">SuperGrok</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SuperGrok/" rel="tag">SuperGrok</a></li></ul>
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
     
-    <div class="columns is-variable is-1 is-multiline is-mobile">
-    
-        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/SuperGrok/">#SuperGrok</a></span>
-    
-    </div>
-    
-    
-    <div class="columns is-mobile is-multiline article-nav">
-        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
-            
-            <a href="/2026/04/Claude-registe/">Claude 封号的原因是什么？如何防止 Claude 封号？| 2026 国内最新注册 Claude 账号教程</a>
-            
-        </span>
-        <span class="column is-12-mobile is-half-desktop  article-nav-next">
-            
-            <a href="/2026/02/minmax-2-5/">用 M2.5 跑 OpenClaw 的完整步骤（暴降 AI Agent 成本）</a>
-            
-        </span>
-    </div>
-    
+<nav id="article-nav">
+  
+    <a href="/2026/04/Claude-registe/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Claude 封号的原因是什么？如何防止 Claude 封号？| 2026 国内最新注册 Claude 账号教程
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2026/02/minmax-2-5/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">用 M2.5 跑 OpenClaw 的完整步骤（暴降 AI Agent 成本）</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
+<!-- Table of Contents -->
 
-
-
-
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BD%A0%E8%BF%98%E5%89%A9%E5%A4%9A%E5%B0%91%EF%BC%9F%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E6%81%A2%E5%A4%8D%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">如何查看你还剩多少？什么时候恢复？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SuperGrok%E7%9A%845%E5%A4%A7%E7%9C%81%E9%A2%9D%E5%BA%A6%E6%94%BB%E7%95%A5"><span class="nav-number">2.</span> <span class="nav-text">SuperGrok的5大省额度攻略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BB%84%E9%87%91Prompt%E5%85%AC%E5%BC%8F%EF%BC%882026%E6%9C%80%E5%BC%BA4%E9%83%A8%E5%88%86%E7%BB%93%E6%9E%84%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">黄金Prompt公式（2026最强4部分结构）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Prompt-%E6%A8%A1%E6%9D%BF%E5%90%88%E9%9B%86"><span class="nav-number">4.</span> <span class="nav-text">Prompt 模板合集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C%E7%B1%BB%EF%BC%88%E8%90%A5%E9%94%80-%E6%96%87%E6%A1%88-%E8%84%9A%E6%9C%AC%EF%BC%89"><span class="nav-number">5.</span> <span class="nav-text">内容创作类（营销&#x2F;文案&#x2F;脚本）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E7%A8%8B-%E4%BB%A3%E7%A0%81%E7%B1%BB%EF%BC%88SuperGrok%E6%9C%80%E5%BC%BA%E5%9C%BA%E6%99%AF%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">编程&#x2F;代码类（SuperGrok最强场景）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%95%E8%B5%84-Crypto%E5%88%86%E6%9E%90%E7%B1%BB%EF%BC%88%E5%AE%9E%E6%97%B6X%E4%BC%98%E5%8A%BF%EF%BC%89"><span class="nav-number">7.</span> <span class="nav-text">投资&#x2F;Crypto分析类（实时X优势）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F-%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90%E7%B1%BB%EF%BC%88Imagine%E5%8A%9F%E8%83%BD%EF%BC%89"><span class="nav-number">8.</span> <span class="nav-text">图像&#x2F;视频生成类（Imagine功能）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A0%94%E7%A9%B6-%E6%96%87%E6%A1%A3%E5%88%86%E6%9E%90%E7%B1%BB"><span class="nav-number">9.</span> <span class="nav-text">研究&#x2F;文档分析类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AA%E6%80%A7%E5%8C%96Custom-Instructions%EF%BC%88%E6%B0%B8%E4%B9%85%E7%94%9F%E6%95%88%EF%BC%81%EF%BC%89"><span class="nav-number">10.</span> <span class="nav-text">个性化Custom Instructions（永久生效！）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E9%AB%98ROI%E6%A8%A1%E6%9D%BF%EF%BC%88%E7%A8%8E%E5%8A%A1-%E5%90%88%E5%90%8C-%E5%AD%A6%E4%B9%A0%EF%BC%89"><span class="nav-number">11.</span> <span class="nav-text">其他高ROI模板（税务&#x2F;合同&#x2F;学习）</span></a></li></ol>
+    
     </div>
+  </aside>
+
 </section>
-    <footer class="footer">
-    <div class="container">
-        <div class="columns content">
-            <div class="column is-narrow has-text-centered">
-                &copy; 2026 dadaming&nbsp;
-                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
-                        target="_blank" rel="noopener" href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
-            </div>
-            <div class="column is-hidden-mobile"></div>
+        
+      </div>
 
-            
-            
-        </div>
     </div>
-</footer>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives/" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories/" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags/" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about/" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
 
-<!-- test if the browser is outdated -->
-<div id="outdated">
-    <h6>Your browser is out-of-date!</h6>
-    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" target="_blank" rel="noopener" href="http://outdatedbrowser.com/">Update my browser now </a></p>
-    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
-</div>
-<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2026 CNM 国内 AI 订阅升级与使用教程大全 All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
 <script>
-    $(document).ready(function () {
-        // plugin function, place inside DOM ready function
-        outdatedBrowser({
-            bgColor: '#f25648',
-            color: '#ffffff',
-            lowerThan: 'flex'
-        })
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
     });
 </script>
 
-<script>
-    window.FontAwesomeConfig = {
-        searchPseudoElements: true
-    }
-    moment.locale("en-AU");
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 
-    
-    
-<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
-<script>
-    (function ($) {
-        $(document).ready(function () {
-            if (typeof($.fn.lightGallery) === 'function') {
-                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof($.fn.justifiedGallery) === 'function') {
-                $('.justified-gallery > p > .gallery-item').unwrap();
-                $('.justified-gallery').justifiedGallery();
-            }
-        });
-    })(jQuery);
-</script>
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
-    <style>
-        .hljs {
-            position: relative;
-        }
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
-        .hljs .clipboard-btn {
-            float: right;
-            color: #9a9a9a;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        .hljs .clipboard-btn:hover {
-          color: #8a8a8a;
-        }
-
-        .hljs > .clipboard-btn {
-            display: none;
-            position: absolute;
-            right: 4px;
-            top: 4px;
-        }
-
-        .hljs:hover > .clipboard-btn {
-            display: inline;
-        }
-
-        .hljs > figcaption > .clipboard-btn {
-            margin-right: 4px;
-        }
-    </style>
-    <script>
-      $(document).ready(function () {
-        $('figure.hljs').each(function(i, figure) {
-          var codeId = 'code-' + i;
-          var code = figure.querySelector('.code');
-          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
-          code.id = codeId;
-          copyButton.addClass('clipboard-btn');
-          copyButton.attr('data-clipboard-target-id', codeId);
-
-          var figcaption = figure.querySelector('figcaption');
-
-          if (figcaption) {
-            figcaption.append(copyButton[0]);
-          } else {
-            figure.prepend(copyButton[0]);
-          }
-        })
-
-        var clipboard = new ClipboardJS('.clipboard-btn', {
-          target: function(trigger) {
-            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
-          }
-        });
-        clipboard.on('success', function(e) {
-          e.clearSelection();
-        })
-      })
-    </script>
-
-    
 
 
 
 <script src="/js/script.js"></script>
 
 
-    
-    <div class="searchbox ins-search">
-    <div class="searchbox-mask"></div>
-    <div class="searchbox-container ins-search-container">
-        <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
-            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="searchbox-result-wrapper ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-    (function (window) {
-        var INSIGHT_CONFIG = {
-            TRANSLATION: {
-                POSTS: 'Posts',
-                PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
-                UNTITLED: '(Untitled)',
-            },
-            CONTENT_URL: '/content.json',
-        };
-        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-    })(window);
-</script>
+<script src="/js/bootstrap.js"></script>
 
-<script src="/js/insight.js"></script>
 
-    
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
 </body>
 </html>

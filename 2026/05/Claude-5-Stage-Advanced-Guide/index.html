@@ -1,142 +1,153 @@
 <!DOCTYPE html>
-<html class="has-navbar-fixed-top">
+<html>
 <head>
-    <meta charset="utf-8">
-<meta name="baidu-site-verification" content="codeva-GZcqE7woK0" />
-<title>Claude 的5阶段进阶指南：当搜索框，真的太浪费了</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="utf-8">
+  
+  <title>Claude 的5阶段进阶指南：当搜索框，真的太浪费了 | CNM 国内 AI 订阅升级与使用教程大全</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="Claude" />
+  
+  
+  
+  
+  <meta name="description" content="从搜索问答到自主执行任务，系统拆解 Claude 的五阶段进阶用法，帮助你把它培养成能写作、操作工具、组织工程团队并持续工作的 AI 助手。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Claude 的5阶段进阶指南：当搜索框，真的太浪费了">
+<meta property="og:url" content="https://clawdo.com/2026/05/Claude-5-Stage-Advanced-Guide/index.html">
+<meta property="og:site_name" content="CNM 国内 AI 订阅升级与使用教程大全">
+<meta property="og:description" content="从搜索问答到自主执行任务，系统拆解 Claude 的五阶段进阶用法，帮助你把它培养成能写作、操作工具、组织工程团队并持续工作的 AI 助手。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pica.zhimg.com/v2-08597cb3532f43540ef23e27a3afe6d4_1440w.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-c24f6dbf20cef7a371d1435b5ee1eab3_1440w.jpg">
+<meta property="og:image" content="https://pica.zhimg.com/v2-ab19c590bbd921bd996b77aaa0943822_1440w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-2f129af04a47f6c463fcb6a4a7143f92_1440w.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-f97e391852ef8ea7ff690fc8484069b7_1440w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-39b385daa718212f41fc9b00741a782c_1440w.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-ba99f08c28d59515bc6dd424ad020dff_1440w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-e77d09372f3e7533f2cb8a1819b784b2_1440w.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-24f25bfdee72cdf6d7dab79c30d43669_1440w.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-d6b51a1a225092bbc77ac013b1e8eb99_1440w.jpg">
+<meta property="article:published_time" content="2026-05-13T08:07:53.000Z">
+<meta property="article:modified_time" content="2026-08-20T02:37:20.366Z">
+<meta property="article:author" content="dadaming">
+<meta property="article:tag" content="Claude">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pica.zhimg.com/v2-08597cb3532f43540ef23e27a3afe6d4_1440w.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="CNM 国内 AI 订阅升级与使用教程大全" type="application/atom+xml">
+  
+  <link rel="icon" href="/favicon.png">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
-
-
-
-
-<meta name="description" content="从搜索问答到自主执行任务，系统拆解 Claude 的五阶段进阶用法，帮助你把它培养成能写作、操作工具、组织工程团队并持续工作的 AI 助手。">
-
-
-
-
-
-
-
-
-
-<link rel="icon" type="image/png" href="/favicon.png?v=20260519-2">
-<link rel="shortcut icon" type="image/png" href="/favicon.png?v=20260519-2">
-
-
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
-
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
-
-
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
 <link rel="stylesheet" href="/css/style.css">
 
 
-<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?05f73ede0440dbfdffc6c599c938373e";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
 
 
-
-    
-    
-    
-    
-    
-
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
 
 <meta name="generator" content="Hexo 8.1.1"></head>
-<body>
-    
-<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
-    <div class="container">
-        <div class="navbar-brand">
-            <a class="navbar-item navbar-logo" href="/">
-                
-                <img src="/images/logo.png" alt="CNM 国内 AI 订阅升级与使用教程大全" height="28">
-                
-            </a>
-            <div class="navbar-burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        
-        <div class="navbar-menu navbar-start">
-            
-            <a class="navbar-item "
-               href="/">Home</a>
-            
-            <a class="navbar-item "
-               href="/archives">Archives</a>
-            
-            <a class="navbar-item "
-               href="/categories">Categories</a>
-            
-            <a class="navbar-item "
-               href="/tags">Tags</a>
-            
-        </div>
-        
-        <div class="navbar-menu navbar-end">
-            
-            <a class="navbar-item search" title="Search" href="javascript:;">
-                <i class="fas fa-search"></i>
-            </a>
-            
-            
-            
-        </div>
-    </div>
-</nav>
 
-    <section class="section">
-    <div class="container">
-    <article class="article content gallery" itemscope itemprop="blogPost">
+
+
+  <body>
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="CNM 国内 AI 订阅升级与使用教程大全" rel="home"> CNM 国内 AI 订阅升级与使用教程大全 </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">分享 ChatGPT、Claude、Grok、Gemini、Codex 和 OpenClaw 等 AI 工具的注册、订阅升级、功能使用、效率技巧与常见问题解决教程。</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/archives/"> <a class="" href="/archives/">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/categories/"> <a class="" href="/categories/">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/tags/"> <a class="" href="/tags/">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/about/"> <a class="" href="/about/">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-Claude-5-Stage-Advanced-Guide" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        Claude 的5阶段进阶指南：当搜索框，真的太浪费了
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Claude 的5阶段进阶指南：当搜索框，真的太浪费了
     </h1>
+  
+
+      </header>
     
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            
-                <span>May 13 2026</span>
-            
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/Claude/">Claude</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            9 minutes read (About 1406 words)
-        </span>
-        
+    <div class="article-meta">
+      
+	<a href="/2026/05/Claude-5-Stage-Advanced-Guide/" class="article-date">
+	  <time datetime="2026-05-13T08:07:53.000Z" itemprop="datePublished">May 13, 2026</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Claude/">Claude</a>
+ 
     </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <html><head></head><body><p>身边10个用Claude的,9个是这样用的:打开网页敲问题、复制答案、关掉。</p>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>身边10个用Claude的,9个是这样用的:打开网页敲问题、复制答案、关掉。</p>
 <p>如果你也是,那你在用法拉利送外卖。</p>
 <p>Claude的真实用法,是一条<strong>5阶段进阶曲线</strong>。每跨一步,每周省下的时间指数级增长——从30分钟,到5小时,到10小时,到”你睡觉它在干活”。</p>
 <p>直接上干货。</p>
@@ -152,11 +163,11 @@ var _hmt = _hmt || [];
 <p><strong>6个核心武器:</strong></p>
 <ol>
 <li><strong>记忆+历史搜索</strong> → 告别每次从零自我介绍</li>
-<li><strong>Connectors</strong> → 50+工具一键打通(Slack/Gmail/Drive/Notion/GitHub/日历)</li>
+<li><strong>Connectors</strong> → 50+工具一键打通(Slack&#x2F;Gmail&#x2F;Drive&#x2F;Notion&#x2F;GitHub&#x2F;日历)</li>
 </ol>
 <p><img src="https://pica.zhimg.com/v2-ab19c590bbd921bd996b77aaa0943822_1440w.jpg" alt="img"></p>
 <ol start="3">
-<li><strong>文件创建</strong> → 直接生成带公式的真Excel/PPT/Word/PDF,不是预览,是可交付文件</li>
+<li><strong>文件创建</strong> → 直接生成带公式的真Excel&#x2F;PPT&#x2F;Word&#x2F;PDF,不是预览,是可交付文件</li>
 </ol>
 <p><img src="https://pic1.zhimg.com/v2-2f129af04a47f6c463fcb6a4a7143f92_1440w.jpg" alt="img"></p>
 <ol start="4">
@@ -164,7 +175,7 @@ var _hmt = _hmt || [];
 </li>
 <li><p><strong>内联可视化</strong> → 丢CSV直接出图,实时切换变量</p>
 </li>
-<li><p><strong>原生Office插件</strong> → 嵌进Excel/PPT/Word里跑,自动套品牌色</p>
+<li><p><strong>原生Office插件</strong> → 嵌进Excel&#x2F;PPT&#x2F;Word里跑,自动套品牌色</p>
 </li>
 </ol>
 <p><img src="https://pic4.zhimg.com/v2-f97e391852ef8ea7ff690fc8484069b7_1440w.jpg" alt="img"></p>
@@ -189,12 +200,12 @@ var _hmt = _hmt || [];
 <p><img src="https://pic2.zhimg.com/v2-24f25bfdee72cdf6d7dab79c30d43669_1440w.jpg" alt="img"></p>
 <ol>
 <li><strong>移动控制</strong> → 手机发任务,云端执行完ping你</li>
-<li><strong>Claude Design</strong> → 大白话描述,自动生成PPT/原型/落地页,自动套品牌</li>
+<li><strong>Claude Design</strong> → 大白话描述,自动生成PPT&#x2F;原型&#x2F;落地页,自动套品牌</li>
 </ol>
 <p><img src="https://pic4.zhimg.com/v2-d6b51a1a225092bbc77ac013b1e8eb99_1440w.jpg" alt="img"></p>
 <p><strong>多数人卡这里不是技术问题,是不敢让AI碰自己文件</strong>。Cowork的权限模型只能动你授权的文件夹,放心。</p>
 <p><strong>破局动作</strong>:建标准文件夹结构</p>
-<figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/about-me   /templates   /projects   /outputs</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/about-me   /templates   /projects   /outputs</span><br></pre></td></tr></table></figure>
 
 <p>写清楚命名规则丢进去,Claude从此干活有章法。</p>
 <h2 id="第四阶段-让它成为”工程团队”"><a href="#第四阶段-让它成为”工程团队”" class="headerlink" title="第四阶段:让它成为”工程团队”"></a><strong>第四阶段:让它成为”工程团队”</strong></h2><p>Anthropic 做 Claude Code 的 Boris Cherny ,<strong>每天并行跑5个Claude会话</strong>,启动完去开会,回来一堆PR等review。</p>
@@ -206,216 +217,200 @@ var _hmt = _hmt || [];
 <li><strong>Git Worktrees</strong> → <code>claude-worktree feature-name</code> 独立分支隔离工作空间,3-4个并行最舒服</li>
 <li><strong>MCP</strong> → 但能用CLI别用MCP,<strong>省60-70% token</strong></li>
 </ol>
-<p><strong>进阶操作</strong>:<code>/compact</code>压缩历史 / <code>/context</code>查token / Auto mode+<code>/focus</code> / 验证循环(让Claude自测自迭代,质量×2-3) / 自定义斜杠命令</p>
+<p><strong>进阶操作</strong>:<code>/compact</code>压缩历史 &#x2F; <code>/context</code>查token &#x2F; Auto mode+<code>/focus</code> &#x2F; 验证循环(让Claude自测自迭代,质量×2-3) &#x2F; 自定义斜杠命令</p>
 <p><strong>破局动作</strong>:找你每周最重复的事,做成第一个云端自动化routine。</p>
 <h2 id="最终阶段-让它成为”基础设施”"><a href="#最终阶段-让它成为”基础设施”" class="headerlink" title="最终阶段:让它成为”基础设施”"></a><strong>最终阶段:让它成为”基础设施”</strong></h2><p>笔记本合上,你在健身房。有人开PR,Claude在云端自动review完反馈,你摸手机时一切已搞定。</p>
 <p><strong>3个底层能力:</strong></p>
 <ol>
-<li>Cloud Routines → 配置存云端,按计划/API/GitHub事件触发,<strong>电脑可关机</strong></li>
+<li>Cloud Routines → 配置存云端,按计划&#x2F;API&#x2F;GitHub事件触发,<strong>电脑可关机</strong></li>
 <li>Hooks → 生命周期安全逻辑,拦截危险命令、自动格式化、完成时通知</li>
-<li>Channels → 从Discord/Telegram/iMessage外部控制会话</li>
+<li>Channels → 从Discord&#x2F;Telegram&#x2F;iMessage外部控制会话</li>
 </ol>
-<p><strong>狠活清单</strong>:Headless+Agent SDK(无界面运行/包装产品) / Remote Control(手机远控桌面) / Autodream(后台自动整理记忆) / Task Budgets(token上限) / Agent Teams(多Claude辩论)</p>
+<p><strong>狠活清单</strong>:Headless+Agent SDK(无界面运行&#x2F;包装产品) &#x2F; Remote Control(手机远控桌面) &#x2F; Autodream(后台自动整理记忆) &#x2F; Task Budgets(token上限) &#x2F; Agent Teams(多Claude辩论)</p>
 <h2 id="真正的瓶颈不是技术-是信任"><a href="#真正的瓶颈不是技术-是信任" class="headerlink" title="真正的瓶颈不是技术,是信任"></a><strong>真正的瓶颈不是技术,是信任</strong></h2><p>最后一步卡住所有人的不是配置,是<strong>你敢不敢让AI在你不在时替你做决策</strong>。</p>
 <p>破局只有一招:<strong>从最低风险开始</strong>。每天给自己发一份”昨日工作摘要”,不发任何人,只看Claude做得对不对。</p>
 <p>每天观察,积累信任,再放手。</p>
-</body></html>
-    
+
+      
     </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Claude/">Claude</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Claude/" rel="tag">Claude</a></li></ul>
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
     
-    <div class="columns is-variable is-1 is-multiline is-mobile">
-    
-        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Claude/">#Claude</a></span>
-    
-    </div>
-    
-    
-    <div class="columns is-mobile is-multiline article-nav">
-        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
-            
-            <a href="/2026/05/Claude-Word-Plugin-for-College-Students/">把 Claude Word 插件塞进了大学生的 Word 里,论文降重、报告生成、PPT 大纲全搞定(含完整操作流程)</a>
-            
-        </span>
-        <span class="column is-12-mobile is-half-desktop  article-nav-next">
-            
-            <a href="/2026/05/Codex-Chrome-Extension-Setup-Guide/">Codex 如何连接 Chrome 浏览器？插件安装与使用教程</a>
-            
-        </span>
-    </div>
-    
+<nav id="article-nav">
+  
+    <a href="/2026/05/Claude-Word-Plugin-for-College-Students/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          把 Claude Word 插件塞进了大学生的 Word 里,论文降重、报告生成、PPT 大纲全搞定(含完整操作流程)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2026/05/Codex-Chrome-Extension-Setup-Guide/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Codex 如何连接 Chrome 浏览器？插件安装与使用教程</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
+<!-- Table of Contents -->
 
-
-
-
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5-%E6%8A%8A%E5%AE%83%E5%BD%93%E6%90%9C%E7%B4%A2%E6%A1%86"><span class="nav-number">1.</span> <span class="nav-text">第一阶段:把它当搜索框</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5-%E8%AE%A9%E5%AE%83%E6%88%90%E4%B8%BA%E2%80%9D%E5%90%8C%E4%BA%8B%E2%80%9D"><span class="nav-number">2.</span> <span class="nav-text">第二阶段:让它成为”同事”</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%B4%E5%8F%A5%E5%AE%9E%E8%AF%9D"><span class="nav-number">2.1.</span> <span class="nav-text">说句实话:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5-%E8%AE%A9%E5%AE%83%E2%80%9D%E5%8A%A8%E6%89%8B%E2%80%9D%E5%B9%B2%E6%B4%BB"><span class="nav-number">3.</span> <span class="nav-text">第三阶段:让它”动手”干活</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E9%98%B6%E6%AE%B5-%E8%AE%A9%E5%AE%83%E6%88%90%E4%B8%BA%E2%80%9D%E5%B7%A5%E7%A8%8B%E5%9B%A2%E9%98%9F%E2%80%9D"><span class="nav-number">4.</span> <span class="nav-text">第四阶段:让它成为”工程团队”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E7%BB%88%E9%98%B6%E6%AE%B5-%E8%AE%A9%E5%AE%83%E6%88%90%E4%B8%BA%E2%80%9D%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E2%80%9D"><span class="nav-number">5.</span> <span class="nav-text">最终阶段:让它成为”基础设施”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9C%9F%E6%AD%A3%E7%9A%84%E7%93%B6%E9%A2%88%E4%B8%8D%E6%98%AF%E6%8A%80%E6%9C%AF-%E6%98%AF%E4%BF%A1%E4%BB%BB"><span class="nav-number">6.</span> <span class="nav-text">真正的瓶颈不是技术,是信任</span></a></li></ol>
+    
     </div>
+  </aside>
+
 </section>
-    <footer class="footer">
-    <div class="container">
-        <div class="columns content">
-            <div class="column is-narrow has-text-centered">
-                &copy; 2026 dadaming&nbsp;
-                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
-                        target="_blank" rel="noopener" href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
-            </div>
-            <div class="column is-hidden-mobile"></div>
+        
+      </div>
 
-            
-            
-        </div>
     </div>
-</footer>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives/" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories/" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags/" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about/" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
 
-<!-- test if the browser is outdated -->
-<div id="outdated">
-    <h6>Your browser is out-of-date!</h6>
-    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" target="_blank" rel="noopener" href="http://outdatedbrowser.com/">Update my browser now </a></p>
-    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
-</div>
-<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2026 CNM 国内 AI 订阅升级与使用教程大全 All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
 <script>
-    $(document).ready(function () {
-        // plugin function, place inside DOM ready function
-        outdatedBrowser({
-            bgColor: '#f25648',
-            color: '#ffffff',
-            lowerThan: 'flex'
-        })
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
     });
 </script>
 
-<script>
-    window.FontAwesomeConfig = {
-        searchPseudoElements: true
-    }
-    moment.locale("en-AU");
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 
-    
-    
-<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
-<script>
-    (function ($) {
-        $(document).ready(function () {
-            if (typeof($.fn.lightGallery) === 'function') {
-                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof($.fn.justifiedGallery) === 'function') {
-                $('.justified-gallery > p > .gallery-item').unwrap();
-                $('.justified-gallery').justifiedGallery();
-            }
-        });
-    })(jQuery);
-</script>
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
-    <style>
-        .hljs {
-            position: relative;
-        }
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
-        .hljs .clipboard-btn {
-            float: right;
-            color: #9a9a9a;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        .hljs .clipboard-btn:hover {
-          color: #8a8a8a;
-        }
-
-        .hljs > .clipboard-btn {
-            display: none;
-            position: absolute;
-            right: 4px;
-            top: 4px;
-        }
-
-        .hljs:hover > .clipboard-btn {
-            display: inline;
-        }
-
-        .hljs > figcaption > .clipboard-btn {
-            margin-right: 4px;
-        }
-    </style>
-    <script>
-      $(document).ready(function () {
-        $('figure.hljs').each(function(i, figure) {
-          var codeId = 'code-' + i;
-          var code = figure.querySelector('.code');
-          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
-          code.id = codeId;
-          copyButton.addClass('clipboard-btn');
-          copyButton.attr('data-clipboard-target-id', codeId);
-
-          var figcaption = figure.querySelector('figcaption');
-
-          if (figcaption) {
-            figcaption.append(copyButton[0]);
-          } else {
-            figure.prepend(copyButton[0]);
-          }
-        })
-
-        var clipboard = new ClipboardJS('.clipboard-btn', {
-          target: function(trigger) {
-            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
-          }
-        });
-        clipboard.on('success', function(e) {
-          e.clearSelection();
-        })
-      })
-    </script>
-
-    
 
 
 
 <script src="/js/script.js"></script>
 
 
-    
-    <div class="searchbox ins-search">
-    <div class="searchbox-mask"></div>
-    <div class="searchbox-container ins-search-container">
-        <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
-            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="searchbox-result-wrapper ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-    (function (window) {
-        var INSIGHT_CONFIG = {
-            TRANSLATION: {
-                POSTS: 'Posts',
-                PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
-                UNTITLED: '(Untitled)',
-            },
-            CONTENT_URL: '/content.json',
-        };
-        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-    })(window);
-</script>
+<script src="/js/bootstrap.js"></script>
 
-<script src="/js/insight.js"></script>
 
-    
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
 </body>
 </html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>担心 Claude 账号被封控，如何导出 Claude 数据，并丝滑切换到 GPT | CNM 国内 AI 订阅升级与使用教程大全</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="如何导出 Claude 数据Claude 怎么切换到 GPT" />
+  
+  
+  
+  
+  <meta name="description" content="最近如果你遇到 Claude 风控、限制登录，或者本身就担心账号哪天突然出问题，建议提前做一件事： 把自己的数据先导出来。  点击查看文章：《Claude 防封经验（IP、注册、充值和使用习惯）一次说清 》  别等账号彻底进不去了，再想起聊天记录、项目资料和长期上下文还都在 Claude 里面。 如果你已经准备逐步切换到 ChatGPT，也可以提前把 GPT 账号和会员准备好。 国内用户如果不方">
+<meta property="og:type" content="article">
+<meta property="og:title" content="担心 Claude 账号被封控，如何导出 Claude 数据，并丝滑切换到 GPT">
+<meta property="og:url" content="https://clawdo.com/2026/09/claude-export-to-gpt/index.html">
+<meta property="og:site_name" content="CNM 国内 AI 订阅升级与使用教程大全">
+<meta property="og:description" content="最近如果你遇到 Claude 风控、限制登录，或者本身就担心账号哪天突然出问题，建议提前做一件事： 把自己的数据先导出来。  点击查看文章：《Claude 防封经验（IP、注册、充值和使用习惯）一次说清 》  别等账号彻底进不去了，再想起聊天记录、项目资料和长期上下文还都在 Claude 里面。 如果你已经准备逐步切换到 ChatGPT，也可以提前把 GPT 账号和会员准备好。 国内用户如果不方">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://camo.githubusercontent.com/83e4ba0557de370e2c16fac7c5d6cf0781464b707b1dfcf7aea29c172be63c10/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f35633465353663662d363430662d343337632d383966342d3966623466393563653165332e6a7067">
+<meta property="og:image" content="https://camo.githubusercontent.com/846fe83b674e8928c6bffa0e973071e7c6cc116bd6cf25f2ad6371a2e0817e6a/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f30376333373462302d376637632d343261392d626265662d3263353364303465383035612e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/a2a9289520ec9f86a26f178e2bf878c900c77bae42985d8a9cbd4b82ff75c75f/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f33343562643962642d306665342d343861632d623835332d6139346234353035663230612e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/eb7d731a98cc9868526279a620cbeea2b260b6345cbedc3e12700c38bfbe4d3c/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f66333637633738332d633738332d343338382d626663302d3664383435366535653833612e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/ca4fcb705e8a5fe37c672cb14f15c58f071bda55cfee1754b26c47a69e608e09/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f39663933383533382d396361632d346231302d386466632d3933666535616364646335652e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/b3a33d19ac732d06dc92af00f7387b091d48b395dedc575f6db848fe69d6cbe6/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f34646233656634622d663664332d346664382d393765322d6363313661343536363736652e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/2eba18738f38ff5a5513ccf2872a434bd230718f1536543da6d586e867295695/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f31653433373831322d363939362d343937302d616633322d3762373838616464393632352e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/557598c4cc07ad6e14e2f02fc357405e8f178083318087f9b7d974019d9db0fe/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f31306662613266372d303931372d343237362d613363612d6230343837333338323334652e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/c322451d02c62c0ebefa3798647ca41345eee0726c9d8a0d7ec35948c2e55f02/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f35316337383736612d626363322d343037392d393561392d6134633335633861376130372e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/d8c9dbaebbb0a53420d8983f348a325dbcc41b2c2cac702c12ae16a0a03611fa/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f64633437356537322d343361642d343737622d383966632d6362326134373364353138632e706e67">
+<meta property="article:published_time" content="2026-09-20T09:30:21.000Z">
+<meta property="article:modified_time" content="2026-09-20T09:35:28.332Z">
+<meta property="article:author" content="dadaming">
+<meta property="article:tag" content="Claude 怎么切换到 GPT">
+<meta property="article:tag" content="如何导出 Claude 数据">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://camo.githubusercontent.com/83e4ba0557de370e2c16fac7c5d6cf0781464b707b1dfcf7aea29c172be63c10/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f35633465353663662d363430662d343337632d383966342d3966623466393563653165332e6a7067">
+  
+    <link rel="alternate" href="/atom.xml" title="CNM 国内 AI 订阅升级与使用教程大全" type="application/atom+xml">
+  
+  <link rel="icon" href="/favicon.png">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+
+  <body>
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="CNM 国内 AI 订阅升级与使用教程大全" rel="home"> CNM 国内 AI 订阅升级与使用教程大全 </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">分享 ChatGPT、Claude、Grok、Gemini、Codex 和 OpenClaw 等 AI 工具的注册、订阅升级、功能使用、效率技巧与常见问题解决教程。</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/archives/"> <a class="" href="/archives/">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/categories/"> <a class="" href="/categories/">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/tags/"> <a class="" href="/tags/">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/about/"> <a class="" href="/about/">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-claude-export-to-gpt" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      担心 Claude 账号被封控，如何导出 Claude 数据，并丝滑切换到 GPT
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2026/09/claude-export-to-gpt/" class="article-date">
+	  <time datetime="2026-09-20T09:30:21.000Z" itemprop="datePublished">September 20, 2026</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Claude/">Claude</a>
+ 
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://camo.githubusercontent.com/83e4ba0557de370e2c16fac7c5d6cf0781464b707b1dfcf7aea29c172be63c10/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f35633465353663662d363430662d343337632d383966342d3966623466393563653165332e6a7067" alt="担心 Claude 账号被封控，如何导出 Claude 数据，并丝滑切换到 GPT"></p>
+<p>最近如果你遇到 Claude 风控、限制登录，或者本身就担心账号哪天突然出问题，建议提前做一件事： <strong>把自己的数据先导出来。</strong></p>
+<blockquote>
+<p><a href="https://clawdo.com/2026/08/Claude-Account-Safety-Guide-IP-Registration-Payment-and-Usage/">点击查看文章：《Claude 防封经验（IP、注册、充值和使用习惯）一次说清 》</a></p>
+</blockquote>
+<p>别等账号彻底进不去了，再想起聊天记录、项目资料和长期上下文还都在 Claude 里面。</p>
+<p>如果你已经准备逐步切换到 ChatGPT，也可以提前把 GPT 账号和会员准备好。</p>
+<p>国内用户如果不方便使用海外支付，可以通过：</p>
+<p><strong>ChatGPT Plus &#x2F; Pro 升级：<a target="_blank" rel="noopener" href="https://cnmgpt.com/">cnmGPT.com</a></strong></p>
+<p>后面把 Claude 的历史数据整理好以后，就可以直接迁移到 GPT 继续使用。</p>
+<p>这篇文章主要讲两件事： <strong>Claude 数据怎么备份，以及备份以后怎么把长期上下文迁移到 GPT。</strong></p>
+<h2 id="1-如何把你的-Claude-数据导出来"><a href="#1-如何把你的-Claude-数据导出来" class="headerlink" title="1. 如何把你的 Claude 数据导出来"></a>1. 如何把你的 Claude 数据导出来</h2><p>进入 Claude 设置，选择 privacy 点击导出数据。</p>
+<p><img src="https://camo.githubusercontent.com/846fe83b674e8928c6bffa0e973071e7c6cc116bd6cf25f2ad6371a2e0817e6a/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f30376333373462302d376637632d343261392d626265662d3263353364303465383035612e706e67" alt="Settings → Privacy → Export data"></p>
+<p>可以选择全部数据，也可以按日期筛选。</p>
+<p><img src="https://camo.githubusercontent.com/a2a9289520ec9f86a26f178e2bf878c900c77bae42985d8a9cbd4b82ff75c75f/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f33343562643962642d306665342d343861632d623835332d6139346234353035663230612e706e67" alt="选择导出数据量"></p>
+<p>提交后，Claude 会通过邮箱发送下载链接，下载到本地保存即可。</p>
+<p><img src="https://camo.githubusercontent.com/eb7d731a98cc9868526279a620cbeea2b260b6345cbedc3e12700c38bfbe4d3c/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f66333637633738332d633738332d343338382d626663302d3664383435366535653833612e706e67" alt="收到官方邮件后下载"></p>
+<p>如果你的 Claude 目前还能正常登录，建议现在就做一次备份。</p>
+<p><strong>尤其是长期使用 Claude、里面有大量项目和重要对话的用户。</strong></p>
+<p>将下载下来的文件使用文本编辑打开，你会得到三条下载链接，复制并在谷歌浏览器打开。</p>
+<p><img src="https://camo.githubusercontent.com/ca4fcb705e8a5fe37c672cb14f15c58f071bda55cfee1754b26c47a69e608e09/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f39663933383533382d396361632d346231302d386466632d3933666535616364646335652e706e67" alt="img"></p>
+<p>Claude 会立即下载zip文件，你只需要点击解压就能得到包含对话内容的 json 文件。</p>
+<p><img src="https://camo.githubusercontent.com/b3a33d19ac732d06dc92af00f7387b091d48b395dedc575f6db848fe69d6cbe6/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f34646233656634622d663664332d346664382d393765322d6363313661343536363736652e706e67" alt="解压后的两个文件和对话内容的 json 文件"></p>
+<p><strong>到这里，你的 Claude 数据已经有了一份本地备份。</strong></p>
+<h2 id="2-导出后，怎么迁移到-GPT？"><a href="#2-导出后，怎么迁移到-GPT？" class="headerlink" title="2. 导出后，怎么迁移到 GPT？"></a>2. 导出后，怎么迁移到 GPT？</h2><p>不需要把几百条聊天一条条搬过去。</p>
+<p>更实用的方法，是把 Claude 历史数据整理成一份长期上下文文件。</p>
+<p>新建一个 Claude&#x2F;GPT 对话 将下方的提示词丢给 Claude&#x2F;GPT 并附带刚刚的 json 文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br></pre></td><td class="code"><pre><span class="line">我准备从 Claude 切换到 ChatGPT。请把我上传的 Claude 对话导出数据、你当前可访问的关于我的记忆信息，以及可检索到的相关历史聊天内容，整理成一个可下载的 Markdown 文件。</span><br><span class="line"></span><br><span class="line">文件名：`Claude-to-ChatGPT.md`</span><br><span class="line">格式：UTF-8 Markdown。</span><br><span class="line"></span><br><span class="line">## 1. 检查数据源</span><br><span class="line"></span><br><span class="line">检查所有上传附件，区分：</span><br><span class="line"></span><br><span class="line">* 实际对话记录</span><br><span class="line">* 项目/账户元数据</span><br><span class="line">* 压缩包或其他可提取档案</span><br><span class="line">* `manifest-*.json` 等仅包含下载链接的索引文件</span><br><span class="line"></span><br><span class="line">`manifest-*.json` 不算实际对话内容，也不要自动访问其中的一次性下载链接。</span><br><span class="line"></span><br><span class="line">如有压缩包，请尝试提取并读取实际数据。若对话数据缺失、损坏或无法读取，请明确说明，并将最终结果标记为“信息不完整”。</span><br><span class="line"></span><br><span class="line">## 2. 提取可用的个人上下文</span><br><span class="line"></span><br><span class="line">除上传文件外，请整理当前可访问的：</span><br><span class="line"></span><br><span class="line">* 已存储的记忆信息</span><br><span class="line">* 我的长期偏好和回复规则</span><br><span class="line">* 相关历史聊天中的有效信息</span><br><span class="line"></span><br><span class="line">重点包括：</span><br><span class="line"></span><br><span class="line">* 身份、背景、角色</span><br><span class="line">* 业务、产品、客户、服务</span><br><span class="line">* 长期目标、优先事项、限制</span><br><span class="line">* 写作风格、格式要求、禁用表达</span><br><span class="line">* 常用工具和工作流程</span><br><span class="line">* 正在进行的项目、决策、状态、下一步</span><br><span class="line">* 重要名称、日期、数字、术语、链接</span><br><span class="line">* 我明确确认或修改过的规则</span><br><span class="line"></span><br><span class="line">请区分信息来源：</span><br><span class="line"></span><br><span class="line">* “记忆中的内容”</span><br><span class="line">* “上传的 Claude 对话”</span><br><span class="line">* “此前 ChatGPT 聊天记录”</span><br><span class="line"></span><br><span class="line">无法访问的来源请明确说明，不要猜测。</span><br><span class="line"></span><br><span class="line">## 3. 分析与合并</span><br><span class="line"></span><br><span class="line">将所有有效信息合并、去重，并：</span><br><span class="line"></span><br><span class="line">* 以最新修改为准</span><br><span class="line">* 标记冲突和不确定信息</span><br><span class="line">* 对价格、额度、项目状态、日期等时效性内容注明对应时间</span><br><span class="line">* 不把旧信息默认视为仍然有效</span><br><span class="line">* 不把你过去给出的建议当成我已经接受的决定</span><br><span class="line">* 不把我偶尔提出的问题自动当成长期偏好</span><br><span class="line">* 排除密码、API Key、Token、私有下载链接等敏感信息</span><br><span class="line"></span><br><span class="line">## 4. 输出结构</span><br><span class="line"></span><br><span class="line">请按以下结构生成：</span><br><span class="line"></span><br><span class="line"># 上下文信息来自 Claude</span><br><span class="line"></span><br><span class="line">## 相关背景信息</span><br><span class="line"></span><br><span class="line">对未来协作最重要的个人和业务背景。</span><br><span class="line"></span><br><span class="line">## 回复指南/说明</span><br><span class="line"></span><br><span class="line">用第一人称撰写，不超过 1,500 个字符，可直接复制到 ChatGPT 自定义指令。</span><br><span class="line"></span><br><span class="line">## 永恒的回忆</span><br><span class="line"></span><br><span class="line">按主题整理长期有效的背景、偏好、职责和明确修正。</span><br><span class="line"></span><br><span class="line">## 目标与工作流程</span><br><span class="line"></span><br><span class="line">我的工作重点、常用流程和协作方式。</span><br><span class="line"></span><br><span class="line">## 项目与决策</span><br><span class="line"></span><br><span class="line">每个项目分别写清：</span><br><span class="line">目的、最新状态、已确认决策、限制、未解决问题、下一步。</span><br><span class="line"></span><br><span class="line">## 详细参考资料</span><br><span class="line"></span><br><span class="line">重要日期、数字、名称、链接、历史背景和已确认示例。</span><br><span class="line"></span><br><span class="line">## 冲突与未知因素</span><br><span class="line"></span><br><span class="line">列出冲突、可能过期、缺失或无法验证的信息。</span><br><span class="line"></span><br><span class="line">## 源数据覆盖率</span><br><span class="line"></span><br><span class="line">说明：</span><br><span class="line"></span><br><span class="line">* 处理了哪些上传文件</span><br><span class="line">* 哪些文件未读取或仅部分读取</span><br><span class="line">* 实际读取到多少对话及时间范围</span><br><span class="line">* 是否使用了记忆信息</span><br><span class="line">* 是否检索到此前聊天记录</span><br><span class="line">* 有哪些信息缺失</span><br><span class="line"></span><br><span class="line">重要事实尽量附简短来源，例如：</span><br><span class="line">“Claude 对话：标题，日期”</span><br><span class="line">或</span><br><span class="line">“记忆中的内容”。</span><br><span class="line"></span><br><span class="line">不要复制完整聊天记录，只保留详细、实用的总结。</span><br><span class="line"></span><br><span class="line">## 5. 最终检查</span><br><span class="line"></span><br><span class="line">交付前确认：</span><br><span class="line"></span><br><span class="line">* 上传历史数据和可用记忆都已尽可能利用</span><br><span class="line">* 明确偏好和修正均被保留</span><br><span class="line">* 建议与已确认决策没有混淆</span><br><span class="line">* 时效性信息都有日期</span><br><span class="line">* 所有处理缺口均已披露</span><br><span class="line"></span><br><span class="line">最后返回：</span><br><span class="line"></span><br><span class="line">1. 可下载的 `Claude-to-ChatGPT.md`</span><br><span class="line">2. 一段简短说明，说明本次数据覆盖情况和是否完整</span><br><span class="line"></span><br><span class="line">除非已经验证，否则不要声称“全部历史已完整处理”，也不要声称这些内容会自动或永久保存到 ChatGPT。</span><br></pre></td></tr></table></figure>
+
+
+
+<p>最后整理成：<code>Claude-to-ChatGPT.md</code></p>
+<p>它的作用不是保存所有聊天原文，而是把真正值得迁移的内容提炼出来。</p>
+<p>这样文件会更小，也适合作为 GPT 后续长期使用的上下文。</p>
+<p><img src="https://camo.githubusercontent.com/2eba18738f38ff5a5513ccf2872a434bd230718f1536543da6d586e867295695/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f31653433373831322d363939362d343937302d616633322d3762373838616464393632352e706e67" alt="点击下载 Claude-to-ChatGPT.md"></p>
+<p>进入 GPT 资料库，上传该文件。</p>
+<p><img src="https://camo.githubusercontent.com/557598c4cc07ad6e14e2f02fc357405e8f178083318087f9b7d974019d9db0fe/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f31306662613266372d303931372d343237362d613363612d6230343837333338323334652e706e67" alt="资料库&gt;新建&gt;上传">新建对话，添加 Claude-to-ChatGPT.md 文件，并输入提示词发给 GPT ：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">此文件包含从Claude传输的我的上下文。</span><br><span class="line">阅读并记住这些持久的事实、偏好、目标和重复的工作流程，它们将在未来的对话中帮助你。</span><br><span class="line">保留我现有的准确记忆。在替换之前标记冲突信息。将日期项目状态和指标视为历史数据，除非确认为当前状态。</span><br></pre></td></tr></table></figure>
+
+
+
+<p>这样做以后，GPT 就能更快理解你过去在 Claude 中长期积累的使用习惯和项目背景。</p>
+<p><img src="https://camo.githubusercontent.com/c322451d02c62c0ebefa3798647ca41345eee0726c9d8a0d7ec35948c2e55f02/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f35316337383736612d626363322d343037392d393561392d6134633335633861376130372e706e67" alt="选择刚刚添加到资料库的 Claude-to-ChatGPT.md 文件"></p>
+<p>完成之后你就会发现，你的 GPT 记忆信息已更新，你就可以在 GPT 中拥有 Claude 的记忆了。</p>
+<p><img src="https://camo.githubusercontent.com/d8c9dbaebbb0a53420d8983f348a325dbcc41b2c2cac702c12ae16a0a03611fa/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f64633437356537322d343361642d343737622d383966632d6362326134373364353138632e706e67" alt="记忆信息已更新"></p>
+<h2 id="3-如果已经被封控怎么办？"><a href="#3-如果已经被封控怎么办？" class="headerlink" title="3. 如果已经被封控怎么办？"></a>3. 如果已经被封控怎么办？</h2><p>如果账号<strong>还能进入设置页面</strong>，第一时间尝试导出数据。</p>
+<p>如果已经完全无法登录，那么正常的数据导出就会比较困难。</p>
+<p>所以这篇文章其实不只是写给已经被封控的人。</p>
+<p>更重要的是提醒那些： <strong>Claude 现在还能正常用，但担心以后被风控的人。</strong></p>
+<p>提前备份一次，成本很低。</p>
+<p>真出问题的时候，会省很多麻烦。</p>
+<h2 id="4-最后"><a href="#4-最后" class="headerlink" title="4. 最后"></a>4. 最后</h2><p>最稳妥的做法其实很简单：</p>
+<p><strong>Claude 正常使用时提前导出 → 本地备份 → 整理长期上下文 → 需要时迁移到 GPT。</strong></p>
+<p>账号和模型都可能会变。 但自己的项目资料、聊天记录和使用习惯，最好一直掌握在自己手里。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Claude/">Claude</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Claude-%E6%80%8E%E4%B9%88%E5%88%87%E6%8D%A2%E5%88%B0-GPT/" rel="tag">Claude 怎么切换到 GPT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A6%82%E4%BD%95%E5%AF%BC%E5%87%BA-Claude-%E6%95%B0%E6%8D%AE/" rel="tag">如何导出 Claude 数据</a></li></ul>
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2026/09/SuperGrok-vs-SuperGrokheavy/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">SuperGrok Heavy 值不值300刀？和30刀普通版差在哪?</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%A6%82%E4%BD%95%E6%8A%8A%E4%BD%A0%E7%9A%84-Claude-%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BA%E6%9D%A5"><span class="nav-number">1.</span> <span class="nav-text">1. 如何把你的 Claude 数据导出来</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%AF%BC%E5%87%BA%E5%90%8E%EF%BC%8C%E6%80%8E%E4%B9%88%E8%BF%81%E7%A7%BB%E5%88%B0-GPT%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">2. 导出后，怎么迁移到 GPT？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%A6%82%E6%9E%9C%E5%B7%B2%E7%BB%8F%E8%A2%AB%E5%B0%81%E6%8E%A7%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">3. 如果已经被封控怎么办？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%9C%80%E5%90%8E"><span class="nav-number">4.</span> <span class="nav-text">4. 最后</span></a></li></ol>
+    
+    </div>
+  </aside>
+
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives/" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories/" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags/" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about/" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2026 CNM 国内 AI 订阅升级与使用教程大全 All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+	<script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?05f73ede0440dbfdffc6c599c938373e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

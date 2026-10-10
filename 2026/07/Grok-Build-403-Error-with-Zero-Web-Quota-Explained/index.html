@@ -18,16 +18,16 @@
 <meta property="og:site_name" content="CNM 国内 AI 订阅升级与使用教程大全">
 <meta property="og:description" content="Grok Build 出现 403 Forbidden、但网页配额仍显示 0% 的原因解析，说明不同额度系统和思考强度的影响，并给出恢复使用的排查与处理方法。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://camo.githubusercontent.com/a117f77f8f777c5fbe309784534547398e1850a4016bbece478347a27828629c/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f32323134326462632d636166362d346633612d613864612d3765313834313565323239392e706e67">
-<meta property="og:image" content="https://camo.githubusercontent.com/531323aba16fca2ea6992ac12167924e6b423c4aa035a97ae686967f94fd2bac/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f61653037376464372d396266392d343631302d393464322d3761343933383939653335632e706e67">
-<meta property="og:image" content="https://camo.githubusercontent.com/2b281eeb17bd9a79bc6c4d28432b60bf6039101115131421f77fd4765c182e8d/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f39373539656364652d396337352d346233632d613766392d3234346635656532626361372e706e67">
-<meta property="og:image" content="https://camo.githubusercontent.com/7df3abb614e78f448689be6b21b7da69573347fb6b9b2e8d3b9e58b87905b070/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f66393264323235612d393837632d346239332d626562642d6235393237393934343138372e706e67">
+<meta property="og:image" content="https://pic1.zhimg.com/70/v2-24d72a9c9c7117606e784f3b7ac26a19_1440w.image?source=172ae18b&biz_tag=Post">
+<meta property="og:image" content="https://picx.zhimg.com/v2-d8afdf238792faf971e0e60a8799c1f7_1440w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-6f42a764dc64f61edf0ab39f8a00de44_1440w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-2a9d2ea6e9de0cf85bc57a656646bf48_1440w.jpg">
 <meta property="article:published_time" content="2026-07-16T07:39:05.000Z">
-<meta property="article:modified_time" content="2026-09-02T07:13:49.021Z">
+<meta property="article:modified_time" content="2026-10-10T05:27:35.902Z">
 <meta property="article:author" content="dadaming">
 <meta property="article:tag" content="Grok_Build出现403错误">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://camo.githubusercontent.com/a117f77f8f777c5fbe309784534547398e1850a4016bbece478347a27828629c/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f32323134326462632d636166362d346633612d613864612d3765313834313565323239392e706e67">
+<meta name="twitter:image" content="https://pic1.zhimg.com/70/v2-24d72a9c9c7117606e784f3b7ac26a19_1440w.image?source=172ae18b&biz_tag=Post">
   
     <link rel="alternate" href="/atom.xml" title="CNM 国内 AI 订阅升级与使用教程大全" type="application/atom+xml">
   
@@ -141,19 +141,19 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://camo.githubusercontent.com/a117f77f8f777c5fbe309784534547398e1850a4016bbece478347a27828629c/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f32323134326462632d636166362d346633612d613864612d3765313834313565323239392e706e67" alt="Grok Build 报 403，但网页配额还是 0%？原因在这里"></p>
+        <p><img src="https://pic1.zhimg.com/70/v2-24d72a9c9c7117606e784f3b7ac26a19_1440w.image?source=172ae18b&biz_tag=Post" alt="Grok Build 报 403，但网页配额还是 0%？原因在这里"></p>
 <p>部分 SuperGrok 用户会遇到这种情况：</p>
-<p><img src="https://camo.githubusercontent.com/531323aba16fca2ea6992ac12167924e6b423c4aa035a97ae686967f94fd2bac/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f61653037376464372d396266392d343631302d393464322d3761343933383939653335632e706e67" alt="Grok 页面使用量额度"></p>
+<p><img src="https://picx.zhimg.com/v2-d8afdf238792faf971e0e60a8799c1f7_1440w.jpg" alt="Grok 页面使用量额度"></p>
 <p>网页使用量页面显示<strong>每周配额仅使用 0%</strong>,但 Grok Build 却提示 403：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Turn failed in 1.9s: Internal error: &#123; &quot;message&quot;: &quot;API error (status 403 Forbidden): permission-denied: Your team ******** has either used all available credits or reached...</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://camo.githubusercontent.com/2b281eeb17bd9a79bc6c4d28432b60bf6039101115131421f77fd4765c182e8d/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f39373539656364652d396337352d346233632d613766392d3234346635656532626361372e706e67" alt="permission-denied，提示 credits 耗尽或达到限额"></p>
+<p><img src="https://pic3.zhimg.com/v2-6f42a764dc64f61edf0ab39f8a00de44_1440w.jpg" alt="permission-denied，提示 credits 耗尽或达到限额"></p>
 <p>更特别的是，把“思考强度”调低后，Build 又能继续使用。</p>
 <blockquote>
 <p><a href="https://clawdo.com/2026/05/Grok-Build-Guide-2026/">Grok Build 使用教程（2026 年最新版）</a></p>
 </blockquote>
 <h2 id="为什么会这样？"><a href="#为什么会这样？" class="headerlink" title="为什么会这样？"></a>为什么会这样？</h2><p>网页端显示的是 SuperGrok 的<strong>共享周配额</strong>，包括 Chat、Imagine、Build 等产品的总体消耗。</p>
-<p><img src="https://camo.githubusercontent.com/7df3abb614e78f448689be6b21b7da69573347fb6b9b2e8d3b9e58b87905b070/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f3136363531352f66393264323235612d393837632d346239332d626562642d6235393237393934343138372e706e67" alt="img"></p>
+<p><img src="https://pic3.zhimg.com/v2-2a9d2ea6e9de0cf85bc57a656646bf48_1440w.jpg" alt="img"></p>
 <p>而 Grok Build 通过独立通道 <code>cli-chat-proxy.grok.com</code> 运行，计量更细。长时间 Agent 会话、多轮工具调用和深度推理，会比普通聊天消耗更多。</p>
 <p>因此可能出现：</p>
 <p><strong>网页总配额还有剩余，但 Build 通道已经触发限制。</strong></p>

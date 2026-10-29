@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Grok Bot 接入微信：3 步，把 AI 员工装进手机 | CNM 国内 AI 订阅升级与使用教程大全</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  
+  <meta name="description" content="以前用 AI，是这套流程：打开网页，敲问题，复制结果，粘贴走人。 现在可以换个玩法。你在地铁上、在路边等人，甚至在床上，给微信发一句： 1帮我整理今天 OpenAI、Claude、Grok 的最新动态。  然后放下手机。云端的 Grok Bot 会自己去搜索、分析、排版，几分钟后，成品回到你的微信里。 今天就带你实操一遍：怎么把 Grok Bot 接进个人微信。 一、Grok Bot 到底是什么">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Grok Bot 接入微信：3 步，把 AI 员工装进手机">
+<meta property="og:url" content="https://clawdo.com/2026/10/grok-bot-wechat/index.html">
+<meta property="og:site_name" content="CNM 国内 AI 订阅升级与使用教程大全">
+<meta property="og:description" content="以前用 AI，是这套流程：打开网页，敲问题，复制结果，粘贴走人。 现在可以换个玩法。你在地铁上、在路边等人，甚至在床上，给微信发一句： 1帮我整理今天 OpenAI、Claude、Grok 的最新动态。  然后放下手机。云端的 Grok Bot 会自己去搜索、分析、排版，几分钟后，成品回到你的微信里。 今天就带你实操一遍：怎么把 Grok Bot 接进个人微信。 一、Grok Bot 到底是什么">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pic1.zhimg.com/70/v2-4966d6df96d418be021e67f3da9a1987_1440w.image?source=172ae18b&biz_tag=Post">
+<meta property="og:image" content="https://picx.zhimg.com/80/v2-2a6ff9047d18f989d757d4cdaed8e829_720w.webp">
+<meta property="og:image" content="https://picx.zhimg.com/80/v2-95cbfa99b8bcab24f40bddeb363a12f7_720w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-9861ebe83d45366452b921f8e3892c90_720w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-f93bc78cf1476c97acae70c98fe3ca3e_720w.webp">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-bd39bd8b9c2639fd25d966563cbcb7db_720w.webp">
+<meta property="article:published_time" content="2026-10-29T07:48:25.000Z">
+<meta property="article:modified_time" content="2026-10-29T07:49:13.492Z">
+<meta property="article:author" content="dadaming">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic1.zhimg.com/70/v2-4966d6df96d418be021e67f3da9a1987_1440w.image?source=172ae18b&biz_tag=Post">
+  
+    <link rel="alternate" href="/atom.xml" title="CNM 国内 AI 订阅升级与使用教程大全" type="application/atom+xml">
+  
+  <link rel="icon" href="/favicon.png">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+
+  <body>
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="CNM 国内 AI 订阅升级与使用教程大全" rel="home"> CNM 国内 AI 订阅升级与使用教程大全 </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">分享 ChatGPT、Claude、Grok、Gemini、Codex 和 OpenClaw 等 AI 工具的注册、订阅升级、功能使用、效率技巧与常见问题解决教程。</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/archives/"> <a class="" href="/archives/">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/categories/"> <a class="" href="/categories/">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/tags/"> <a class="" href="/tags/">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/about/"> <a class="" href="/about/">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-grok-bot-wechat" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Grok Bot 接入微信：3 步，把 AI 员工装进手机
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2026/10/grok-bot-wechat/" class="article-date">
+	  <time datetime="2026-10-29T07:48:25.000Z" itemprop="datePublished">October 29, 2026</time>
+	</a>
+
+       
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://pic1.zhimg.com/70/v2-4966d6df96d418be021e67f3da9a1987_1440w.image?source=172ae18b&biz_tag=Post" alt="Grok Bot 接入微信：3 步，把 AI 员工装进手机"></p>
+<p>以前用 AI，是这套流程：打开网页，敲问题，复制结果，粘贴走人。</p>
+<p>现在可以换个玩法。你在地铁上、在路边等人，甚至在床上，给微信发一句：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">帮我整理今天 OpenAI、Claude、Grok 的最新动态。</span><br></pre></td></tr></table></figure>
+
+<p>然后放下手机。云端的 Grok Bot 会自己去搜索、分析、排版，几分钟后，成品回到你的微信里。</p>
+<p>今天就带你实操一遍：怎么把 Grok Bot 接进个人微信。</p>
+<h2 id="一、Grok-Bot-到底是什么？"><a href="#一、Grok-Bot-到底是什么？" class="headerlink" title="一、Grok Bot 到底是什么？"></a>一、Grok Bot 到底是什么？</h2><p>一句话：xAI 推出的 AI Agent，你可以把它当成<strong>一个自带电脑的 AI 员工</strong>。</p>
+<p>它和普通 Grok 聊天最大的区别，是它真的会”干活”：</p>
+<ul>
+<li><strong>云端电脑：</strong> 有自己的浏览器、终端和文件系统，不只是动嘴。</li>
+<li><strong>长期记忆：</strong> 记得你的工作习惯和任务背景，不用每次从头交代。</li>
+<li><strong>自动化：</strong> 重复任务可以定时跑，到点自己开工。</li>
+<li><strong>多 Bot 协作：</strong> 能拉起多个助手，分工合作。</li>
+</ul>
+<p>最关键的一点：任务在云端执行，你合上电脑，它不一定停工。</p>
+<p>官方入口：x.ai&#x2F;bot</p>
+<h2 id="二、需要什么会员？"><a href="#二、需要什么会员？" class="headerlink" title="二、需要什么会员？"></a>二、需要什么会员？</h2><p>新版 The X Subscription 的 <strong>Premium、Super、Ultra</strong> 套餐，都含 Grok Bot 权益。</p>
+<p><img src="https://picx.zhimg.com/80/v2-2a6ff9047d18f989d757d4cdaed8e829_720w.webp" alt="img"></p>
+<p>安装 Grok Bot，登录有权益的账号，就能开工。</p>
+<p>国内绑卡、订阅页打不开，或想直接升到带 Bot 的档位，别卡在支付这一步——可走 <a target="_blank" rel="noopener" href="https://cnmgrok.com/">cnmgrok.com</a> 办理 <strong>Grok Premium</strong>（以及更高的 Super &#x2F; Ultra 相关权益，以站点当前套餐为准）。开通后再用同一账号登录 Bot，下面的微信桥才能接得上；</p>
+<p>免费号再怎么折腾提示词，也开不出完整 Grok Bot。</p>
+<h2 id="三、实战：3-步接入微信"><a href="#三、实战：3-步接入微信" class="headerlink" title="三、实战：3 步接入微信"></a>三、实战：3 步接入微信</h2><p>先说清楚一件事：<strong>这不是 Grok Bot 的内置功能</strong>，而是社区方案。思路是用微信 ClawBot 的 iLink 通道，配合 Grok Bot 的 Webhook Routine 和第三方转发程序，把两头接起来。</p>
+<h3 id="第一步：打开微信-ClawBot"><a href="#第一步：打开微信-ClawBot" class="headerlink" title="第一步：打开微信 ClawBot"></a>第一步：打开微信 ClawBot</h3><p>先确认微信版本够新：</p>
+<ul>
+<li>iOS：8.0.70 及以上</li>
+<li>Android：8.0.69 及以上</li>
+</ul>
+<p>然后依次点：我 → 设置 → 插件，找到「微信 ClawBot」并启用。</p>
+<p><img src="https://picx.zhimg.com/80/v2-95cbfa99b8bcab24f40bddeb363a12f7_720w.webp" alt="img"></p>
+<p>微信 ClawBot</p>
+<p>如果插件列表里没有它，多半是你的账号还没被开放，光升级版本未必管用，这个只能等。</p>
+<h3 id="第二步：让-Grok-Bot-自己搭桥"><a href="#第二步：让-Grok-Bot-自己搭桥" class="headerlink" title="第二步：让 Grok Bot 自己搭桥"></a>第二步：让 Grok Bot 自己搭桥</h3><p>最省事的做法：别手动折腾，直接让 Bot 自己部署。打开 Grok Bot 的主对话，发这段提示词：</p>
+<blockquote>
+<p>请帮我通过微信 ClawBot 的 iLink 通道，将我的个人微信连接到 Grok Bot。<br>使用项目：<a target="_blank" rel="noopener" href="https://github.com/lawrencewzen/wx-bot">https://github.com/lawrencewzen/wx-bot</a><br>请先阅读项目 README 和 AGENTS.md，检查兼容性与安全风险，再协助我完成安装。<br>要求：</p>
+</blockquote>
+<ol>
+<li>使用微信 ClawBot 接收我的消息。</li>
+<li>通过 Webhook Routine 将消息交给当前 Grok Bot。</li>
+<li>处理完成后，将回复发送回微信。</li>
+<li>将登录凭证和 Webhook 密钥保存在私密环境中，不输出到普通聊天记录。</li>
+<li>需要扫码、授权时暂停并提示我。</li>
+<li>完成后测试消息收发，并说明如何重启和停止服务。</li>
+</ol>
+<p>不要在未确认前执行删除文件、外发敏感信息或高风险操作。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-9861ebe83d45366452b921f8e3892c90_720w.webp" alt="img"></p>
+<p>接下来 Bot 会读文档、配环境、建 Routine。中途如果要你保存 Webhook URL 和密钥，请走安全凭证输入，<strong>千万别直接贴在聊天里</strong>。</p>
+<h3 id="第三步：扫码，发第一句话"><a href="#第三步：扫码，发第一句话" class="headerlink" title="第三步：扫码，发第一句话"></a>第三步：扫码，发第一句话</h3><p>桥搭好之后：</p>
+<ol>
+<li>按提示拿到微信登录二维码；</li>
+<li>用微信扫一扫，确认绑定；</li>
+<li>打开 ClawBot 对话，主动发一条测试消息。</li>
+</ol>
+<p><img src="https://pic1.zhimg.com/80/v2-f93bc78cf1476c97acae70c98fe3ca3e_720w.webp" alt="img"></p>
+<p>收到回复，说明消息链路通了。没收到也别急，按顺序排查四个环节：微信绑定、转发程序、Webhook 执行状态、回复发送结果。</p>
+<h2 id="四、真实场景：微信一句话，出一份-AI-简报"><a href="#四、真实场景：微信一句话，出一份-AI-简报" class="headerlink" title="四、真实场景：微信一句话，出一份 AI 简报"></a>四、真实场景：微信一句话，出一份 AI 简报</h2><p>接入完成，来跑一个最有用的场景。在 ClawBot 里发：</p>
+<blockquote>
+<p>帮我整理最近 24 小时 OpenAI、Anthropic、xAI 和 Google 的重要 AI 新闻。只保留 5 条最值得关注的内容，包含标题、发布时间、一句话摘要和官方来源链接。用中文回复，不要编造。</p>
+</blockquote>
+<p>背后的链路是这样的：</p>
+<p><strong>微信发消息 → ClawBot 接收 → 转发程序触发 Grok Bot → Bot 搜索整理 → 报告回到微信</strong></p>
+<p>你会收到类似这样的简报：</p>
+<p><img src="https://pic4.zhimg.com/80/v2-bd39bd8b9c2639fd25d966563cbcb7db_720w.webp" alt="img"></p>
+<p>以上只是格式示例，具体内容由 Bot 实时查询生成，不会提前填入没核实过的消息。</p>
+<p>玩熟之后，还能往外扩：竞品监控、资料整理、代码排查，甚至在微信里指挥多个 Bot 分头干活。</p>
+<h2 id="五、踩坑提醒"><a href="#五、踩坑提醒" class="headerlink" title="五、踩坑提醒"></a>五、踩坑提醒</h2><p><strong>1. 微信并不是直连 Grok Bot。</strong> 中间隔着一层第三方转发程序。云端电脑重启、服务中断、登录状态失效，都可能让你收不到回复。</p>
+<p><strong>2. 别让多个机器人抢同一个微信号。</strong> 同一个号同时挂多个 ClawBot&#x2F;OpenClaw 通道，消息可能被别的实例截走。</p>
+<p><strong>3. 微信的主动推送有时间窗口。</strong> 太久没和机器人互动，主动推送未必送得到。所以定时日报，没法保证每次都准时落到微信。</p>
+<p><strong>4. 权限别一次给满。</strong> 刚开始只给查询、整理、回复。涉及支付、删除、群发、改账号设置的操作，务必人工确认。</p>
+<p><strong>5. 接入微信不等于免费。</strong> Bot 干的每一件活，都在消耗账号的使用额度。</p>
+<h2 id="六、写在最后"><a href="#六、写在最后" class="headerlink" title="六、写在最后"></a>六、写在最后</h2><p>Grok Bot 真正吸引人的地方，不是多了个聊天窗口，而是<strong>AI 开始替你把活干完</strong>。</p>
+<p>接入微信之后，手机成了指挥入口：你只管交代任务，回头看结果。</p>
+<p>如果你天天要盯 AI 新闻、整理资料、处理重复的办公杂活，这套玩法值得折腾一次。</p>
+<p>前提只有一个：账号先有 Grok Bot 权益。国内想稳妥升到 <strong>Grok Premium</strong>（或更高档），开通路径可看 <a target="_blank" rel="noopener" href="https://cnmgrok.com/">cnmgrok.com</a>，办完再用同一账号登录 Bot、接微信。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2026/10/Claude-Usage-Limits-Risk-Warnings-and-Account-Bans/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Claude 卡住了？：额度墙、风控提示，还是真封号</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81Grok-Bot-%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">一、Grok Bot 到底是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%9C%80%E8%A6%81%E4%BB%80%E4%B9%88%E4%BC%9A%E5%91%98%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">二、需要什么会员？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%AE%9E%E6%88%98%EF%BC%9A3-%E6%AD%A5%E6%8E%A5%E5%85%A5%E5%BE%AE%E4%BF%A1"><span class="nav-number">3.</span> <span class="nav-text">三、实战：3 步接入微信</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E6%89%93%E5%BC%80%E5%BE%AE%E4%BF%A1-ClawBot"><span class="nav-number">3.1.</span> <span class="nav-text">第一步：打开微信 ClawBot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E8%AE%A9-Grok-Bot-%E8%87%AA%E5%B7%B1%E6%90%AD%E6%A1%A5"><span class="nav-number">3.2.</span> <span class="nav-text">第二步：让 Grok Bot 自己搭桥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E6%89%AB%E7%A0%81%EF%BC%8C%E5%8F%91%E7%AC%AC%E4%B8%80%E5%8F%A5%E8%AF%9D"><span class="nav-number">3.3.</span> <span class="nav-text">第三步：扫码，发第一句话</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%9C%9F%E5%AE%9E%E5%9C%BA%E6%99%AF%EF%BC%9A%E5%BE%AE%E4%BF%A1%E4%B8%80%E5%8F%A5%E8%AF%9D%EF%BC%8C%E5%87%BA%E4%B8%80%E4%BB%BD-AI-%E7%AE%80%E6%8A%A5"><span class="nav-number">4.</span> <span class="nav-text">四、真实场景：微信一句话，出一份 AI 简报</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E8%B8%A9%E5%9D%91%E6%8F%90%E9%86%92"><span class="nav-number">5.</span> <span class="nav-text">五、踩坑提醒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="nav-number">6.</span> <span class="nav-text">六、写在最后</span></a></li></ol>
+    
+    </div>
+  </aside>
+
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives/" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories/" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags/" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about/" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2026 CNM 国内 AI 订阅升级与使用教程大全 All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+	<script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?05f73ede0440dbfdffc6c599c938373e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   
-  <title>在 Windows 上用 Grok 订阅跑通 Hermes Agent(零 API key,15 分钟上手) | CNM 国内 AI 订阅升级与使用教程大全</title>
+  <title>在 Windows 上用 Grok 订阅跑通 Hermes Agent(零 API key,15 分钟上手) | Clawdo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://clawdo.com/2026/05/Grok-Hermes-Agent-Windows-Setup-Guide/">
   
   <meta name="keywords" content="如何使用Grok订阅跑通Hermes_Agent教程" />
   
@@ -14,10 +16,10 @@
   <meta name="description" content="Windows 10&#x2F;11 安装 Hermes Agent 并使用 Grok 订阅登录的完整教程，无需 API Key，涵盖 PowerShell 安装、首次对话、定时任务及语音和图像功能配置。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在 Windows 上用 Grok 订阅跑通 Hermes Agent(零 API key,15 分钟上手)">
-<meta property="og:url" content="https://clawdo.com/2026/05/Grok-Hermes-Agent-Windows-Setup-Guide/index.html">
+<meta property="og:url" content="https://clawdo.com/2026/05/Grok-Hermes-Agent-Windows-Setup-Guide/">
 <meta property="og:site_name" content="CNM 国内 AI 订阅升级与使用教程大全">
 <meta property="og:description" content="Windows 10&#x2F;11 安装 Hermes Agent 并使用 Grok 订阅登录的完整教程，无需 API Key，涵盖 PowerShell 安装、首次对话、定时任务及语音和图像功能配置。">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://pic1.zhimg.com/70/v2-c090ccaade2ed437d2e5435b0b7d29d8_1440w.image?source=172ae18b&biz_tag=Post">
 <meta property="og:image" content="https://pic4.zhimg.com/80/v2-323509f6bd9c25c901f69e8bfcefcd0b_720w.webp">
 <meta property="og:image" content="https://picx.zhimg.com/80/v2-95f2ccf887f81f61bd28f652287420e9_720w.webp">
@@ -97,15 +99,15 @@
             <div class="clearfix sf-menu">
               <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">Home</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">首页</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/archives/"> <a class="" href="/archives/">Archives</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/archives/"> <a class="" href="/archives/">归档</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/categories/"> <a class="" href="/categories/">Categories</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/categories/"> <a class="" href="/categories/">分类</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/tags/"> <a class="" href="/tags/">Tags</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/tags/"> <a class="" href="/tags/">标签</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/about/"> <a class="" href="/about/">About</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/about/"> <a class="" href="/about/">关于</a> </li>
                     
               </ul>
             </div>
@@ -138,7 +140,7 @@
     <div class="article-meta">
       
 	<a href="/2026/05/Grok-Hermes-Agent-Windows-Setup-Guide/" class="article-date">
-	  <time datetime="2026-05-18T07:38:00.000Z" itemprop="datePublished">May 18, 2026</time>
+	  <time datetime="2026-05-18T07:38:00.000Z" itemprop="datePublished">五月 18, 2026</time>
 	</a>
 
       
@@ -306,7 +308,7 @@
 <nav id="article-nav">
   
     <a href="/2026/05/Windows-OpenClaw-Grok-Complete-Setup-Guide/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">上一篇</strong>
       <div class="article-nav-title">
         
           【保姆级】Windows 装 OpenClaw + Grok 全流程：自启动、网页搜索、Telegram 接入
@@ -316,7 +318,7 @@
   
   
     <a href="/2026/05/Claude-for-Microsoft-365-Tutorial/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">下一篇</strong>
       <div class="article-nav-title">Claude for Microsoft 365 使用教程 | 附带 Claude Pro 升级教程</div>
     </a>
   
@@ -329,7 +331,7 @@
 
   <aside id="sidebar">
     <div id="toc" class="toc-article">
-    <strong class="toc-title">Contents</strong>
+    <strong class="toc-title">文章目录</strong>
     
       <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%88%E8%AF%B4%E4%B8%80%E5%8F%A5%E9%87%8D%E8%A6%81%E7%9A%84%E8%AF%9D-%E5%8E%9F%E7%94%9F-Windows-%E6%98%AF%E6%97%A9%E6%9C%9F-Beta"><span class="nav-number">1.</span> <span class="nav-text">先说一句重要的话:原生 Windows 是早期 Beta</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%A0%E5%B0%86%E5%BE%97%E5%88%B0%E4%BB%80%E4%B9%88"><span class="nav-number">2.</span> <span class="nav-text">你将得到什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5-%E7%94%A8-PowerShell-%E5%AE%89%E8%A3%85-Hermes-Agent"><span class="nav-number">3.</span> <span class="nav-text">第一步:用 PowerShell 安装 Hermes Agent</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5-%E7%94%A8-Grok-%E8%AE%A2%E9%98%85%E7%99%BB%E5%BD%95-%E6%A0%B8%E5%BF%83%E6%AD%A5%E9%AA%A4"><span class="nav-number">4.</span> <span class="nav-text">第二步:用 Grok 订阅登录(核心步骤)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5-%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%AF%B9%E8%AF%9D"><span class="nav-number">5.</span> <span class="nav-text">第三步:第一次对话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5-%E5%90%AF%E7%94%A8%E8%AF%AD%E9%9F%B3%E5%92%8C%E5%9B%BE%E5%83%8F-%E5%90%8C%E4%B8%80%E4%B8%AA%E7%99%BB%E5%BD%95-%E6%97%A0%E9%9C%80%E9%A2%9D%E5%A4%96%E9%85%8D%E7%BD%AE"><span class="nav-number">6.</span> <span class="nav-text">第四步:启用语音和图像(同一个登录,无需额外配置)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5-%E8%AE%A9%E5%AE%83%E5%9C%A8%E5%90%8E%E5%8F%B0%E8%87%AA%E5%8A%A8%E5%B9%B2%E6%B4%BB-Windows-%E4%B8%8A%E7%9A%84%E5%85%B3%E9%94%AE%E5%B7%AE%E5%BC%82"><span class="nav-number">7.</span> <span class="nav-text">第五步:让它在后台自动干活(Windows 上的关键差异)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E9%80%9F%E6%9F%A5%E8%A1%A8"><span class="nav-number">8.</span> <span class="nav-text">Windows 常见问题速查表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%AF%A5%E5%88%87%E5%88%B0-WSL2"><span class="nav-number">9.</span> <span class="nav-text">什么时候该切到 WSL2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%A0%E6%9D%A1%E5%80%BC%E5%BE%97%E8%AE%B0%E4%BD%8F%E7%9A%84%E5%AE%9E%E8%B7%B5%E7%BA%AA%E5%BE%8B"><span class="nav-number">10.</span> <span class="nav-text">几条值得记住的实践纪律</span></a></li></ol>
     

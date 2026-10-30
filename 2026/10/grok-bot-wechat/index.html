@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   
-  <title>Grok Bot 接入微信：3 步，把 AI 员工装进手机 | CNM 国内 AI 订阅升级与使用教程大全</title>
+  <title>Grok Bot 接入微信：3 步，把 AI 员工装进手机 | Clawdo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://clawdo.com/2026/10/grok-bot-wechat/">
   
   <meta name="keywords" content="Grok Bot接入微信" />
   
@@ -14,10 +16,10 @@
   <meta name="description" content="通过微信 ClawBot iLink 通道 + Grok Bot Webhook Routine，将个人微信接入 Grok Bot，实现手机端指挥 AI 员工。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Grok Bot 接入微信：3 步，把 AI 员工装进手机">
-<meta property="og:url" content="https://clawdo.com/2026/10/grok-bot-wechat/index.html">
+<meta property="og:url" content="https://clawdo.com/2026/10/grok-bot-wechat/">
 <meta property="og:site_name" content="CNM 国内 AI 订阅升级与使用教程大全">
 <meta property="og:description" content="通过微信 ClawBot iLink 通道 + Grok Bot Webhook Routine，将个人微信接入 Grok Bot，实现手机端指挥 AI 员工。">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://pic1.zhimg.com/70/v2-4966d6df96d418be021e67f3da9a1987_1440w.image?source=172ae18b&biz_tag=Post">
 <meta property="og:image" content="https://picx.zhimg.com/80/v2-2a6ff9047d18f989d757d4cdaed8e829_720w.webp">
 <meta property="og:image" content="https://picx.zhimg.com/80/v2-95cbfa99b8bcab24f40bddeb363a12f7_720w.webp">
@@ -92,15 +94,15 @@
             <div class="clearfix sf-menu">
               <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">Home</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">首页</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/archives/"> <a class="" href="/archives/">Archives</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/archives/"> <a class="" href="/archives/">归档</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/categories/"> <a class="" href="/categories/">Categories</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/categories/"> <a class="" href="/categories/">分类</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/tags/"> <a class="" href="/tags/">Tags</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/tags/"> <a class="" href="/tags/">标签</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/about/"> <a class="" href="/about/">About</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/about/"> <a class="" href="/about/">关于</a> </li>
                     
               </ul>
             </div>
@@ -133,7 +135,7 @@
     <div class="article-meta">
       
 	<a href="/2026/10/grok-bot-wechat/" class="article-date">
-	  <time datetime="2026-10-29T07:48:25.000Z" itemprop="datePublished">October 29, 2026</time>
+	  <time datetime="2026-10-29T07:48:25.000Z" itemprop="datePublished">十月 29, 2026</time>
 	</a>
 
       
@@ -239,7 +241,7 @@
   
   
     <a href="/2026/10/Claude-Usage-Limits-Risk-Warnings-and-Account-Bans/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">下一篇</strong>
       <div class="article-nav-title">Claude 卡住了？：额度墙、风控提示，还是真封号</div>
     </a>
   
@@ -252,7 +254,7 @@
 
   <aside id="sidebar">
     <div id="toc" class="toc-article">
-    <strong class="toc-title">Contents</strong>
+    <strong class="toc-title">文章目录</strong>
     
       <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81Grok-Bot-%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">一、Grok Bot 到底是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%9C%80%E8%A6%81%E4%BB%80%E4%B9%88%E4%BC%9A%E5%91%98%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">二、需要什么会员？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%AE%9E%E6%88%98%EF%BC%9A3-%E6%AD%A5%E6%8E%A5%E5%85%A5%E5%BE%AE%E4%BF%A1"><span class="nav-number">3.</span> <span class="nav-text">三、实战：3 步接入微信</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E6%89%93%E5%BC%80%E5%BE%AE%E4%BF%A1-ClawBot"><span class="nav-number">3.1.</span> <span class="nav-text">第一步：打开微信 ClawBot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E8%AE%A9-Grok-Bot-%E8%87%AA%E5%B7%B1%E6%90%AD%E6%A1%A5"><span class="nav-number">3.2.</span> <span class="nav-text">第二步：让 Grok Bot 自己搭桥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E6%89%AB%E7%A0%81%EF%BC%8C%E5%8F%91%E7%AC%AC%E4%B8%80%E5%8F%A5%E8%AF%9D"><span class="nav-number">3.3.</span> <span class="nav-text">第三步：扫码，发第一句话</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%9C%9F%E5%AE%9E%E5%9C%BA%E6%99%AF%EF%BC%9A%E5%BE%AE%E4%BF%A1%E4%B8%80%E5%8F%A5%E8%AF%9D%EF%BC%8C%E5%87%BA%E4%B8%80%E4%BB%BD-AI-%E7%AE%80%E6%8A%A5"><span class="nav-number">4.</span> <span class="nav-text">四、真实场景：微信一句话，出一份 AI 简报</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E8%B8%A9%E5%9D%91%E6%8F%90%E9%86%92"><span class="nav-number">5.</span> <span class="nav-text">五、踩坑提醒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="nav-number">6.</span> <span class="nav-text">六、写在最后</span></a></li></ol>
     

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  
+  <title>如何让 GPT-6.2 好好说人话？分享 5 个实用方法 | CNMAI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://clawdo.com/2026/11/gpt-6-2-writing-tips/">
+  
+  <meta name="keywords" content="ChatGPT 实用方法" />
+  
+  
+  
+  
+  <meta name="description" content="分享 5 个改善 GPT-6.2 中文表达的方法，附实用提示词、wait-what Skill 及配置教程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何让 GPT-6.2 好好说人话？分享 5 个实用方法">
+<meta property="og:url" content="https://clawdo.com/2026/11/gpt-6-2-writing-tips/">
+<meta property="og:site_name" content="ChatGPT、Claude、Grok 使用与订阅指南｜CNMAI">
+<meta property="og:description" content="分享 5 个改善 GPT-6.2 中文表达的方法，附实用提示词、wait-what Skill 及配置教程。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic1.zhimg.com/70/v2-7ecd9f7cabd43167fc63c5666e08c1ef_1440w.image?source=172ae18b&biz_tag=Post">
+<meta property="og:image" content="https://picx.zhimg.com/v2-05024d2580be2515bcb6b6101e4a2875_1440w.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-64d682f951dc20680739bd534331e0ff_1440w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-df0b1d9e4b74122e3215363488f0a266_1440w.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-626150f318cbd2dbf0ac342571573687_1440w.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-0a00010f520fc4a0cb8a555527ef28fb_1440w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-2e4234d4f085251977eb080b63d4cd28_1440w.jpg">
+<meta property="article:published_time" content="2026-11-25T08:56:22.000Z">
+<meta property="article:modified_time" content="2026-11-25T09:20:29.731Z">
+<meta property="article:author" content="dadaming">
+<meta property="article:tag" content="ChatGPT 实用方法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic1.zhimg.com/70/v2-7ecd9f7cabd43167fc63c5666e08c1ef_1440w.image?source=172ae18b&biz_tag=Post">
+  
+    <link rel="alternate" href="/atom.xml" title="ChatGPT、Claude、Grok 使用与订阅指南｜CNMAI" type="application/atom+xml">
+  
+  <link rel="icon" href="/favicon.png">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+
+  <body>
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="ChatGPT、Claude、Grok 使用与订阅指南｜CNMAI" rel="home"> ChatGPT、Claude、Grok 使用与订阅指南｜CNMAI </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">分享 ChatGPT、Claude、Grok、Gemini、Codex 和 OpenClaw 等 AI 工具的注册、订阅升级、功能使用、效率技巧与常见问题解决教程。</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/archives/"> <a class="" href="/archives/">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/categories/"> <a class="" href="/categories/">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/tags/"> <a class="" href="/tags/">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/about/"> <a class="" href="/about/">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-gpt-6-2-writing-tips" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      如何让 GPT-6.2 好好说人话？分享 5 个实用方法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2026/11/gpt-6-2-writing-tips/" class="article-date">
+	  <time datetime="2026-11-25T08:56:22.000Z" itemprop="datePublished">十一月 25, 2026</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/ChatGPT/">ChatGPT</a>
+ 
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://pic1.zhimg.com/70/v2-7ecd9f7cabd43167fc63c5666e08c1ef_1440w.image?source=172ae18b&biz_tag=Post" alt="如何让 GPT-6.2 好好说人话？分享 5 个实用方法"></p>
+<p>最近使用 GPT-6.2，比起模型的跑分和推理能力，我更关心 OpenAI 什么时候能优化一下中文表达。</p>
+<p>GPT 最近几个版本的表达习惯越来越奇怪，喜欢用比喻，喜欢总结，还特别喜欢重复一些固定句式。</p>
+<p>比如：</p>
+<ul>
+<li>这不是……而是……</li>
+<li>你真正需要的是……</li>
+<li>如果只记住一句话，那就是……</li>
+<li>我们先把这件事情拆开来看。</li>
+<li>我给你一个最直接、最诚实的建议。</li>
+</ul>
+<p>简单的问题复杂化，正常的技术交流也要加入一些情绪价值。有时候还需要反复强调自己的需求，才能得到一段正常的中文回复。</p>
+<p><img src="https://picx.zhimg.com/v2-05024d2580be2515bcb6b6101e4a2875_1440w.jpg" alt="img"></p>
+<p>经过一段时间的使用，我整理了几个改善 GPT 中文表达的方法，大家可以根据自己的使用场景进行选择。</p>
+<h3 id="一、修改-ChatGPT-自定义指令"><a href="#一、修改-ChatGPT-自定义指令" class="headerlink" title="一、修改 ChatGPT 自定义指令"></a><strong>一、修改 ChatGPT 自定义指令</strong></h3><p>这是最简单的方法，适合绝大多数 ChatGPT 网页端和手机端用户。</p>
+<p>打开 ChatGPT，进入：</p>
+<p><strong>设置 → 个性化 → 自定义指令</strong></p>
+<p><img src="https://pic4.zhimg.com/v2-64d682f951dc20680739bd534331e0ff_1440w.jpg" alt="img"></p>
+<p>将下面的提示词复制进去：</p>
+<p><img src="https://pic1.zhimg.com/v2-df0b1d9e4b74122e3215363488f0a266_1440w.jpg" alt="img"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用自然、准确的中文表达，遵循中文主谓宾表达习惯。去掉无意义的假口语化、比喻、重复总结和情绪铺垫，避免使用“不是……而是……”等模板化句式。直接回答问题，根据实际内容决定回答长度和结构，保留必要的技术细节，不刻意提供情绪价值，不强行升华观点。</span><br></pre></td></tr></table></figure>
+
+<p>保存后，ChatGPT 会在后续对话中参考这些表达要求。</p>
+<p>如果觉得 GPT 的回复还是太长，可以增加一句：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">控制信息密度，不重复已经表达清楚的内容，简单问题直接回答，复杂问题详细解释。</span><br></pre></td></tr></table></figure>
+
+<p>不建议直接限制回答字数，否则可能导致一些必要的信息被省略。</p>
+<h3 id="二、修改-ChatGPT-的基础风格和语气"><a href="#二、修改-ChatGPT-的基础风格和语气" class="headerlink" title="二、修改 ChatGPT 的基础风格和语气"></a><strong>二、修改 ChatGPT 的基础风格和语气</strong></h3><p>ChatGPT 的个性化设置中，可以调整模型的基础风格和语气。</p>
+<p>进入：</p>
+<p><strong>设置 → 个性化 → 基础风格和语气</strong></p>
+<p>可以优先尝试简洁、高效或专业类型的风格，具体选项名称以客户端显示为准。</p>
+<p>如果页面提供额外的表达特征设置，也可以参考以下配置：</p>
+<table>
+<thead>
+<tr>
+<th>设置项</th>
+<th>建议</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>基础风格</td>
+<td>高效或专业</td>
+</tr>
+<tr>
+<td>热情程度</td>
+<td>较少</td>
+</tr>
+<tr>
+<td>热忱程度</td>
+<td>较少</td>
+</tr>
+<tr>
+<td>标题与列表</td>
+<td>较少</td>
+</tr>
+<tr>
+<td>Emoji 表情</td>
+<td>较少</td>
+</tr>
+</tbody></table>
+<p><img src="https://pic2.zhimg.com/v2-626150f318cbd2dbf0ac342571573687_1440w.jpg" alt="img"></p>
+<p>这种方法不需要编写复杂的提示词，可以配合自定义指令一起使用。</p>
+<p>不过，个性化设置主要影响模型的表达倾向，无法完全消除某些固定句式。</p>
+<h3 id="三、使用-wait-what-Skill"><a href="#三、使用-wait-what-Skill" class="headerlink" title="三、使用 wait-what Skill"></a><strong>三、使用 wait-what Skill</strong></h3><p>最近看到 Matt Pocock 分享的一个 Skill，叫作 <code>wait-what</code>。</p>
+<p>GitHub 项目地址：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/mattpocock/skills">https://github.com/mattpocock/skills</a></p>
+<p>这个 Skill 的主要作用是重新解释上一条难以理解的回复，适合经常使用 Codex、Claude Code 等 AI 编程工具的用户。</p>
+<h3 id="1-安装-wait-what"><a href="#1-安装-wait-what" class="headerlink" title="1. 安装 wait-what"></a><strong>1. 安装 wait-what</strong></h3><p>电脑需要提前安装 Node.js，然后打开终端，执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx skills add mattpocock/skills --skill wait-what</span><br></pre></td></tr></table></figure>
+
+<p>根据提示选择对应的 AI 编程工具。</p>
+<p>如果只想为 Codex 全局安装，可以执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx skills add mattpocock/skills --skill wait-what -a codex -g</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-修改为中文版"><a href="#2-修改为中文版" class="headerlink" title="2. 修改为中文版"></a><strong>2. 修改为中文版</strong></h3><p>原版主要针对英文技术交流，中文用户可以自行修改 <code>SKILL.md</code> 文件。</p>
+<p>这里提供一个中文改良版：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">name: wait-what</span><br><span class="line">description: 使用自然、准确的中文重新解释上一条难以理解的回复。</span><br><span class="line">disable-model-invocation: true</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">重新解释上一条回复，使其符合中文用户的阅读习惯。</span><br><span class="line"></span><br><span class="line">## 表达要求</span><br><span class="line"></span><br><span class="line">- 使用自然的中文主谓宾表达方式。</span><br><span class="line">- 去掉无意义的假口语化、比喻和情绪铺垫。</span><br><span class="line">- 避免使用“不是……而是……”等固定句式。</span><br><span class="line">- 不使用生硬的翻译腔和抽象表达。</span><br><span class="line">- 不重复已经表达清楚的内容。</span><br><span class="line">- 不强行总结、升华或增加小标题。</span><br><span class="line">- 不使用居高临下或过度指导性的语气。</span><br><span class="line">- 根据问题复杂程度调整回答长度。</span><br><span class="line"></span><br><span class="line">## 内容要求</span><br><span class="line"></span><br><span class="line">- 保留原有事实、技术细节、代码和操作步骤。</span><br><span class="line">- 补充理解内容所必需的上下文。</span><br><span class="line">- 如果存在 GLOSSARY.md，遵循其中的术语定义。</span><br><span class="line">- 保留必要的适用条件和风险说明。</span><br><span class="line">- 不擅自修改原回复的技术结论。</span><br><span class="line"></span><br><span class="line">## 输出要求</span><br><span class="line"></span><br><span class="line">直接输出重新组织后的内容，不解释修改过程，</span><br><span class="line">不添加无关的开场白和结束语。</span><br></pre></td></tr></table></figure>
+
+<p>保存文件后，即可在支持 Skill 的工具中调用。</p>
+<h3 id="3-使用方法"><a href="#3-使用方法" class="headerlink" title="3. 使用方法"></a><strong>3. 使用方法</strong></h3><p>Codex 用户可以输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$wait-what</span><br></pre></td></tr></table></figure>
+
+<p>Claude Code 用户可以输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/wait-what</span><br></pre></td></tr></table></figure>
+
+<p>也可以附带更加具体的要求：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$wait-what 重新解释上一条回复，使用自然的中文， 保留所有技术细节。</span><br></pre></td></tr></table></figure>
+
+<p>需要注意，wait-what 主要用于重新组织已有回复，在本地安装 Skill 不会自动改变 ChatGPT 网页端的表达方式。</p>
+<h3 id="四、通过-AGENTS-md-规范-Codex-的表达方式"><a href="#四、通过-AGENTS-md-规范-Codex-的表达方式" class="headerlink" title="四、通过 AGENTS.md 规范 Codex 的表达方式"></a><strong>四、通过 AGENTS.md 规范 Codex 的表达方式</strong></h3><p>如果你和我一样，经常使用 Codex 开发项目，每次都调用 wait-what 也比较麻烦。</p>
+<p>可以通过 <code>AGENTS.md</code> 提前规范 Codex 的沟通方式。</p>
+<p>Mac 用户可以在终端执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p ~/.codex</span><br></pre></td></tr></table></figure>
+
+<p>然后创建或编辑：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/.codex/AGENTS.md</span><br></pre></td></tr></table></figure>
+
+<p>加入以下内容：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 中文沟通规范</span><br><span class="line"></span><br><span class="line">- 默认使用简体中文交流。</span><br><span class="line">- 使用符合中文习惯的主谓宾表达方式。</span><br><span class="line">- 去掉无意义的假口语化、比喻和重复总结。</span><br><span class="line">- 避免使用“不是……而是……”等模板化句式。</span><br><span class="line">- 不刻意提供情绪价值。</span><br><span class="line">- 不强行使用标题、列表和总结。</span><br><span class="line">- 保留必要的技术术语、代码和操作步骤。</span><br><span class="line">- 汇报开发进度时，明确说明实际完成的工作。</span><br><span class="line">- 未经测试的功能不得描述为已经验证。</span><br><span class="line">- 将非必要的防御性说明与主要内容分开，</span><br><span class="line">  但保留影响使用和决策的重要风险提示。</span><br></pre></td></tr></table></figure>
+
+<p>如果已经存在 <code>AGENTS.md</code> 文件，直接将这些要求追加进去即可。</p>
+<p>也可以在具体项目的根目录下创建 <code>AGENTS.md</code>，针对不同项目制定不同的沟通规范。</p>
+<p>相比 wait-what，这种方式更适合长期使用，可以减少 Codex 在日常开发过程中出现的表达问题。</p>
+<h3 id="五、使用一句话提示词重新生成回复"><a href="#五、使用一句话提示词重新生成回复" class="headerlink" title="五、使用一句话提示词重新生成回复"></a><strong>五、使用一句话提示词重新生成回复</strong></h3><p>如果不想修改设置，也不想安装任何 Skill，可以直接在 GPT 回复不满意时发送一句提示词。</p>
+<p>这里整理了几个不同场景下可以直接使用的版本。</p>
+<p><strong>通用版本</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">去掉无意义的假口语化、比喻和重复总结，避免使用“不是……而是……”等模板化句式，使用自然、准确的中文重新表达。</span><br></pre></td></tr></table></figure>
+
+<p><strong>技术交流</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用正常的中文技术交流方式，直接说明问题、原因和解决方案，保留必要的技术细节，删除无关的修辞和情绪铺垫。</span><br></pre></td></tr></table></figure>
+
+<p><strong>文章写作</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">按照中文母语者的写作习惯重新组织文章，减少模板化句式、翻译腔、重复总结和刻意升华，保留原有观点及有效信息。</span><br></pre></td></tr></table></figure>
+
+<p><strong>日常问答</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用正常人日常交流的方式回答，直接说明重点，不使用多余的比喻、标题和总结。</span><br></pre></td></tr></table></figure>
+
+<p><strong>项目开发</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">直接说明已完成的工作、存在的问题和下一步操作，保留必要的技术细节，不添加无关的评价、比喻和重复说明。</span><br></pre></td></tr></table></figure>
+
+<p>这些提示词也可以用于 Claude、Gemini、Grok 等其他 AI 模型。</p>
+<h3 id="六、修改前后的效果对比"><a href="#六、修改前后的效果对比" class="headerlink" title="六、修改前后的效果对比"></a><strong>六、修改前后的效果对比</strong></h3><p>修改前</p>
+<p><img src="https://pic4.zhimg.com/v2-0a00010f520fc4a0cb8a555527ef28fb_1440w.jpg" alt="img"></p>
+<p>修改后</p>
+<p><img src="https://pic1.zhimg.com/v2-2e4234d4f085251977eb080b63d4cd28_1440w.jpg" alt="img"></p>
+<p>修改后的内容保留了必要的信息，也更符合正常的中文交流习惯。</p>
+<blockquote>
+<p>如果你也想体验 GPT-6.2，或者有 ChatGPT Plus、Pro 会员升级需求，可以通过 <a target="_blank" rel="noopener" href="https://cnmgpt.com/">cnmgpt.com</a> 正规 IOS 内购升级，为自己的账号直接升级，无需提供账号密码。</p>
+</blockquote>
+<h3 id="七、哪种方法更适合自己？"><a href="#七、哪种方法更适合自己？" class="headerlink" title="七、哪种方法更适合自己？"></a><strong>七、哪种方法更适合自己？</strong></h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>适用场景</th>
+<th>使用难度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>自定义指令</td>
+<td>ChatGPT 日常使用</td>
+<td>简单</td>
+</tr>
+<tr>
+<td>个性化设置</td>
+<td>调整整体表达风格</td>
+<td>简单</td>
+</tr>
+<tr>
+<td>wait-what Skill</td>
+<td>AI 编程及回复重写</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>AGENTS.md</td>
+<td>长期使用 Codex 开发项目</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>一句话提示词</td>
+<td>临时修改回复</td>
+<td>简单</td>
+</tr>
+</tbody></table>
+<p>普通 ChatGPT 用户可以同时配置自定义指令和个性化设置。经常使用 Codex 的用户，可以通过 <code>AGENTS.md</code> 规范日常交流，再使用 wait-what 处理不满意的回复。</p>
+<p>这些方法无法改变模型本身的能力，也不能彻底解决长对话遗忘的问题，但可以在一定程度上改善中文表达，减少阅读和沟通成本。</p>
+<p>希望后续 OpenAI 在提升模型推理能力的同时，也能多关注一下中文用户的实际使用体验。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/ChatGPT/">ChatGPT</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ChatGPT-%E5%AE%9E%E7%94%A8%E6%96%B9%E6%B3%95/" rel="tag">ChatGPT 实用方法</a></li></ul>
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2026/11/claude-pro-app-store-refund-guide/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">Claude Pro 被封了怎么退款？苹果 App Store 退款申请教程（附英文申诉模板）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BF%AE%E6%94%B9-ChatGPT-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">一、修改 ChatGPT 自定义指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%BF%AE%E6%94%B9-ChatGPT-%E7%9A%84%E5%9F%BA%E7%A1%80%E9%A3%8E%E6%A0%BC%E5%92%8C%E8%AF%AD%E6%B0%94"><span class="nav-number">2.</span> <span class="nav-text">二、修改 ChatGPT 的基础风格和语气</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%BD%BF%E7%94%A8-wait-what-Skill"><span class="nav-number">3.</span> <span class="nav-text">三、使用 wait-what Skill</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85-wait-what"><span class="nav-number">4.</span> <span class="nav-text">1. 安装 wait-what</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BF%AE%E6%94%B9%E4%B8%BA%E4%B8%AD%E6%96%87%E7%89%88"><span class="nav-number">5.</span> <span class="nav-text">2. 修改为中文版</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">6.</span> <span class="nav-text">3. 使用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E9%80%9A%E8%BF%87-AGENTS-md-%E8%A7%84%E8%8C%83-Codex-%E7%9A%84%E8%A1%A8%E8%BE%BE%E6%96%B9%E5%BC%8F"><span class="nav-number">7.</span> <span class="nav-text">四、通过 AGENTS.md 规范 Codex 的表达方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E4%BD%BF%E7%94%A8%E4%B8%80%E5%8F%A5%E8%AF%9D%E6%8F%90%E7%A4%BA%E8%AF%8D%E9%87%8D%E6%96%B0%E7%94%9F%E6%88%90%E5%9B%9E%E5%A4%8D"><span class="nav-number">8.</span> <span class="nav-text">五、使用一句话提示词重新生成回复</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E4%BF%AE%E6%94%B9%E5%89%8D%E5%90%8E%E7%9A%84%E6%95%88%E6%9E%9C%E5%AF%B9%E6%AF%94"><span class="nav-number">9.</span> <span class="nav-text">六、修改前后的效果对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E5%93%AA%E7%A7%8D%E6%96%B9%E6%B3%95%E6%9B%B4%E9%80%82%E5%90%88%E8%87%AA%E5%B7%B1%EF%BC%9F"><span class="nav-number">10.</span> <span class="nav-text">七、哪种方法更适合自己？</span></a></li></ol>
+    
+    </div>
+  </aside>
+
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives/" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories/" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags/" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about/" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2026 ChatGPT、Claude、Grok 使用与订阅指南｜CNMAI All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+	<script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?05f73ede0440dbfdffc6c599c938373e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
